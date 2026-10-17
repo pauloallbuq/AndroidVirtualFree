@@ -1,0 +1,18 @@
+cmdline: root=/dev/ram0 quiet androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200
+qemu: qemu-system-x86_64 -M pc -accel tcg,thread=multi,tb-size=256 -cpu max -smp 4 -m 2048 -kernel /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/kernel -initrd /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/initrd.img -append root=/dev/ram0 androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 printk.devkmsg=on -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/data.qcow2,if=ide,index=0,media=disk,format=qcow2,cache=writeback,discard=unmap -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/android-x86_64-9.0-r2.iso,if=ide,index=2,media=cdrom,readonly=on,format=raw -netdev user,id=n0 -device virtio-net-pci,netdev=n0,romfile= -vga std -usb -device usb-tablet -vnc 127.0.0.1:1 -serial tcp:127.0.0.1:4555,server,nowait -monitor stdio
+[boot1] VNC conectado: 720x400 'QEMU'
+[boot1] 15s: aguardando boot; tela 1280x720, frames=46
+[boot1] 245s: aguardando boot; tela 1280x720, frames=916
+[boot1] 485s: aguardando boot; tela 1280x720, frames=1937
+[boot1] 725s: aguardando boot; tela 1280x720, frames=3044
+[boot1] 965s: aguardando boot; tela 1280x720, frames=3749
+[boot1] 1205s: aguardando boot; tela 1280x720, frames=4429
+[boot1] 1445s: aguardando boot; tela 1280x720, frames=5244
+[boot1] 1685s: aguardando boot; tela 1280x720, frames=6323
+[boot1] 1925s: aguardando boot; tela 1280x720, frames=7127
+[boot1] 2165s: aguardando boot; tela 1280x720, frames=7867
+[boot1] 2405s: aguardando boot; tela 1280x720, frames=8525
+[boot1] 2645s: aguardando boot; tela 1280x720, frames=9277
+[boot1] 2885s: aguardando boot; tela 1280x720, frames=9934
+[boot1] 3125s: aguardando boot; tela 1280x720, frames=10769
+[boot1] 3365s: aguardando boot; tela 1280x720, frames=11839
