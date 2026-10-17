@@ -1,0 +1,902 @@
+==== 1792269917398
+20:45:16 up 0 min,  0 users,  load average: 2.05, 0.44, 0.14
+running
+
+--------- beginning of main
+I/ConfigStore( 1197): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::presentTimeOffsetFromVSyncNs retrieved: 0
+W/media.codec( 1213): Could not read additional policy file '/vendor/etc/seccomp_policy/mediacodec.policy'
+I/ConfigStore( 1197): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::useHwcForRGBtoYUV retrieved: 0
+I/ConfigStore( 1197): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::maxVirtualDisplaySize retrieved: 0 (default)
+I/ConfigStore( 1197): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::useVrFlinger retrieved: 0 (default)
+I/ConfigStore( 1197): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::maxFrameBufferAcquiredBuffers retrieved: 3
+I/ConfigStore( 1197): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.configstore@1.1::ISurfaceFlingerConfigs/default in either framework or device manifest.
+W/android.hardware.media.omx@1.0-service( 1213): libminijail[1213]: failed to get path of fd 4: No such file or directory
+W/android.hardware.media.omx@1.0-service( 1213): libminijail[1213]: allowing syscall: socketcall
+W/android.hardware.media.omx@1.0-service( 1213): libminijail[1213]: allowing syscall: writev
+W/android.hardware.media.omx@1.0-service( 1213): libminijail[1213]: allowing syscall: fcntl64
+I/ConfigStore( 1197): android::hardware::configstore::V1_1::ISurfaceFlingerConfigs::primaryDisplayOrientation retrieved: ORIENTATION_0 (default)
+I/SurfaceFlinger( 1197): Enabling HWC virtual displays
+I/SurfaceFlinger( 1197): Disabling Triple Buffering
+I/SurfaceFlinger( 1197): Treble testing override: 'false'
+I/SurfaceFlinger( 1197): SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+I/SurfaceFlinger( 1197): Phase offest NS: 1000000
+W/android.hardware.media.omx@1.0-service( 1213): libminijail[1213]: allowing syscall: clock_gettime
+I/ServiceManager( 1211): Waiting for service package_native...
+W/android.hardware.media.omx@1.0-service( 1213): libminijail[1213]: logging seccomp filter failures
+D/vndksupport( 1197): Loading /vendor/lib64/egl/libEGL_swiftshader.so from current namespace instead of sphal namespace.
+W/MediaCodecsXmlParser( 1213): ignoring Limit specified outside of a Type
+W/MediaCodecsXmlParser( 1213): ignoring Limit specified outside of a Type
+W/MediaCodecsXmlParser( 1213): unable to open media codecs configuration xml file: /data/misc/media/media_codecs_profiling_results.xml
+W/MediaCodecsXmlParser( 1213): parseTopLevelXMLFile(/data/misc/media/media_codecs_profiling_results.xml) failed
+E/MediaCodecsXmlParser( 1213): Cannot find the role for a decoder of type audio/alac
+E/MediaCodecsXmlParser( 1213): Cannot find the role for a decoder of type audio/vnd.dts
+I/ServiceManagement( 1213): Removing namespace from process name android.hardware.media.omx@1.0-service to omx@1.0-service.
+D/vndksupport( 1213): Loading libstagefrighthw.so from current namespace instead of sphal namespace.
+D/vndksupport( 1213): Loading libffmpeg_omx.so from current namespace instead of sphal namespace.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.audio@4.0::IDevicesFactory/default in either framework or device manifest.
+I/android.hardwar( 1184): type=1400 audit(0.0:224): avc: denied { read } for name="lib" dev="tmpfs" ino=5777 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+E/audiohalservice( 1184): Could not get passthrough implementation for android.hardware.audio@4.0::IDevicesFactory/default.
+D/vndksupport( 1184): Loading /vendor/lib/hw/android.hardware.audio@2.0-impl.so from current namespace instead of sphal namespace.
+I/cameraserver( 1201): ServiceManager: 0xe631a700
+I/CameraService( 1201): CameraService started (pid=1201)
+I/CameraService( 1201): CameraService process starting
+W/BatteryNotifier( 1201): batterystats service unavailable!
+W/BatteryNotifier( 1201): batterystats service unavailable!
+I/mediametrics( 1208): ServiceManager: 0x7ece63a3d740
+D/MediaAnalyticsService( 1208): MediaAnalyticsService created
+I/ServiceManagement( 1201): getService: Trying again for android.hardware.camera.provider@2.4::ICameraProvider/legacy/0...
+I/ServiceManagement( 1184): Removing namespace from process name android.hardware.audio@2.0-service to audio@2.0-service.
+I/audiohalservice( 1184): Registration complete for android.hardware.audio@2.0::IDevicesFactory/default.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.audio.effect@4.0::IEffectsFactory/default in either framework or device manifest.
+E/audiohalservice( 1184): Could not get passthrough implementation for android.hardware.audio.effect@4.0::IEffectsFactory/default.
+D/vndksupport( 1184): Loading /vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so from current namespace instead of sphal namespace.
+D/Camera_Factory( 1186): CameraFactory::CameraFactory
+D/Camera_Factory( 1186): CameraFactory::parseConfig: configFile = /etc/camera.cfg
+D/Camera_Factory( 1186): /etc/camera.cfg not found, using camera configuration defaults
+D/Camera_Factory( 1186): CameraFactory::get_number_of_cameras
+D/Camera_Factory( 1186): CameraFactory::getCameraNum: 0
+I/CamProvider@2.4-impl( 1186): Loaded "Camera Module" camera module
+I/CamProvider@2.4-impl( 1186): setUpVendorTags: No vendor tags defined for this device.
+D/Camera_Factory( 1186): CameraFactory::get_number_of_cameras
+D/Camera_Factory( 1186): CameraFactory::getCameraNum: 0
+I/ServiceManagement( 1186): Removing namespace from process name android.hardware.camera.provider@2.4-service to provider@2.4-service.
+I/android.hardware.camera.provider@2.4-service( 1186): Registration complete for android.hardware.camera.provider@2.4::ICameraProvider/legacy/0.
+I/FastMixerState( 1195): sMaxFastTracks = 8
+I/CameraProviderManager( 1201): Connecting to new camera provider: legacy/0, isRemote? 1
+I/CameraProviderManager( 1201): Camera provider legacy/0 ready with 0 camera devices
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.camera.provider@2.4::ICameraProvider/external/0 in either framework or device manifest.
+I/cameraserver( 1201): type=1400 audit(0.0:225): avc: denied { read } for name="lib" dev="tmpfs" ino=5777 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+D/vndksupport( 1201): Loading /vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so from current namespace instead of sphal namespace.
+V/MediaUtils( 1195): physMem: 2088816640
+V/MediaUtils( 1195): requested limit: 417763320
+V/MediaUtils( 1195): cfi shadow size: 32768
+V/MediaUtils( 1195): actual limit: 417796088
+V/MediaUtils( 1195): original limits: 4294967295/4294967295
+V/MediaUtils( 1195): new limits: 417796088/4294967295
+I/audiohalservice( 1184): Registration complete for android.hardware.audio.effect@2.0::IEffectsFactory/default.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.soundtrigger@2.1::ISoundTriggerHw/default in either framework or device manifest.
+E/audiohalservice( 1184): Could not get passthrough implementation for android.hardware.soundtrigger@2.1::ISoundTriggerHw/default.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.soundtrigger@2.0::ISoundTriggerHw/default in either framework or device manifest.
+I/audioserver( 1195): ServiceManager: 0xe701aa60
+D/vndksupport( 1184): Loading /vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so from current namespace instead of sphal namespace.
+E/ExtCamUtils@3.4( 1201): loadFromCfg: Unable to load external camera config file '/vendor/etc/external_camera_config.xml'. Error: XML_ERROR_FILE_NOT_FOUND
+W/BatteryNotifier( 1195): batterystats service unavailable!
+I/CamPvdr@2.4-external( 1201): threadLoop start monitoring new V4L2 devices
+I/CameraProviderManager( 1201): Connecting to new camera provider: external/0, isRemote? 0
+I/CameraProviderManager( 1201): Camera provider external/0 ready with 0 camera devices
+W/CameraProviderManager( 1201): addProviderLocked: Camera provider HAL with name 'legacy/0' already registered
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.audio@4.0::IDevicesFactory/default in either framework or device manifest.
+V/MediaUtils( 1207): physMem: 2088816640
+I/        ( 1201): Waiting for activity service
+V/MediaUtils( 1207): requested limit: 417763320
+V/MediaUtils( 1207): cfi shadow size: 2147483648
+V/MediaUtils( 1207): actual limit: 2565246968
+V/MediaUtils( 1207): original limits: -1/-1
+V/MediaUtils( 1207): new limits: 2565246968/-1
+D/vndksupport( 1207): Loading libutils.so from current namespace instead of sphal namespace.
+W//system/bin/mediaextractor( 1207): No seccomp policy defined for this architecture.
+E/SoundTriggerHalImpl( 1184): couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+D/libEGL  ( 1197): loaded /vendor/lib64/egl/libEGL_swiftshader.so
+I/audioserver( 1195): type=1400 audit(0.0:226): avc: denied { read } for name="lib" dev="tmpfs" ino=5777 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/mediaserver( 1209): ServiceManager: 0xede1ab60
+I/audiohalservice( 1184): Registration complete for android.hardware.soundtrigger@2.0::ISoundTriggerHw/default.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.bluetooth.a2dp@1.0::IBluetoothAudioOffload/default in either framework or device manifest.
+E/audiohalservice( 1184): Could not get passthrough implementation for android.hardware.bluetooth.a2dp@1.0::IBluetoothAudioOffload/default.
+W/audiohalservice( 1184): Could not register Bluetooth audio offload 1.0
+I/ServiceManager( 1211): Waiting for service package_native...
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.audio@2.0::IDevicesFactory/msd in either framework or device manifest.
+D/vndksupport( 1195): Loading /vendor/lib/hw/android.hardware.audio@2.0-impl.so from current namespace instead of sphal namespace.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.audio.effect@4.0::IEffectsFactory/default in either framework or device manifest.
+I/AudioFlinger( 1195): Using default 3000 mSec as standby time.
+D/AndroidRuntime( 1179): >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+I/APM::ConfigParsingUtils( 1195): loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+I/omx@1.0-service( 1213): type=1400 audit(0.0:227): avc: denied { execmod } for path="/system/vendor/lib/libavcodec.so" dev="loop1" ino=7363 scontext=u:r:mediacodec:s0 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1
+W/BatteryNotifier( 1209): batterystats service unavailable!
+W/audio_hw_primary( 1184): Unable to find the mixer
+W/DeviceHAL( 1184): Error from HAL Device in function set_master_volume: Function not implemented
+I/AudioFlinger( 1195): loadHwModule() Loaded primary audio interface, handle 10
+I/AudioFlinger( 1195): openOutput() this 0xe703c000, module 10 Device 0x2, SamplingRate 48000, Format 0x000001, Channels 0x3, flags 0x2
+W/DeviceHAL( 1184): Error from HAL Device in function open_output_stream: No such device
+I/AudioHwDevice( 1195): openOutputStream(), HAL returned sampleRate 48000, Format 0x1, channelMask 0x3, status -19
+W/APM_AudioPolicyManager( 1195): Cannot open output stream for device 00000002 on hw module primary
+W/DeviceHAL( 1184): Error from HAL Device in function open_input_stream: Invalid argument
+I/AudioFlinger( 1195): AudioFlinger's thread 0xe6583540 tid=1303 ready to run
+W/AudioFlinger( 1195): no wake lock to update, system not ready yet
+==== 1792270149243
+20:49:09 up 4 min,  0 users,  load average: 8.00, 4.70, 1.95
+running
+
+--------- beginning of main
+W/dex2oat ( 1466): Verification of boolean com.google.android.gms.trustagent.trustlet.device.ui.TrustedDevicesFragment.c(androidx.preference.Preference) took 141.255ms
+W/dex2oat ( 1466): Verification of void awhp.a(android.content.Context) took 143.496ms
+W/dex2oat ( 1466): Verification of void awtz.i() took 164.803ms
+W/dex2oat ( 1466): Verification of boolean axcv.a(int, android.os.Parcel, android.os.Parcel) took 147.261ms
+W/dex2oat ( 1466): Verification of void axlb.<init>(java.lang.String, com.google.android.gms.wallet.shared.BuyFlowConfig, java.lang.String, bomf) took 140.804ms
+W/dex2oat ( 1466): Verification of void ayla.a(aykp, int, long) took 155.588ms
+W/dex2oat ( 1466): Verification of blck axoh.a(blcm, blcl) took 172.375ms
+W/dex2oat ( 1466): Verification of void com.google.android.gms.wallet.buyflow.CheckoutChimeraActivity.onCreate(android.os.Bundle) took 164.523ms
+W/dex2oat ( 1466): Verification of axpk axpk.a(java.lang.String) took 147.508ms
+W/dex2oat ( 1466): Verification of blgt axqm.a(com.google.android.chimera.Fragment, android.os.Bundle) took 106.433ms
+W/dex2oat ( 1466): Verification of bwdp axym.a() took 148.234ms
+W/dex2oat ( 1466): Verification of ayce aybz.a() took 165.122ms
+W/dex2oat ( 1466): Verification of void ayit.a(axio, android.os.Bundle, axwy) took 189.495ms
+W/dex2oat ( 1466): Verification of android.view.View aynq.a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle) took 147.313ms
+W/dex2oat ( 1466): Verification of android.view.View aynz.a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle) took 150.054ms
+W/dex2oat ( 1466): Verification of void com.google.android.gms.wallet.ui.component.lineitem.LineItemBundleView.b(int) took 162.147ms
+W/dex2oat ( 1466): Verification of void azds.a(azeg) took 165.741ms
+W/dex2oat ( 1466): Verification of azmq azmz.a(java.lang.String, java.util.Map, long) took 146.327ms
+W/dex2oat ( 1466): Verification of void azmm.handleMessage(android.os.Message) took 347.782ms
+W/dex2oat ( 1466): Verification of azqd azqd.a(azpx, boolean) took 165.956ms
+W/dex2oat ( 1466): Verification of void azpm.onUpgrade(android.database.sqlite.SQLiteDatabase, int, int) took 174.375ms
+W/dex2oat ( 1466): Verification of java.lang.String babl.a(azvv) took 140.631ms
+W/dex2oat ( 1466): Verification of babr babd.a(java.util.List, java.lang.Object) took 144.997ms
+W/dex2oat ( 1466): Verification of void azyx.a(android.content.Context) took 166.459ms
+W/dex2oat ( 1466): Verification of baiq bahn.a() took 148.009ms
+W/dex2oat ( 1466): Verification of bahj bagw.a(boolean) took 157.021ms
+W/dex2oat ( 1466): Verification of banj bbmg.a(android.content.Context, bblq, sni, java.util.List, android.database.sqlite.SQLiteDatabase, boolean, java.lang.String, android.graphics.Bitmap, java.lang.String, java.lang.String, boolean, boolean) took 147.358ms
+W/dex2oat ( 1466): Verification of void bbmu.run() took 158.322ms
+W/dex2oat ( 1466): Verification of void bcgh.b(byte[], byte[]) took 176.692ms
+W/dex2oat ( 1466): Verification of java.lang.String bcrp.a(android.content.Context) took 144.855ms
+W/dex2oat ( 1466): Verification of void bdwa.a(bzlb) took 146.328ms
+W/dex2oat ( 1466): Verification of java.util.List bdwu.d(java.lang.String) took 152.569ms
+W/dex2oat ( 1466): Verification of void bedo.run() took 149.794ms
+W/dex2oat ( 1466): Compilation of void com.google.android.gms.security.snet.SnetWatchdogChimeraIntentService.onHandleIntent(android.content.Intent) took 141.032ms
+W/dex2oat ( 1466): Compilation of void auaj.<init>(rey) took 146.759ms
+W/dex2oat ( 1466): Compilation of void auaa.<init>(rey) took 146.698ms
+W/dex2oat ( 1466): Compilation of void atyo.c(com.google.android.gms.common.api.Status, boolean) took 154.337ms
+W/dex2oat ( 1466): Compilation of java.lang.Object auak.createFromParcel(android.os.Parcel) took 150.705ms
+W/dex2oat ( 1466): Compilation of void aurm.<clinit>() took 137.735ms
+W/dex2oat ( 1466): Compilation of void avpe.a(avok, long, java.lang.Object[]) took 139.043ms
+W/dex2oat ( 1466): Compilation of long awuw.b() took 155.190ms
+W/dex2oat ( 1466): Compilation of void awvx.<init>(com.google.android.gms.update.phone.PopupDialogChimeraActivity) took 163.653ms
+W/dex2oat ( 1466): Compilation of void axwk.onCreate(android.os.Bundle) took 143.111ms
+W/dex2oat ( 1466): Compilation of void axxv.b() took 139.512ms
+W/dex2oat ( 1466): Compilation of void com.google.android.gms.wallet.paymentmethods.InstrumentRankSpinner.onLayout(boolean, int, int, int, int) took 144.463ms
+W/dex2oat ( 1466): Compilation of void azmy.a(java.lang.String, java.lang.String, java.util.Set) took 146.027ms
+W/dex2oat ( 1466): Compilation of void bbxv.<init>(bcjo, bcjk, bbxz) took 137.003ms
+E/ReportEncoder( 1341): No watchlist hash
+W/dex2oat ( 1466): Compilation of void bdwa.<init>(java.security.SecureRandom, bdwm, bdwe, int, int, bmfi, bdwf, bdqw, blyh) took 141.656ms
+--------- beginning of system
+I/WatchlistLoggingHandler( 1341): Milliseconds spent on tryAggregateRecords(): 154769
+I/dex2oat ( 1466): Explicit concurrent copying GC freed 84352(13MB) AllocSpace objects, 0(0B) LOS objects, 81% free, 351KB/1887KB, paused 144us total 942.242ms
+W/dex2oat ( 1466): Verification of void bfkh.run() took 138.568ms
+W/dex2oat ( 1466): Verification of void bfht.a(java.util.List, java.util.List, long) took 153.340ms
+W/dex2oat ( 1466): Verification of boolean bfkg.a(int, int, long) took 183.319ms
+W/dex2oat ( 1466): Verification of void bfma.run() took 165.958ms
+W/dex2oat ( 1466): Verification of void bfuk.b_(java.util.List) took 150.188ms
+W/dex2oat ( 1466): Verification of void com.google.android.location.geofencer.service.GeofencerStateMachine.a(java.util.List, int, android.location.Location) took 140.890ms
+W/dex2oat ( 1466): Verification of void bgix.handleMessage(android.os.Message) took 162.964ms
+W/dex2oat ( 1466): Verification of bfqg bger.a(bfqn, bfqe) took 182.153ms
+W/dex2oat ( 1466): Verification of void bgey.a(bgmz, bfqi[], boolean) took 411.933ms
+W/dex2oat ( 1466): Verification of void bgpt.a(bgoh) took 181.323ms
+W/dex2oat ( 1466): Verification of void bgyc.a(com.android.volley.VolleyError) took 169.264ms
+W/dex2oat ( 1466): Verification of void bhat.<init>(android.accounts.Account) took 136.102ms
+W/dex2oat ( 1466): Verification of void bgzz.a(android.content.Intent) took 161.492ms
+W/dex2oat ( 1466): Verification of void bhaa.run() took 217.019ms
+W/dex2oat ( 1466): Verification of bhol bhos.a(bhkv) took 148.112ms
+W/dex2oat ( 1466): Verification of void bhvp.a(android.content.Context) took 151.891ms
+W/dex2oat ( 1466): Verification of void bhvw.a(android.content.Context) took 148.977ms
+W/dex2oat ( 1466): Verification of void bidy.a() took 139.457ms
+W/dex2oat ( 1466): Verification of void biqk.<clinit>() took 144.423ms
+W/dex2oat ( 1466): Verification of void biwf.c() took 144.446ms
+W/dex2oat ( 1466): Verification of android.view.View bjcf.a(char, char[], java.lang.String, android.view.View) took 139.643ms
+W/dex2oat ( 1466): Verification of boolean bjcg.a(bldo) took 141.787ms
+W/dex2oat ( 1466): Verification of java.lang.String bjkq.a(byte[], java.lang.String, java.lang.String) took 142.172ms
+W/dex2oat ( 1466): Verification of void bjzg.<init>(boolean) took 169.154ms
+W/dex2oat ( 1466): Verification of void bkzb.a(bakj, int, int) took 168.204ms
+W/dex2oat ( 1466): Verification of int bliw.a() took 146.994ms
+W/dex2oat ( 1466): Verification of java.lang.Object blqm.a(int, java.lang.Object) took 150.563ms
+W/dex2oat ( 1466): Verification of void bmth.<clinit>() took 142.364ms
+W/dex2oat ( 1466): Verification of java.lang.Object bnky.a(int, java.lang.Object) took 148.926ms
+W/dex2oat ( 1466): Verification of java.lang.Object boep.a(int, java.lang.Object) took 137.157ms
+W/dex2oat ( 1466): Verification of java.lang.Object bphv.a(int, java.lang.Object) took 143.870ms
+W/dex2oat ( 1466): Verification of java.lang.Object bslm.a(int, java.lang.Object) took 143.758ms
+W/dex2oat ( 1466): Verification of java.lang.Object burf.a(int, java.lang.Object) took 140.627ms
+W/dex2oat ( 1466): Verification of void bvbw.<clinit>() took 146.398ms
+W/dex2oat ( 1466): Verification of java.lang.Object bvop.a(int, java.lang.Object) took 161.407ms
+W/dex2oat ( 1466): Compilation of com.google.android.gms.location.ActivityRecognitionResult beyj.a(com.google.android.gms.location.ActivityRecognitionResult, bfbw, com.google.android.gms.location.ActivityRecognitionResult) took 140.101ms
+W/dex2oat ( 1466): Compilation of void blqw.<clinit>() took 139.007ms
+W/dex2oat ( 1466): Compilation of bwha bovy.a(bwgp) took 143.296ms
+I/dex2oat ( 1466): Explicit concurrent copying GC freed 71962(9MB) AllocSpace objects, 0(0B) LOS objects, 81% free, 357KB/1893KB, paused 138us total 575.840ms
+W/dex2oat ( 1466): Verification of void bwdt.a(java.lang.Object, bwef, bwbh) took 108.470ms
+W/dex2oat ( 1466): Verification of long bwvv.c() took 145.772ms
+W/dex2oat ( 1466): Verification of java.lang.Object bxjh.a(int, java.lang.Object) took 141.139ms
+W/dex2oat ( 1466): Verification of void bxxu.<clinit>() took 152.891ms
+W/dex2oat ( 1466): Verification of java.lang.Object bymc.a(int, java.lang.Object) took 159.668ms
+W/dex2oat ( 1466): Verification of java.lang.String byxr.toString() took 143.225ms
+W/dex2oat ( 1466): Verification of void bypf.<clinit>() took 206.381ms
+W/dex2oat ( 1466): Verification of bzue bzue.a(int) took 139.475ms
+W/dex2oat ( 1466): Verification of void cdop.a(int) took 135.036ms
+W/dex2oat ( 1466): Verification of void ceak.a(ceal) took 140.519ms
+W/dex2oat ( 1466): Verification of void cekm.<clinit>() took 153.472ms
+W/dex2oat ( 1466): Verification of int org.chromium.net.CronetEngine$Builder.compareVersions(java.lang.String, java.lang.String) took 144.082ms
+W/dex2oat ( 1466): Verification of boolean cevy.a() took 166.192ms
+W/dex2oat ( 1466): Compilation of java.lang.Object bwrp.a(int, java.lang.Object) took 144.868ms
+I/dex2oat ( 1466): Explicit concurrent copying GC freed 32445(3MB) AllocSpace objects, 0(0B) LOS objects, 80% free, 360KB/1896KB, paused 119us total 109.145ms
+I/dex2oat ( 1466): dex2oat took 108.962s (83.779s cpu) (threads: 4) arena alloc=1132KB (1159832B) java alloc=360KB (369080B) native alloc=15MB (16234552B) free=7MB (7358408B) swap=16MB (16777216B)
+V/installed( 1204): DexInv: --- END '/system/priv-app/GmsCore/GmsCore.apk' (success) ---
+I/system_server( 1341): The ClassLoaderContext is a special shared library.
+I/chatty  ( 1341): uid=1000 system_server identical 23 lines
+I/system_server( 1341): The ClassLoaderContext is a special shared library.
+I/PackageManager.DexOptimizer( 1341): Running dexopt (dexoptNeeded=1) on: /system/app/TermOnePlus/TermOnePlus.apk pkg=com.termoneplus isa=x86_64 dexoptFlags=public,enable_hidden_api_checks targetFilter=quicken oatDir=null classLoaderContext=PCL[]
+V/installed( 1204): DexInv: --- BEGIN '/system/app/TermOnePlus/TermOnePlus.apk' ---
+W/dex2oat ( 1498): Unexpected CPU variant for X86 using defaults: x86_64
+I/dex2oat ( 1498): /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=18 --compiler-filter=quicken --classpath-dir=/system/app/TermOnePlus --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --compilation-reason=first-boot
+W/dex2oat ( 1498): Verification of android.view.View androidx.appcompat.app.AppCompatViewInflater.createView(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean, boolean, boolean, boolean) took 145.973ms
+W/dex2oat ( 1498): Verification of void androidx.appcompat.widget.ScrollingTabContainerView$TabView.onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent) took 181.140ms
+W/dex2oat ( 1498): Verification of int androidx.appcompat.widget.DropDownListView.measureHeightOfChildrenCompat(int, int, int, int, int) took 199.343ms
+W/dex2oat ( 1498): Verification of java.lang.reflect.Constructor androidx.lifecycle.Lifecycling.generatedConstructor(java.lang.Class) took 145.132ms
+W/dex2oat ( 1498): Verification of void androidx.slidingpanelayout.widget.SlidingPaneLayout.<init>(android.content.Context, android.util.AttributeSet, int) took 140.190ms
+W/dex2oat ( 1498): Verification of void jackpal.androidterm.emulatorview.StyleRow.allocate() took 150.721ms
+==== 1792270398392
+20:53:17 up 0 min,  0 users,  load average: 2.75, 0.61, 0.20
+running
+
+--------- beginning of main
+I/zygote  ( 1181): option[5]=-verbose:gc
+I/zygote  ( 1181): option[6]=-Xms16m
+I/zygote  ( 1181): option[7]=-Xmx512m
+I/zygote  ( 1181): option[8]=-XX:HeapGrowthLimit=192m
+I/zygote  ( 1181): option[9]=-XX:HeapMinFree=512k
+I/zygote  ( 1181): option[10]=-XX:HeapMaxFree=8m
+I/zygote  ( 1181): option[11]=-XX:HeapTargetUtilization=0.75
+I/zygote  ( 1181): option[12]=-Xusejit:true
+I/zygote  ( 1181): option[13]=-Xjitsaveprofilinginfo
+I/zygote  ( 1181): option[14]=-XjdwpOptions:suspend=n,server=y
+I/zygote  ( 1181): option[15]=-XjdwpProvider:default
+I/zygote  ( 1181): option[16]=-Xlockprofthreshold:500
+I/zygote  ( 1181): option[17]=-Ximage-compiler-option
+I/zygote  ( 1181): option[18]=--runtime-arg
+I/zygote  ( 1181): option[19]=-Ximage-compiler-option
+I/zygote  ( 1181): option[20]=-Xms64m
+I/zygote  ( 1181): option[21]=-Ximage-compiler-option
+I/zygote  ( 1181): option[22]=--runtime-arg
+I/zygote  ( 1181): option[23]=-Ximage-compiler-option
+I/zygote  ( 1181): option[24]=-Xmx64m
+I/zygote  ( 1181): option[25]=-Ximage-compiler-option
+I/zygote  ( 1181): option[26]=--profile-file=/system/etc/boot-image.prof
+I/zygote  ( 1181): option[27]=-Ximage-compiler-option
+I/zygote  ( 1181): option[28]=--compiler-filter=speed-profile
+I/zygote  ( 1181): option[29]=-Xcompiler-option
+I/zygote  ( 1181): option[30]=--runtime-arg
+I/zygote  ( 1181): option[31]=-Xcompiler-option
+I/zygote  ( 1181): option[32]=-Xms64m
+I/zygote  ( 1181): option[33]=-Xcompiler-option
+I/zygote  ( 1181): option[34]=--runtime-arg
+I/zygote  ( 1181): option[35]=-Xcompiler-option
+I/zygote  ( 1181): option[36]=-Xmx512m
+I/zygote  ( 1181): option[37]=-Ximage-compiler-option
+I/zygote  ( 1181): option[38]=--instruction-set-variant=x86_64
+I/zygote  ( 1181): option[39]=-Xcompiler-option
+I/zygote  ( 1181): option[40]=--instruction-set-variant=x86_64
+I/zygote  ( 1181): option[41]=-Ximage-compiler-option
+I/zygote  ( 1181): option[42]=--instruction-set-features=default
+I/zygote  ( 1181): option[43]=-Xcompiler-option
+I/zygote  ( 1181): option[44]=--instruction-set-features=default
+I/zygote  ( 1181): option[45]=-Duser.locale=en-US
+I/zygote  ( 1181): option[46]=-XX:NativeBridge=libnb.so
+I/zygote  ( 1181): option[47]=--cpu-abilist=x86,armeabi-v7a,armeabi
+I/zygote  ( 1181): option[48]=-Xfingerprint:Android-x86/android_x86_64/x86_64:9/PI/lh03251128:userdebug/test-keys
+I/AudioFlinger( 1196): loadHwModule() Loaded usb audio interface, handle 26
+W/APM_AudioPolicyManager( 1196): Output device 00000002 unreachable
+E/APM_AudioPolicyManager( 1196): Default device 00000002 is unreachable
+E/APM_AudioPolicyManager( 1196): Failed to open primary output
+E/EffectsConfig( 1196): Could not parse effect configuration in any of the default locations.
+W/AudioPolicyEffects( 1196): Failed to load XML effect configuration, fallback to .conf
+I/        ( 1196): Waiting for activity service
+I/ServiceManager( 1212): Waiting for service package_native...
+I/zygote  ( 1181): VerifyImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+W/ServiceManager( 1212): Service package_native didn't start. Returning NULL
+--------- beginning of system
+E/storaged( 1212): getService package_native failed
+I/storaged( 1212): storaged: Start
+E/storaged( 1212): getDiskStats failed with result NOT_SUPPORTED and size 0
+D/vndksupport( 1198): Loading /vendor/lib64/egl/libGLESv1_CM_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1198): loaded /vendor/lib64/egl/libGLESv1_CM_swiftshader.so
+D/vndksupport( 1198): Loading /vendor/lib64/egl/libGLESv2_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1198): loaded /vendor/lib64/egl/libGLESv2_swiftshader.so
+I/ConfigStore( 1198): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+I/ConfigStore( 1198): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+W/SurfaceFlinger( 1198): no suitable EGLConfig found, trying a simpler query
+I/SurfaceFlinger( 1198): EGL information: format=0x1
+I/SurfaceFlinger( 1198): vendor    : Android
+I/SurfaceFlinger( 1198): version   : 1.4 Android META-EGL
+I/SurfaceFlinger( 1198): extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_get_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_ANDROID_get_frame_timestamps EGL_EXT_surface_SMPTE2086_metadata EGL_EXT_surface_CTA861_3_metadata EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_surfaceless_context EGL_ANDROID_recordable 
+I/SurfaceFlinger( 1198): Client API: OpenGL_ES
+I/SurfaceFlinger( 1198): EGLSurface: 8-8-8-8, config=0x2e
+I/SurfaceFlinger( 1198): OpenGL ES informations: format=0x1
+I/SurfaceFlinger( 1198): vendor    : Google Inc.
+I/SurfaceFlinger( 1198): renderer  : Google SwiftShader
+I/SurfaceFlinger( 1198): version   : OpenGL ES 3.0 SwiftShader 4.1.0.7
+I/SurfaceFlinger( 1198): extensions: GL_EXT_debug_marker GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_EGL_sync GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_framebuffer_object GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_3D GL_OES_vertex_array_object GL_OES_vertex_half_float GL_EXT_blend_minmax GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_texture_compression_dxt1 GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_rg GL_ARB_texture_rectangle GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_instanced_arrays GL_ANG
+I/SurfaceFlinger( 1198): GL_MAX_TEXTURE_SIZE = 8192
+I/SurfaceFlinger( 1198): GL_MAX_VIEWPORT_DIMS = 8192
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.graphics.composer@2.1::IComposer/default in either framework or device manifest.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.composer@2.1-impl.so from current namespace instead of sphal namespace.
+I/ComposerHal( 1198): falling back to gralloc module
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+W/gralloc ( 1198): FBIOPUT_VSCREENINFO failed, page flipping not supported
+W/gralloc ( 1198): page flipping not supported (yres_virtual=720, requested=1440)
+I/gralloc ( 1198): using (fd=20)
+I/gralloc ( 1198): id           = bochsdrmfb
+I/gralloc ( 1198): xres         = 1280 px
+I/gralloc ( 1198): yres         = 720 px
+I/gralloc ( 1198): xres_virtual = 1280 px
+I/gralloc ( 1198): yres_virtual = 720 px
+I/gralloc ( 1198): bpp          = 32
+I/gralloc ( 1198): r            = 16:8
+I/gralloc ( 1198): g            =  8:8
+I/gralloc ( 1198): b            =  0:8
+I/gralloc ( 1198): width        = 203 mm (160.157639 dpi)
+I/gralloc ( 1198): height       = 114 mm (160.421051 dpi)
+I/gralloc ( 1198): refresh rate = 60.00 Hz
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+E/HWComposer( 1198): getSupportedPerFrameMetadata: getSupportedPerFrameMetadata failed for display 0: Unsupported (8)
+I/surfaceflinger( 1198): type=1400 audit(0.0:226): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=472 ioctlcmd=0x4b3a scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+D/DisplayDevice( 1198): Open /dev/tty0 OK
+I/surfaceflinger( 1198): type=1400 audit(0.0:227): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=472 ioctlcmd=0x5603 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1198): type=1400 audit(0.0:228): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=472 ioctlcmd=0x5606 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1198): type=1400 audit(0.0:229): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=472 ioctlcmd=0x5607 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1198): type=1400 audit(0.0:230): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=472 ioctlcmd=0x5401 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.allocator@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/gralloc ( 1198): Registering a buffer in the process that created it. This may cause memory ordering problems.
+I/chatty  ( 1198): uid=0(root) /system/bin/surfaceflinger identical 1 line
+D/gralloc ( 1198): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/DisplayDevice( 1198): Open /dev/tty0 OK
+I/ServiceManager( 1212): Waiting for service package_native...
+D/SurfaceFlinger( 1198): shader cache generated - 24 shaders in 333.843689 ms
+D/SurfaceFlinger( 1198): Set power mode=2, type=0 flinger=0x7e0ead867000
+D/SurfaceFlinger( 1198): Finished set power mode=2, type=0
+I/SurfaceFlinger( 1198): auto set density to 160
+D/vndksupport( 1308): Loading /vendor/lib64/egl/libEGL_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1308): loaded /vendor/lib64/egl/libEGL_swiftshader.so
+I/ServiceManager( 1212): Waiting for service package_native...
+D/vndksupport( 1308): Loading /vendor/lib64/egl/libGLESv1_CM_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1308): loaded /vendor/lib64/egl/libGLESv1_CM_swiftshader.so
+D/vndksupport( 1308): Loading /vendor/lib64/egl/libGLESv2_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1308): loaded /vendor/lib64/egl/libGLESv2_swiftshader.so
+I/ConfigStore( 1308): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+I/ConfigStore( 1308): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+D/BootAnimation( 1308): BootAnimationShownTiming start time: 17767ms
+D/gralloc ( 1198): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/vndksupport( 1308): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1308): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+==== 1792270627925
+20:57:07 up 1 min,  0 users,  load average: 7.05, 1.94, 0.67
+running
+
+--------- beginning of main
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+I/.gms.persisten( 1692): The ClassLoaderContext is a special shared library.
+I/OMXMaster( 1213): makeComponentInstance(OMX.ffmpeg.wmv.decoder) in omx@1.0-service process
+V/FFmpegOMXPlugin( 1213): makeComponentInstance 'OMX.ffmpeg.wmv.decoder'
+I/.gms.persisten( 1692): The ClassLoaderContext is a special shared library.
+D/SoftFFmpegVideo( 1213): SoftFFmpegVideo component: OMX.ffmpeg.wmv.decoder codingType=5 appData: 0xf14378c0
+D/SoftFFmpegVideo( 1213): 0xf1437780 initDecoder: 0xee33b400
+E/OMXNodeInstance( 1213): getExtensionIndex(0xf1143000:ffmpeg.wmv.decoder, OMX.google.android.index.configureVideoTunnelMode) ERROR: UnsupportedIndex(0x8000101a)
+E/OMXNodeInstance( 1213): getExtensionIndex(0xf1143000:ffmpeg.wmv.decoder, OMX.google.android.index.enableAndroidNativeBuffers) ERROR: UnsupportedIndex(0x8000101a)
+D/SoftFFmpegVideo( 1213): 0xf1437780 deInitDecoder: 0xee33b400
+I/.gms.persisten( 1692): The ClassLoaderContext is a special shared library.
+I/OMXClient( 1209): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.h264.encoder) in omx@1.0-service process
+--------- beginning of system
+V/vold    ( 1169): /dev/block/vold/disk:11,0: LABEL="Android-x86 9.0-r2 (x86_64)" TYPE="iso9660" 
+V/vold    ( 1169): 
+I/vold    ( 1169): Detect iso9660
+V/vold    ( 1169): /system/bin/blkid
+V/vold    ( 1169):     -c
+V/vold    ( 1169):     /dev/null
+V/vold    ( 1169):     -s
+V/vold    ( 1169):     TYPE
+V/vold    ( 1169):     -s
+V/vold    ( 1169):     UUID
+V/vold    ( 1169):     -s
+V/vold    ( 1169):     LABEL
+V/vold    ( 1169):     /dev/block/vold/public:11,0
+W/OMXUtils( 1209): do not know color format 0x7f000789 = 2130708361
+I/.gms.persisten( 1692): The ClassLoaderContext is a special shared library.
+I/OMXClient( 1209): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.h263.encoder) in omx@1.0-service process
+I/oid.setupwizar( 1589): Background concurrent copying GC freed 54670(2MB) AllocSpace objects, 4(80KB) LOS objects, 49% free, 2MB/4MB, paused 2.055ms total 320.875ms
+I/SoftMPEG4Encoder( 1213): Construct SoftMPEG4Encoder
+W/OMXUtils( 1209): do not know color format 0x7f000789 = 2130708361
+E/OMXNodeInstance( 1213): getConfig(0xf1143000:google.h263.encoder, ConfigAndroidIntraRefresh(0x6f60000a)) ERROR: Undefined(0x80001001)
+I/OMXClient( 1209): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.mpeg4.encoder) in omx@1.0-service process
+I/SoftMPEG4Encoder( 1213): Construct SoftMPEG4Encoder
+W/OMXUtils( 1209): do not know color format 0x7f000789 = 2130708361
+E/OMXNodeInstance( 1213): getConfig(0xf142d4a0:google.mpeg4.encoder, ConfigAndroidIntraRefresh(0x6f60000a)) ERROR: Undefined(0x80001001)
+I/OMXClient( 1209): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vp8.encoder) in omx@1.0-service process
+V/vold    ( 1169): /dev/block/vold/public:11,0: LABEL="Android-x86 9.0-r2 (x86_64)" TYPE="iso9660" 
+V/vold    ( 1169): 
+I/Binder:1169_4( 1169): type=1400 audit(0.0:296): avc: denied { mount } for name="/" dev="sr0" ino=1856 scontext=u:r:vold:s0 tcontext=u:object_r:unlabeled:s0 tclass=filesystem permissive=1
+W/OMXUtils( 1209): do not know color format 0x7f000789 = 2130708361
+E/OMXNodeInstance( 1213): getConfig(0xf142d5c0:google.vp8.encoder, ConfigAndroidIntraRefresh(0x6f60000a)) ERROR: Undefined(0x80001001)
+I/OMXClient( 1209): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vp9.encoder) in omx@1.0-service process
+W/OMXUtils( 1209): do not know color format 0x7f000789 = 2130708361
+E/OMXNodeInstance( 1213): getConfig(0xf142d5c0:google.vp9.encoder, ConfigAndroidIntraRefresh(0x6f60000a)) ERROR: Undefined(0x80001001)
+D/MediaCodecList( 1209): ignored a null builder
+I/OMXClient( 1478): IOmx service obtained
+I/OMXClient( 1331): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+E/OMXNodeInstance( 1213): getConfig(0xf142d7a0:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+E/OMXNodeInstance( 1213): getConfig(0xf142d680:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/HwBinder:1213_3( 1213): type=1400 audit(0.0:297): avc: denied { read } for name="lib" dev="tmpfs" ino=8230 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 9 lines
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+D/SystemUIBootTiming( 1478): StartServicescom.android.systemui.recents.Recents took to complete: 3408ms
+W/SystemUIService( 1478): Initialization of com.android.systemui.recents.Recents took 3471 ms
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 8 lines
+I/vol.Events( 1478): writeEvent collection_started
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/vol.Events( 1478): writeEvent external_ringer_mode_changed normal
+I/vol.Events( 1478): writeEvent internal_ringer_mode_changed normal
+I/FFmpegExtractor( 1207): android-source:0x76d04fe23a00
+I/FFmpegExtractor( 1207): android-source:0x76d051a62400
+I/FFmpegExtractor( 1207): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+I/FFmpegExtractor( 1207): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+I/OMXClient( 1331): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+E/OMXNodeInstance( 1213): getConfig(0xf142d680:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/OMXClient( 1478): IOmx service obtained
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 3 lines
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+E/OMXNodeInstance( 1213): getConfig(0xf142d440:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 14 lines
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/oid.setupwizar( 1589): Background concurrent copying GC freed 24730(1200KB) AllocSpace objects, 2(80KB) LOS objects, 49% free, 3MB/6MB, paused 523us total 1.073s
+W/AudioService( 1331): onLoadSoundEffects(), Error 1 while loading samples
+I/FFmpegExtractor( 1207): android-source:0x76d051a62400
+I/FFmpegExtractor( 1207): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+I/FFmpegExtractor( 1207): android-source:0x76d04fe23a00
+I/FFmpegExtractor( 1207): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+I/OMXClient( 1478): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+E/OMXNodeInstance( 1213): getConfig(0xf142d440:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 2 lines
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/OMXClient( 1331): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 2 lines
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+E/OMXNodeInstance( 1213): getConfig(0xf142d680:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x79320622c100, 32768)
+E/ActivityThread( 1692): Failed to find provider info for com.google.android.gsf.gservices
+==== 1792270865084
+21:01:04 up 0 min,  0 users,  load average: 2.24, 0.49, 0.16
+running
+
+--------- beginning of main
+I/zygote  ( 1181): option[30]=--runtime-arg
+I/zygote  ( 1181): option[31]=-Xcompiler-option
+I/zygote  ( 1181): option[32]=-Xms64m
+I/zygote  ( 1181): option[33]=-Xcompiler-option
+I/zygote  ( 1181): option[34]=--runtime-arg
+I/zygote  ( 1181): option[35]=-Xcompiler-option
+I/zygote  ( 1181): option[36]=-Xmx512m
+I/zygote  ( 1181): option[37]=-Ximage-compiler-option
+I/zygote  ( 1181): option[38]=--instruction-set-variant=x86_64
+I/zygote  ( 1181): option[39]=-Xcompiler-option
+I/zygote  ( 1181): option[40]=--instruction-set-variant=x86_64
+I/zygote  ( 1181): option[41]=-Ximage-compiler-option
+I/zygote  ( 1181): option[42]=--instruction-set-features=default
+I/zygote  ( 1181): option[43]=-Xcompiler-option
+I/zygote  ( 1181): option[44]=--instruction-set-features=default
+I/zygote  ( 1181): option[45]=-Duser.locale=en-US
+I/zygote  ( 1181): option[46]=-XX:NativeBridge=libnb.so
+I/zygote  ( 1181): option[47]=--cpu-abilist=x86,armeabi-v7a,armeabi
+I/zygote  ( 1181): option[48]=-Xfingerprint:Android-x86/android_x86_64/x86_64:9/PI/lh03251128:userdebug/test-keys
+W/MediaCodecsXmlParser( 1214): unable to open media codecs configuration xml file: /data/misc/media/media_codecs_profiling_results.xml
+W/MediaCodecsXmlParser( 1214): parseTopLevelXMLFile(/data/misc/media/media_codecs_profiling_results.xml) failed
+I/ServiceManagement( 1214): Removing namespace from process name android.hardware.media.omx@1.0-service to omx@1.0-service.
+I/media.codec( 1214): IOmx HAL service created.
+I/bt_a2dp_hw( 1196): adev_open:  adev_open in A2dp_hw module
+I/AudioFlinger( 1196): loadHwModule() Loaded a2dp audio interface, handle 18
+D/vndksupport( 1185): Loading /vendor/lib/hw/audio.usb.default.so from current namespace instead of sphal namespace.
+I/AudioFlinger( 1196): loadHwModule() Loaded usb audio interface, handle 26
+W/APM_AudioPolicyManager( 1196): Output device 00000002 unreachable
+E/APM_AudioPolicyManager( 1196): Default device 00000002 is unreachable
+E/APM_AudioPolicyManager( 1196): Failed to open primary output
+E/EffectsConfig( 1196): Could not parse effect configuration in any of the default locations.
+W/AudioPolicyEffects( 1196): Failed to load XML effect configuration, fallback to .conf
+I/        ( 1196): Waiting for activity service
+I/zygote64( 1180): VerifyImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86_64 --instruction-set=x86_64 --verify
+I/patchoat( 1301): type=1400 audit(0.0:222): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=7226 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/patchoat( 1301): type=1400 audit(0.0:223): avc: denied { read } for name="vendor" dev="tmpfs" ino=7226 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/zygote  ( 1181): VerifyImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+I/ServiceManager( 1212): Waiting for service package_native...
+D/vndksupport( 1198): Loading /vendor/lib64/egl/libGLESv1_CM_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1198): loaded /vendor/lib64/egl/libGLESv1_CM_swiftshader.so
+D/vndksupport( 1198): Loading /vendor/lib64/egl/libGLESv2_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1198): loaded /vendor/lib64/egl/libGLESv2_swiftshader.so
+I/ConfigStore( 1198): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+I/ConfigStore( 1198): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+W/SurfaceFlinger( 1198): no suitable EGLConfig found, trying a simpler query
+I/SurfaceFlinger( 1198): EGL information: format=0x1
+I/SurfaceFlinger( 1198): vendor    : Android
+I/SurfaceFlinger( 1198): version   : 1.4 Android META-EGL
+I/SurfaceFlinger( 1198): extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_get_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_ANDROID_get_frame_timestamps EGL_EXT_surface_SMPTE2086_metadata EGL_EXT_surface_CTA861_3_metadata EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_surfaceless_context EGL_ANDROID_recordable 
+I/SurfaceFlinger( 1198): Client API: OpenGL_ES
+I/SurfaceFlinger( 1198): EGLSurface: 8-8-8-8, config=0x2e
+I/SurfaceFlinger( 1198): OpenGL ES informations: format=0x1
+I/SurfaceFlinger( 1198): vendor    : Google Inc.
+I/SurfaceFlinger( 1198): renderer  : Google SwiftShader
+I/SurfaceFlinger( 1198): version   : OpenGL ES 3.0 SwiftShader 4.1.0.7
+I/SurfaceFlinger( 1198): extensions: GL_EXT_debug_marker GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_EGL_sync GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_framebuffer_object GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_3D GL_OES_vertex_array_object GL_OES_vertex_half_float GL_EXT_blend_minmax GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_texture_compression_dxt1 GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_rg GL_ARB_texture_rectangle GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_instanced_arrays GL_ANG
+I/SurfaceFlinger( 1198): GL_MAX_TEXTURE_SIZE = 8192
+I/SurfaceFlinger( 1198): GL_MAX_VIEWPORT_DIMS = 8192
+W/hwservicemanager( 1114): getTransport: Cannot find entry android.hardware.graphics.composer@2.1::IComposer/default in either framework or device manifest.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.composer@2.1-impl.so from current namespace instead of sphal namespace.
+W/ServiceManager( 1212): Service package_native didn't start. Returning NULL
+--------- beginning of system
+E/storaged( 1212): getService package_native failed
+I/ComposerHal( 1198): falling back to gralloc module
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+W/gralloc ( 1198): FBIOPUT_VSCREENINFO failed, page flipping not supported
+W/gralloc ( 1198): page flipping not supported (yres_virtual=720, requested=1440)
+I/gralloc ( 1198): using (fd=20)
+I/gralloc ( 1198): id           = bochsdrmfb
+I/gralloc ( 1198): xres         = 1280 px
+I/gralloc ( 1198): yres         = 720 px
+I/gralloc ( 1198): xres_virtual = 1280 px
+I/gralloc ( 1198): yres_virtual = 720 px
+I/gralloc ( 1198): bpp          = 32
+I/gralloc ( 1198): r            = 16:8
+I/gralloc ( 1198): g            =  8:8
+I/gralloc ( 1198): b            =  0:8
+I/gralloc ( 1198): width        = 203 mm (160.157639 dpi)
+I/gralloc ( 1198): height       = 114 mm (160.421051 dpi)
+I/gralloc ( 1198): refresh rate = 60.00 Hz
+I/storaged( 1212): storaged: Start
+E/storaged( 1212): getDiskStats failed with result NOT_SUPPORTED and size 0
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+E/HWComposer( 1198): getSupportedPerFrameMetadata: getSupportedPerFrameMetadata failed for display 0: Unsupported (8)
+I/surfaceflinger( 1198): type=1400 audit(0.0:224): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=6915 ioctlcmd=0x4b3a scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1198): type=1400 audit(0.0:225): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=6915 ioctlcmd=0x5603 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1198): type=1400 audit(0.0:226): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=6915 ioctlcmd=0x5606 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+D/DisplayDevice( 1198): Open /dev/tty0 OK
+I/surfaceflinger( 1198): type=1400 audit(0.0:227): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=6915 ioctlcmd=0x5607 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1198): type=1400 audit(0.0:228): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=6915 ioctlcmd=0x5401 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/android.hardware.graphics.allocator@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/gralloc ( 1198): Registering a buffer in the process that created it. This may cause memory ordering problems.
+I/chatty  ( 1198): uid=0(root) /system/bin/surfaceflinger identical 1 line
+D/gralloc ( 1198): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/DisplayDevice( 1198): Open /dev/tty0 OK
+D/SurfaceFlinger( 1198): shader cache generated - 24 shaders in 350.675781 ms
+D/SurfaceFlinger( 1198): Set power mode=2, type=0 flinger=0x7706e1867000
+D/SurfaceFlinger( 1198): Finished set power mode=2, type=0
+I/ServiceManager( 1212): Waiting for service package_native...
+I/SurfaceFlinger( 1198): auto set density to 160
+D/vndksupport( 1309): Loading /vendor/lib64/egl/libEGL_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1309): loaded /vendor/lib64/egl/libEGL_swiftshader.so
+D/vndksupport( 1309): Loading /vendor/lib64/egl/libGLESv1_CM_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1309): loaded /vendor/lib64/egl/libGLESv1_CM_swiftshader.so
+D/vndksupport( 1309): Loading /vendor/lib64/egl/libGLESv2_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1309): loaded /vendor/lib64/egl/libGLESv2_swiftshader.so
+I/ConfigStore( 1309): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+I/ConfigStore( 1309): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+D/BootAnimation( 1309): BootAnimationShownTiming start time: 17709ms
+D/gralloc ( 1198): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/vndksupport( 1309): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1309): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/vndksupport( 1309): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+I/ServiceManager( 1212): Waiting for service package_native...
+D/gralloc ( 1198): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/vndksupport( 1198): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/Zygote  ( 1180): begin preload
+I/Zygote  ( 1180): Installing ICU cache reference pinning...
+I/Zygote  ( 1180): Preloading ICU data...
+I/zygote  ( 1181): Explicit concurrent copying GC freed 186(9KB) AllocSpace objects, 0(0B) LOS objects, 98% free, 22KB/1558KB, paused 8.382ms total 73.931ms
+I/zygote  ( 1181): Explicit concurrent copying GC freed 5(32KB) AllocSpace objects, 0(0B) LOS objects, 98% free, 22KB/1558KB, paused 156us total 24.501ms
+D/Zygote32Timing( 1181): PostZygoteInitGC took to complete: 131ms
+D/Zygote32Timing( 1181): ZygoteInit took to complete: 147ms
+I/main    ( 1181): type=1400 audit(0.0:239): avc: denied { mounton } for path="/" dev="tmpfs" ino=887 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+I/Zygote  ( 1181): Accepting command socket connections
+I/ServiceManager( 1212): Waiting for service package_native...
+D/Zygote64Timing( 1180): BeginIcuCachePinning took to complete: 252ms
+I/Zygote  ( 1180): Preloading classes...
+==== 1792271342991
+21:09:03 up 2 min,  0 users,  load average: 5.85, 2.30, 0.85
+running
+
+--------- beginning of main
+W/dex2oat ( 1432): Verification of void PP.a(java.lang.Throwable, java.lang.Throwable) took 101.098ms
+W/dex2oat ( 1432): Verification of java.lang.Object Up.createFromParcel(android.os.Parcel) took 147.300ms
+W/dex2oat ( 1432): Verification of java.lang.Object Zt.createFromParcel(android.os.Parcel) took 154.546ms
+W/dex2oat ( 1432): Verification of boolean aAE.handleMessage(android.os.Message) took 109.469ms
+W/dex2oat ( 1432): Verification of android.content.Intent aLF.a(android.content.Context, boolean) took 140.628ms
+W/dex2oat ( 1432): Verification of void aLJ.<init>(android.app.Activity, aLQ, aLO) took 110.527ms
+W/dex2oat ( 1432): Verification of void aON.<init>(org.chromium.chrome.browser.autofill.keyboard_accessory.bar_component.KeyboardAccessoryView) took 156.785ms
+W/dex2oat ( 1432): Verification of void ach.<init>() took 146.766ms
+W/dex2oat ( 1432): Verification of java.lang.String ajG.toString() took 141.675ms
+W/dex2oat ( 1432): Verification of void android.support.design.widget.TabLayout.<init>(android.content.Context, android.util.AttributeSet, byte) took 142.406ms
+W/dex2oat ( 1432): Verification of void android.support.design.widget.TextInputLayout.<init>(android.content.Context, android.util.AttributeSet, byte) took 151.513ms
+W/dex2oat ( 1432): Verification of void android.support.v7.widget.ContentFrameLayout.onMeasure(int, int) took 149.969ms
+W/dex2oat ( 1432): Verification of void apz.<clinit>() took 140.294ms
+W/dex2oat ( 1432): Verification of void apv.<init>() took 150.339ms
+W/dex2oat ( 1432): Verification of void bFX.<clinit>() took 157.138ms
+W/dex2oat ( 1432): Verification of void bFh.run() took 167.360ms
+W/dex2oat ( 1432): Verification of void bNm.b() took 147.674ms
+W/dex2oat ( 1432): Verification of void cbP.<init>(org.chromium.chrome.browser.toolbar.top.ToolbarPhone, java.lang.Class, java.lang.String) took 141.406ms
+W/dex2oat ( 1432): Verification of void cbI.<init>(org.chromium.chrome.browser.toolbar.top.ToolbarControlContainer, cbM) took 148.210ms
+W/dex2oat ( 1432): Verification of void cbN.onLayoutChange(android.view.View, int, int, int, int, int, int, int, int) took 147.350ms
+W/dex2oat ( 1432): Verification of void cbQ.<init>(org.chromium.chrome.browser.toolbar.top.ToolbarPhone, boolean, int, int, int, int, int, int) took 141.587ms
+W/dex2oat ( 1432): Verification of void chI.<init>(org.chromium.chrome.browser.widget.accessibility.AccessibilityTabModelListItem) took 141.583ms
+W/dex2oat ( 1432): Verification of int cml.b(java.lang.String) took 140.772ms
+W/dex2oat ( 1432): Verification of void com.google.ipc.invalidation.ticl.android2.TiclService.onHandleIntent(android.content.Intent) took 159.771ms
+W/dex2oat ( 1432): Verification of void cpb.run() took 150.410ms
+W/dex2oat ( 1432): Verification of void ctz.a(android.content.res.Configuration) took 151.463ms
+W/dex2oat ( 1432): Verification of void dz.a(android.view.View) took 151.797ms
+W/dex2oat ( 1432): Verification of java.lang.String jA.toString() took 148.313ms
+W/dex2oat ( 1432): Verification of void nP.a(nf, mQ) took 166.916ms
+W/dex2oat ( 1432): Verification of void org.chromium.chrome.browser.autofill.keyboard_accessory.ManualFillingBridge.<init>(long, org.chromium.ui.base.WindowAndroid) took 150.531ms
+W/dex2oat ( 1432): Verification of void Sp.a(byte[], long, long, long) took 139.945ms
+W/dex2oat ( 1432): Verification of RI RI.a(RC, RK, Rs, Sh, QP, RA) took 155.427ms
+W/dex2oat ( 1432): Verification of void Tc.<clinit>() took 278.662ms
+W/dex2oat ( 1432): Verification of void aYf.<clinit>() took 148.470ms
+W/dex2oat ( 1432): Verification of void aio.onLayout(boolean, int, int, int, int) took 145.156ms
+W/dex2oat ( 1432): Verification of boolean ajC.a(ajG) took 106.166ms
+W/dex2oat ( 1432): Verification of void android.support.v7.widget.ActionMenuView.onMeasure(int, int) took 150.010ms
+W/dex2oat ( 1432): Verification of void bDx.<init>() took 155.922ms
+W/dex2oat ( 1432): Verification of void org.chromium.chrome.browser.ntp.NewTabPageLayout.onFinishInflate() took 144.451ms
+W/dex2oat ( 1432): Verification of void org.chromium.chrome.browser.preferences.SyncAndServicesPreferences.onCreate(android.os.Bundle) took 146.811ms
+W/dex2oat ( 1432): Verification of void org.chromium.content.browser.ContactsDialogHost.showDialog(boolean, boolean, boolean, boolean, java.lang.String) took 168.222ms
+W/dex2oat ( 1432): Verification of sw aSS.a(android.view.ViewGroup, int) took 148.630ms
+W/dex2oat ( 1432): Verification of boolean aMv.start(int, boolean) took 148.710ms
+W/dex2oat ( 1432): Verification of auK aqY.b() took 148.938ms
+W/dex2oat ( 1432): Verification of void arD.a(asD) took 144.660ms
+W/dex2oat ( 1432): Verification of boolean gW.a(android.content.Intent) took 144.589ms
+W/dex2oat ( 1432): Verification of void kk.a(android.widget.PopupWindow, boolean) took 143.956ms
+W/dex2oat ( 1432): Verification of void kI.onCreate(android.os.Bundle) took 235.675ms
+I/dex2oat ( 1432): Explicit concurrent copying GC freed 54628(15MB) AllocSpace objects, 0(0B) LOS objects, 95% free, 76KB/1612KB, paused 2.270ms total 676.549ms
+I/dex2oat ( 1432): Explicit concurrent copying GC freed 997(247KB) AllocSpace objects, 0(0B) LOS objects, 95% free, 76KB/1612KB, paused 192us total 10.533ms
+I/dex2oat ( 1432): dex2oat took 18.298s (14.575s cpu) (threads: 4) arena alloc=0B (0B) java alloc=76KB (78496B) native alloc=7MB (8054008B) free=2MB (2956040B)
+V/installed( 1204): DexInv: --- END '/system/app/Chrome/Chrome.apk' (success) ---
+I/PackageManager.DexOptimizer( 1334): Running dexopt (dexoptNeeded=1) on: /system/app/Chrome/Chrome.apk pkg=com.android.chrome isa=x86 dexoptFlags=public,enable_hidden_api_checks targetFilter=verify oatDir=null classLoaderContext=PCL[]
+V/installed( 1204): DexInv: --- BEGIN '/system/app/Chrome/Chrome.apk' ---
+W/dex2oat ( 1443): Unexpected CPU variant for X86 using defaults: x86_64
+W/dex2oat ( 1443): Mismatch between dex2oat instruction set features (ISA: X86 Feature string: -ssse3,-sse4.1,-sse4.2,-avx,-avx2,-popcnt) and those of dex2oat executable (ISA: X86 Feature string: ssse3,sse4.1,sse4.2,-avx,-avx2,popcnt) for the command line:
+W/dex2oat ( 1443): /system/bin/dex2oat --zip-fd=16 --zip-location=Chrome.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@app@Chrome@Chrome.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/app/Chrome --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:29 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+I/dex2oat ( 1443): /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=18 --compiler-filter=verify --classpath-dir=/system/app/Chrome --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --compilation-reason=boot
+--------- beginning of system
+E/storaged( 1211): getDiskStats failed with result NOT_SUPPORTED and size 0
+W/dex2oat ( 1443): Verification of void BH.a(Fg, java.lang.String) took 139.283ms
+W/dex2oat ( 1443): Verification of java.lang.String BN.a(java.lang.String, java.lang.String, java.util.Collection, boolean) took 149.299ms
+W/dex2oat ( 1443): Verification of boolean Fz.handleMessage(android.os.Message) took 149.414ms
+W/dex2oat ( 1443): Verification of java.lang.Object JB.createFromParcel(android.os.Parcel) took 102.328ms
+W/dex2oat ( 1443): Verification of void org.chromium.chrome.browser.preferences.datareduction.DataReductionStatsPreference.onBindView(android.view.View) took 109.768ms
+W/dex2oat ( 1443): Verification of void org.chromium.chrome.browser.webapps.WebappLauncherActivity.onCreate(android.os.Bundle) took 160.310ms
+W/dex2oat ( 1443): Verification of void org.chromium.media.MediaCodecBridge.requestKeyFrameSoon() took 122.070ms
+W/dex2oat ( 1443): Verification of void qB.run() took 150.494ms
+W/dex2oat ( 1443): Verification of void rw.onMeasure(int, int) took 181.307ms
+W/dex2oat ( 1443): Verification of void BX.<init>(android.content.Context, java.lang.String, java.lang.String, com.google.android.gms.cast.framework.CastOptions, BH, Cp) took 155.160ms
+W/dex2oat ( 1443): Verification of int RI.a(java.lang.Object, byte[], int, int, int, int, int, int, long, int, long, Qo) took 144.484ms
+W/dex2oat ( 1443): Verification of void QD.g(java.util.List) took 151.148ms
+W/dex2oat ( 1443): Verification of int RI.b(java.lang.Object) took 144.000ms
+W/dex2oat ( 1443): Verification of void Tc.<clinit>() took 220.933ms
+W/dex2oat ( 1443): Verification of void aQW.<clinit>() took 155.749ms
+W/dex2oat ( 1443): Verification of void aYn.a(float, float, float, float) took 155.800ms
+W/dex2oat ( 1443): Verification of void aYf.a(long, long) took 157.324ms
+W/dex2oat ( 1443): Verification of boolean ajC.a(ajG) took 151.656ms
+W/dex2oat ( 1443): Verification of void bMa.a(java.util.Map) took 157.535ms
+W/dex2oat ( 1443): Verification of void bYk.<init>(android.content.Context, org.chromium.chrome.browser.compositor.layouts.content.TabContentManager, bWK) took 160.037ms
+W/dex2oat ( 1443): Verification of void bYt.a(android.content.res.ColorStateList, boolean) took 167.574ms
+W/dex2oat ( 1443): Verification of void brm.a(java.lang.String, java.lang.String, int, int, org.chromium.base.Callback) took 141.439ms
+W/dex2oat ( 1443): Verification of void cDc.<init>() took 146.837ms
+W/dex2oat ( 1443): Verification of void ciQ.<init>(org.chromium.chrome.browser.widget.findinpage.FindToolbar) took 143.114ms
+W/dex2oat ( 1443): Verification of int[] cra.a(android.widget.ListView) took 148.644ms
+W/dex2oat ( 1443): Verification of boolean gF.onTransact(int, android.os.Parcel, android.os.Parcel, int) took 146.006ms
+W/dex2oat ( 1443): Verification of boolean org.chromium.chrome.browser.BluetoothChooserDialog.a() took 141.560ms
+W/dex2oat ( 1443): Verification of void agS.a(ahj, axF) took 158.657ms
+W/dex2oat ( 1443): Verification of cgx blv.a(android.view.ViewGroup) took 140.943ms
+W/dex2oat ( 1443): Verification of void com.google.android.gms.instantapps.internal.RoutingOptions.writeToParcel(android.os.Parcel, int) took 137.740ms
+W/dex2oat ( 1443): Verification of void org.chromium.chrome.browser.feedback.ProcessIdFeedbackSource.prepareCompleted(long) took 145.806ms
+W/dex2oat ( 1443): Verification of android.view.inputmethod.InputConnection org.chromium.content.browser.input.ImeAdapterImpl.a(android.view.inputmethod.EditorInfo) took 152.925ms
+W/dex2oat ( 1443): Verification of void bBD.y() took 145.480ms
+W/dex2oat ( 1443): Verification of void bIO.<init>(org.chromium.content_public.browser.RenderFrameHost) took 148.011ms
+W/dex2oat ( 1443): Verification of void lw.onCreate(android.os.Bundle) took 158.962ms
+W/dex2oat ( 1443): Verification of void awg.a(aAk) took 155.059ms
+I/dex2oat ( 1443): Explicit concurrent copying GC freed 54652(9MB) AllocSpace objects, 0(0B) LOS objects, 96% free, 55KB/1591KB, paused 1.297ms total 575.833ms
+I/dex2oat ( 1443): Explicit concurrent copying GC freed 1000(180KB) AllocSpace objects, 0(0B) LOS objects, 96% free, 56KB/1592KB, paused 136us total 142.583ms
+I/dex2oat ( 1443): dex2oat took 19.473s (14.049s cpu) (threads: 4) arena alloc=0B (0B) java alloc=56KB (57480B) native alloc=5MB (6269584B) free=2MB (2643312B)
+V/installed( 1204): DexInv: --- END '/system/app/Chrome/Chrome.apk' (success) ---
+I/system_server( 1334): The ClassLoaderContext is a special shared library.
+I/system_server( 1334): The ClassLoaderContext is a special shared library.
+W/system_server( 1334): Could not open dex files from location: /system/framework/com.android.location.provider.jar
+I/PackageManager.DexOptimizer( 1334): Running dexopt (dexoptNeeded=1) on: /system/priv-app/GmsCore/GmsCore.apk pkg=com.google.android.gms isa=x86 dexoptFlags=public,enable_hidden_api_checks targetFilter=verify oatDir=null classLoaderContext=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar]
+V/installed( 1204): DexInv: --- BEGIN '/system/priv-app/GmsCore/GmsCore.apk' ---
+I/dex2oat ( 1454): type=1400 audit(0.0:279): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1539 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/dex2oat ( 1454): type=1400 audit(0.0:280): avc: denied { read } for name="vendor" dev="tmpfs" ino=1539 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/dex2oat ( 1454): Unexpected CPU variant for X86 using defaults: x86_64
+W/dex2oat ( 1454): Mismatch between dex2oat instruction set features (ISA: X86 Feature string: -ssse3,-sse4.1,-sse4.2,-avx,-avx2,-popcnt) and those of dex2oat executable (ISA: X86 Feature string: ssse3,sse4.1,sse4.2,-avx,-avx2,popcnt) for the command line:
+W/dex2oat ( 1454): /system/bin/dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+I/dex2oat ( 1454): /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=18 --compiler-filter=verify --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --compilation-reason=boot
+W/dex2oat ( 1454): Could not open dex files from location: /system/framework/com.android.location.provider.jar
+W/dex2oat ( 1454): Failed to open classpath dex files
+I/dex2oat ( 1454): Large app, accepted running with swap.
+W/dex2oat ( 1454): Verification of void dy.a(ds) took 166.343ms
+W/dex2oat ( 1454): Verification of void ahk.onMeasure(int, int) took 104.981ms
+W/dex2oat ( 1454): Verification of boolean android.support.v7.widget.RecyclerView.a(int, int, android.view.MotionEvent) took 107.043ms
+W/dex2oat ( 1454): Verification of void android.support.wearable.view.ActionPage.<init>(android.content.Context, android.util.AttributeSet, int, int) took 108.698ms
+W/dex2oat ( 1454): Verification of void apz.a(java.io.InputStream) took 188.299ms
+W/dex2oat ( 1454): Verification of void rjo.onCreate() took 207.311ms
+W/dex2oat ( 1454): Verification of bppv cwv.a(java.lang.Object) took 105.542ms
+==== 1792271588860
+21:13:08 up 0 min,  0 users,  load average: 2.37, 0.52, 0.17
+running
+
+--------- beginning of main
+I/zygote64( 1178): option[9]=-XX:HeapMinFree=512k
+I/zygote64( 1178): option[10]=-XX:HeapMaxFree=8m
+I/zygote64( 1178): option[11]=-XX:HeapTargetUtilization=0.75
+I/zygote64( 1178): option[12]=-Xusejit:true
+I/zygote64( 1178): option[13]=-Xjitsaveprofilinginfo
+I/zygote64( 1178): option[14]=-XjdwpOptions:suspend=n,server=y
+I/zygote64( 1178): option[15]=-XjdwpProvider:default
+I/zygote64( 1178): option[16]=-Xlockprofthreshold:500
+I/zygote64( 1178): option[17]=-Ximage-compiler-option
+I/zygote64( 1178): option[18]=--runtime-arg
+I/zygote64( 1178): option[19]=-Ximage-compiler-option
+I/zygote64( 1178): option[20]=-Xms64m
+I/zygote64( 1178): option[21]=-Ximage-compiler-option
+I/zygote64( 1178): option[22]=--runtime-arg
+I/zygote64( 1178): option[23]=-Ximage-compiler-option
+I/zygote64( 1178): option[24]=-Xmx64m
+I/zygote64( 1178): option[25]=-Ximage-compiler-option
+I/zygote64( 1178): option[26]=--profile-file=/system/etc/boot-image.prof
+I/zygote64( 1178): option[27]=-Ximage-compiler-option
+I/zygote64( 1178): option[28]=--compiler-filter=speed-profile
+I/zygote64( 1178): option[29]=-Xcompiler-option
+I/zygote64( 1178): option[30]=--runtime-arg
+I/zygote64( 1178): option[31]=-Xcompiler-option
+I/zygote64( 1178): option[32]=-Xms64m
+I/zygote64( 1178): option[33]=-Xcompiler-option
+I/zygote64( 1178): option[34]=--runtime-arg
+I/zygote64( 1178): option[35]=-Xcompiler-option
+I/zygote64( 1178): option[36]=-Xmx512m
+I/zygote64( 1178): option[37]=-Ximage-compiler-option
+I/zygote64( 1178): option[38]=--instruction-set-variant=x86_64
+I/zygote64( 1178): option[39]=-Xcompiler-option
+I/zygote64( 1178): option[40]=--instruction-set-variant=x86_64
+I/zygote64( 1178): option[41]=-Ximage-compiler-option
+I/zygote64( 1178): option[42]=--instruction-set-features=default
+I/zygote64( 1178): option[43]=-Xcompiler-option
+I/zygote64( 1178): option[44]=--instruction-set-features=default
+I/zygote64( 1178): option[45]=-Duser.locale=en-US
+I/zygote64( 1178): option[46]=-XX:NativeBridge=libnb.so
+I/zygote64( 1178): option[47]=--cpu-abilist=x86_64
+I/zygote64( 1178): option[48]=-Xfingerprint:Android-x86/android_x86_64/x86_64:9/PI/lh03251128:userdebug/test-keys
+W/DeviceHAL( 1183): Error from HAL Device in function set_master_volume: Function not implemented
+I/AudioFlinger( 1194): loadHwModule() Loaded primary audio interface, handle 10
+I/AudioFlinger( 1194): openOutput() this 0xe4bbc000, module 10 Device 0x2, SamplingRate 48000, Format 0x000001, Channels 0x3, flags 0x2
+W/DeviceHAL( 1183): Error from HAL Device in function open_output_stream: No such device
+I/AudioHwDevice( 1194): openOutputStream(), HAL returned sampleRate 48000, Format 0x1, channelMask 0x3, status -19
+W/APM_AudioPolicyManager( 1194): Cannot open output stream for device 00000002 on hw module primary
+W/DeviceHAL( 1183): Error from HAL Device in function open_input_stream: Invalid argument
+I/AudioFlinger( 1194): AudioFlinger's thread 0xe4103380 tid=1296 ready to run
+W/AudioFlinger( 1194): no wake lock to update, system not ready yet
+I/zygote  ( 1179): option[0]=-Xzygote
+I/zygote  ( 1179): option[1]=-Xusetombstonedtraces
+I/zygote  ( 1179): option[2]=exit
+I/zygote  ( 1179): option[3]=vfprintf
+I/zygote  ( 1179): option[4]=sensitiveThread
+I/zygote  ( 1179): option[5]=-verbose:gc
+I/zygote  ( 1179): option[6]=-Xms16m
+I/zygote  ( 1179): option[7]=-Xmx512m
+I/zygote  ( 1179): option[8]=-XX:HeapGrowthLimit=192m
+I/zygote  ( 1179): option[9]=-XX:HeapMinFree=512k
+I/zygote  ( 1179): option[10]=-XX:HeapMaxFree=8m
+I/zygote  ( 1179): option[11]=-XX:HeapTargetUtilization=0.75
+I/zygote  ( 1179): option[12]=-Xusejit:true
+I/zygote  ( 1179): option[13]=-Xjitsaveprofilinginfo
+I/zygote  ( 1179): option[14]=-XjdwpOptions:suspend=n,server=y
+I/zygote  ( 1179): option[15]=-XjdwpProvider:default
+I/zygote  ( 1179): option[16]=-Xlockprofthreshold:500
+I/zygote  ( 1179): option[17]=-Ximage-compiler-option
+I/zygote  ( 1179): option[18]=--runtime-arg
+I/zygote  ( 1179): option[19]=-Ximage-compiler-option
+I/zygote  ( 1179): option[20]=-Xms64m
+I/zygote  ( 1179): option[21]=-Ximage-compiler-option
+I/zygote  ( 1179): option[22]=--runtime-arg
+I/zygote  ( 1179): option[23]=-Ximage-compiler-option
+I/zygote  ( 1179): option[24]=-Xmx64m
+I/zygote  ( 1179): option[25]=-Ximage-compiler-option
+I/zygote  ( 1179): option[26]=--profile-file=/system/etc/boot-image.prof
+I/zygote  ( 1179): option[27]=-Ximage-compiler-option
+I/zygote  ( 1179): option[28]=--compiler-filter=speed-profile
+I/zygote  ( 1179): option[29]=-Xcompiler-option
+I/zygote  ( 1179): option[30]=--runtime-arg
+I/zygote  ( 1179): option[31]=-Xcompiler-option
+I/zygote  ( 1179): option[32]=-Xms64m
+I/zygote  ( 1179): option[33]=-Xcompiler-option
+I/zygote  ( 1179): option[34]=--runtime-arg
+I/zygote  ( 1179): option[35]=-Xcompiler-option
+I/zygote  ( 1179): option[36]=-Xmx512m
+I/zygote  ( 1179): option[37]=-Ximage-compiler-option
+I/zygote  ( 1179): option[38]=--instruction-set-variant=x86_64
+I/zygote  ( 1179): option[39]=-Xcompiler-option
+I/zygote  ( 1179): option[40]=--instruction-set-variant=x86_64
+I/zygote  ( 1179): option[41]=-Ximage-compiler-option
+I/zygote  ( 1179): option[42]=--instruction-set-features=default
+I/zygote  ( 1179): option[43]=-Xcompiler-option
+I/zygote  ( 1179): option[44]=--instruction-set-features=default
+I/zygote  ( 1179): option[45]=-Duser.locale=en-US
+I/zygote  ( 1179): option[46]=-XX:NativeBridge=libnb.so
+I/zygote  ( 1179): option[47]=--cpu-abilist=x86,armeabi-v7a,armeabi
+I/zygote  ( 1179): option[48]=-Xfingerprint:Android-x86/android_x86_64/x86_64:9/PI/lh03251128:userdebug/test-keys
+I/omx@1.0-service( 1212): type=1400 audit(0.0:225): avc: denied { read } for name="etc" dev="tmpfs" ino=82 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/MediaCodecsXmlParser( 1212): ignoring Limit specified outside of a Type
+W/MediaCodecsXmlParser( 1212): ignoring Limit specified outside of a Type
+I/bt_a2dp_hw( 1194): adev_open:  adev_open in A2dp_hw module
+I/AudioFlinger( 1194): loadHwModule() Loaded a2dp audio interface, handle 18
+D/vndksupport( 1183): Loading /vendor/lib/hw/audio.usb.default.so from current namespace instead of sphal namespace.
+W/MediaCodecsXmlParser( 1212): unable to open media codecs configuration xml file: /data/misc/media/media_codecs_profiling_results.xml
+W/MediaCodecsXmlParser( 1212): parseTopLevelXMLFile(/data/misc/media/media_codecs_profiling_results.xml) failed
+I/ServiceManagement( 1212): Removing namespace from process name android.hardware.media.omx@1.0-service to omx@1.0-service.
+I/media.codec( 1212): IOmx HAL service created.
+I/AudioFlinger( 1194): loadHwModule() Loaded usb audio interface, handle 26
+I/zygote64( 1178): VerifyImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86_64 --instruction-set=x86_64 --verify
+W/APM_AudioPolicyManager( 1194): Output device 00000002 unreachable
+E/APM_AudioPolicyManager( 1194): Default device 00000002 is unreachable
+E/APM_AudioPolicyManager( 1194): Failed to open primary output
+E/EffectsConfig( 1194): Could not parse effect configuration in any of the default locations.
+W/AudioPolicyEffects( 1194): Failed to load XML effect configuration, fallback to .conf
+I/        ( 1194): Waiting for activity service
+I/patchoat( 1298): type=1400 audit(0.0:226): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=110 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/patchoat( 1298): type=1400 audit(0.0:227): avc: denied { read } for name="vendor" dev="tmpfs" ino=110 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/zygote  ( 1179): VerifyImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+I/ServiceManager( 1210): Waiting for service package_native...
