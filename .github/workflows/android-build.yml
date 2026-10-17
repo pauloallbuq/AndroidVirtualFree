@@ -18,7 +18,7 @@ env:
 defaults:
   run:
     # toda saída também vai para ci-logs/ (as anotações de erro são lidas sem login)
-    shell: bash --noprofile --norc -c 'mkdir -p ci-logs; set -o pipefail; bash -eo pipefail {0} 2>&1 | tee -a ci-logs/steps.log'
+    shell: bash scripts/ci-run.sh {0}
 
 jobs:
   build:
