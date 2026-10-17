@@ -1,0 +1,34 @@
+nativeLibraryDir=/data/app/~~O_0RXgUzVDSUOB2cumZPzg==/com.androidvirtualfree-yytUAW71SvmANbA3zgzaeA==/lib/x86_64
+QEMU emulator version 11.1.2
+Copyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers
+qemu --version (uid do app, sem root): QEMU emulator version 11.1.2
+Copyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers
+tocado: Iniciar Android
+[0 min] 10-17 20:09:06.989  3893  4475 I AVF     : BOOTING Iniciando o Android virtual…
+[1 min] 10-17 20:10:22.717  3893  4475 I AVF     : BOOTING Android carregando (1 min). A primeira inicialização pode levar vários minutos.
+[2 min] 10-17 20:11:42.695  3893  4475 I AVF     : BOOTING Android carregando (2 min). A primeira inicialização pode levar vários minutos.
+[4 min] 10-17 20:13:02.885  3893  4475 I AVF     : BOOTING Android carregando (3 min). A primeira inicialização pode levar vários minutos.
+[5 min] 10-17 20:14:22.481  3893  4475 I AVF     : BOOTING Android carregando (5 min). A primeira inicialização pode levar vários minutos.
+[6 min] 10-17 20:15:42.525  3893  4475 I AVF     : BOOTING Android carregando (6 min). A primeira inicialização pode levar vários minutos.
+[8 min] 10-17 20:17:02.622  3893  4475 I AVF     : BOOTING Android carregando (7 min). A primeira inicialização pode levar vários minutos.
+[9 min] 10-17 20:18:22.720  3893  4475 I AVF     : BOOTING Android carregando (9 min). A primeira inicialização pode levar vários minutos.
+[10 min] 10-17 20:19:42.854  3893  4475 I AVF     : BOOTING Android carregando (10 min). A primeira inicialização pode levar vários minutos.
+[12 min] 10-17 20:21:02.559  3893  4475 I AVF     : BOOTING Android carregando (11 min). A primeira inicialização pode levar vários minutos.
+[13 min] 10-17 20:22:22.146  3893  4475 I AVF     : BOOTING Android carregando (13 min). A primeira inicialização pode levar vários minutos.
+[14 min] 10-17 20:23:41.765  3893  4475 I AVF     : BOOTING Android carregando (14 min). A primeira inicialização pode levar vários minutos.
+[16 min] 10-17 20:25:01.441  3893  4475 I AVF     : BOOTING Android carregando (15 min). A primeira inicialização pode levar vários minutos.
+[17 min] 10-17 20:26:21.029  3893  4475 I AVF     : BOOTING Android carregando (17 min). A primeira inicialização pode levar vários minutos.
+[18 min] 10-17 20:27:40.639  3893  4475 I AVF     : BOOTING Android carregando (18 min). A primeira inicialização pode levar vários minutos.
+[20 min] 10-17 20:29:00.364  3893  4475 I AVF     : BOOTING Android carregando (19 min). A primeira inicialização pode levar vários minutos.
+[21 min] 10-17 20:30:20.482  3893  4475 I AVF     : BOOTING Android carregando (21 min). A primeira inicialização pode levar vários minutos.
+[22 min] 10-17 20:31:40.093  3893  4475 I AVF     : BOOTING Android carregando (22 min). A primeira inicialização pode levar vários minutos.
+[23 min] 10-17 20:32:59.723  3893  4475 I AVF     : BOOTING Android carregando (23 min). A primeira inicialização pode levar vários minutos.
+[25 min] 10-17 20:34:19.273  3893  4475 I AVF     : BOOTING Android carregando (25 min). A primeira inicialização pode levar vários minutos.
+[26 min] 10-17 20:35:38.821  3893  4475 I AVF     : BOOTING Android carregando (26 min). A primeira inicialização pode levar vários minutos.
+[27 min] 10-17 20:36:58.357  3893  4475 I AVF     : BOOTING Android carregando (27 min). A primeira inicialização pode levar vários minutos.
+[29 min] 10-17 20:38:17.991  3893  4475 I AVF     : BOOTING Android carregando (29 min). A primeira inicialização pode levar vários minutos.
+[30 min] 10-17 20:39:37.597  3893  4475 I AVF     : BOOTING Android carregando (30 min). A primeira inicialização pode levar vários minutos.
+[31 min] 10-17 20:40:57.667  3893  4475 I AVF     : BOOTING Android carregando (31 min). A primeira inicialização pode levar vários minutos.
+[33 min] 10-17 20:42:17.811  3893  4475 I AVF     : BOOTING Android carregando (33 min). A primeira inicialização pode levar vários minutos.
+[34 min] 10-17 20:43:37.845  3893  4475 I AVF     : BOOTING Android carregando (34 min). A primeira inicialização pode levar vários minutos.
+FALHA: convidado não completou o boot em 35 min (QEMU TCG aninhado no emulador)
