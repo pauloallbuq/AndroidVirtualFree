@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Virtual Free</string>
+    <string name="subtitle">Android 9 (x86_64) real, rodando em uma máquina virtual QEMU — sem root</string>
+    <string name="btn_start">Iniciar Android</string>
+    <string name="btn_preparing">Preparando…</string>
+    <string name="btn_install">Instalar APK</string>
+    <string name="btn_stop">Encerrar</string>
+
+    <string name="msg_preparing">Preparando a máquina virtual…</string>
+    <string name="msg_downloading">Baixando Android-x86 9.0 (só na primeira vez): %1$d de %2$d MB</string>
+    <string name="msg_extracting">Extraindo kernel do Android…</string>
+    <string name="msg_booting">Iniciando o Android virtual…</string>
+    <string name="msg_booting_wait">Android carregando (%1$d min). A primeira inicialização pode levar vários minutos.</string>
+    <string name="msg_ready">Android virtual pronto (boot em %1$d s)</string>
+    <string name="msg_stopping">Desligando o Android virtual e salvando os dados…</string>
+    <string name="msg_stopped">Máquina virtual encerrada. Seus apps e dados foram mantidos.</string>
+    <string name="msg_error">Erro: %1$s</string>
+    <string name="msg_no_space">Espaço livre insuficiente (%1$d MB). São necessários cerca de 3 GB.</string>
+    <string name="msg_qemu_died">A máquina virtual parou inesperadamente.\n%1$s</string>
+    <string name="msg_boot_timeout">O Android virtual não terminou de iniciar em 40 minutos.</string>
+    <string name="msg_not_running">Inicie o Android virtual primeiro.</string>
+    <string name="msg_installing">Copiando o APK…</string>
+    <string name="msg_installing_pkg">Instalando %1$s dentro do Android virtual…</string>
+    <string name="msg_install_ok">%1$s instalado no Android virtual e aberto.</string>
+    <string name="msg_install_failed">Falha na instalação: %1$s</string>
+
+    <string name="err_not_apk">O arquivo escolhido não é um APK válido.</string>
+    <string name="err_abi">o APK só tem código ARM e o Android virtual é x86_64 (sem tradutor ARM instalado).</string>
+    <string name="err_sdk">o APK exige uma versão do Android mais nova que a 9.</string>
+    <string name="err_storage">espaço insuficiente dentro do Android virtual.</string>
+    <string name="warn_arm_only">Aviso: este APK contém apenas bibliotecas ARM; pode não instalar no convidado x86_64.</string>
+</resources>

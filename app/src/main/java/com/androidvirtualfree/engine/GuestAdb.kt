@@ -1,0 +1,47 @@
+package com.androidvirtualfree.engine
+
+import dadb.AdbKeyPair
+import dadb.Dadb
+import dadb.InstallResult
+import java.io.File
+
+/**
+ * Comunicação com o adbd do Android convidado (rede interna do QEMU, porta encaminhada
+ * só para 127.0.0.1 e só enquanto há uma operação em andamento).
+ */
+class GuestAdb(private val port: Int, keyDir: File) {
+    private val keyPair: AdbKeyPair by lazy {
+        val priv = File(keyDir, "adbkey")
+        val pub = File(keyDir, "adbkey.pub")
+        if (!priv.exists() || !pub.exists()) AdbKeyPair.generate(priv, pub)
+        AdbKeyPair.read(priv, pub)
+    }
+
+    fun <T> session(block: (Dadb) -> T): T =
+        Dadb.create("127.0.0.1", port, keyPair, connectTimeout = 5_000, socketTimeout = 180_000).use(block)
+
+    fun shell(cmd: String): String = session { it.shell(cmd).allOutput }
+
+    fun isBootCompleted(): Boolean = runCatching {
+        session { it.shell("getprop sys.boot_completed").output.trim() == "1" }
+    }.getOrDefault(false)
+
+    /** Instala dentro do convidado. Retorna null em caso de sucesso ou a mensagem de erro do PackageManager. */
+    fun install(apk: File): String? = session { d ->
+        when (val r = d.install(apk, "-r")) {
+            is InstallResult.Success -> null
+            is InstallResult.Failure -> r.reason.trim().ifEmpty { "falha desconhecida" }
+        }
+    }
+
+    fun isInstalled(pkg: String): Boolean =
+        shell("pm list packages $pkg").lines().any { it.trim() == "package:$pkg" }
+
+    fun launch(pkg: String): String =
+        shell("monkey -p $pkg -c android.intent.category.LAUNCHER 1")
+
+    /** Desliga o Android convidado de forma limpa (grava o disco). */
+    fun powerOff() {
+        runCatching { session { it.shell("sync; reboot -p") } }
+    }
+}

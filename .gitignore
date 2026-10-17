@@ -1,0 +1,9 @@
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+# gerados no CI por scripts/
+app/src/main/jniLibs/
+app/src/main/assets/qemu/
+app/src/main/assets/vm/
