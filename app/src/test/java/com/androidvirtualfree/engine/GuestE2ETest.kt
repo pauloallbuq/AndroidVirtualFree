@@ -108,7 +108,12 @@ class GuestE2ETest {
         val t0 = System.currentTimeMillis()
         val con = connectConsole()
         var shot = 0
+        var lastUp = 0.0; var reboots = 0
         while (!con.bootCompleted()) {
+            val up = runCatching { con.run("cut -d' ' -f1 /proc/uptime", 15_000).trim().toDouble() }.getOrDefault(lastUp)
+            if (up + 5 < lastUp) { reboots++; log("[$tag] convidado REINICIOU (uptime $lastUp -> $up), total=$reboots") }
+            lastUp = up
+            assertTrue("convidado reiniciando em loop", reboots < 2)
             if (!q.isAlive) { Thread.sleep(3000); log("[$tag] QEMU saiu durante o boot após ${(System.currentTimeMillis() - t0) / 1000}s, exit=${q.exitCode()}") }
             assertTrue("QEMU saiu durante o boot (exit=${q.exitCode()})", q.isAlive)
             val el = System.currentTimeMillis() - t0
