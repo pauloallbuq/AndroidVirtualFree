@@ -44,7 +44,7 @@ jobs:
         run: |
           python3 scripts/fetch_termux_qemu.py --arch aarch64 --abi arm64-v8a --jnilibs app/src/main/jniLibs --assets app/src/main/assets
           python3 scripts/fetch_termux_qemu.py --arch x86_64  --abi x86_64    --jnilibs app/src/main/jniLibs --assets app/src/main/assets
-          ls -la app/src/main/jniLibs/*/ | head -100
+          du -sh app/src/main/jniLibs/*
           file app/src/main/jniLibs/arm64-v8a/libqemu_x86_64.so app/src/main/jniLibs/x86_64/libqemu_x86_64.so
 
       - name: Disco persistente /data do convidado
