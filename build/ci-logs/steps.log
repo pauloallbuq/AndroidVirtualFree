@@ -1,0 +1,238 @@
+Selecting previously unselected package libboost-iostreams1.83.0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 203540 files and directories currently installed.)
+Preparing to unpack .../00-libboost-iostreams1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb ...
+Unpacking libboost-iostreams1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+Selecting previously unselected package libboost-thread1.83.0:amd64.
+Preparing to unpack .../01-libboost-thread1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb ...
+Unpacking libboost-thread1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+Selecting previously unselected package libdaxctl1:amd64.
+Preparing to unpack .../02-libdaxctl1_77-2ubuntu2_amd64.deb ...
+Unpacking libdaxctl1:amd64 (77-2ubuntu2) ...
+Selecting previously unselected package librdmacm1t64:amd64.
+Preparing to unpack .../03-librdmacm1t64_50.0-2ubuntu0.2_amd64.deb ...
+Unpacking librdmacm1t64:amd64 (50.0-2ubuntu0.2) ...
+Selecting previously unselected package libiscsi7:amd64.
+Preparing to unpack .../04-libiscsi7_1.19.0-3build4_amd64.deb ...
+Unpacking libiscsi7:amd64 (1.19.0-3build4) ...
+Selecting previously unselected package libndctl6:amd64.
+Preparing to unpack .../05-libndctl6_77-2ubuntu2_amd64.deb ...
+Unpacking libndctl6:amd64 (77-2ubuntu2) ...
+Selecting previously unselected package libnfs14:amd64.
+Preparing to unpack .../06-libnfs14_5.0.2-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libnfs14:amd64 (5.0.2-1ubuntu0.24.04.1) ...
+Selecting previously unselected package libpmem1:amd64.
+Preparing to unpack .../07-libpmem1_1.13.1-1.1ubuntu2_amd64.deb ...
+Unpacking libpmem1:amd64 (1.13.1-1.1ubuntu2) ...
+Selecting previously unselected package libpmemobj1:amd64.
+Preparing to unpack .../08-libpmemobj1_1.13.1-1.1ubuntu2_amd64.deb ...
+Unpacking libpmemobj1:amd64 (1.13.1-1.1ubuntu2) ...
+Selecting previously unselected package librados2.
+Preparing to unpack .../09-librados2_19.2.3-0ubuntu0.24.04.3_amd64.deb ...
+Unpacking librados2 (19.2.3-0ubuntu0.24.04.3) ...
+Selecting previously unselected package librbd1.
+Preparing to unpack .../10-librbd1_19.2.3-0ubuntu0.24.04.3_amd64.deb ...
+Unpacking librbd1 (19.2.3-0ubuntu0.24.04.3) ...
+Selecting previously unselected package liburing2:amd64.
+Preparing to unpack .../11-liburing2_2.5-1build1_amd64.deb ...
+Unpacking liburing2:amd64 (2.5-1build1) ...
+Selecting previously unselected package qemu-utils.
+Preparing to unpack .../12-qemu-utils_1%3a8.2.2+ds-0ubuntu1.18_amd64.deb ...
+Unpacking qemu-utils (1:8.2.2+ds-0ubuntu1.18) ...
+Selecting previously unselected package qemu-block-extra.
+Preparing to unpack .../13-qemu-block-extra_1%3a8.2.2+ds-0ubuntu1.18_amd64.deb ...
+Unpacking qemu-block-extra (1:8.2.2+ds-0ubuntu1.18) ...
+Setting up libboost-thread1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+Setting up libnfs14:amd64 (5.0.2-1ubuntu0.24.04.1) ...
+Setting up libboost-iostreams1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+Setting up libdaxctl1:amd64 (77-2ubuntu2) ...
+Setting up libndctl6:amd64 (77-2ubuntu2) ...
+Setting up librdmacm1t64:amd64 (50.0-2ubuntu0.2) ...
+Setting up liburing2:amd64 (2.5-1build1) ...
+Setting up libiscsi7:amd64 (1.19.0-3build4) ...
+Setting up libpmem1:amd64 (1.13.1-1.1ubuntu2) ...
+Setting up librados2 (19.2.3-0ubuntu0.24.04.3) ...
+Setting up libpmemobj1:amd64 (1.13.1-1.1ubuntu2) ...
+Setting up librbd1 (19.2.3-0ubuntu0.24.04.3) ...
+Setting up qemu-utils (1:8.2.2+ds-0ubuntu1.18) ...
+Setting up qemu-block-extra (1:8.2.2+ds-0ubuntu1.18) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/run-qemu.mount → /usr/lib/systemd/system/run-qemu.mount.
+Processing triggers for man-db (2.12.0-4build2) ...
+Not building database; man-db/auto-update is not 'true'.
+Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+pacotes: qemu-system-x86-64-headless=1:11.1.2, zstd=1.5.7-1, zlib=1.3.2, liblzma=5.8.4, resolv-conf=1.3, qemu-common=1:11.1.2, libssh=0.12.2, openssl=1:3.6.5, ca-certificates=1:2026.09.25, libpixman=0.46.4-1, libnfs=8.0.0, libgnutls=3.8.13-1, p11-kit=0.26.5, libtasn1=4.21.0, libffi=3.8.0, libunistring=1.4.2, libiconv=1.19, libandroid-support=29-1, libunbound=1.26.1, libngtcp2=1.25.0, libnghttp2=1.70.0, libevent=2.1.13, libidn2=2.3.8-1, libnettle=4.0+really3.10.2, libgmp=6.3.0-2, libc++=30, libcurl=8.23.0, libssh2=1.11.1-2, libnghttp3=1.18.0, libcap-ng=2:0.9.6, libbz2=1.0.8-8, glib=2.90.1, python=3.14.6-1, readline=8.3.6, ncurses=6.6.20260307+really6.5.20250830, ncurses-ui-libs=6.6.20260307+really6.5.20250830, libsqlite=3.54.1, libexpat=2.9.0, libcrypt=0.2-6, libandroid-posix-semaphore=0.1-4, gdbm=1.26-1, pcre2=10.49, pulseaudio=17.0-4, speexdsp=1.2.1-1, libwebrtc-audio-processing=1.3-5, abseil-cpp=20260526.0, libsoxr=0.1.3-8, libsndfile=1.2.2-3, libvorbis=1.3.7-4, libogg=1.3.6-1, libopus=1.6.1, libmpg123=1.33.7, libmp3lame=4.0-1, libflac=1.5.0-1, libltdl=2.6.2, libandroid-glob=0.6-3, libandroid-execinfo=0.1-3, libandroid-stub=30-2, dbus=1.16.2-3, libx11=1.8.14, xorgproto=2026.1, xorg-util-macros=1.20.2, libxcb=1.17.0-1, libxdmcp=1.1.5-2, libxau=1.0.12-2, libusbredir=0.15.0, libusb=1.0.30, libspice-server=0.16.0-1, libspice-protocol=0.14.5, libsasl=2.1.28-3, liborc=0.4.44, liblz4=1.10.0-1, libjpeg-turbo=3.2.0, gstreamer=1.28.8, gst-plugins-base=1.28.8, libxv=1.0.13-1, libxext=1.3.7, libxi=1.8.4, libtheora=1.2.0-1, libpng=1.6.59, libandroid-shmem=0.7, graphene=1.10.8-3, libslirp=4.9.5, liblzo=2.10-5, libdw=0.196, libelf=0.196, json-c=0.19, argp=1.5.0-1, jack2=1.9.22-2, libsamplerate=0.2.2-4, libdb=18.1.40-6, alsa-lib=1.2.16.1, libandroid-sysv-semaphore=0.1-1, dtc=1.8.1
+69 bibliotecas + executável em app/src/main/jniLibs/arm64-v8a
+20 firmwares em app/src/main/assets/qemu
+pacotes: qemu-system-x86-64-headless=1:11.1.2, zstd=1.5.7-1, zlib=1.3.2, liblzma=5.8.4, resolv-conf=1.3, qemu-common=1:11.1.2, libssh=0.12.2, openssl=1:3.6.5, ca-certificates=1:2026.09.25, libpixman=0.46.4-1, libnfs=8.0.0, libgnutls=3.8.13-1, p11-kit=0.26.5, libtasn1=4.21.0, libffi=3.8.0, libunistring=1.4.2, libiconv=1.19, libandroid-support=29-1, libunbound=1.26.1, libngtcp2=1.25.0, libnghttp2=1.70.0, libevent=2.1.13, libidn2=2.3.8-1, libnettle=4.0+really3.10.2, libgmp=6.3.0-2, libc++=30, libcurl=8.23.0, libssh2=1.11.1-2, libnghttp3=1.18.0, libcap-ng=2:0.9.6, libbz2=1.0.8-8, glib=2.90.1, python=3.14.6-1, readline=8.3.6, ncurses=6.6.20260307+really6.5.20250830, ncurses-ui-libs=6.6.20260307+really6.5.20250830, libsqlite=3.54.1, libexpat=2.9.0, libcrypt=0.2-6, libandroid-posix-semaphore=0.1-4, gdbm=1.26-1, pcre2=10.49, pulseaudio=17.0-4, speexdsp=1.2.1-1, libwebrtc-audio-processing=1.3-5, abseil-cpp=20260526.0, libsoxr=0.1.3-8, libsndfile=1.2.2-3, libvorbis=1.3.7-4, libogg=1.3.6-1, libopus=1.6.1, libmpg123=1.33.7, libmp3lame=4.0-1, libflac=1.5.0-1, libltdl=2.6.2, libandroid-glob=0.6-3, libandroid-execinfo=0.1-3, libandroid-stub=30-2, dbus=1.16.2-3, libx11=1.8.14, xorgproto=2026.1, xorg-util-macros=1.20.2, libxcb=1.17.0-1, libxdmcp=1.1.5-2, libxau=1.0.12-2, libusbredir=0.15.0, libusb=1.0.30, libspice-server=0.16.0-1, libspice-protocol=0.14.5, libsasl=2.1.28-3, liborc=0.4.44, liblz4=1.10.0-1, libjpeg-turbo=3.2.0, gstreamer=1.28.8, gst-plugins-base=1.28.8, libxv=1.0.13-1, libxext=1.3.7, libxi=1.8.4, libtheora=1.2.0-1, libpng=1.6.59, libandroid-shmem=0.7, graphene=1.10.8-3, libslirp=4.9.5, liblzo=2.10-5, libdw=0.196, libelf=0.196, json-c=0.19, argp=1.5.0-1, jack2=1.9.22-2, libsamplerate=0.2.2-4, libdb=18.1.40-6, alsa-lib=1.2.16.1, libandroid-sysv-semaphore=0.1-1, dtc=1.8.1
+69 bibliotecas + executável em app/src/main/jniLibs/x86_64
+20 firmwares em app/src/main/assets/qemu
+62M	app/src/main/jniLibs/arm64-v8a
+64M	app/src/main/jniLibs/x86_64
+app/src/main/jniLibs/arm64-v8a/libqemu_x86_64.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, stripped
+app/src/main/jniLibs/x86_64/libqemu_x86_64.so:    ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, stripped
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Journal features:         (none)
+-rw-r--r-- 1 runner runner 1114112 Oct 17 20:06 app/src/main/assets/vm/data.qcow2
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+
+> Task :app:processDebugMainManifest
+/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/app/src/main/AndroidManifest.xml:16:9-41 Warning:
+	android:extractNativeLibs should not be specified in this source AndroidManifest.xml file. See https://d.android.com/guide/topics/manifest/application-element#extractNativeLibs for more information.
+The AGP Upgrade Assistant can remove the attribute from the AndroidManifest.xml file and update the build file accordingly. See https://d.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :app:processDebugManifest
+> Task :app:javaPreCompileDebug
+> Task :app:processDebugManifestForPackage
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:processDebugResources
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+
+> Task :app:testDebugUnitTest
+
+BootConfigTest > isoReaderExtractsFilesAcrossSectors PASSED
+
+BootConfigTest > fallbackWhenNoConfig PASSED
+
+BootConfigTest > rejectsNonIso PASSED
+
+BootConfigTest > parsesLiveEntryAndAddsPersistentData PASSED
+
+BootConfigTest > qemuArgsArePrivateAndPersistent PASSED
+
+GuestE2ETest > guestBootsInstallsApkAndPersists SKIPPED
+
+RfbClientTest > fullProtocolRoundTrip PASSED
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_4-1792267568622.json
+
+BUILD SUCCESSFUL in 17s
+22 actionable tasks: 22 executed
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:compressDebugAssets
+> Task :app:dexBuilderDebug
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugStartupProfile
+> Task :app:mergeLibDexDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs
+> Task :app:mergeExtDexDebug
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :probe:preBuild UP-TO-DATE
+> Task :probe:preDebugBuild UP-TO-DATE
+> Task :probe:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :probe:checkDebugAarMetadata
+> Task :probe:generateDebugResValues
+> Task :probe:javaPreCompileDebug
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libFLAC.so, libandroid-execinfo.so, libandroid-shmem.so, libandroid-support.so, libandroid-sysv-semaphore.so, libargp.so, libasound.so, libbz2_so_1_0.so, libc++_shared.so, libcrypto_so_3.so, libcurl.so, libdb-18.1.so, libdbus-1.so, libdw_so_1.so, libelf_so_1.so, libfdt.so, libffi.so, libgio_2_0_so_0.so, libglib_2_0_so_0.so, libgmodule_2_0_so_0.so, libgmp.so, libgnutls.so, libgobject_2_0_so_0.so, libgstallocators-1.0.so, libgstapp-1.0.so, libgstbase-1.0.so, libgstreamer-1.0.so, libgstvideo-1.0.so, libhogweed_so_6.so, libiconv.so, libidn2.so, libjack_so_0.so, libjpeg_so_8.so, liblz4.so, liblzma_so_5.so, liblzo2.so, libmp3lame.so, libmpg123.so, libncursesw_so_6.so, libnettle_so_8.so, libnghttp2.so, libnghttp3.so, libngtcp2.so, libngtcp2_crypto_ossl.so, libogg.so, libopus.so, liborc-0.4.so, libp11-kit.so, libpcre2-8.so, libpixman-1.so, libpng16.so, libpulse.so, libpulsecommon-17.0.so, libqemu_x86_64.so, libsamplerate.so, libsasl2.so, libslirp.so, libsndfile.so, libspice-server.so, libssh.so, libssh2.so, libssl_so_3.so, libtasn1.so, libunistring.so, libusb-1.0.so, libusbredirparser.so, libvorbis.so, libvorbisenc.so, libz_so_1.so, libzstd_so_1.so.
+
+> Task :probe:mapDebugSourceSetPaths
+> Task :probe:generateDebugResources
+> Task :probe:mergeDebugResources
+> Task :probe:packageDebugResources
+> Task :probe:createDebugCompatibleScreenManifests
+> Task :probe:extractDeepLinksDebug
+> Task :probe:parseDebugLocalResources
+> Task :probe:processDebugMainManifest
+> Task :probe:processDebugManifest
+> Task :probe:mergeDebugShaders
+> Task :probe:compileDebugShaders NO-SOURCE
+> Task :probe:generateDebugAssets UP-TO-DATE
+> Task :probe:mergeDebugAssets
+> Task :probe:compressDebugAssets
+> Task :probe:desugarDebugFileDependencies
+> Task :probe:processDebugManifestForPackage
+> Task :probe:processDebugJavaRes NO-SOURCE
+> Task :probe:checkDebugDuplicateClasses
+> Task :probe:mergeDebugJavaResource
+> Task :probe:mergeDebugStartupProfile
+> Task :probe:mergeExtDexDebug
+> Task :probe:mergeLibDexDebug
+> Task :probe:mergeDebugJniLibFolders
+> Task :probe:mergeDebugNativeLibs NO-SOURCE
+> Task :probe:stripDebugDebugSymbols NO-SOURCE
+> Task :probe:validateSigningDebug
+> Task :probe:writeDebugAppMetadata
+> Task :probe:writeDebugSigningConfigVersions
+> Task :probe:processDebugResources
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :probe:compileDebugJavaWithJavac
+> Task :probe:dexBuilderDebug
+> Task :probe:mergeDebugGlobalSynthetics
+> Task :probe:mergeProjectDexDebug
+> Task :probe:packageDebug
+> Task :probe:createDebugApkListingFileRedirect
+> Task :probe:assembleDebug
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_5-1792267585830.json
+
+BUILD SUCCESSFUL in 11s
+69 actionable tasks: 53 executed, 16 up-to-date
+ 26257008  1981-01-01 01:01   lib/arm64-v8a/libqemu_x86_64.so
+ 26733712  1981-01-01 01:01   lib/x86_64/libqemu_x86_64.so
+  1114112  1981-01-01 01:01   assets/vm/data.qcow2
+   262144  1981-01-01 01:01   assets/qemu/bios-256k.bin
+-rw-r--r-- 1 runner runner 47458473 Oct 17 20:06 app/build/outputs/apk/debug/app-debug.apk
