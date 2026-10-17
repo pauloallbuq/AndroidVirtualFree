@@ -172,24 +172,19 @@ def main():
             needed_total[n] = src
             queue.append(src)
 
+    # Sem patchelf: binários ficam idênticos aos do Termux. Nomes não empacotáveis
+    # (libz.so.1) viram libz_so_1.so e o app cria symlinks libz.so.1 -> nativeLibraryDir/...
     renames = {n: packaged_name(n) for n in needed_total}
-    def patch(path, soname=None):
-        args = ["patchelf", "--remove-rpath"]
-        for old in readelf_needed(path):
-            if old in renames and renames[old] != old:
-                args += ["--replace-needed", old, renames[old]]
-        if soname:
-            args += ["--set-soname", soname]
-        subprocess.run(args + [path], check=True)
-
     for n, src in needed_total.items():
-        dst = os.path.join(outlib, renames[n])
-        shutil.copyfile(src, dst)
-        patch(dst, renames[n])
+        shutil.copyfile(src, os.path.join(outlib, renames[n]))
     qemu_dst = os.path.join(outlib, "libqemu_x86_64.so")
     shutil.copyfile(exe, qemu_dst)
     os.chmod(qemu_dst, 0o755)
-    patch(qemu_dst)
+    fw_dir = os.path.join(a.assets, "qemu"); os.makedirs(fw_dir, exist_ok=True)
+    with open(os.path.join(fw_dir, f"libmap-{a.abi}.txt"), "w") as f:
+        for n in sorted(renames):
+            if renames[n] != n:
+                f.write(f"{n} {renames[n]}\n")
     print(f"{len(needed_total)} bibliotecas + executável em {outlib}")
 
     share = os.path.join(usr, "share", "qemu")

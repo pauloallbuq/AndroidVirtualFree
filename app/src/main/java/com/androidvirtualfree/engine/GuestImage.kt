@@ -14,6 +14,20 @@ class GuestImage(private val ctx: Context) {
     val dataDisk = File(dir, "data.qcow2")
     val firmware = File(dir, "qemu")
     val bootDir = File(dir, "boot")
+    val libLinks = File(dir, "libs")
+
+    /**
+     * Bibliotecas do Termux com soname versionado (libz.so.1) são empacotadas como libz_so_1.so.
+     * Cria symlinks com o nome original apontando para nativeLibraryDir (os binários não são alterados).
+     */
+    fun linkLibraries(nativeDir: String, abi: String) {
+        libLinks.deleteRecursively(); libLinks.mkdirs()
+        val map = runCatching { ctx.assets.open("qemu/libmap-$abi.txt").bufferedReader().readLines() }.getOrDefault(emptyList())
+        for (line in map) {
+            val (name, file) = line.trim().split(' ').takeIf { it.size == 2 } ?: continue
+            android.system.Os.symlink("$nativeDir/$file", File(libLinks, name).path)
+        }
+    }
 
     /** Copia firmwares e o disco /data inicial (somente se ainda não existir: preserva os dados). */
     fun installAssets() {

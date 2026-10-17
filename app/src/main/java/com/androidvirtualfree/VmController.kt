@@ -79,6 +79,7 @@ object VmController {
         val (bc, files) = BootConfig.prepare(img.iso, img.bootDir, VIDEO)
 
         val nativeDir = ctx.applicationInfo.nativeLibraryDir
+        img.linkLibraries(nativeDir, if (File(nativeDir).name == "x86_64") "x86_64" else "arm64-v8a")
         vncSocket = File(img.dir, "vnc.sock")
         val cfg = VmConfig(
             qemuBinary = "$nativeDir/libqemu_x86_64.so",
@@ -90,7 +91,7 @@ object VmController {
             memoryMb = memoryForDevice(ctx),
         )
         val env = mapOf(
-            "LD_LIBRARY_PATH" to nativeDir,
+            "LD_LIBRARY_PATH" to "${img.libLinks.absolutePath}:$nativeDir",
             "TMPDIR" to ctx.cacheDir.absolutePath,
             "HOME" to img.dir.absolutePath,
         )

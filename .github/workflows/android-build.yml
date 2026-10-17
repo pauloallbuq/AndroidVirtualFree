@@ -9,7 +9,7 @@ on:
 
 concurrency:
   group: build-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   ISO_URL: https://downloads.sourceforge.net/project/android-x86/Release%209.0/android-x86_64-9.0-r2.iso

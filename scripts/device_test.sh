@@ -6,7 +6,7 @@ set -uo pipefail
 APK="$1"; ISO="$2"; PKG=com.androidvirtualfree
 OUT=device-out; mkdir -p "$OUT"
 BOOT_MIN="${BOOT_MIN:-35}"
-fail() { echo "FALHA: $*" | tee -a "$OUT/report.txt"; adb logcat -d -s AVF:* > "$OUT/logcat-avf.txt"; adb exec-out screencap -p > "$OUT/fail.png"; exit 1; }
+fail() { echo "FALHA: $*" | tee -a "$OUT/report.txt"; adb logcat -d -b crash > "$OUT/crash.txt"; grep -E "signal|Abort|#[0-9]+ pc|Cmdline|CANNOT|linker" "$OUT/crash.txt" | head -30 >> "$OUT/report.txt"; adb logcat -d -s AVF:* > "$OUT/logcat-avf.txt"; adb exec-out screencap -p > "$OUT/fail.png"; exit 1; }
 log() { echo "$*" | tee -a "$OUT/report.txt"; }
 
 adb install -r -g "$APK" || fail "adb install"
@@ -18,7 +18,15 @@ LIB="$APKDIR/lib/${ABI/x86_64/x86_64}"
 log "nativeLibraryDir=$LIB"
 adb shell ls -la "$LIB" > "$OUT/nativelibs.txt"
 
-V=$(adb shell run-as $PKG sh -c "'LD_LIBRARY_PATH=$LIB $LIB/libqemu_x86_64.so --version'" 2>&1 | tr -d '\r')
+# mesmos symlinks que o app cria (GuestImage.linkLibraries)
+MAPABI=$([ "$ABI" = "x86_64" ] && echo x86_64 || echo arm64-v8a)
+CMDS="rm -rf files/vm/libs; mkdir -p files/vm/libs"
+while read -r N F; do [ -n "$N" ] && CMDS="$CMDS; ln -s $LIB/$F files/vm/libs/$N"; done < <(unzip -p "$APK" "assets/qemu/libmap-$MAPABI.txt")
+adb shell "run-as $PKG sh -c '$CMDS'"
+LP="/data/data/$PKG/files/vm/libs:$LIB"
+V=$(adb shell run-as $PKG sh -c "'LD_LIBRARY_PATH=$LP $LIB/libqemu_x86_64.so --version'" 2>&1 | tr -d '\r')
+adb shell run-as $PKG sh -c "'LD_DEBUG=1 LD_LIBRARY_PATH=$LP $LIB/libqemu_x86_64.so --version'" > "$OUT/ld_debug.txt" 2>&1
+tail -5 "$OUT/ld_debug.txt" >> "$OUT/report.txt"
 log "qemu --version (uid do app, sem root): $V"
 echo "$V" | grep -q "QEMU emulator version" || fail "QEMU não executa dentro do sandbox do app"
 
