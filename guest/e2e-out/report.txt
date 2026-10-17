@@ -1,0 +1,6 @@
+cmdline: root=/dev/ram0 quiet androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200
+qemu: qemu-system-x86_64 -M pc -accel tcg,thread=multi,tb-size=256 -cpu max -smp 4 -m 2048 -kernel /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/kernel -initrd /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/initrd.img -append root=/dev/ram0 quiet androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/data.qcow2,if=ide,index=0,media=disk,format=qcow2,cache=writeback,discard=unmap -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/android-x86_64-9.0-r2.iso,if=ide,index=2,media=cdrom,readonly=on,format=raw -netdev user,id=n0 -device virtio-net-pci,netdev=n0,romfile= -vga std -usb -device usb-tablet -vnc 127.0.0.1:1 -serial file:/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/serial-boot1.log -monitor stdio -no-reboot
+[boot1] VNC conectado: 720x400 'QEMU'
+[boot1] 74s: aguardando boot; tela 1280x720, frames=324
+[boot1] 154s: aguardando boot; tela 1280x720, frames=855
+[boot1] 302s: aguardando boot; tela 1280x720, frames=1762
