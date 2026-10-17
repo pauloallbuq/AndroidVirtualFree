@@ -15,6 +15,9 @@ env:
   ISO_URL: https://downloads.sourceforge.net/project/android-x86/Release%209.0/android-x86_64-9.0-r2.iso
   ISO_NAME: android-x86_64-9.0-r2.iso
 
+permissions:
+  contents: write   # publica logs/capturas na branch ci-results (legíveis sem login)
+
 defaults:
   run:
     # toda saída também vai para ci-logs/ (as anotações de erro são lidas sem login)
@@ -85,6 +88,19 @@ jobs:
           name: unit-test-reports
           path: app/build/reports/tests/
 
+      - name: Publicar resultados na branch ci-results
+        if: always()
+        shell: bash
+        run: |
+          D=$(mktemp -d); mkdir -p "$D/$J"
+          for d in e2e-out device-out ci-logs; do [ -d "$d" ] && cp -r "$d" "$D/$J/" ; done
+          find "$D" -name '*.ppm' -delete; find "$D" -name 'work' -type d -prune -exec rm -rf {} +
+          find "$D" -size +20M -delete
+          cd "$D" && git init -q && git checkout -q -b ci-results
+          git -c user.name=ci -c user.email=ci@local add -A && git -c user.name=ci -c user.email=ci@local commit -qm "$J run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" ci-results:ci-results/$J-${{ github.run_id }}
+        env:
+          J: build
       - name: Relatar erro (anotações)
         if: failure()
         shell: bash
@@ -149,6 +165,19 @@ jobs:
             e2e-out/*.txt
             e2e-out/*.log
 
+      - name: Publicar resultados na branch ci-results
+        if: always()
+        shell: bash
+        run: |
+          D=$(mktemp -d); mkdir -p "$D/$J"
+          for d in e2e-out device-out ci-logs; do [ -d "$d" ] && cp -r "$d" "$D/$J/" ; done
+          find "$D" -name '*.ppm' -delete; find "$D" -name 'work' -type d -prune -exec rm -rf {} +
+          find "$D" -size +20M -delete
+          cd "$D" && git init -q && git checkout -q -b ci-results
+          git -c user.name=ci -c user.email=ci@local add -A && git -c user.name=ci -c user.email=ci@local commit -qm "$J run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" ci-results:ci-results/$J-${{ github.run_id }}
+        env:
+          J: guest
       - name: Relatar erro (anotações)
         if: failure()
         shell: bash
@@ -197,6 +226,19 @@ jobs:
           name: device-test-results
           path: device-out/
 
+      - name: Publicar resultados na branch ci-results
+        if: always()
+        shell: bash
+        run: |
+          D=$(mktemp -d); mkdir -p "$D/$J"
+          for d in e2e-out device-out ci-logs; do [ -d "$d" ] && cp -r "$d" "$D/$J/" ; done
+          find "$D" -name '*.ppm' -delete; find "$D" -name 'work' -type d -prune -exec rm -rf {} +
+          find "$D" -size +20M -delete
+          cd "$D" && git init -q && git checkout -q -b ci-results
+          git -c user.name=ci -c user.email=ci@local add -A && git -c user.name=ci -c user.email=ci@local commit -qm "$J run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" ci-results:ci-results/$J-${{ github.run_id }}
+        env:
+          J: device
       - name: Relatar erro (anotações)
         if: failure()
         shell: bash
