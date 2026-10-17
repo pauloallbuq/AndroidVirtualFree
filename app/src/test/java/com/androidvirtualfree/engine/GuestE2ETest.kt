@@ -60,10 +60,12 @@ class GuestE2ETest {
             vnc = VncEndpoint.Tcp(1),
             serialLog = File(out, "serial-$tag.log"),
             accel = env["AVF_E2E_ACCEL"] ?: "tcg,thread=multi,tb-size=256",
+            serialSpec = "tcp:127.0.0.1:4555,server,nowait",
         )
         log("qemu: ${cfg.args().joinToString(" ")}")
         val q = QemuProcess(cfg, emptyMap(), File(out, "qemu-$tag.log"))
         q.start()
+        startConsole(tag)
         val screen = Screen()
         var sock: Socket? = null
         for (i in 0 until 60) {
@@ -80,12 +82,33 @@ class GuestE2ETest {
         return Triple(q, c, screen)
     }
 
+    /** Console root (ttyS0) do Android-x86: registra logcat/dmesg periodicamente para diagnóstico. */
+    private fun startConsole(tag: String) {
+        thread(isDaemon = true) {
+            var s: Socket? = null
+            for (i in 0 until 120) { s = runCatching { Socket("127.0.0.1", 4555) }.getOrNull(); if (s != null) break; Thread.sleep(250) }
+            val sock = s ?: return@thread
+            val f = File(out, "console-$tag.log")
+            thread(isDaemon = true) { runCatching { sock.getInputStream().copyTo(f.outputStream()) } }
+            val o = sock.getOutputStream()
+            runCatching {
+                while (true) {
+                    Thread.sleep(30_000)
+                    o.write(("\necho ==== $(date) ====; getprop sys.boot_completed; getprop init.svc.adbd; getprop service.adb.tcp.port; getprop persist.adb.tcp.port; " +
+                        "uptime; logcat -d -v brief -b main,system,crash -t 150; dmesg | tail -20\n").toByteArray())
+                    o.flush()
+                }
+            }
+        }
+    }
+
     private fun waitBoot(tag: String, q: QemuProcess, adb: GuestAdb, screen: Screen): Long {
         val t0 = System.currentTimeMillis()
         q.openAdbForward(PORT)
         var shot = 0
         while (!adb.isBootCompleted()) {
-            assertTrue("QEMU morreu durante o boot: ${q.logTail()}", q.isAlive)
+            if (!q.isAlive) { Thread.sleep(3000); log("[$tag] QEMU saiu durante o boot após ${(System.currentTimeMillis() - t0) / 1000}s, exit=${q.exitCode()}") }
+            assertTrue("QEMU saiu durante o boot (exit=${q.exitCode()})", q.isAlive)
             val el = System.currentTimeMillis() - t0
             assertTrue("timeout de boot ($tag)", el < 35L * 60 * 1000)
             if (el / 60000 >= shot) { screen.savePpm(File(out, "$tag-boot-${shot}min.ppm")); log("[$tag] ${el / 1000}s: aguardando boot; tela ${screen.w}x${screen.h}, frames=${screen.frames}"); shot += 2 }
