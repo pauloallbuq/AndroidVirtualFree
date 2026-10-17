@@ -13,9 +13,9 @@ trap 'sudo rm -rf "$WORK"' EXIT
 mkdir -p "$WORK/root/property"
 printf '5555' > "$WORK/root/property/persist.adb.tcp.port"
 printf 'adb'  > "$WORK/root/property/persist.sys.usb.config"
+chmod 0600 "$WORK/root/property/"*
+chmod 0700 "$WORK/root/property"
 sudo chown -R 0:0 "$WORK/root/property"
-sudo chmod 0700 "$WORK/root/property"
-sudo chmod 0600 "$WORK/root/property/"*
 
 truncate -s "$SIZE" "$WORK/data.raw"
 sudo mkfs.ext4 -q -F -L data -O ^metadata_csum_seed,^orphan_file -d "$WORK/root" "$WORK/data.raw" \
