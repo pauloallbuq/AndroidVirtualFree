@@ -10,12 +10,17 @@ import java.io.File
  * só para 127.0.0.1 e só enquanto há uma operação em andamento).
  */
 class GuestAdb(private val port: Int, keyDir: File) {
+    private val priv = File(keyDir, "adbkey")
+    private val pub = File(keyDir, "adbkey.pub")
     private val keyPair: AdbKeyPair by lazy {
-        val priv = File(keyDir, "adbkey")
-        val pub = File(keyDir, "adbkey.pub")
-        if (!priv.exists() || !pub.exists()) AdbKeyPair.generate(priv, pub)
+        ensureKey()
         AdbKeyPair.read(priv, pub)
     }
+
+    private fun ensureKey() { if (!priv.exists() || !pub.exists()) AdbKeyPair.generate(priv, pub) }
+
+    /** Chave pública no formato de /data/misc/adb/adb_keys (autorizada pelo console root). */
+    fun publicKey(): String { ensureKey(); return pub.readText().trim() }
 
     fun <T> session(block: (Dadb) -> T): T =
         Dadb.create("127.0.0.1", port, keyPair, connectTimeout = 5_000, socketTimeout = 180_000).use(block)

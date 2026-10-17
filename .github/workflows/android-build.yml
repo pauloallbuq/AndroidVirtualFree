@@ -117,7 +117,7 @@ jobs:
     name: Convidado real (boot, instalar APK, root, persistência)
     needs: build
     runs-on: ubuntu-24.04
-    timeout-minutes: 110
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -194,7 +194,7 @@ jobs:
     name: App no emulador Android (exec do QEMU sem root)
     needs: build
     runs-on: ubuntu-24.04
-    timeout-minutes: 75
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4

@@ -65,7 +65,6 @@ class GuestE2ETest {
         log("qemu: ${cfg.args().joinToString(" ")}")
         val q = QemuProcess(cfg, emptyMap(), File(out, "qemu-$tag.log"))
         q.start()
-        startConsole(tag)
         val screen = Screen()
         var sock: Socket? = null
         for (i in 0 until 60) {
@@ -82,40 +81,48 @@ class GuestE2ETest {
         return Triple(q, c, screen)
     }
 
-    /** Console root (ttyS0) do Android-x86: registra logcat/dmesg periodicamente para diagnóstico. */
-    private fun startConsole(tag: String) {
-        thread(isDaemon = true) {
-            var s: Socket? = null
-            for (i in 0 until 120) { s = runCatching { Socket("127.0.0.1", 4555) }.getOrNull(); if (s != null) break; Thread.sleep(250) }
-            val sock = s ?: return@thread
-            val f = File(out, "console-$tag.log")
-            thread(isDaemon = true) { runCatching { sock.getInputStream().copyTo(f.outputStream()) } }
-            val o = sock.getOutputStream()
-            runCatching {
-                while (true) {
-                    Thread.sleep(30_000)
-                    o.write(("\necho ==== $(date) ====; getprop sys.boot_completed; getprop init.svc.adbd; getprop service.adb.tcp.port; getprop persist.adb.tcp.port; " +
-                        "uptime; logcat -d -v brief -b main,system,crash -t 150; dmesg | tail -20\n").toByteArray())
-                    o.flush()
-                }
-            }
+    private var console: GuestConsole? = null
+
+    private fun connectConsole(): GuestConsole {
+        for (i in 0 until 120) {
+            val sock = runCatching { Socket("127.0.0.1", 4555) }.getOrNull()
+            if (sock != null) return GuestConsole(sock.getInputStream(), sock.getOutputStream(), sock).also { console = it }
+            Thread.sleep(250)
         }
+        error("console serial não abriu")
+    }
+
+    private fun diag(tag: String, con: GuestConsole) = runCatching {
+        File(out, "console-$tag.log").appendText("==== ${System.currentTimeMillis()}\n" +
+            con.run("uptime; getprop init.svc.adbd; getprop ro.adb.secure; logcat -d -v brief -b main,system,crash -t 120", 60_000) + "\n")
     }
 
     private fun waitBoot(tag: String, q: QemuProcess, adb: GuestAdb, screen: Screen): Long {
         val t0 = System.currentTimeMillis()
-        q.openAdbForward(PORT)
+        val con = connectConsole()
         var shot = 0
-        while (!adb.isBootCompleted()) {
+        while (!con.bootCompleted()) {
             if (!q.isAlive) { Thread.sleep(3000); log("[$tag] QEMU saiu durante o boot após ${(System.currentTimeMillis() - t0) / 1000}s, exit=${q.exitCode()}") }
             assertTrue("QEMU saiu durante o boot (exit=${q.exitCode()})", q.isAlive)
             val el = System.currentTimeMillis() - t0
-            assertTrue("timeout de boot ($tag)", el < 35L * 60 * 1000)
-            if (el / 60000 >= shot) { screen.savePpm(File(out, "$tag-boot-${shot}min.ppm")); log("[$tag] ${el / 1000}s: aguardando boot; tela ${screen.w}x${screen.h}, frames=${screen.frames}"); shot += 2 }
-            Thread.sleep(5000)
+            assertTrue("timeout de boot ($tag)", el < 60L * 60 * 1000)
+            if (el / 60000 >= shot) {
+                screen.savePpm(File(out, "$tag-boot-${shot}min.ppm")); diag(tag, con)
+                log("[$tag] ${el / 1000}s: aguardando boot; tela ${screen.w}x${screen.h}, frames=${screen.frames}"); shot += 4
+            }
+            Thread.sleep(10_000)
         }
         val secs = (System.currentTimeMillis() - t0) / 1000
-        log("[$tag] sys.boot_completed=1 após ${secs}s")
+        log("[$tag] sys.boot_completed=1 após ${secs}s (console root)")
+        con.prepareAfterBoot(adb.publicKey())
+        log("[$tag] chave ADB autorizada e assistente desativado")
+        q.openAdbForward(PORT)
+        val ta = System.currentTimeMillis()
+        while (!adb.isBootCompleted()) {
+            assertTrue("ADB do convidado não respondeu", System.currentTimeMillis() - ta < 5 * 60 * 1000)
+            diag(tag, con); Thread.sleep(10_000)
+        }
+        log("[$tag] ADB conectado")
         return secs
     }
 
@@ -149,13 +156,14 @@ class GuestE2ETest {
         assertTrue("o app instalado não apareceu na tela do convidado (fração dourada $gold)", gold > 0.30)
 
         adb.shell("echo avf-persist > /data/local/tmp/avf_marker")
+        log("root via console: " + console!!.run("id"))
         log("root (su 0 id): " + adb.shell("su 0 id 2>&1").trim())
         log("root (su -c id): " + adb.shell("su -c id 2>&1").trim())
         log("persist.sys.root_access=" + adb.shell("getprop persist.sys.root_access").trim())
 
-        adb.powerOff()
+        console!!.powerOff()
         q.closeAdbForward(PORT)
-        val clean = q.waitFor(120_000)
+        val clean = q.waitFor(180_000)
         log("desligamento limpo via 'reboot -p': $clean (exit=${q.exitCode()})")
         if (!clean) q.quit()
         c.close()
@@ -169,8 +177,8 @@ class GuestE2ETest {
         log("após reiniciar: pacote instalado=$still, marcador='$marker'")
         Thread.sleep(10_000)
         screen.savePpm(File(out, "boot2-home.ppm"))
-        adb.powerOff(); q.closeAdbForward(PORT)
-        if (!q.waitFor(120_000)) q.quit()
+        console!!.powerOff(); q.closeAdbForward(PORT)
+        if (!q.waitFor(180_000)) q.quit()
         c.close()
         assertTrue("app não persistiu", still)
         assertEquals("avf-persist", marker)

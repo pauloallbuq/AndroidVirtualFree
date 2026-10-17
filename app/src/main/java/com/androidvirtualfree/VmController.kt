@@ -7,6 +7,9 @@ import android.os.StatFs
 import android.util.Log
 import com.androidvirtualfree.engine.BootConfig
 import com.androidvirtualfree.engine.GuestAdb
+import com.androidvirtualfree.engine.GuestConsole
+import android.net.LocalSocket
+import android.net.LocalSocketAddress
 import com.androidvirtualfree.engine.GuestImage
 import com.androidvirtualfree.engine.QemuProcess
 import com.androidvirtualfree.engine.VmConfig
@@ -24,7 +27,7 @@ object VmController {
     private const val TAG = "AVF"
     const val ADB_PORT = 15555
     const val VIDEO = "1280x720"
-    private const val BOOT_TIMEOUT_MS = 40L * 60 * 1000
+    private const val BOOT_TIMEOUT_MS = 90L * 60 * 1000
 
     private val main = Handler(Looper.getMainLooper())
     private val worker = Executors.newSingleThreadExecutor()
@@ -36,6 +39,7 @@ object VmController {
     @Volatile private var stopRequested = false
     lateinit var vncSocket: File; private set
     private lateinit var adb: GuestAdb
+    @Volatile private var console: GuestConsole? = null
 
     fun addListener(l: (VmState) -> Unit) { listeners += l; l(state) }
     fun removeListener(l: (VmState) -> Unit) { listeners -= l }
@@ -81,6 +85,7 @@ object VmController {
         val nativeDir = ctx.applicationInfo.nativeLibraryDir
         img.linkLibraries(nativeDir, if (File(nativeDir).name == "x86_64") "x86_64" else "arm64-v8a")
         vncSocket = File(img.dir, "vnc.sock")
+        val consoleSock = File(img.dir, "console.sock").apply { delete() }
         val cfg = VmConfig(
             qemuBinary = "$nativeDir/libqemu_x86_64.so",
             firmwareDir = img.firmware,
@@ -89,6 +94,7 @@ object VmController {
             vnc = VncEndpoint.Unix(vncSocket),
             serialLog = File(img.dir, "serial.log"),
             memoryMb = memoryForDevice(ctx),
+            serialSpec = "unix:${consoleSock.absolutePath},server=on,wait=off",
         )
         val env = mapOf(
             "LD_LIBRARY_PATH" to "${img.libLinks.absolutePath}:$nativeDir",
@@ -101,22 +107,24 @@ object VmController {
         qemu = p
         set(Phase.BOOTING, ctx.getString(R.string.msg_booting))
 
-        // aguarda o Android convidado completar o boot (sys.boot_completed=1 via adb)
-        p.openAdbForward(ADB_PORT)
+        // conecta ao console root do convidado (ttyS0) e aguarda sys.boot_completed=1
         val t0 = System.currentTimeMillis()
-        try {
-            while (true) {
-                if (!p.isAlive) throw IllegalStateException(ctx.getString(R.string.msg_qemu_died, p.logTail()))
-                if (stopRequested) return
-                if (adb.isBootCompleted()) break
-                if (System.currentTimeMillis() - t0 > BOOT_TIMEOUT_MS) throw IllegalStateException(ctx.getString(R.string.msg_boot_timeout))
-                val min = (System.currentTimeMillis() - t0) / 60000
-                set(Phase.BOOTING, ctx.getString(R.string.msg_booting_wait, min))
-                Thread.sleep(5_000)
-            }
-        } finally {
-            runCatching { p.closeAdbForward(ADB_PORT) }
+        var con: GuestConsole? = null
+        while (true) {
+            if (!p.isAlive) throw IllegalStateException(ctx.getString(R.string.msg_qemu_died, p.logTail()))
+            if (stopRequested) return
+            if (System.currentTimeMillis() - t0 > BOOT_TIMEOUT_MS) throw IllegalStateException(ctx.getString(R.string.msg_boot_timeout))
+            if (con == null) con = runCatching {
+                val s = LocalSocket().apply { connect(LocalSocketAddress(consoleSock.absolutePath, LocalSocketAddress.Namespace.FILESYSTEM)) }
+                GuestConsole(s.inputStream, s.outputStream, s)
+            }.getOrNull()?.also { console = it }
+            if (con != null && con.bootCompleted()) break
+            val min = (System.currentTimeMillis() - t0) / 60000
+            set(Phase.BOOTING, ctx.getString(R.string.msg_booting_wait, min))
+            Thread.sleep(10_000)
         }
+        set(Phase.BOOTING, ctx.getString(R.string.msg_finishing))
+        runCatching { con!!.prepareAfterBoot(adb.publicKey()) }.onFailure { Log.w(TAG, "prepareAfterBoot", it) }
         set(Phase.RUNNING, ctx.getString(R.string.msg_ready, (System.currentTimeMillis() - t0) / 1000))
 
         // vigia o processo
@@ -141,14 +149,11 @@ object VmController {
         set(Phase.STOPPING, ctx.getString(R.string.msg_stopping))
         Thread {
             try {
-                if (graceful) {
-                    runCatching { p.openAdbForward(ADB_PORT) }
-                    adb.powerOff()
-                    runCatching { p.closeAdbForward(ADB_PORT) }
-                }
-                if (!graceful || !p.waitFor(45_000)) p.quit()
+                if (graceful) console?.powerOff()
+                if (!graceful || !p.waitFor(60_000)) p.quit()
             } finally {
                 qemu = null
+                console?.close(); console = null
                 set(Phase.STOPPED, ctx.getString(R.string.msg_stopped))
             }
         }.start()

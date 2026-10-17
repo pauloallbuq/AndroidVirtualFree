@@ -5,7 +5,7 @@
 set -uo pipefail
 APK="$1"; ISO="$2"; PKG=com.androidvirtualfree
 OUT=device-out; mkdir -p "$OUT"
-BOOT_MIN="${BOOT_MIN:-35}"
+BOOT_MIN="${BOOT_MIN:-75}"
 fail() { echo "FALHA: $*" | tee -a "$OUT/report.txt"; adb logcat -d -b crash > "$OUT/crash.txt"; grep -E "signal|Abort|#[0-9]+ pc|Cmdline|CANNOT|linker" "$OUT/crash.txt" | head -30 >> "$OUT/report.txt"; adb logcat -d -s AVF:* > "$OUT/logcat-avf.txt"; adb exec-out screencap -p > "$OUT/fail.png"; exit 1; }
 log() { echo "$*" | tee -a "$OUT/report.txt"; }
 

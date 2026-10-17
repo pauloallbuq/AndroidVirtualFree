@@ -18,7 +18,8 @@
     <string name="msg_error">Erro: %1$s</string>
     <string name="msg_no_space">Espaço livre insuficiente (%1$d MB). São necessários cerca de 3 GB.</string>
     <string name="msg_qemu_died">A máquina virtual parou inesperadamente.\n%1$s</string>
-    <string name="msg_boot_timeout">O Android virtual não terminou de iniciar em 40 minutos.</string>
+    <string name="msg_boot_timeout">O Android virtual não terminou de iniciar em 90 minutos.</string>
+    <string name="msg_finishing">Android iniciado. Finalizando a configuração…</string>
     <string name="msg_not_running">Inicie o Android virtual primeiro.</string>
     <string name="msg_installing">Copiando o APK…</string>
     <string name="msg_installing_pkg">Instalando %1$s dentro do Android virtual…</string>

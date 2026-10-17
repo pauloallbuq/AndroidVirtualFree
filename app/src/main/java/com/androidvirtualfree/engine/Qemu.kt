@@ -45,7 +45,6 @@ data class VmConfig(
             },
             "-serial", serialSpec ?: "file:${serialLog.absolutePath}",
             "-monitor", "stdio",
-            "-no-reboot",
         )
         return a
     }
