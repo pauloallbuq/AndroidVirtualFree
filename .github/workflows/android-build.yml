@@ -15,6 +15,11 @@ env:
   ISO_URL: https://downloads.sourceforge.net/project/android-x86/Release%209.0/android-x86_64-9.0-r2.iso
   ISO_NAME: android-x86_64-9.0-r2.iso
 
+defaults:
+  run:
+    # toda saída também vai para ci-logs/ (as anotações de erro são lidas sem login)
+    shell: bash --noprofile --norc -c 'mkdir -p ci-logs; set -o pipefail; bash -eo pipefail {0} 2>&1 | tee -a ci-logs/steps.log'
+
 jobs:
   build:
     name: Compilar APK + testes unitários
@@ -80,6 +85,18 @@ jobs:
           name: unit-test-reports
           path: app/build/reports/tests/
 
+      - name: Relatar erro (anotações)
+        if: failure()
+        shell: bash
+        run: |
+          shopt -s nullglob
+          for f in ci-logs/steps.log e2e-out/report.txt device-out/report.txt; do
+            [ -f "$f" ] || continue
+            tail -n 120 "$f" | sed 's/%/%25/g' | split -l 12 - /tmp/chunk_
+            for c in /tmp/chunk_*; do echo "::error title=$f::$(sed ':a;N;$!ba;s/\n/%0A/g' "$c")"; done
+            rm -f /tmp/chunk_*
+          done
+
   guest-e2e:
     name: Convidado real (boot, instalar APK, root, persistência)
     needs: build
@@ -132,6 +149,18 @@ jobs:
             e2e-out/*.txt
             e2e-out/*.log
 
+      - name: Relatar erro (anotações)
+        if: failure()
+        shell: bash
+        run: |
+          shopt -s nullglob
+          for f in ci-logs/steps.log e2e-out/report.txt device-out/report.txt; do
+            [ -f "$f" ] || continue
+            tail -n 120 "$f" | sed 's/%/%25/g' | split -l 12 - /tmp/chunk_
+            for c in /tmp/chunk_*; do echo "::error title=$f::$(sed ':a;N;$!ba;s/\n/%0A/g' "$c")"; done
+            rm -f /tmp/chunk_*
+          done
+
   device-test:
     name: App no emulador Android (exec do QEMU sem root)
     needs: build
@@ -167,3 +196,15 @@ jobs:
         with:
           name: device-test-results
           path: device-out/
+
+      - name: Relatar erro (anotações)
+        if: failure()
+        shell: bash
+        run: |
+          shopt -s nullglob
+          for f in ci-logs/steps.log e2e-out/report.txt device-out/report.txt; do
+            [ -f "$f" ] || continue
+            tail -n 120 "$f" | sed 's/%/%25/g' | split -l 12 - /tmp/chunk_
+            for c in /tmp/chunk_*; do echo "::error title=$f::$(sed ':a;N;$!ba;s/\n/%0A/g' "$c")"; done
+            rm -f /tmp/chunk_*
+          done
