@@ -1,0 +1,1668 @@
+==== 1792274603551
+22:03:24 up 0 min,  0 users,  load average: 3.26, 0.68, 0.22
+running
+
+--------- beginning of main
+I/vold    ( 1169): type=1400 audit(0.0:95): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/vold    ( 1169): type=1400 audit(0.0:96): avc: denied { read } for name="vendor" dev="tmpfs" ino=1092 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/init    (    1): type=1400 audit(0.0:97): avc: denied { dac_read_search } for capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+I/vdc     ( 1170): type=1400 audit(0.0:98): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:vdc:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/vdc     ( 1170): type=1400 audit(0.0:99): avc: denied { read } for name="vendor" dev="tmpfs" ino=1092 scontext=u:r:vdc:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+--------- beginning of system
+I/vold    ( 1169): Vold 3.0 (the awakening) firing up
+V/vold    ( 1169): Detected support for: ext4 f2fs iso9660 ntfs vfat
+W/vold    ( 1169): Failed to LOOP_GET_STATUS64 /dev/block/loop3: No such device or address
+V/vold    ( 1169): Found unmanaged loop device at /dev/block/loop0 named 
+W/vold    ( 1169): Failed to LOOP_GET_STATUS64 /dev/block/loop6: No such device or address
+W/vold    ( 1169): Failed to LOOP_GET_STATUS64 /dev/block/loop5: No such device or address
+V/vold    ( 1169): Found unmanaged loop device at /dev/block/loop1 named 
+W/vold    ( 1169): Failed to LOOP_GET_STATUS64 /dev/block/loop7: No such device or address
+W/vold    ( 1169): Failed to LOOP_GET_STATUS64 /dev/block/loop2: No such device or address
+W/vold    ( 1169): Failed to LOOP_GET_STATUS64 /dev/block/loop4: No such device or address
+I/vold    ( 1169): [libfs_mgr]fs_mgr_read_fstab_dt(): failed to read fstab from dt
+D/vold    ( 1169): VoldNativeService::start() completed OK
+D/vold    ( 1169): e4crypt_init_user0
+D/vold    ( 1169): e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+D/vold    ( 1169): Preparing: /data/system/users/0
+D/vold    ( 1169): Preparing: /data/misc/profiles/cur/0
+D/vold    ( 1169): Preparing: /data/system_de/0
+D/vold    ( 1169): Preparing: /data/misc_de/0
+D/vold    ( 1169): Preparing: /data/vendor_de/0
+D/vold    ( 1169): Preparing: /data/user_de/0
+V/vold    ( 1169): /system/bin/vold_prepare_subdirs
+V/vold    ( 1169):     prepare
+V/vold    ( 1169):     
+V/vold    ( 1169):     0
+V/vold    ( 1169):     1
+I/vold_prepare_subdirs( 1169): SELinux: Loaded file_contexts
+D/vold_prepare_subdirs( 1175): Setting up mode 700 uid 0 gid 0 context u:object_r:vold_data_file:s0 on path: /data/misc_de/0/vold
+D/vold_prepare_subdirs( 1175): Setting up mode 700 uid 0 gid 0 context u:object_r:storaged_data_file:s0 on path: /data/misc_de/0/storaged
+D/vold_prepare_subdirs( 1175): Setting up mode 700 uid 1000 gid 1000 context u:object_r:fingerprint_vendor_data_file:s0 on path: /data/vendor_de/0/fpdata
+D/vold    ( 1169): e4crypt_unlock_user_key 0 serial=0 token_present=0
+E/vold    ( 1169): Failed to chmod /data/system_ce/0: No such file or directory
+E/vold    ( 1169): Failed to chmod /data/misc_ce/0: No such file or directory
+E/vold    ( 1169): Failed to chmod /data/media/0: No such file or directory
+I/vold    ( 1169): Found disk at /devices/pci0000:00/0000:00:01.1/ata2/host1/target1:0:0/1:0:0:0/block/sr0 but delaying scan due to secure keyguard
+I//system/bin/tzdatacheck( 1177): timezone distro dir /data/misc/zoneinfo/current does not exist. No action required.
+I/android.hardwar( 1188): type=1400 audit(0.0:122): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:hal_configstore_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/android.hardwar( 1188): type=1400 audit(0.0:123): avc: denied { read } for name="vendor" dev="tmpfs" ino=1092 scontext=u:r:hal_configstore_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/init    (    1): type=1400 audit(0.0:124): avc: denied { dac_read_search } for capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+I/android.hardwar( 1193): type=1400 audit(0.0:125): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:hal_usb_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/android.hardwar( 1193): type=1400 audit(0.0:126): avc: denied { read } for name="vendor" dev="tmpfs" ino=1092 scontext=u:r:hal_usb_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/ServiceManagement( 1182): Removing namespace from process name android.hidl.allocator@1.0-service to allocator@1.0-service.
+I/health@2.0/( 1183): health@2.0/backup: Hal starting main loop...
+I/health@2.0/( 1183): health@2.0/backup Hal is starting up...
+I/ServiceManagement( 1193): Removing namespace from process name android.hardware.usb@1.0-service to usb@1.0-service.
+I/ServiceManagement( 1185): Removing namespace from process name android.hardware.bluetooth@1.0-service.btlinux to bluetooth@1.0-service.btlinux.
+I/ServiceManagement( 1189): Removing namespace from process name android.hardware.dumpstate@1.0-service to dumpstate@1.0-service.
+I/storaged( 1211): type=1400 audit(0.0:188): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:storaged:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/storaged( 1211): type=1400 audit(0.0:189): avc: denied { read } for name="vendor" dev="tmpfs" ino=1092 scontext=u:r:storaged:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/installd( 1204): installd firing up
+I/android.hardwar( 1188): type=1400 audit(0.0:190): avc: denied { read } for name="vendor" dev="tmpfs" ino=1092 scontext=u:r:hal_configstore_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W//vendor/bin/hw/android.hardware.configstore@1.1-service( 1188): Could not find seccomp policy file at: /vendor/etc/seccomp_policy/configstore@1.1.policy
+I/ServiceManagement( 1188): Removing namespace from process name android.hardware.configstore@1.1-service to configstore@1.1-service.
+E/cutils  ( 1204): Failed to read /data/.layout_version: No such file or directory
+D/installd( 1204): Assuming that device has multi-user storage layout; upgrade no longer supported
+I//system/bin/tombstoned( 1217): tombstoned successfully initialized
+I/installd( 1204): type=1400 audit(0.0:191): avc: denied { dac_read_search } for capability=2 scontext=u:r:installd:s0 tcontext=u:r:installd:s0 tclass=capability permissive=1
+D/installd( 1204): Upgrading to /data/misc/user directories
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.health@1.0::IHealth/default in either framework or device manifest.
+I/loop1   ( 1083): type=1400 audit(0.0:192): avc: denied { read } for path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+I/android.hardware.usb@1.0-service( 1193): USB HAL Ready.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.memtrack@1.0::IMemtrack/default in either framework or device manifest.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.usb.gadget@1.0::IUsbGadget/default in either framework or device manifest.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.thermal@1.1::IThermal/default in either framework or device manifest.
+D/vndksupport( 1183): Loading /vendor/lib64/hw/android.hardware.health@1.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1192): Loading /vendor/lib64/hw/android.hardware.power@1.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1191): Loading /vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1190): Loading /vendor/lib64/hw/android.hardware.light@2.0-impl.so from current namespace instead of sphal namespace.
+I/Netd    ( 1178): Netd 1.0 starting
+D/TetherController( 1178): Setting IP forward enable = 0
+E/        ( 1178): Cannot determine initial API level of the device
+I/usbd    ( 1218): Usb HAL not found
+W/thermalserviced( 1198): Unable to get Thermal HAL V1.1, vendor thermal event notification not available
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device manifest.
+I/HealthHalUtils( 1211): health: cannot get default service
+I/ServiceManagement( 1211): getService: Trying again for android.hardware.health@2.0::IHealth/backup...
+I/healthd ( 1183): healthd: redirecting calls to 1.0 health HAL
+D/vndksupport( 1191): Loading /vendor/lib64/hw/memtrack.default.so from current namespace instead of sphal namespace.
+I/health@2.0/( 1183): health@2.0/backup: Hal init done
+W/storaged( 1211): health: invalid battery status
+I/ServiceManagement( 1192): Removing namespace from process name android.hardware.power@1.0-service to power@1.0-service.
+I/android.hardware.power@1.0-service( 1192): Registration complete for android.hardware.power@1.0::IPower/default.
+I/ServiceManagement( 1191): Removing namespace from process name android.hardware.memtrack@1.0-service to memtrack@1.0-service.
+I/android.hardware.memtrack@1.0-service( 1191): Registration complete for android.hardware.memtrack@1.0::IMemtrack/default.
+I/android.hardwar( 1190): type=1400 audit(0.0:208): avc: denied { read } for name="backlight" dev="sysfs" ino=355 scontext=u:r:hal_light_default:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+I/android.hardwar( 1190): type=1400 audit(0.0:209): avc: denied { open } for path="/sys/class/backlight" dev="sysfs" ino=355 scontext=u:r:hal_light_default:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+E/lights  ( 1190): Unable to detect max_brightness. Try to set backlight.max_brightness_file
+E/light   ( 1190): light_open lights backlight failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+E/light   ( 1190): light_open lights keyboard failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+E/light   ( 1190): light_open lights buttons failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+E/light   ( 1190): light_open lights battery failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+E/light   ( 1190): light_open lights notifications failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+E/light   ( 1190): light_open lights attention failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+E/light   ( 1190): light_open lights bluetooth failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+E/light   ( 1190): light_open lights wifi failed: -22
+E/light   ( 1190): Light passthrough failed to load legacy HAL.
+I/light   ( 1190): Could not open any lights.
+I/ServiceManagement( 1190): Removing namespace from process name android.hardware.light@2.0-service to light@2.0-service.
+I/android.hardware.light@2.0-service( 1190): Registration complete for android.hardware.light@2.0::ILight/default.
+I/wificond( 1212): wificond is starting up...
+I/gatekeeperd( 1215): Starting gatekeeperd...
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.gatekeeper@1.0::IGatekeeper/default in either framework or device manifest.
+I/gatekeeperd( 1215): type=1400 audit(0.0:210): avc: denied { read } for name="lib64" dev="tmpfs" ino=1068 scontext=u:r:gatekeeperd:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/gatekeeperd( 1215): falling back to software GateKeeper
+W/statsd  ( 1210): statscompanion service unavailable!
+I/statsd  ( 1210): using statsd socket
+I/Netd    ( 1178): Creating child chains: 666.6ms
+I/Netd    ( 1178): Setting up OEM hooks: 3.2ms
+I/Netd    ( 1178): Setting up FirewallController hooks: 0.3ms
+==== 1792274831095
+22:07:12 up 4 min,  0 users,  load average: 8.81, 5.12, 2.13
+running
+
+--------- beginning of main
+W/dex2oat ( 1456): Verification of void lw.onCreate(android.os.Bundle) took 129.009ms
+W/dex2oat ( 1456): Verification of boolean org.chromium.chrome.browser.widget.findinpage.FindToolbar$FindQuery.onKey(android.view.View, int, android.view.KeyEvent) took 102.688ms
+W/dex2oat ( 1456): Verification of java.lang.Object aAk.a(int, java.lang.Object, java.lang.Object) took 100.853ms
+W/dex2oat ( 1456): Verification of java.lang.Object aAt.a(int, java.lang.Object, java.lang.Object) took 102.202ms
+W/dex2oat ( 1456): Verification of java.lang.Object awc.a(int, java.lang.Object, java.lang.Object) took 108.591ms
+W/dex2oat ( 1456): Verification of void bBo.a(java.lang.Runnable, java.lang.Runnable) took 109.787ms
+W/dex2oat ( 1456): Verification of void bBi.a(org.chromium.base.Callback) took 113.193ms
+W/dex2oat ( 1456): Verification of void et.onCreate(android.os.Bundle) took 112.361ms
+W/dex2oat ( 1456): Verification of void axp.a(asV) took 112.608ms
+W/dex2oat ( 1456): Verification of java.lang.Object axl.a(int, java.lang.Object, java.lang.Object) took 123.879ms
+W/dex2oat ( 1456): Verification of void cqk.addExtraDataToAccessibilityNodeInfo(int, android.view.accessibility.AccessibilityNodeInfo, java.lang.String, android.os.Bundle) took 101.800ms
+W/dex2oat ( 1456): Verification of void org.chromium.chrome.browser.ChromeTabbedActivity.B() took 115.131ms
+W/dex2oat ( 1456): Compilation of void aQC.<init>(org.chromium.chrome.browser.ChromeActivity, org.chromium.chrome.browser.tab.Tab) took 109.038ms
+W/dex2oat ( 1456): Compilation of java.lang.String J.N.M4Lnd8Lh(java.lang.Object, long) took 112.686ms
+W/dex2oat ( 1456): Compilation of org.chromium.ui.base.EventForwarder org.chromium.content.browser.webcontents.WebContentsImpl.nativeGetOrCreateEventForwarder(long) took 112.037ms
+W/dex2oat ( 1456): Compilation of boolean Fz.handleMessage(android.os.Message) took 122.697ms
+W/dex2oat ( 1456): Compilation of android.os.IBinder KS.onBind(android.content.Intent) took 119.822ms
+W/dex2oat ( 1456): Compilation of boolean aOQ.a(cFD, org.chromium.chrome.browser.autofill.keyboard_accessory.bar_component.KeyboardAccessoryView, cFA) took 107.027ms
+W/dex2oat ( 1456): Compilation of boolean aNe.a(android.view.View, boolean, boolean) took 122.206ms
+W/dex2oat ( 1456): Compilation of void aiF.<init>(agv, acr) took 102.094ms
+W/dex2oat ( 1456): Compilation of void android.support.v7.widget.Toolbar.onRestoreInstanceState(android.os.Parcelable) took 105.871ms
+W/dex2oat ( 1456): Compilation of void bYp.a(java.util.List) took 100.415ms
+W/dex2oat ( 1456): Compilation of void cyn.a(short, int) took 104.369ms
+W/dex2oat ( 1456): Compilation of Jy yo.a(boq) took 115.644ms
+W/dex2oat ( 1456): Compilation of void yy.<init>(yx, aJc) took 119.876ms
+W/dex2oat ( 1456): Compilation of void aCY.setViewPosition(android.view.View, float, float, float, float, int, int) took 106.768ms
+W/dex2oat ( 1456): Compilation of void aYU.f(float, float) took 115.665ms
+W/dex2oat ( 1456): Compilation of void aZu.a() took 116.512ms
+W/dex2oat ( 1456): Compilation of void aaF.<init>(android.content.Context, afX, afV, afv, agm, afo, afu, aai, java.util.List, acr, agy, agj, afs, afW, afw, afA, abL, aal, afY, boolean) took 141.278ms
+W/dex2oat ( 1456): Compilation of void android.support.design.widget.BottomSheetBehavior.a(android.support.design.widget.CoordinatorLayout, android.view.View, android.os.Parcelable) took 107.965ms
+W/dex2oat ( 1456): Compilation of void android.support.v7.widget.ActionBarOverlayLayout.onLayout(boolean, int, int, int, int) took 115.877ms
+W/dex2oat ( 1456): Compilation of void android.support.v7.widget.StaggeredGridLayoutManager.c(sq, su) took 111.524ms
+W/dex2oat ( 1456): Compilation of java.lang.Object atm.b(boolean, java.lang.Object, java.lang.Object) took 112.392ms
+W/dex2oat ( 1456): Compilation of void bfZ.onResult(java.lang.Object) took 108.019ms
+W/dex2oat ( 1456): Compilation of void bfq.b(org.chromium.chrome.browser.tab.Tab, boolean) took 111.961ms
+W/dex2oat ( 1456): Compilation of void bzH.onLogoAvailable(org.chromium.chrome.browser.ntp.LogoBridge$Logo, boolean) took 102.616ms
+W/dex2oat ( 1456): Compilation of void cnT.b() took 113.944ms
+W/dex2oat ( 1456): Compilation of void org.chromium.chrome.browser.widget.findinpage.FindToolbar.onFinishInflate() took 110.242ms
+W/dex2oat ( 1456): Compilation of void arX.<clinit>() took 100.724ms
+W/dex2oat ( 1456): Compilation of void kI.onCreate(android.os.Bundle) took 131.416ms
+W/dex2oat ( 1456): Compilation of void org.chromium.content.browser.input.ImeAdapterImpl.populateImeTextSpansFromJava(java.lang.CharSequence, long) took 102.434ms
+I/dex2oat ( 1456): Explicit concurrent copying GC freed 54555(9MB) AllocSpace objects, 0(0B) LOS objects, 96% free, 56KB/1592KB, paused 4.617ms total 394.764ms
+I/dex2oat ( 1456): Explicit concurrent copying GC freed 991(148KB) AllocSpace objects, 0(0B) LOS objects, 96% free, 56KB/1592KB, paused 246us total 15.941ms
+I/dex2oat ( 1456): dex2oat took 42.851s (25.405s cpu) (threads: 4) arena alloc=2MB (2623592B) java alloc=56KB (57656B) native alloc=6MB (7218264B) free=6MB (6413224B)
+V/installed( 1204): DexInv: --- END '/system/app/Chrome/Chrome.apk' (success) ---
+I/system_server( 1339): The ClassLoaderContext is a special shared library.
+I/system_server( 1339): The ClassLoaderContext is a special shared library.
+W/system_server( 1339): Could not open dex files from location: /system/framework/com.android.location.provider.jar
+I/PackageManager.DexOptimizer( 1339): Running dexopt (dexoptNeeded=1) on: /system/priv-app/GmsCore/GmsCore.apk pkg=com.google.android.gms isa=x86 dexoptFlags=public,enable_hidden_api_checks targetFilter=quicken oatDir=null classLoaderContext=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar]
+V/installed( 1204): DexInv: --- BEGIN '/system/priv-app/GmsCore/GmsCore.apk' ---
+W/dex2oat ( 1470): Unexpected CPU variant for X86 using defaults: x86_64
+W/dex2oat ( 1470): Mismatch between dex2oat instruction set features (ISA: X86 Feature string: -ssse3,-sse4.1,-sse4.2,-avx,-avx2,-popcnt) and those of dex2oat executable (ISA: X86 Feature string: ssse3,sse4.1,sse4.2,-avx,-avx2,popcnt) for the command line:
+W/dex2oat ( 1470): /system/bin/dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+I/dex2oat ( 1470): /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=18 --compiler-filter=quicken --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --compilation-reason=first-boot
+--------- beginning of system
+E/storaged( 1211): getDiskStats failed with result NOT_SUPPORTED and size 0
+W/dex2oat ( 1470): Could not open dex files from location: /system/framework/com.android.location.provider.jar
+W/dex2oat ( 1470): Failed to open classpath dex files
+I/dex2oat ( 1470): Large app, accepted running with swap.
+W/dex2oat ( 1470): Verification of void b.<clinit>() took 104.778ms
+W/dex2oat ( 1470): Verification of void f.<init>() took 108.926ms
+W/dex2oat ( 1470): Verification of boolean dg.equals(java.lang.Object) took 110.610ms
+W/dex2oat ( 1470): Verification of void om.setInitialSavedState(op) took 103.309ms
+W/dex2oat ( 1470): Verification of void dj.<init>(android.content.Context, android.util.AttributeSet) took 123.249ms
+W/dex2oat ( 1470): Verification of void android.support.constraint.ConstraintLayout.onMeasure(int, int) took 167.765ms
+W/dex2oat ( 1470): Verification of void ec.<init>(dy) took 115.666ms
+W/dex2oat ( 1470): Verification of el el.a(java.util.List) took 102.987ms
+W/dex2oat ( 1470): Verification of int dx.a(ds, dy[], dy, int, boolean[]) took 240.191ms
+W/dex2oat ( 1470): Verification of boolean android.support.design.appbar.AppBarLayout.b(boolean) took 115.640ms
+W/dex2oat ( 1470): Verification of void android.support.design.appbar.CollapsingToolbarLayout.<init>(android.content.Context, android.util.AttributeSet, int) took 109.029ms
+W/dex2oat ( 1470): Verification of boolean dx.b(ds) took 119.587ms
+W/dex2oat ( 1470): Verification of void fa.<init>(fb, androidx.coordinatorlayout.widget.CoordinatorLayout, android.view.View) took 106.126ms
+W/dex2oat ( 1470): Verification of void android.support.design.appbar.CollapsingToolbarLayout.onLayout(boolean, int, int, int, int) took 108.949ms
+W/dex2oat ( 1470): Verification of void fq.a(android.content.res.ColorStateList) took 107.555ms
+W/dex2oat ( 1470): Verification of int acv.addIntentOptions(int, int, int, android.content.ComponentName, android.content.Intent[], android.content.Intent, int, android.view.MenuItem[]) took 107.428ms
+W/dex2oat ( 1470): Verification of void acv.b(android.os.Bundle) took 100.591ms
+W/dex2oat ( 1470): Verification of void android.support.design.bottomnavigation.BottomNavigationView.<init>(android.content.Context, android.util.AttributeSet, int) took 101.631ms
+W/dex2oat ( 1470): Verification of void fr.b() took 100.099ms
+W/dex2oat ( 1470): Verification of void dx.c(ds) took 373.055ms
+W/dex2oat ( 1470): Verification of void android.support.v7.widget.AppCompatButton.setBackgroundResource(int) took 113.566ms
+W/dex2oat ( 1470): Verification of void dx.d(ds) took 245.658ms
+W/dex2oat ( 1470): Verification of void android.support.design.card.MaterialCardView.<init>(android.content.Context, android.util.AttributeSet, int) took 125.741ms
+W/dex2oat ( 1470): Verification of void gy.<init>(android.support.design.chip.Chip) took 104.540ms
+W/dex2oat ( 1470): Verification of boolean yt.b(int, int) took 114.717ms
+W/dex2oat ( 1470): Verification of boolean kl.d() took 108.344ms
+W/dex2oat ( 1470): Verification of void dx.b() took 247.981ms
+W/dex2oat ( 1470): Verification of boolean android.support.design.floatingactionbutton.ExtendedFloatingActionButton$ExtendedFloatingActionButtonBehavior.a(androidx.coordinatorlayout.widget.CoordinatorLayout, android.view.View, android.view.View) took 112.505ms
+W/dex2oat ( 1470): Verification of void android.support.design.floatingactionbutton.FloatingActionButton.<init>(android.content.Context, android.util.AttributeSet, int) took 112.236ms
+W/dex2oat ( 1470): Verification of void android.support.design.floatingactionbutton.FloatingActionButton.a() took 102.021ms
+W/dex2oat ( 1470): Verification of void hr.a(android.content.res.ColorStateList, android.graphics.PorterDuff$Mode, android.content.res.ColorStateList, int) took 106.402ms
+W/dex2oat ( 1470): Verification of ha ha.a(android.content.Context, android.util.AttributeSet, int) took 118.115ms
+W/dex2oat ( 1470): Verification of void ii.b(float) took 105.562ms
+W/dex2oat ( 1470): Verification of void ie.a(android.content.res.ColorStateList, android.graphics.PorterDuff$Mode, android.content.res.ColorStateList, int) took 113.960ms
+W/dex2oat ( 1470): Verification of void ha.draw(android.graphics.Canvas) took 116.591ms
+W/dex2oat ( 1470): Verification of void im.<clinit>() took 113.266ms
+W/dex2oat ( 1470): Verification of void ja.<init>(android.os.Parcel, java.lang.ClassLoader) took 101.221ms
+W/dex2oat ( 1470): Verification of void android.support.v7.widget.RecyclerView.B() took 120.334ms
+W/dex2oat ( 1470): Verification of boolean android.support.v7.widget.RecyclerView.onInterceptTouchEvent(android.view.MotionEvent) took 103.145ms
+W/dex2oat ( 1470): Verification of void ahk.onMeasure(int, int) took 540.451ms
+W/dex2oat ( 1470): Verification of void mv.<init>(android.support.design.tabs.TabLayout, android.content.Context) took 104.772ms
+W/dex2oat ( 1470): Verification of void android.support.design.tabs.TabLayout.a(androidx.viewpager.widget.ViewPager, boolean) took 107.510ms
+W/dex2oat ( 1470): Verification of void android.support.design.tabs.TabLayout.onMeasure(int, int) took 115.336ms
+W/dex2oat ( 1470): Verification of void oi.<init>(android.os.Parcel) took 107.297ms
+W/dex2oat ( 1470): Verification of void android.support.design.textfield.TextInputLayout.<init>(android.content.Context, android.util.AttributeSet, int) took 125.808ms
+W/dex2oat ( 1470): Verification of ox ow.a() took 107.460ms
+W/dex2oat ( 1470): Verification of void pr.<init>() took 110.010ms
+W/dex2oat ( 1470): Verification of void android.support.design.textfield.TextInputLayout.onLayout(boolean, int, int, int, int) took 103.475ms
+W/dex2oat ( 1470): Verification of void pb.a(java.util.ArrayList, java.util.ArrayList, int, int) took 117.766ms
+W/dex2oat ( 1470): Verification of void qa.a(pb, java.util.ArrayList, java.util.ArrayList, int, int, boolean) took 118.888ms
+W/dex2oat ( 1470): Verification of void pb.s(om) took 105.431ms
+W/dex2oat ( 1470): Verification of aju ajl.a(int, long) took 133.819ms
+W/dex2oat ( 1470): Verification of void apk.a(android.content.Context, android.database.Cursor, int) took 106.713ms
+W/dex2oat ( 1470): Verification of void android.support.v7.widget.SearchView.a(java.lang.CharSequence, boolean) took 105.114ms
+W/dex2oat ( 1470): Verification of void android.support.v7.widget.SwitchCompat.<init>(android.content.Context, android.util.AttributeSet, int) took 106.271ms
+W/dex2oat ( 1470): Verification of void alj.<init>(android.support.v7.widget.Toolbar, boolean) took 102.434ms
+W/dex2oat ( 1470): Verification of void all.a() took 102.820ms
+W/dex2oat ( 1470): Verification of void amo.<init>(android.support.wearable.complications.rendering.ComplicationStyle, boolean, boolean, boolean) took 107.093ms
+W/dex2oat ( 1470): Verification of void android.support.v7.widget.Toolbar.onLayout(boolean, int, int, int, int) took 117.845ms
+W/dex2oat ( 1470): Verification of void android.support.v7.widget.Toolbar.onRestoreInstanceState(android.os.Parcelable) took 111.210ms
+W/dex2oat ( 1470): Verification of void anh.onLayout(boolean, int, int, int, int) took 105.044ms
+W/dex2oat ( 1470): Verification of void ank.<init>() took 107.162ms
+==== 1792275316385
+22:15:17 up 1 min,  0 users,  load average: 7.97, 2.42, 0.85
+running
+
+--------- beginning of main
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x7a128a42c100, 32768)
+I/Binder:1335_5( 1335): type=1400 audit(0.0:294): avc: denied { read } for name="vendor" dev="tmpfs" ino=1949 scontext=u:r:system_server:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/main    ( 1744): type=1400 audit(0.0:295): avc: denied { dac_read_search } for capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+I/SELinux ( 1335): SELinux: Loaded file_contexts
+--------- beginning of system
+W/Looper  ( 1335): Slow dispatch took 318ms main h=com.android.server.notification.NotificationManagerService$WorkerHandler c=null m=3
+D/BluetoothManagerService( 1335): BluetoothServiceConnection: com.android.bluetooth.btservice.AdapterService
+D/BluetoothManagerService( 1335): MESSAGE_BLUETOOTH_SERVICE_CONNECTED: 1
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x7a128a42c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 2 lines
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x7a128a42c100, 32768)
+D/BluetoothManagerService( 1335): MESSAGE_GET_NAME_AND_ADDRESS
+I/Zygote  ( 1744): seccomp disabled by setenforce 0
+I/main    ( 1744): type=1400 audit(0.0:296): avc: denied { read } for name="vendor" dev="tmpfs" ino=1949 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+D/BluetoothManagerService( 1335): unbindAndFinish(): android.bluetooth.IBluetooth$Stub$Proxy@1255d6e mBinding = false mUnbinding = false
+W/MediaPlayer( 1652): Couldn't open content://0@settings/system/notification_sound_cache: java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+W/MediaPlayer( 1652): Couldn't open null: java.lang.NullPointerException: uri
+D/BluetoothAdapterService( 1477): onUnbind() - calling cleanup
+D/BluetoothAdapterService( 1477): cleanup()
+I/FusedLocation( 1335): engine started (com.android.location.fused)
+W/Looper  ( 1335): Slow dispatch took 109ms main h=com.android.location.fused.FusedLocationProvider$2 c=null m=1
+W/system_server( 1335): Long monitor contention with owner android.io (1357) at boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection)(ActivityManagerService.java:20553) waiters=0 in void com.android.server.am.ActivityManagerService.setLockScreenShown(boolean, boolean, int) for 175ms
+W/system_server( 1335): Long monitor contention with owner android.io (1357) at boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection)(ActivityManagerService.java:20553) waiters=1 in android.app.ContentProviderHolder com.android.server.am.ActivityManagerService.getContentProviderImpl(android.app.IApplicationThread, java.lang.String, android.os.IBinder, boolean, int) for 172ms
+W/.gms.persisten( 1744): Unexpected CPU variant for X86 using defaults: x86_64
+E/MediaPlayerService( 1209): Couldn't open fd for content://settings/system/notification_sound
+E/MediaPlayerNative( 1652): Unable to create media player
+V/MediaPlayer( 1652): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer( 1652): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+V/MediaPlayer( 1652): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer( 1652): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+D/Ringtone( 1652): Problem opening; delegating to remote player
+W/BluetoothSdpJni( 1477): Cleaning up Bluetooth SDP Interface...
+W/BluetoothSdpJni( 1477): Cleaning up Bluetooth SDP object
+D/BluetoothAdapterService( 1477): cleanup() - Cleaning up adapter native
+E/TrafficController( 1178): Failed to delete the counterSet: Bad file descriptor
+I/bt_stack_manager( 1477): event_clean_up_stack is cleaning up the stack
+I/bt_btif_core( 1477): btif_cleanup_bluetooth entered
+W/Looper  ( 1335): Slow dispatch took 152ms main h=com.android.server.pm.UserManagerService$MainHandler c=null m=1
+W/system_server( 1335): Long monitor contention with owner main (1335) at void com.android.server.pm.UserManagerService$MainHandler.handleMessage(android.os.Message)(UserManagerService.java:3712) waiters=0 in android.content.pm.ProviderInfo com.android.server.pm.PackageManagerService.resolveContentProviderInternal(java.lang.String, int, int) for 153ms
+E/bt_btif ( 1477): do_in_bta_thread: MessageLooper not initialized
+E/BluetoothServiceJni( 1477): Callback: 'callback_thread_event' is not called on the correct thread
+I/bt_btif_queue( 1477): btif_queue_release
+I/bt_btif_core( 1477): run_message_loop finished
+W/bt_osi_thread( 1477): run_thread: thread id 1711, thread name bt_jni_workqueue exited
+I/bt_core_module( 1477): module_clean_up Cleaning up module "stack_config_module"
+I/bt_core_module( 1477): module_clean_up Cleanup of module "stack_config_module" completed
+I/bt_core_module( 1477): module_clean_up Cleaning up module "interop_module"
+I/bt_core_module( 1477): module_clean_up Cleanup of module "interop_module" completed
+I/bt_btif_core( 1477): btif_cleanup_bluetooth finished
+I/bt_core_module( 1477): module_clean_up Cleaning up module "btif_config_module"
+D/vold    ( 1169): Found a CDROM: /sys//devices/pci0000:00/0000:00:01.1/ata2/host1/target1:0:0/1:0:0:0/block/sr0
+W/MediaPlayer( 1652): Couldn't open content://0@settings/system/notification_sound_cache: java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+W/MediaPlayer( 1652): Couldn't open null: java.lang.NullPointerException: uri
+W/vold    ( 1169): sgdisk failed to scan /dev/block/vold/disk:11,0
+V/vold    ( 1169): /system/bin/blkid
+V/vold    ( 1169):     -c
+V/vold    ( 1169):     /dev/null
+V/vold    ( 1169):     -s
+V/vold    ( 1169):     TYPE
+V/vold    ( 1169):     -s
+V/vold    ( 1169):     UUID
+V/vold    ( 1169):     -s
+V/vold    ( 1169):     LABEL
+V/vold    ( 1169):     /dev/block/vold/disk:11,0
+E/MediaPlayerService( 1209): Couldn't open fd for content://settings/system/notification_sound
+E/MediaPlayerNative( 1652): Unable to create media player
+V/MediaPlayer( 1652): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer( 1652): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+V/MediaPlayer( 1652): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer( 1652): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+D/Ringtone( 1652): Problem opening; delegating to remote player
+I/sh      ( 1764): type=1400 audit(0.0:297): avc: denied { search } for name="/" dev="tmpfs" ino=1895 scontext=u:r:blkid_untrusted:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+I/bt_core_module( 1477): module_clean_up Cleanup of module "btif_config_module" completed
+I/bt_core_module( 1477): module_clean_up Cleaning up module "bt_utils_module"
+I/bt_core_module( 1477): module_clean_up Cleanup of module "bt_utils_module" completed
+I/bt_core_module( 1477): module_clean_up Cleaning up module "osi_module"
+D/bt_osi_alarm( 1477): callback_dispatch Callback thread exited
+W/bt_osi_thread( 1477): run_thread: thread id 1708, thread name alarm_dispatcher exited
+W/bt_osi_thread( 1477): run_thread: thread id 1707, thread name alarm_default_ca exited
+I/FFmpegExtractor( 1207): android-source:0x7b6497229400
+I/bt_core_module( 1477): module_clean_up Cleanup of module "osi_module" completed
+I/bt_stack_manager( 1477): event_clean_up_stack finished
+I/BluetoothServiceJni( 1477): cleanupNative: return from cleanup
+I/FFmpegExtractor( 1207): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+W/system_server( 1335): Long monitor contention with owner Binder:1335_5 (1672) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:544) waiters=0 in android.os.Message android.os.MessageQueue.next() for 102ms
+W/ActivityManager( 1335): Slow operation: 164ms so far, now at attachApplicationLocked: after mServices.attachApplicationLocked
+W/system_server( 1335): Long monitor contention with owner Binder:1335_5 (1672) at void com.android.server.am.ActivityManagerService.attachApplication(android.app.IApplicationThread, long)(ActivityManagerService.java:7966) waiters=0 in void com.android.server.am.ActivityManagerService.unregisterReceiver(android.content.IIntentReceiver) for 141ms
+I/sh      ( 1764): type=1400 audit(0.0:298): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1949 scontext=u:r:blkid_untrusted:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/Looper  ( 1335): Drained
+D/BluetoothActiveDeviceManager( 1477): cleanup()
+D/BluetoothAdapterService( 1477): onDestroy()
+I/BluetoothAdapterService( 1477): Force exit to cleanup internal state in Bluetooth stack
+I/OMXClient( 1488): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+E/OMXNodeInstance( 1213): getConfig(0xe6e2cf60:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+I/droid.bluetoot( 1477): System.exit called, status: 0
+I/AndroidRuntime( 1477): VM exiting with result code 0, cleanup skipped.
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x7a128a42c100, 32768)
+I/chatty  ( 1182): uid=1000(system) allocator@1.0-s identical 10 lines
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x7a128a42c100, 32768)
+E/NetdConnector( 1335): NDC Command {15 bandwidth addniceapps 10008} took too long (798ms)
+W/system_server( 1335): Long monitor contention with owner NetworkPolicy.uid (1425) at void java.lang.Object.wait(long, int)(Object.java:-2) waiters=0 in void com.android.server.NetworkManagementService.setUidCleartextNetworkPolicy(int, int) for 469ms
+E/TrafficController( 1178): Failed to set the counterSet: Bad file descriptor, fd: -1
+I/blkid   ( 1764): type=1400 audit(0.0:300): avc: denied { search } for name="/" dev="tmpfs" ino=1895 scontext=u:r:blkid_untrusted:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+I/FFmpegExtractor( 1207): android-source:0x7b6498c5ca00
+I/FFmpegExtractor( 1207): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+I/.gms.persisten( 1744): The ClassLoaderContext is a special shared library.
+D/SystemUIBootTiming( 1488): StartServicescom.android.systemui.recents.Recents took to complete: 2780ms
+W/SystemUIService( 1488): Initialization of com.android.systemui.recents.Recents took 2779 ms
+I/.gms.persisten( 1744): The ClassLoaderContext is a special shared library.
+I/OMXClient( 1488): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+I/loop1   ( 1082): type=1400 audit(0.0:301): avc: denied { read } for path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+I/vol.Events( 1488): writeEvent collection_started
+E/OMXNodeInstance( 1213): getConfig(0xe6e2cf60:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+I/.gms.persisten( 1744): The ClassLoaderContext is a special shared library.
+W/AshmemAllocator( 1182): ashmem_create_region(32768) returning hidl_memory(0x7a128a42c100, 32768)
+==== 1792275554080
+22:19:14 up 1 min,  0 users,  load average: 6.92, 2.04, 0.71
+running
+
+--------- beginning of system
+I/SystemServer( 1331): StartNetworkScoreService
+I/SystemServiceManager( 1331): Starting com.android.server.NetworkScoreService$Lifecycle
+--------- beginning of main
+I/NetworkScoreService( 1331): Registering network_score
+D/SystemServerTiming( 1331): StartNetworkScoreService took to complete: 14ms
+I/SystemServer( 1331): StartNetworkStatsService
+D/SystemServerTiming( 1331): StartNetworkStatsService took to complete: 118ms
+I/SystemServer( 1331): StartNetworkPolicyManagerService
+I/main    ( 1180): type=1400 audit(0.0:274): avc: denied { read } for name="etc" dev="tmpfs" ino=8215 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+D/SystemServerTiming( 1331): StartNetworkPolicyManagerService took to complete: 136ms
+I/SystemServer( 1331): StartWifi
+W/system_server( 1331): Verification of void com.android.server.wifi.WifiService.<init>(android.content.Context) took 595.099ms
+I/SystemServiceManager( 1331): Starting com.android.server.wifi.WifiService
+D/SystemServerTimingAsync( 1331): AppDataPrepare took to complete: 12315ms
+I/PackageManager( 1331): Deferred reconcileAppsData finished 82 packages
+D/SystemServerInitThreadPool( 1331): Finished executing prepareAppData
+W/system_server( 1331): Verification of void com.android.server.wifi.WifiInjector.<init>(android.content.Context) took 324.790ms
+E/ActivityRecognitionHardware( 1180): activity_recognition HAL is deprecated. class_init is effectively a no-op
+I/zygote  ( 1180): Background concurrent copying GC freed 17203(961KB) AllocSpace objects, 1(20KB) LOS objects, 73% free, 549KB/2MB, paused 2.836ms total 175.176ms
+I/zygote  ( 1180): Background concurrent copying GC freed 6265(690KB) AllocSpace objects, 5(140KB) LOS objects, 42% free, 2MB/3MB, paused 267us total 133.287ms
+W/system_server( 1331): Verification of void com.android.server.wifi.WifiVendorHal.<init>(com.android.server.wifi.HalDeviceManager, android.os.Looper) took 139.355ms
+I/zygote  ( 1180): Background concurrent copying GC freed 2875(1810KB) AllocSpace objects, 21(336KB) LOS objects, 42% free, 3MB/5MB, paused 944us total 154.381ms
+D/WifiApConfigStore( 1331): 2G band allowed channels are:1,6,11
+I/WifiScoringParams( 1331): rssi2=-85:-85:-73:-60,rssi5=-82:-82:-70:-57,pps=0:1:100,horizon=15,nud=8,expid=0
+I/zygote  ( 1180): Thread[1,tid=1180,Native,Thread*=0xe9e1e000,peer=0x12ec0110,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+D/MtpDeviceJNI( 1180): register_android_mtp_MtpDevice
+I/zygote  ( 1180): Thread[1,tid=1180,Native,Thread*=0xe9e1e000,peer=0x12ec0110,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+I/zygote  ( 1180): Thread[1,tid=1180,Native,Thread*=0xe9e1e000,peer=0x12ec0110,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+D/WifiStateMachine( 1331): EnableConnectedMacRandomization Setting changed to false
+E/WifiStateMachine( 1331): getWifiLinkLayerStats called without an interface
+D/WifiStateMachinePrime( 1331): Starting Wifi in WifiDisabledState
+D/WifiStateMachinePrime( 1331): Entering WifiDisabledState
+D/ActiveModeManager( 1331): sending scan available broadcast: false
+D/WifiOpenNetworkNotifier( 1331): Settings toggle enabled=true
+D/WifiCarrierNetworkNotifier( 1331): Settings toggle enabled=true
+D/WakeupController( 1331): WifiWake enabled
+D/WifiController( 1331): isAirplaneModeOn = false, isWifiEnabled = false, isScanningAvailable = false, isLocationModeActive = false
+E/SupplicantStaIfaceHal( 1331): Can't call setDebugParams, ISupplicant is null
+W/WifiDiags( 1331): no ring buffers found
+W/WifiDiags( 1331): Failed to start packet fate monitoring
+I/WifiService( 1331): Registering wifi
+W/SystemServiceManager( 1331): Service com.android.server.wifi.WifiService took 105 ms in onStart
+D/SystemServerTiming( 1331): StartWifi took to complete: 3421ms
+I/SystemServer( 1331): StartWifiScanning
+I/SystemServiceManager( 1331): Starting com.android.server.wifi.scanner.WifiScanningService
+I/WifiScanningService( 1331): Creating wifiscanner
+I/WifiScanningService( 1331): Publishing wifiscanner
+D/SystemServerTiming( 1331): StartWifiScanning took to complete: 19ms
+I/SystemServer( 1331): StartEthernet
+I/SystemServiceManager( 1331): Starting com.android.server.ethernet.EthernetService
+I/EthernetService( 1331): Registering service ethernet
+D/SystemServerTiming( 1331): StartEthernet took to complete: 11ms
+I/SystemServer( 1331): StartConnectivityService
+D/ConnectivityService( 1331): ConnectivityService starting up
+D/ConnectivityService( 1331): wifiOnly=true
+D/ConnectivityService( 1331): networkAttributes - ignoring mobile as this dev is wifiOnly 0
+D/ConnectivityService( 1331): networkAttributes - ignoring mobile as this dev is wifiOnly 2
+D/ConnectivityService( 1331): networkAttributes - ignoring mobile as this dev is wifiOnly 3
+D/ConnectivityService( 1331): networkAttributes - ignoring mobile as this dev is wifiOnly 5
+D/ConnectivityService( 1331): networkAttributes - ignoring mobile as this dev is wifiOnly 10
+D/ConnectivityService( 1331): networkAttributes - ignoring mobile as this dev is wifiOnly 11
+D/ConnectivityService( 1331): networkAttributes - ignoring mobile as this dev is wifiOnly 12
+E/ConnectivityService( 1331): Ignoring protectedNetwork 10
+E/ConnectivityService( 1331): Ignoring protectedNetwork 11
+E/ConnectivityService( 1331): Ignoring protectedNetwork 12
+E/ConnectivityService( 1331): Ignoring protectedNetwork 14
+E/ConnectivityService( 1331): Ignoring protectedNetwork 15
+D/SystemServerTiming( 1331): StartConnectivityService took to complete: 325ms
+I/SystemServer( 1331): StartNsdService
+D/NsdService( 1331): Network service discovery is enabled
+I/zygote  ( 1180): Background concurrent copying GC freed 12295(1031KB) AllocSpace objects, 137(2MB) LOS objects, 44% free, 1889KB/3MB, paused 357us total 160.479ms
+D/SystemServerTiming( 1331): StartNsdService took to complete: 142ms
+I/SystemServer( 1331): StartSystemUpdateManagerService
+I/SystemUpdateManagerService( 1331): No existing info file /data/system/system-update-info.xml
+D/SystemServerTiming( 1331): StartSystemUpdateManagerService took to complete: 9ms
+I/SystemServer( 1331): StartUpdateLockService
+D/SystemServerTiming( 1331): StartUpdateLockService took to complete: 5ms
+I/SystemServer( 1331): StartNotificationManager
+I/SystemServiceManager( 1331): Starting com.android.server.notification.NotificationManagerService
+D/ConditionProviders.SCP( 1331): new ScheduleConditionProvider()
+D/ZenLog  ( 1331): config: readXml,ZenModeConfig[user=0,allowAlarms=true,allowMedia=true,allowSystem=false,allowReminders=false,allowEvents=false,allowCalls=true,allowRepeatCallers=true,allowMessages=false,allowCallsFrom=stars,allowMessagesFrom=contacts,suppressedVisualEffects=511,areChannelsBypassingDnd=false,automaticRules={EVENTS_DEFAULT_RULE=ZenRule[enabled=false,snoozing=false,name=Event,zenMode=ZEN_MODE_IMPORTANT_INTERRUPTIONS,conditionId=condition://android/event?userId=-10000&calendar=&reply=1,condition=Condition[id=condition://android/event?userId=-10000&calendar=&reply=1,summary=...,line1=...,line2=...,icon=0,state=STATE_FALSE,flags=2],component=ComponentInfo{android/com.android.server.notification.EventConditionProvider},id=EVENTS_DEFAULT_RULE,creationTime=1792275015319,enabler=null], EVERY_NIGHT_DEFAULT_RULE=ZenRule[enabled=false,snoozing=false,name=Sleeping,zenMode=ZEN_MODE_IMPORTANT_INTERRUPTIONS,conditionId=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,condition=Condition[id=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,summary=...,line1=...,line2=...,icon=0,state=STATE_TRUE,flags=2],component=ComponentInfo{android/com.android.server.notification.ScheduleConditionProvider},id=EVERY_NIGHT_DEFAULT_RULE,creationTime=1792275015318,enabler=null]},manualRule=null],Diff[automaticRule[EVENTS_DEFAULT_RULE].condition:null->Condition[id=condition://android/event?userId=-10000&calendar=&reply=1,summary=...,line1=...,line2=...,icon=0,state=STATE_FALSE,flags=2],automaticRule[EVENTS_DEFAULT_RULE].creationTime:1792275554373->1792275015319,automaticRule[EVERY_NIGHT_DEFAULT_RULE].condition:null->Condition[id=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,summary=...,line1=...,line2=...,icon=0,state=STATE_TRUE,flags=2],automaticRule[EVERY_NIGHT_DEFAULT_RULE].creationTime:1792275554349->1792275015318]
+I/NotificationListeners( 1331): Read notification listener permissions from xml
+I/ConditionProviders( 1331): Read condition provider permissions from xml
+I/ConditionProviders( 1331): Read condition provider permissions from xml
+D/NotificationAssistants( 1331): Approving default notification assistant for user 0
+D/ZenLog  ( 1331): set_zen_mode: off,init
+W/SystemServiceManager( 1331): Service com.android.server.notification.NotificationManagerService took 618 ms in onStart
+D/SystemServerTiming( 1331): StartNotificationManager took to complete: 743ms
+I/SystemServer( 1331): StartDeviceMonitor
+I/SystemServiceManager( 1331): Starting com.android.server.storage.DeviceStorageMonitorService
+D/SystemServerTiming( 1331): StartDeviceMonitor took to complete: 9ms
+I/SystemServer( 1331): StartLocationManagerService
+D/SystemServerTiming( 1331): StartLocationManagerService took to complete: 5ms
+I/SystemServer( 1331): StartCountryDetectorService
+D/SystemServerTiming( 1331): StartCountryDetectorService took to complete: 2ms
+I/SystemServer( 1331): StartSearchManagerService
+I/SystemServiceManager( 1331): Starting com.android.server.search.SearchManagerService$Lifecycle
+D/SystemServerTiming( 1331): StartSearchManagerService took to complete: 6ms
+I/SystemServer( 1331): StartWallpaperManagerService
+I/SystemServiceManager( 1331): Starting com.android.server.wallpaper.WallpaperManagerService$Lifecycle
+D/SystemServerTiming( 1331): StartWallpaperManagerService took to complete: 6ms
+I/SystemServer( 1331): StartAudioService
+I/SystemServiceManager( 1331): Starting com.android.server.audio.AudioService$Lifecycle
+W/TelecomManager( 1331): Telecom Service not found.
+D/PermissionCache( 1195): checking android.permission.MODIFY_AUDIO_ROUTING for uid=1000 => granted (1111 us)
+D/PermissionCache( 1195): checking android.permission.MODIFY_AUDIO_SETTINGS for uid=1000 => granted (11401 us)
+D/AudioFlinger( 1195): isLowRamDevice:false totalMemory:2088816640 mClientSharedHeapSize:4194304
+D/SystemServerTiming( 1331): StartAudioService took to complete: 476ms
+I/SystemServer( 1331): StartDockObserver
+I/SystemServiceManager( 1331): Starting com.android.server.DockObserver
+W/DockObserver( 1331): This kernel does not have dock station support
+D/SystemServerTiming( 1331): StartDockObserver took to complete: 100ms
+I/SystemServer( 1331): StartWiredAccessoryManager
+W/WiredAccessoryManager( 1331): This kernel does not have usb audio support
+W/WiredAccessoryManager( 1331): This kernel does not have HDMI audio support
+D/SystemServerTiming( 1331): StartWiredAccessoryManager took to complete: 4ms
+I/SystemServer( 1331): StartMidiManager
+I/SystemServiceManager( 1331): Starting com.android.server.midi.MidiService$Lifecycle
+D/SystemServerTiming( 1331): StartMidiManager took to complete: 16ms
+I/SystemServer( 1331): StartUsbService
+I/SystemServiceManager( 1331): Starting com.android.server.usb.UsbService$Lifecycle
+==== 1792275798296
+22:23:18 up 1 min,  0 users,  load average: 4.32, 1.25, 0.43
+running
+
+--------- beginning of system
+W/PackageSettings( 1333): Couldn't write 1001 to /config/sdcardfs/com.android.phone/appid
+W/PackageSettings( 1333): Couldn't write 2000 to /config/sdcardfs/com.android.shell/appid
+W/PackageSettings( 1333): Couldn't write 1000 to /config/sdcardfs/com.android.wallpaperbackup/appid
+W/PackageSettings( 1333): Couldn't write 10019 to /config/sdcardfs/com.android.providers.blockednumber/appid
+W/PackageSettings( 1333): Couldn't write 10019 to /config/sdcardfs/com.android.providers.userdictionary/appid
+W/PackageSettings( 1333): Couldn't write 10026 to /config/sdcardfs/com.android.emergency/appid
+W/PackageSettings( 1333): Couldn't write 1000 to /config/sdcardfs/com.android.location.fused/appid
+W/PackageSettings( 1333): Couldn't write 10057 to /config/sdcardfs/com.android.deskclock/appid
+W/PackageSettings( 1333): Couldn't write 10017 to /config/sdcardfs/com.android.systemui/appid
+W/PackageSettings( 1333): Couldn't write 10041 to /config/sdcardfs/com.android.bluetoothmidiservice/appid
+W/PackageSettings( 1333): Couldn't write 10068 to /config/sdcardfs/com.termoneplus/appid
+W/PackageSettings( 1333): Couldn't write 10060 to /config/sdcardfs/com.android.traceur/appid
+W/PackageSettings( 1333): Couldn't write 10007 to /config/sdcardfs/com.google.android.gms.setup/appid
+W/PackageSettings( 1333): Couldn't write 1002 to /config/sdcardfs/com.android.bluetooth/appid
+W/PackageSettings( 1333): Couldn't write 1000 to /config/sdcardfs/com.android.development/appid
+W/PackageSettings( 1333): Couldn't write 10055 to /config/sdcardfs/com.android.wallpaperpicker/appid
+W/PackageSettings( 1333): Couldn't write 10019 to /config/sdcardfs/com.android.providers.contacts/appid
+W/PackageSettings( 1333): Couldn't write 10047 to /config/sdcardfs/com.android.captiveportallogin/appid
+W/PackageSettings( 1333): Couldn't write 10032 to /config/sdcardfs/com.google.android.apps.restore/appid
+V/PackageManager( 1333): Ephemeral resolver found; pkg: com.google.android.gms, info:ResolveInfo{22c8d4a com.google.android.gms/.chimera.PersistentBoundBrokerService m=0x108000}
+D/PackageManager( 1333): Set ephemeral resolver: Pair{ComponentInfo{com.google.android.gms/com.google.android.gms.chimera.PersistentBoundBrokerService} android.intent.action.RESOLVE_INSTANT_APP_PACKAGE}
+D/PackageManager( 1333): Set ephemeral installer activity: ComponentInfo{com.android.vending/com.google.android.finsky.instantapps.EphemeralInstallerActivity}
+--------- beginning of main
+I/system_server( 1333): Waiting for a blocking GC Explicit
+W/system_server( 1333): Long monitor contention with owner main (1333) at void com.android.server.pm.PackageManagerService.<init>(android.content.Context, com.android.server.pm.Installer, boolean, boolean)(PackageManagerService.java:2496) waiters=0 in void com.android.server.pm.Settings$RuntimePermissionPersistence.writePermissionsSync(int) for 1.679s
+I/system_server( 1333): Background concurrent copying GC freed 41815(2MB) AllocSpace objects, 11(436KB) LOS objects, 42% free, 4MB/8MB, paused 295us total 669.373ms
+I/system_server( 1333): WaitForGcToComplete blocked Explicit on HeapTrim for 122.261ms
+D/SystemServerTimingAsync( 1333): AppDataFixup took to complete: 1589ms
+I/system_server( 1333): Explicit concurrent copying GC freed 7830(484KB) AllocSpace objects, 5(228KB) LOS objects, 42% free, 4MB/7MB, paused 403us total 534.454ms
+I/system_server( 1333): WaitForGcToComplete blocked HeapTrim on HeapTrim for 533.656ms
+D/SystemServerTiming( 1333): StartPackageManagerService took to complete: 9484ms
+I/SystemServer( 1333): StartOtaDexOptService
+D/OTADexopt( 1333): No upgrade, skipping A/B artifacts check.
+D/SystemServerTiming( 1333): StartOtaDexOptService took to complete: 2ms
+I/SystemServer( 1333): StartUserManagerService
+I/SystemServiceManager( 1333): Starting com.android.server.pm.UserManagerService$LifeCycle
+W/SystemServiceManager( 1333): Service com.android.server.pm.UserManagerService$LifeCycle took 95 ms in onStart
+D/SystemServerTiming( 1333): StartUserManagerService took to complete: 97ms
+I/SystemServer( 1333): InitAttributerCache
+D/SystemServerTiming( 1333): InitAttributerCache took to complete: 4ms
+I/SystemServer( 1333): SetSystemProcess
+I/lowmemorykiller( 1196): lmkd data connection established
+D/SystemServerTiming( 1333): SetSystemProcess took to complete: 287ms
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.soundtrigger@2.0::ISoundTriggerHw/default in either framework or device manifest.
+I/SystemServer( 1333): StartOverlayManagerService
+I/SoundTriggerHalHidl( 1195): getProperties res implementor 
+D/SystemServerTiming( 1333): StartOverlayManagerService took to complete: 10ms
+I/SystemServer( 1333): StartBatteryService
+I/SystemServiceManager( 1333): Starting com.android.server.BatteryService
+I/SoundTriggerHalHidl( 1195): getProperties ret -19
+E/SoundTriggerHwService( 1195): could not read implementation properties
+D/SystemServerInitThreadPool( 1333): Started executing StartSensorService
+D/SystemServerInitThreadPool( 1333): Started executing Init OverlayManagerService
+D/SensorService( 1333): nuSensorService starting...
+D/vndksupport( 1333): Loading /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so from current namespace instead of sphal namespace.
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device manifest.
+I/android_os_HwBinder( 1333): HwBinder: Starting thread pool for backup::android.hardware.health@2.0::IHealth
+D/vndksupport( 1333): Loading /vendor/lib64/hw/sensors.kbd.so from current namespace instead of sphal namespace.
+D/KbdSensor( 1333): open_kbd_sensor: id=poll
+I/idmap   ( 1396): type=1400 audit(0.0:257): avc: denied { search } for name="/" dev="tmpfs" ino=17 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+I/idmap   ( 1396): type=1400 audit(0.0:258): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=1951 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/idmap   ( 1396): type=1400 audit(0.0:259): avc: denied { read } for name="vendor" dev="tmpfs" ino=1951 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/KbdSensor( 1333): Open AT Translated Set 2 keyboard ok, fd=82
+D/KbdSensor( 1333): SensorPollContext: module=0x75d94d1732b8 dev=0x75d96bad9300 fd=82
+D/KbdSensor( 1333): poll_activate: dev=0x75d96bad9300 handle=0 enabled=0
+I/android_os_HwBinder( 1333): HwBinder: Starting thread pool for default::android.hidl.manager@1.0::IServiceManager
+E/LightsService( 1333): Light requested not available on this device. 3
+I/HealthServiceWrapper( 1333): health: HealthServiceWrapper listening to instance backup
+I/BatteryService( 1333): health: Waited 3ms and received the update.
+D/SensorService( 1333): new thread SensorEventAckReceiver
+D/SensorService( 1333): nuSensorService thread starting...
+I/android_os_HwBinder( 1333): HwBinder: Starting thread pool for backup::android.hardware.health@2.0::IHealth
+W/SystemServiceManager( 1333): Service com.android.server.BatteryService took 710 ms in onStart
+D/SystemServerTiming( 1333): StartBatteryService took to complete: 835ms
+I/SystemServer( 1333): StartUsageService
+I/SystemServiceManager( 1333): Starting com.android.server.usage.UsageStatsService
+D/SystemServerTimingAsync( 1333): StartSensorService took to complete: 733ms
+D/SystemServerInitThreadPool( 1333): Finished executing StartSensorService
+I/UsageStatsService( 1333): User[0] Rollover scheduled @ 2026-10-18 22:23:19(1792362199253)
+W/SystemServiceManager( 1333): Service com.android.server.usage.UsageStatsService took 396 ms in onStart
+D/SystemServerTiming( 1333): StartUsageService took to complete: 525ms
+I/SystemServer( 1333): StartWebViewUpdateService
+I/SystemServiceManager( 1333): Starting com.android.server.webkit.WebViewUpdateService
+D/SystemServerTiming( 1333): StartWebViewUpdateService took to complete: 44ms
+I/SystemServer( 1333): StartBinderCallsStatsService
+D/SystemServerTiming( 1333): StartBinderCallsStatsService took to complete: 95ms
+I/SystemServer( 1333): StartKeyAttestationApplicationIdProviderService
+D/SystemServerInitThreadPool( 1333): Started executing SecondaryZygotePreload
+I/SystemServer( 1333): SecondaryZygotePreload
+D/SystemServerTiming( 1333): StartKeyAttestationApplicationIdProviderService took to complete: 10ms
+I/SystemServer( 1333): StartKeyChainSystemService
+I/SystemServiceManager( 1333): Starting com.android.server.security.KeyChainSystemService
+D/SystemServerTiming( 1333): StartKeyChainSystemService took to complete: 2ms
+I/SystemServer( 1333): StartSchedulingPolicyService
+D/SystemServerInitThreadPool( 1333): Started executing SchedulingPolicyService.<init>
+D/SystemServerTiming( 1333): StartSchedulingPolicyService took to complete: 11ms
+I/SystemServer( 1333): StartTelecomLoaderService
+I/SystemServiceManager( 1333): Starting com.android.server.telecom.TelecomLoaderService
+D/SystemServerTiming( 1333): StartTelecomLoaderService took to complete: 8ms
+I/SystemServer( 1333): StartTelephonyRegistry
+I/SchedulingPolicyService( 1333): Moving 1213 back to group default
+I/Zygote  ( 1333): Process: zygote socket RESERVED/zygote opened, supported ABIS: x86_64
+D/SystemServerInitThreadPool( 1333): Finished executing SchedulingPolicyService.<init>
+D/SystemServerTiming( 1333): StartTelephonyRegistry took to complete: 12ms
+I/SystemServer( 1333): StartEntropyMixer
+I/EntropyMixer( 1333): Writing entropy...
+I/Zygote  ( 1333): Process: zygote socket RESERVED/zygote_secondary opened, supported ABIS: x86,armeabi-v7a,armeabi
+D/SystemServerTiming( 1333): StartEntropyMixer took to complete: 156ms
+I/Zygote  ( 1180): Lazily preloading resources.
+I/SystemServer( 1333): StartAccountManagerService
+I/SystemServiceManager( 1333): Starting com.android.server.accounts.AccountManagerService$Lifecycle
+D/Zygote  ( 1180): begin preload
+I/Zygote  ( 1180): Installing ICU cache reference pinning...
+I/Zygote  ( 1180): Preloading ICU data...
+W/SystemServiceManager( 1333): Service com.android.server.accounts.AccountManagerService$Lifecycle took 137 ms in onStart
+D/SystemServerTiming( 1333): StartAccountManagerService took to complete: 235ms
+I/SystemServer( 1333): StartContentService
+I/SystemServiceManager( 1333): Starting com.android.server.content.ContentService$Lifecycle
+W/SystemServiceManager( 1333): Service com.android.server.content.ContentService$Lifecycle took 294 ms in onStart
+D/SystemServerTiming( 1333): StartContentService took to complete: 295ms
+I/SystemServer( 1333): InstallSystemProviders
+==== 1792276034456
+22:27:15 up 0 min,  0 users,  load average: 3.56, 0.96, 0.33
+running
+
+--------- beginning of main
+I/SurfaceFlinger( 1196): renderer  : Google SwiftShader
+I/SurfaceFlinger( 1196): version   : OpenGL ES 3.0 SwiftShader 4.1.0.7
+I/SurfaceFlinger( 1196): extensions: GL_EXT_debug_marker GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_EGL_sync GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_framebuffer_object GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_3D GL_OES_vertex_array_object GL_OES_vertex_half_float GL_EXT_blend_minmax GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_draw_buffers GL_EXT_instanced_arrays GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_texture_compression_dxt1 GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_rg GL_ARB_texture_rectangle GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_instanced_arrays GL_ANG
+I/SurfaceFlinger( 1196): GL_MAX_TEXTURE_SIZE = 8192
+I/SurfaceFlinger( 1196): GL_MAX_VIEWPORT_DIMS = 8192
+W/hwservicemanager( 1113): getTransport: Cannot find entry android.hardware.graphics.composer@2.1::IComposer/default in either framework or device manifest.
+D/vndksupport( 1196): Loading /vendor/lib64/hw/android.hardware.graphics.composer@2.1-impl.so from current namespace instead of sphal namespace.
+I/ComposerHal( 1196): falling back to gralloc module
+D/vndksupport( 1196): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+W/gralloc ( 1196): FBIOPUT_VSCREENINFO failed, page flipping not supported
+W/gralloc ( 1196): page flipping not supported (yres_virtual=720, requested=1440)
+I/gralloc ( 1196): using (fd=20)
+I/gralloc ( 1196): id           = bochsdrmfb
+I/gralloc ( 1196): xres         = 1280 px
+I/gralloc ( 1196): yres         = 720 px
+I/gralloc ( 1196): xres_virtual = 1280 px
+I/gralloc ( 1196): yres_virtual = 720 px
+I/gralloc ( 1196): bpp          = 32
+I/gralloc ( 1196): r            = 16:8
+I/gralloc ( 1196): g            =  8:8
+I/gralloc ( 1196): b            =  0:8
+I/gralloc ( 1196): width        = 203 mm (160.157639 dpi)
+I/gralloc ( 1196): height       = 114 mm (160.421051 dpi)
+I/gralloc ( 1196): refresh rate = 60.00 Hz
+D/vndksupport( 1196): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1196): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+I/ServiceManager( 1210): Waiting for service package_native...
+E/HWComposer( 1196): getSupportedPerFrameMetadata: getSupportedPerFrameMetadata failed for display 0: Unsupported (8)
+I/surfaceflinger( 1196): type=1400 audit(0.0:226): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=7856 ioctlcmd=0x4b3a scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+D/DisplayDevice( 1196): Open /dev/tty0 OK
+I/surfaceflinger( 1196): type=1400 audit(0.0:227): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=7856 ioctlcmd=0x5603 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1196): type=1400 audit(0.0:228): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=7856 ioctlcmd=0x5606 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1196): type=1400 audit(0.0:229): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=7856 ioctlcmd=0x5607 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+I/surfaceflinger( 1196): type=1400 audit(0.0:230): avc: denied { ioctl } for path="/dev/tty0" dev="tmpfs" ino=7856 ioctlcmd=0x5401 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+D/vndksupport( 1196): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1196): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/vndksupport( 1196): Loading /vendor/lib64/hw/android.hardware.graphics.allocator@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1196): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+I/chatty  ( 1196): uid=0(root) /system/bin/surfaceflinger identical 1 line
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/DisplayDevice( 1196): Open /dev/tty0 OK
+D/SurfaceFlinger( 1196): shader cache generated - 24 shaders in 693.672546 ms
+D/SurfaceFlinger( 1196): Set power mode=2, type=0 flinger=0x733c40867000
+D/SurfaceFlinger( 1196): Finished set power mode=2, type=0
+I/ServiceManager( 1210): Waiting for service package_native...
+I/SurfaceFlinger( 1196): auto set density to 160
+D/vndksupport( 1307): Loading /vendor/lib64/egl/libEGL_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1307): loaded /vendor/lib64/egl/libEGL_swiftshader.so
+W/ServiceManager( 1210): Service package_native didn't start. Returning NULL
+--------- beginning of system
+E/storaged( 1210): getService package_native failed
+D/vndksupport( 1307): Loading /vendor/lib64/egl/libGLESv1_CM_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1307): loaded /vendor/lib64/egl/libGLESv1_CM_swiftshader.so
+D/vndksupport( 1307): Loading /vendor/lib64/egl/libGLESv2_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1307): loaded /vendor/lib64/egl/libGLESv2_swiftshader.so
+I/ConfigStore( 1307): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+I/ConfigStore( 1307): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+D/BootAnimation( 1307): BootAnimationShownTiming start time: 27674ms
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/vndksupport( 1307): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1307): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/vndksupport( 1307): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/vndksupport( 1196): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/Zygote  ( 1178): begin preload
+I/Zygote  ( 1178): Installing ICU cache reference pinning...
+I/Zygote  ( 1178): Preloading ICU data...
+I/zygote  ( 1179): Explicit concurrent copying GC freed 186(9KB) AllocSpace objects, 0(0B) LOS objects, 98% free, 22KB/1558KB, paused 22.393ms total 92.032ms
+I/zygote  ( 1179): Explicit concurrent copying GC freed 5(32KB) AllocSpace objects, 0(0B) LOS objects, 97% free, 38KB/1574KB, paused 212us total 29.416ms
+D/Zygote32Timing( 1179): PostZygoteInitGC took to complete: 164ms
+D/Zygote32Timing( 1179): ZygoteInit took to complete: 181ms
+I/main    ( 1179): type=1400 audit(0.0:241): avc: denied { mounton } for path="/" dev="tmpfs" ino=1520 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+I/Zygote  ( 1179): Accepting command socket connections
+D/Zygote64Timing( 1178): BeginIcuCachePinning took to complete: 371ms
+I/Zygote  ( 1178): Preloading classes...
+I/PackageBackwardCompatibility( 1178): Loaded android.content.pm.OrgApacheHttpLegacyUpdater
+I/PackageBackwardCompatibility( 1178): Could not find android.content.pm.AndroidTestBaseUpdater, ignoring
+D/vndksupport( 1196): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+E/ActivityRecognitionHardware( 1178): activity_recognition HAL is deprecated. class_init is effectively a no-op
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+I/zygote64( 1178): Thread[1,tid=1178,Native,Thread*=0x71507c614c00,peer=0x12c01dd0,"main"] recursive attempt to load library "/system/lib64/libmedia_jni.so"
+D/MtpDeviceJNI( 1178): register_android_mtp_MtpDevice
+I/zygote64( 1178): Thread[1,tid=1178,Native,Thread*=0x71507c614c00,peer=0x12c01dd0,"main"] recursive attempt to load library "/system/lib64/libmedia_jni.so"
+I/zygote64( 1178): Thread[1,tid=1178,Native,Thread*=0x71507c614c00,peer=0x12c01dd0,"main"] recursive attempt to load library "/system/lib64/libmedia_jni.so"
+I/Zygote  ( 1178): ...preloaded 6535 classes in 4230ms.
+I/zygote64( 1178): VMRuntime.preloadDexCaches starting
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+D/gralloc ( 1196): Registering a buffer in the process that created it. This may cause memory ordering problems.
+I/zygote64( 1178): VMRuntime.preloadDexCaches strings total=339365 before=12307 after=12307
+I/zygote64( 1178): VMRuntime.preloadDexCaches types total=31361 before=7819 after=7820
+I/zygote64( 1178): VMRuntime.preloadDexCaches fields total=140795 before=9180 after=9180
+I/zygote64( 1178): VMRuntime.preloadDexCaches methods total=247837 before=12780 after=12780
+I/zygote64( 1178): VMRuntime.preloadDexCaches finished
+D/Zygote64Timing( 1178): PreloadClasses took to complete: 4565ms
+I/Zygote  ( 1178): Preloading resources...
+W/Resources( 1178): Preloaded drawable resource #0x1080269 (android:drawable/dialog_background_material) that varies with configuration!!
+I/Zygote  ( 1178): ...preloaded 64 resources in 608ms.
+I/Zygote  ( 1178): ...preloaded 41 resources in 108ms.
+I/Zygote  ( 1178): ...preloaded 6 resource in 115ms.
+D/Zygote64Timing( 1178): PreloadResources took to complete: 1784ms
+D/vndksupport( 1178): Loading /vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1178): Loading /vendor/lib64/egl/libEGL_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1178): loaded /vendor/lib64/egl/libEGL_swiftshader.so
+D/vndksupport( 1178): Loading /vendor/lib64/egl/libGLESv1_CM_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1178): loaded /vendor/lib64/egl/libGLESv1_CM_swiftshader.so
+D/vndksupport( 1178): Loading /vendor/lib64/egl/libGLESv2_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1178): loaded /vendor/lib64/egl/libGLESv2_swiftshader.so
+I/Zygote  ( 1178): Preloading shared libraries...
+I/Zygote  ( 1178): Uninstalled ICU cache reference pinning...
+I/Zygote  ( 1178): Installed AndroidKeyStoreProvider in 7ms.
+I/Zygote  ( 1178): Warmed up JCA providers in 120ms.
+D/Zygote  ( 1178): end preload
+D/Zygote64Timing( 1178): ZygotePreload took to complete: 8109ms
+I/zygote64( 1178): Explicit concurrent copying GC freed 59606(5MB) AllocSpace objects, 165(3MB) LOS objects, 49% free, 2MB/4MB, paused 2.950ms total 403.007ms
+I/zygote64( 1178): Explicit concurrent copying GC freed 6572(247KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2MB/4MB, paused 163us total 336.177ms
+D/Zygote64Timing( 1178): PostZygoteInitGC took to complete: 867ms
+D/Zygote64Timing( 1178): ZygoteInit took to complete: 8990ms
+I/zygote64( 1178): Background concurrent copying GC freed 174(64KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2MB/4MB, paused 88us total 141.062ms
+I/main    ( 1178): type=1400 audit(0.0:242): avc: denied { dac_read_search } for capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+I/Zygote  ( 1178): System server process 1331 has been created
+I/Zygote  ( 1178): Accepting command socket connections
+I/Zygote  ( 1331): seccomp disabled by setenforce 0
+I/Zygote  ( 1331): Process: zygote socket RESERVED/zygote_secondary opened, supported ABIS: x86,armeabi-v7a,armeabi
+I/loop1   ( 1083): type=1400 audit(0.0:243): avc: denied { read } for path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+I/system_server( 1331): The ClassLoaderContext is a special shared library.
+I/SystemServer( 1331): InitBeforeStartServices
+I/SystemServer( 1331): Entered the Android system server!
+==== 1792276274975
+22:31:14 up 0 min,  0 users,  load average: 1.42, 0.30, 0.10
+running
+
+--------- beginning of main
+D/vndksupport( 1195): Loading /vendor/lib64/hw/gralloc.default.so from current namespace instead of sphal namespace.
+I/surfaceflinger( 1195): type=1400 audit(0.0:216): avc: denied { dac_override } for capability=1 scontext=u:r:surfaceflinger:s0 tcontext=u:r:surfaceflinger:s0 tclass=capability permissive=1
+E/SELinux ( 1112): avc:  denied  { add } for interface=android.hardware.graphics.allocator::IAllocator sid=u:r:surfaceflinger:s0 pid=1195 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:hal_graphics_allocator_hwservice:s0 tclass=hwservice_manager permissive=1
+I/hwservicemanage( 1112): type=1400 audit(0.0:217): avc: denied { map } for path="/dev/event-log-tags" dev="tmpfs" ino=7375 scontext=u:r:hwservicemanager:s0 tcontext=u:object_r:runtime_event_log_tags_file:s0 tclass=file permissive=1
+I/media.codec( 1211): mediacodecservice starting
+I/SurfaceFlinger( 1195): Registration complete for android.hardware.graphics.allocator@2.0::IAllocator/default.
+I/ServiceManager( 1209): Waiting for service package_native...
+I/SurfaceFlinger( 1195): Using HWComposer service: 'default'
+I/SurfaceFlinger( 1195): SurfaceFlinger is starting
+I/android.hardwar( 1211): type=1400 audit(0.0:218): avc: denied { read } for name="vendor" dev="tmpfs" ino=7239 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/media.codec( 1211): Could not read additional policy file '/vendor/etc/seccomp_policy/mediacodec.policy'
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::vsyncEventPhaseOffsetNs retrieved: 1000000 (default)
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::vsyncSfEventPhaseOffsetNs retrieved: 1000000 (default)
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasSyncFramework retrieved: 1
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::presentTimeOffsetFromVSyncNs retrieved: 0
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::useHwcForRGBtoYUV retrieved: 0
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::maxVirtualDisplaySize retrieved: 0 (default)
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::useVrFlinger retrieved: 0 (default)
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::maxFrameBufferAcquiredBuffers retrieved: 3
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.audio@4.0::IDevicesFactory/default in either framework or device manifest.
+W/android.hardware.media.omx@1.0-service( 1211): libminijail[1211]: failed to get path of fd 4: No such file or directory
+I/ConfigStore( 1195): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.configstore@1.1::ISurfaceFlingerConfigs/default in either framework or device manifest.
+W/android.hardware.media.omx@1.0-service( 1211): libminijail[1211]: allowing syscall: socketcall
+W/android.hardware.media.omx@1.0-service( 1211): libminijail[1211]: allowing syscall: writev
+W/android.hardware.media.omx@1.0-service( 1211): libminijail[1211]: allowing syscall: fcntl64
+W/android.hardware.media.omx@1.0-service( 1211): libminijail[1211]: allowing syscall: clock_gettime
+E/audiohalservice( 1182): Could not get passthrough implementation for android.hardware.audio@4.0::IDevicesFactory/default.
+I/ConfigStore( 1195): android::hardware::configstore::V1_1::ISurfaceFlingerConfigs::primaryDisplayOrientation retrieved: ORIENTATION_0 (default)
+D/vndksupport( 1182): Loading /vendor/lib/hw/android.hardware.audio@2.0-impl.so from current namespace instead of sphal namespace.
+W/android.hardware.media.omx@1.0-service( 1211): libminijail[1211]: logging seccomp filter failures
+I/SurfaceFlinger( 1195): Enabling HWC virtual displays
+I/SurfaceFlinger( 1195): Disabling Triple Buffering
+I/SurfaceFlinger( 1195): Treble testing override: 'false'
+I/SurfaceFlinger( 1195): SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+I/SurfaceFlinger( 1195): Phase offest NS: 1000000
+D/vndksupport( 1195): Loading /vendor/lib64/egl/libEGL_swiftshader.so from current namespace instead of sphal namespace.
+W/MediaCodecsXmlParser( 1211): ignoring Limit specified outside of a Type
+W/MediaCodecsXmlParser( 1211): ignoring Limit specified outside of a Type
+W/MediaCodecsXmlParser( 1211): unable to open media codecs configuration xml file: /data/misc/media/media_codecs_profiling_results.xml
+W/MediaCodecsXmlParser( 1211): parseTopLevelXMLFile(/data/misc/media/media_codecs_profiling_results.xml) failed
+E/MediaCodecsXmlParser( 1211): Cannot find the role for a decoder of type audio/alac
+E/MediaCodecsXmlParser( 1211): Cannot find the role for a decoder of type audio/vnd.dts
+D/libEGL  ( 1195): loaded /vendor/lib64/egl/libEGL_swiftshader.so
+I/ServiceManagement( 1182): Removing namespace from process name android.hardware.audio@2.0-service to audio@2.0-service.
+I/ServiceManagement( 1211): Removing namespace from process name android.hardware.media.omx@1.0-service to omx@1.0-service.
+I/audiohalservice( 1182): Registration complete for android.hardware.audio@2.0::IDevicesFactory/default.
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.audio.effect@4.0::IEffectsFactory/default in either framework or device manifest.
+E/audiohalservice( 1182): Could not get passthrough implementation for android.hardware.audio.effect@4.0::IEffectsFactory/default.
+D/vndksupport( 1182): Loading /vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so from current namespace instead of sphal namespace.
+D/vndksupport( 1211): Loading libstagefrighthw.so from current namespace instead of sphal namespace.
+D/vndksupport( 1211): Loading libffmpeg_omx.so from current namespace instead of sphal namespace.
+I/cameraserver( 1199): ServiceManager: 0xe951a700
+I/CameraService( 1199): CameraService started (pid=1199)
+I/CameraService( 1199): CameraService process starting
+W/BatteryNotifier( 1199): batterystats service unavailable!
+W/BatteryNotifier( 1199): batterystats service unavailable!
+I/android.hardwar( 1184): type=1400 audit(0.0:220): avc: denied { read } for name="lib" dev="tmpfs" ino=7214 scontext=u:r:hal_camera_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/ServiceManagement( 1199): getService: Trying again for android.hardware.camera.provider@2.4::ICameraProvider/legacy/0...
+I/audiohalservice( 1182): Registration complete for android.hardware.audio.effect@2.0::IEffectsFactory/default.
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.soundtrigger@2.1::ISoundTriggerHw/default in either framework or device manifest.
+E/audiohalservice( 1182): Could not get passthrough implementation for android.hardware.soundtrigger@2.1::ISoundTriggerHw/default.
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.soundtrigger@2.0::ISoundTriggerHw/default in either framework or device manifest.
+D/vndksupport( 1182): Loading /vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so from current namespace instead of sphal namespace.
+I/ServiceManager( 1209): Waiting for service package_native...
+I/mediametrics( 1206): ServiceManager: 0x77fa70e3d740
+D/MediaAnalyticsService( 1206): MediaAnalyticsService created
+E/SoundTriggerHalImpl( 1182): couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+I/audiohalservice( 1182): Registration complete for android.hardware.soundtrigger@2.0::ISoundTriggerHw/default.
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.bluetooth.a2dp@1.0::IBluetoothAudioOffload/default in either framework or device manifest.
+E/audiohalservice( 1182): Could not get passthrough implementation for android.hardware.bluetooth.a2dp@1.0::IBluetoothAudioOffload/default.
+W/audiohalservice( 1182): Could not register Bluetooth audio offload 1.0
+D/Camera_Factory( 1184): CameraFactory::CameraFactory
+D/Camera_Factory( 1184): CameraFactory::parseConfig: configFile = /etc/camera.cfg
+D/Camera_Factory( 1184): /etc/camera.cfg not found, using camera configuration defaults
+D/Camera_Factory( 1184): CameraFactory::get_number_of_cameras
+D/Camera_Factory( 1184): CameraFactory::getCameraNum: 0
+I/CamProvider@2.4-impl( 1184): Loaded "Camera Module" camera module
+I/CamProvider@2.4-impl( 1184): setUpVendorTags: No vendor tags defined for this device.
+D/Camera_Factory( 1184): CameraFactory::get_number_of_cameras
+D/Camera_Factory( 1184): CameraFactory::getCameraNum: 0
+I/ServiceManagement( 1184): Removing namespace from process name android.hardware.camera.provider@2.4-service to provider@2.4-service.
+I/android.hardware.camera.provider@2.4-service( 1184): Registration complete for android.hardware.camera.provider@2.4::ICameraProvider/legacy/0.
+I/CameraProviderManager( 1199): Connecting to new camera provider: legacy/0, isRemote? 1
+I/CameraProviderManager( 1199): Camera provider legacy/0 ready with 0 camera devices
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.camera.provider@2.4::ICameraProvider/external/0 in either framework or device manifest.
+I/cameraserver( 1199): type=1400 audit(0.0:221): avc: denied { read } for name="lib" dev="tmpfs" ino=7214 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+D/vndksupport( 1199): Loading /vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so from current namespace instead of sphal namespace.
+V/MediaUtils( 1205): physMem: 2088816640
+V/MediaUtils( 1205): requested limit: 417763320
+V/MediaUtils( 1205): cfi shadow size: 2147483648
+V/MediaUtils( 1205): actual limit: 2565246968
+V/MediaUtils( 1205): original limits: -1/-1
+V/MediaUtils( 1205): new limits: 2565246968/-1
+D/vndksupport( 1205): Loading libutils.so from current namespace instead of sphal namespace.
+W//system/bin/mediaextractor( 1205): No seccomp policy defined for this architecture.
+I/mediaserver( 1207): ServiceManager: 0xe6f9ab60
+E/ExtCamUtils@3.4( 1199): loadFromCfg: Unable to load external camera config file '/vendor/etc/external_camera_config.xml'. Error: XML_ERROR_FILE_NOT_FOUND
+I/CameraProviderManager( 1199): Connecting to new camera provider: external/0, isRemote? 0
+I/CameraProviderManager( 1199): Camera provider external/0 ready with 0 camera devices
+W/CameraProviderManager( 1199): addProviderLocked: Camera provider HAL with name 'legacy/0' already registered
+I/CamPvdr@2.4-external( 1199): threadLoop start monitoring new V4L2 devices
+I/        ( 1199): Waiting for activity service
+D/AndroidRuntime( 1177): >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+I/FastMixerState( 1193): sMaxFastTracks = 8
+V/MediaUtils( 1193): physMem: 2088816640
+V/MediaUtils( 1193): requested limit: 417763320
+V/MediaUtils( 1193): cfi shadow size: 32768
+V/MediaUtils( 1193): actual limit: 417796088
+V/MediaUtils( 1193): original limits: 4294967295/4294967295
+V/MediaUtils( 1193): new limits: 417796088/4294967295
+I/audioserver( 1193): ServiceManager: 0xf2f1aa60
+W/BatteryNotifier( 1193): batterystats service unavailable!
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.audio@4.0::IDevicesFactory/default in either framework or device manifest.
+I/audioserver( 1193): type=1400 audit(0.0:222): avc: denied { read } for name="lib" dev="tmpfs" ino=7214 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.audio@2.0::IDevicesFactory/msd in either framework or device manifest.
+D/vndksupport( 1193): Loading /vendor/lib/hw/android.hardware.audio@2.0-impl.so from current namespace instead of sphal namespace.
+D/AndroidRuntime( 1178): >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.audio.effect@4.0::IEffectsFactory/default in either framework or device manifest.
+I/AudioFlinger( 1193): Using default 3000 mSec as standby time.
+==== 1792276751408
+22:39:12 up 3 min,  0 users,  load average: 7.36, 4.07, 1.67
+running
+
+--------- beginning of main
+W/dex2oat ( 1453): Verification of boolean acti.R() took 111.985ms
+W/dex2oat ( 1453): Verification of void acsi.<init>(byte) took 241.130ms
+W/dex2oat ( 1453): Verification of void acuo.a() took 111.536ms
+W/dex2oat ( 1453): Verification of void acuk.a() took 119.008ms
+W/dex2oat ( 1453): Verification of java.lang.Iterable acuz.a(android.content.pm.Signature[]) took 112.097ms
+W/dex2oat ( 1453): Verification of boolean acws.b(acwu) took 107.103ms
+W/dex2oat ( 1453): Verification of void acwy.a() took 102.208ms
+W/dex2oat ( 1453): Verification of boolean agrf.a(int, android.os.Parcel, android.os.Parcel) took 101.929ms
+W/dex2oat ( 1453): Verification of void adcl.run() took 100.577ms
+W/dex2oat ( 1453): Verification of void adds.a() took 105.915ms
+W/dex2oat ( 1453): Verification of void adej.run() took 105.399ms
+W/dex2oat ( 1453): Verification of android.util.Pair addm.a(android.database.sqlite.SQLiteDatabase, android.content.res.Resources, boolean, java.util.Collection) took 132.730ms
+W/dex2oat ( 1453): Verification of void adff.a(bpjj, int) took 100.739ms
+W/dex2oat ( 1453): Verification of void adge.a(adgd, int) took 105.666ms
+W/dex2oat ( 1453): Verification of void adgc.a(android.content.Context, java.util.Iterator, boolean, bqln, aclp) took 125.666ms
+W/dex2oat ( 1453): Verification of void adgi.d(adgm) took 217.354ms
+W/dex2oat ( 1453): Verification of int adgn.compare(java.lang.Object, java.lang.Object) took 104.867ms
+W/dex2oat ( 1453): Verification of bpin adgl.a() took 116.568ms
+W/dex2oat ( 1453): Verification of void adir.<init>(com.google.android.gms.icing.service.IndexChimeraService, bpkq, java.lang.String, sfm, java.lang.String, sbo, int, int, java.lang.String) took 101.542ms
+W/dex2oat ( 1453): Verification of void adje.<init>(android.content.Context, java.lang.String) took 115.497ms
+W/dex2oat ( 1453): Verification of void adjm.b() took 109.649ms
+W/dex2oat ( 1453): Verification of adjo adjw.a(android.content.Context, acoe, acba, com.google.android.gms.icing.nativeindex.NativeIndex, acmu, aclp) took 102.466ms
+W/dex2oat ( 1453): Verification of com.google.android.gms.appdatasearch.GlobalSearchApplicationInfo adje.i(java.lang.String) took 107.774ms
+W/dex2oat ( 1453): Verification of bppv adka.a(java.lang.Object) took 114.415ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.icing.ui.SettingsContainerChimeraActivity.onStart() took 102.680ms
+W/dex2oat ( 1453): Verification of java.lang.Object adla.a(rdr, java.lang.Object[]) took 108.292ms
+W/dex2oat ( 1453): Verification of java.lang.Object adlo.doInBackground(java.lang.Object[]) took 104.089ms
+W/dex2oat ( 1453): Verification of void adli.<init>(android.content.Context) took 115.231ms
+W/dex2oat ( 1453): Verification of java.util.List adou.b() took 100.194ms
+W/dex2oat ( 1453): Verification of void adot.b(java.lang.String, java.lang.String, java.lang.String) took 102.886ms
+W/dex2oat ( 1453): Verification of void adoi.a(android.content.Context, java.io.PrintWriter, java.lang.String[], acaz) took 247.363ms
+W/dex2oat ( 1453): Verification of android.content.Intent adqg.a(android.content.Context, com.google.android.gms.auth.firstparty.dataservice.TokenRequest) took 105.709ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.identity.accounts.service.AccountDataApiService.a(aaer, rvf) took 114.256ms
+W/dex2oat ( 1453): Verification of boolean adtv.b() took 120.259ms
+W/dex2oat ( 1453): Verification of bwdp adtx.a() took 124.185ms
+W/dex2oat ( 1453): Verification of boolean advs.a(int, android.os.Parcel, android.os.Parcel) took 103.856ms
+W/dex2oat ( 1453): Verification of void adve.<init>(android.content.Context) took 130.471ms
+W/dex2oat ( 1453): Verification of void advq.a(int) took 124.009ms
+W/dex2oat ( 1453): Verification of void adez.<init>() took 2.058s
+W/dex2oat ( 1453): Verification of void adxr.<init>() took 102.672ms
+W/dex2oat ( 1453): Verification of java.lang.Object adxe.a(int, java.lang.Object) took 108.262ms
+W/dex2oat ( 1453): Verification of android.content.pm.PackageInfo adxv.a(java.lang.String, int) took 125.891ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.instantapps.notifications.GcmMessageProxyIntentOperation.onHandleIntent(android.content.Intent) took 100.988ms
+W/dex2oat ( 1453): Verification of java.lang.Object adzl.call() took 111.088ms
+W/dex2oat ( 1453): Verification of java.lang.Object adzk.call() took 111.964ms
+W/dex2oat ( 1453): Verification of advh aeaf.a(aecs) took 111.706ms
+W/dex2oat ( 1453): Verification of int adzs.a(adzv, aduh) took 139.792ms
+W/dex2oat ( 1453): Verification of aecf aecb.b(java.lang.String, boolean, adwt, aecy, boolean) took 118.252ms
+W/dex2oat ( 1453): Verification of android.database.Cursor com.google.android.gms.instantapps.routing.InstantAppsChimeraContentProvider.query(android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String) took 126.974ms
+W/dex2oat ( 1453): Verification of int[] aedc.b(java.lang.String) took 102.552ms
+W/dex2oat ( 1453): Verification of boolean aede.a(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, android.net.Uri) took 109.972ms
+W/dex2oat ( 1453): Verification of java.lang.String aeff.a(android.content.ComponentName) took 128.704ms
+W/dex2oat ( 1453): Verification of void aekv.<init>(java.lang.Long, java.lang.Integer) took 100.579ms
+W/dex2oat ( 1453): Verification of bqma aekw.a(aemn, java.util.List) took 100.920ms
+W/dex2oat ( 1453): Verification of void aenh.run() took 128.646ms
+W/dex2oat ( 1453): Verification of android.view.View aenr.onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle) took 109.214ms
+W/dex2oat ( 1453): Verification of android.view.View aens.onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle) took 129.013ms
+W/dex2oat ( 1453): Verification of void aepv.<clinit>() took 101.080ms
+W/dex2oat ( 1453): Verification of aewm aerq.a(aeqt) took 109.715ms
+W/dex2oat ( 1453): Verification of void aetf.a(android.content.Context) took 101.318ms
+W/dex2oat ( 1453): Verification of void aetd.a(android.content.Context) took 108.149ms
+W/dex2oat ( 1453): Verification of void aeyp.a_(android.os.Bundle) took 100.898ms
+W/dex2oat ( 1453): Verification of int com.google.android.gms.learning.training.background.TrainingGcmTaskChimeraService.a(afan) took 149.776ms
+W/dex2oat ( 1453): Verification of void aefn.<init>() took 1.309s
+W/dex2oat ( 1453): Verification of java.lang.Object afct.createFromParcel(android.os.Parcel) took 112.095ms
+W/dex2oat ( 1453): Verification of android.content.Intent afsb.a(java.util.List, android.content.Intent) took 110.756ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.locationsharing.settings.LocationSharingSettingsChimeraActivity.onCreate(android.os.Bundle) took 100.306ms
+W/dex2oat ( 1453): Verification of void afua.a(aftl, int) took 106.378ms
+W/dex2oat ( 1453): Verification of void afue.<clinit>() took 106.844ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.locationsharing.updateshares.UpdateSharesIntentOperation.onHandleIntent(android.content.Intent) took 134.134ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.lockbox.LockboxAccountsChangedChimeraReceiver.onHandleIntent(android.content.Intent) took 116.258ms
+W/dex2oat ( 1453): Verification of void afzm.a() took 104.340ms
+W/dex2oat ( 1453): Verification of bwha agaz.a(bwgp) took 113.988ms
+W/dex2oat ( 1453): Verification of boolean agcy.a(int, android.os.Parcel, android.os.Parcel) took 110.265ms
+W/dex2oat ( 1453): Verification of wgk com.google.android.gms.maps.internal.CreatorImpl.a(agdv) took 110.090ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.nearby.discovery.devices.DevicesListChimeraActivity.a(int) took 112.583ms
+W/dex2oat ( 1453): Verification of void aipz.a() took 205.353ms
+W/dex2oat ( 1453): Verification of void aist.a(android.accounts.Account, boolean) took 116.154ms
+W/dex2oat ( 1453): Verification of java.lang.Object aitj.createFromParcel(android.os.Parcel) took 124.084ms
+W/dex2oat ( 1453): Verification of aitg aiti.a(java.lang.String) took 125.816ms
+W/dex2oat ( 1453): Verification of void aiwr.run() took 103.787ms
+W/dex2oat ( 1453): Verification of void aiwz.a() took 153.457ms
+W/dex2oat ( 1453): Verification of void aixa.a(com.google.android.gms.nearby.messages.Message, java.lang.String, ajte, byte[]) took 145.555ms
+W/dex2oat ( 1453): Verification of avge aizz.a(java.lang.String, aidr) took 115.337ms
+W/dex2oat ( 1453): Verification of boolean com.google.android.gms.nearby.mediums.BluetoothClassicV2.a(ajfs) took 108.630ms
+W/dex2oat ( 1453): Verification of void ajgy.<init>(ajgt, ajpb, ajoi) took 119.337ms
+W/dex2oat ( 1453): Verification of boolean com.google.android.gms.nearby.mediums.BluetoothClassicV2.a(java.lang.String, ajft) took 117.444ms
+W/dex2oat ( 1453): Verification of boolean ajgt.a(java.lang.String, byte[], byte[], int, android.os.ParcelUuid) took 106.007ms
+W/dex2oat ( 1453): Verification of boolean ajkm.a(ajkl) took 128.074ms
+W/dex2oat ( 1453): Verification of void ajod.<init>(java.lang.String, java.lang.String, bkyd) took 102.836ms
+W/dex2oat ( 1453): Verification of void ajof.a(byte[]) took 102.007ms
+W/dex2oat ( 1453): Verification of void ajok.<init>() took 108.662ms
+W/dex2oat ( 1453): Verification of void ajob.write(byte[], int, int) took 112.789ms
+W/dex2oat ( 1453): Verification of void ajpf.b(ajpb) took 101.459ms
+W/dex2oat ( 1453): Verification of void ajtg.a(ajtd, akbi) took 102.832ms
+W/dex2oat ( 1453): Verification of void ajtn.<init>(android.content.Context) took 100.045ms
+W/dex2oat ( 1453): Verification of java.lang.Object ajtf.createFromParcel(android.os.Parcel) took 130.063ms
+W/dex2oat ( 1453): Verification of void ajvp.<init>(android.content.Context) took 106.917ms
+W/dex2oat ( 1453): Verification of void ajus.run() took 181.106ms
+W/dex2oat ( 1453): Verification of bxci ajwa.a(ajtd, bwdp, bwdp, int, java.util.Set) took 155.270ms
+W/dex2oat ( 1453): Verification of void ajyr.a(ajxm, ajxm, int) took 101.960ms
+W/dex2oat ( 1453): Verification of bxgp[] ajyl.a(bxgp[]) took 108.955ms
+W/dex2oat ( 1453): Verification of bxjh akcw.b(java.lang.String) took 105.669ms
+W/dex2oat ( 1453): Verification of void akcr.a(java.lang.Object) took 114.848ms
+W/dex2oat ( 1453): Verification of void akcp.a(ajtd, java.util.List, java.util.List, java.util.List, java.util.List, bxga, akcv) took 152.251ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.nearby.messages.settings.ButtonLayout.onLayout(boolean, int, int, int, int) took 103.461ms
+W/dex2oat ( 1453): Verification of void akel.updateDrawState(android.text.TextPaint) took 116.821ms
+W/dex2oat ( 1453): Verification of void akcj.b() took 300.459ms
+W/dex2oat ( 1453): Verification of void akil.a(java.lang.Runnable) took 111.322ms
+W/dex2oat ( 1453): Verification of void akjn.a(akhp) took 101.054ms
+W/dex2oat ( 1453): Verification of void akjt.<init>(akju) took 118.015ms
+W/dex2oat ( 1453): Verification of void com.google.android.gms.nearby.sharing.NearbySharingChimeraService.a() took 130.839ms
+W/dex2oat ( 1453): Verification of void aktp.a(android.content.Context, java.lang.Object) took 104.456ms
+W/dex2oat ( 1453): Verification of void akup.<init>(android.content.Context, akmr) took 111.613ms
+W/dex2oat ( 1453): Verification of void akzn.b(akrs, java.lang.String) took 100.432ms
+W/dex2oat ( 1453): Verification of void aldq.a() took 102.613ms
+W/dex2oat ( 1453): Verification of void aldr.a(android.net.NetworkInfo$DetailedState) took 102.571ms
+W/dex2oat ( 1453): Verification of void aldw.writeToParcel(android.os.Parcel, int) took 102.973ms
+W/dex2oat ( 1453): Verification of android.graphics.Bitmap alhj.a(byte[]) took 100.090ms
+W/dex2oat ( 1453): Verification of void alki.run() took 102.948ms
+==== 1792276996493
+22:43:17 up 1 min,  0 users,  load average: 8.75, 2.94, 1.05
+running
+
+--------- beginning of main
+I/vol.Events( 1483): writeEvent level_changed STREAM_ALARM 6
+I/vol.Events( 1483): writeEvent level_changed STREAM_BLUETOOTH_SCO 7
+I/vol.Events( 1483): writeEvent zen_mode_config_changed [disallowAlarms=false disallowMedia=false disallowSystem=true disallowRinger=false]
+--------- beginning of system
+D/SystemUIBootTiming( 1483): StartServicescom.android.systemui.volume.VolumeUI took to complete: 3355ms
+W/SystemUIService( 1483): Initialization of com.android.systemui.volume.VolumeUI took 3356 ms
+I/oid.setupwizar( 1630): Background concurrent copying GC freed 25187(1270KB) AllocSpace objects, 4(252KB) LOS objects, 49% free, 3MB/6MB, paused 152.327ms total 1.751s
+D/KbdSensor( 1332): poll_batch: dev=0x7307fd2adf00 sensor_handle=0 flags=0 sampling_period_ns=2000000 max_report_latency_ns=100000000
+D/KbdSensor( 1332): poll_setDelay: dev=0x7307fd2adf00 handle=0 ns=2000000
+D/KbdSensor( 1332): poll_activate: dev=0x7307fd2adf00 handle=0 enabled=1
+W/KeyguardServiceDelegate( 1332): onScreenTurningOn(): no keyguard service!
+W/system_server( 1332): Long monitor contention with owner Binder:1332_6 (1658) at int com.android.server.wm.WindowManagerService.addWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.view.DisplayCutout$ParcelableWrapper, android.view.InputChannel)(WindowManagerService.java:1142) waiters=0 in void com.android.server.wm.WindowAnimator.lambda$new$1(com.android.server.wm.WindowAnimator, long) for 233ms
+D/SystemUIBootTiming( 1483): StartServicescom.android.systemui.stackdivider.Divider took to complete: 1812ms
+W/SystemUIService( 1483): Initialization of com.android.systemui.stackdivider.Divider took 1819 ms
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+I/WifiService( 1332): getWifiServiceMessenger uid=10017
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+D/ConnectivityService( 1332): requestNetwork for uid/pid:10017/1483 NetworkRequest [ TRACK_DEFAULT id=10, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10017] ]
+D/Ethernet( 1332): got request NetworkRequest [ TRACK_DEFAULT id=10, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10017] ] with score 0
+W/DirectBootExitBR( 1740): User is in direct boot mode.
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+I/GmsApplication( 1740): Staging modules and/or updating config
+I/GmsApplication( 1740): Staging modules
+I/FileApkMgr( 1740): Extracting modules...
+I/FileApkMgr( 1740): Extracting modules completed
+I/GmsApplication( 1740): Staging modules completed
+I/GmsApplication( 1740): Updating config
+I/chatty  ( 1740): uid=10008 com.google.android.gms.persistent identical 10 lines
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+W/FileUtils( 1740): Failed to set world readable: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb
+W/WallpaperManagerService( 1332): Cannot extract colors because wallpaper could not be read.
+W/WallpaperManagerService( 1332): Cannot get theme colors because WallpaperColors is null.
+W/WallpaperManagerService( 1332): Cannot extract colors because wallpaper could not be read.
+W/WallpaperManagerService( 1332): Cannot get theme colors because WallpaperColors is null.
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+D/StatusBar( 1483): disable<e i a s b h r c s > disable2<q i n >
+E/ChimeraCfgMgr( 1740): Failed to read module config: java.io.FileNotFoundException: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb (No such file or directory)
+I/StatusBarManagerService( 1332): registerStatusBar bar=com.android.internal.statusbar.IStatusBar$Stub$Proxy@cca4dc9
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+E/GservicesValue( 1740): Gservices key not whitelisted for directboot access: gms:chimera:dev_module_blacklist
+I/chatty  ( 1740): uid=10008 com.google.android.gms.persistent identical 4 lines
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+I/GmsModuleFndr( 1740): Beginning GMS chimera module scan
+E/ChimeraCfgMgr( 1740): Failed to read module config: java.io.FileNotFoundException: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb (No such file or directory)
+W/ActivityManager( 1332): Launch timeout has expired, giving up wake lock!
+W/ActivityManager( 1332): Timeout executing service: ServiceRecord{fcf2343 u0 com.android.systemui/.keyguard.KeyguardService}
+W/ActivityManager( 1332): Slow operation: 138ms so far, now at startProcess: asking zygote to start proc
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+I/DynamiteModule( 1740): Considering local module com.google.android.gms.googlecertificates:4 and remote module com.google.android.gms.googlecertificates:0
+I/DynamiteModule( 1740): Selected local version of com.google.android.gms.googlecertificates
+E/ChimeraCfgMgr( 1740): Failed to read module config: java.io.FileNotFoundException: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb (No such file or directory)
+W/ActivityManager( 1332): Slow operation: 469ms so far, now at startProcess: returned from zygote!
+W/ActivityManager( 1332): Slow operation: 471ms so far, now at startProcess: done updating battery stats
+W/ActivityManager( 1332): Slow operation: 566ms so far, now at startProcess: building log message
+I/ActivityManager( 1332): Start proc 1799:com.google.android.gms/u0a8 for service com.google.android.gms/.chimera.GmsIntentOperationService
+W/ActivityManager( 1332): Slow operation: 567ms so far, now at startProcess: starting to update pids map
+W/ActivityManager( 1332): Slow operation: 567ms so far, now at startProcess: done updating pids map
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+I/main    ( 1799): type=1400 audit(0.0:299): avc: denied { dac_read_search } for capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+I/Zygote  ( 1799): seccomp disabled by setenforce 0
+I/main    ( 1799): type=1400 audit(0.0:300): avc: denied { read } for name="vendor" dev="tmpfs" ino=2420 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/gle.android.gm( 1799): Unexpected CPU variant for X86 using defaults: x86_64
+I/system_server( 1332): libdebuggerd_client: started dumping process 1483
+I/ndroid.systemu( 1483): Thread[3,tid=1503,WaitingInMainSignalCatcherLoop,Thread*=0x730803616400,peer=0x13800100,"Signal Catcher"]: reacting to signal 3
+I/ndroid.systemu( 1483): 
+I/ndroid.systemu( 1483): Background concurrent copying GC freed 23851(2MB) AllocSpace objects, 4(80KB) LOS objects, 49% free, 2MB/4MB, paused 100.265ms total 1.373s
+I//system/bin/tombstoned( 1215): registered intercept for pid 1483 and type kDebuggerdJavaBacktrace
+I/chatty  ( 1740): uid=10008 com.google.android.gms.persistent identical 4 lines
+E/ActivityThread( 1740): Failed to find provider info for com.google.android.gsf.gservices
+E/ChimeraCfgMgr( 1740): Failed to read module config: java.io.FileNotFoundException: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb (No such file or directory)
+W/IntentOperation( 1740): Failed to get Chimera config:com.google.android.chimera.config.InvalidConfigException: java.io.FileNotFoundException: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb (No such file or directory)
+W/WindowManager( 1332): Keyguard drawn timeout. Setting mKeyguardDrawComplete
+I/gle.android.gm( 1799): The ClassLoaderContext is a special shared library.
+I/chatty  ( 1799): uid=10008(com.google.android.gms) identical 1 line
+I/gle.android.gm( 1799): The ClassLoaderContext is a special shared library.
+I/CameraManagerGlobal( 1483): Connecting to camera service
+I/gle.android.gm( 1799): The ClassLoaderContext is a special shared library.
+E/ActivityThread( 1799): Failed to find provider info for com.google.android.gsf.gservices
+W/DirectBootExitBR( 1799): User is in direct boot mode.
+I/chatty  ( 1799): uid=10008(com.google.android.gms) identical 8 lines
+E/ActivityThread( 1799): Failed to find provider info for com.google.android.gsf.gservices
+I/GmsApplication( 1799): Staging modules and/or updating config
+I/oid.setupwizar( 1630): Background concurrent copying GC freed 60116(2MB) AllocSpace objects, 1(48KB) LOS objects, 49% free, 3MB/7MB, paused 323us total 1.370s
+I//system/bin/tombstoned( 1215): received crash request for pid 1483
+I//system/bin/tombstoned( 1215): found intercept fd 512 for pid 1483 and type kDebuggerdJavaBacktrace
+I/ndroid.systemu( 1483): Wrote stack traces to '[tombstoned]'
+I/system_server( 1332): libdebuggerd_client: done dumping process 1483
+I/system_server( 1332): libdebuggerd_client: started dumping process 1332
+I//system/bin/tombstoned( 1215): registered intercept for pid 1332 and type kDebuggerdJavaBacktrace
+I/system_server( 1332): Thread[2,tid=1337,WaitingInMainSignalCatcherLoop,Thread*=0x7307fd20e000,peer=0x12e40000,"Signal Catcher"]: reacting to signal 3
+I/system_server( 1332): 
+I/m.android.phon( 1616): Background concurrent copying GC freed 47260(3MB) AllocSpace objects, 0(0B) LOS objects, 53% free, 1342KB/2MB, paused 2.315ms total 459.148ms
+E/KbdSensor( 1332): doPoll: poll 84 error: Interrupted system call
+I/SetupWizard( 1630): [WelcomeActivity] TextToSpeech.OnInitListener.onInit(ERROR) call ignored.
+I/ActivityManager( 1332): Config changes=4 {1.0 ?mcc?mnc [en_US] ldltr sw720dp w1280dp h648dp 160dpi lrg long land -touch qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1280, 672) mWindowingMode=fullscreen mActivityType=undefined} s.6}
+I/ActivityManager( 1332): Override config changes=4 {1.0 ?mcc?mnc [en_US] ldltr sw720dp w1280dp h648dp 160dpi lrg long land -touch qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1280, 672) mAppBounds=Rect(0, 0 - 1280, 672) mWindowingMode=fullscreen mActivityType=undefined} s.6} for displayId=0
+D/OpenGLRenderer( 1630): Skia GL Pipeline
+W/system_server( 1332): Long monitor contention with owner Binder:1332_3 (1383) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, int, int, long, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.view.DisplayCutout$ParcelableWrapper, android.util.MergedConfiguration, android.view.Surface)(WindowManagerService.java:1873) waiters=0 in void com.android.server.wm.WindowManagerService$H.handleMessage(android.os.Message) for 134ms
+I/RenderThread( 1630): type=1400 audit(0.0:301): avc: denied { search } for name="graphics" dev="tmpfs" ino=2540 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+D/gralloc ( 1195): Registering a buffer in the process that created it. This may cause memory ordering problems.
+I/chatty  ( 1195): uid=0(root) Binder:1195_1 identical 1 line
+D/gralloc ( 1195): Registering a buffer in the process that created it. This may cause memory ordering problems.
+I/Choreographer( 1630): Skipped 39 frames!  The application may be doing too much work on its main thread.
+I/ConfigStore( 1630): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+I/ConfigStore( 1630): android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+I/OpenGLRenderer( 1630): Initialized EGL, version 1.4
+D/OpenGLRenderer( 1630): Swap behavior 1
+E/libsuspend( 1332): poll error: Interrupted system call
+D/NotificationEntryMgr( 1483): heads up is enabled
+I//system/bin/tombstoned( 1215): received crash request for pid 1332
+I//system/bin/tombstoned( 1215): found intercept fd 512 for pid 1332 and type kDebuggerdJavaBacktrace
+I/system_server( 1332): Wrote stack traces to '[tombstoned]'
+I/system_server( 1332): libdebuggerd_client: done dumping process 1332
+I/system_server( 1332): libdebuggerd_client: started dumping process 1616
+I//system/bin/tombstoned( 1215): registered intercept for pid 1616 and type kDebuggerdJavaBacktrace
+I/m.android.phon( 1616): Thread[3,tid=1626,WaitingInMainSignalCatcherLoop,Thread*=0x730803616400,peer=0x134410f8,"Signal Catcher"]: reacting to signal 3
+I/m.android.phon( 1616): 
+W/WindowManager( 1332): Window freeze timeout expired.
+W/WindowManager( 1332): Force clearing orientation change: Window{45215fb u0 com.google.android.setupwizard/com.google.android.setupwizard.user.WelcomeActivity}
+==== 1792277235956
+22:47:16 up 1 min,  0 users,  load average: 10.50, 3.29, 1.16
+running
+
+--------- beginning of main
+I/OMXMaster( 1214): makeComponentInstance(OMX.google.vp9.encoder) in omx@1.0-service process
+--------- beginning of system
+I/ActivityManager( 1332): Process com.android.bluetooth (pid 1469) has died: fore SVC 
+W/libprocessgroup( 1332): kill(-1469, 9) failed: No such process
+W/OMXUtils( 1210): do not know color format 0x7f000789 = 2130708361
+E/OMXNodeInstance( 1214): getConfig(0xef6ad740:google.vp9.encoder, ConfigAndroidIntraRefresh(0x6f60000a)) ERROR: Undefined(0x80001001)
+D/MediaCodecList( 1210): ignored a null builder
+W/libprocessgroup( 1332): kill(-1469, 9) failed: No such process
+I/Zygote  ( 1180): Process 1469 exited cleanly (0)
+W/libprocessgroup( 1332): kill(-1469, 9) failed: No such process
+W/libprocessgroup( 1332): kill(1469, 9) failed: No such process
+W/libprocessgroup( 1332): kill(-1469, 9) failed: No such process
+I/libprocessgroup( 1332): Successfully killed process cgroup uid 1002 pid 1469 in 432ms
+I/OMXClient( 1332): IOmx service obtained
+I/OMXClient( 1480): IOmx service obtained
+I/OMXMaster( 1214): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+I/OMXMaster( 1214): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+I/.gms.persisten( 1711): The ClassLoaderContext is a special shared library.
+E/OMXNodeInstance( 1214): getConfig(0xef6ad560:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+E/OMXNodeInstance( 1214): getConfig(0xef6ad260:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+I/HwBinder:1214_2( 1214): type=1400 audit(0.0:297): avc: denied { read } for name="lib" dev="tmpfs" ino=7215 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+I/chatty  ( 1183): uid=1000(system) allocator@1.0-s identical 20 lines
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+I/oid.setupwizar( 1615): Background concurrent copying GC freed 63090(2MB) AllocSpace objects, 4(80KB) LOS objects, 50% free, 2006KB/3MB, paused 15.995ms total 1.286s
+D/SystemUIBootTiming( 1480): StartServicescom.android.systemui.recents.Recents took to complete: 3284ms
+W/SystemUIService( 1480): Initialization of com.android.systemui.recents.Recents took 3285 ms
+I/vol.Events( 1480): writeEvent collection_started
+I/AudioService( 1332): setBluetoothScoOnInt: false resetBluetoothSco
+I/FFmpegExtractor( 1208): android-source:0x743c31623a00
+I/FFmpegExtractor( 1208): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1208): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1208): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+V/vold    ( 1171): /dev/block/vold/disk:11,0: LABEL="Android-x86 9.0-r2 (x86_64)" TYPE="iso9660" 
+V/vold    ( 1171): 
+I/vold    ( 1171): Detect iso9660
+V/vold    ( 1171): /system/bin/blkid
+V/vold    ( 1171):     -c
+V/vold    ( 1171):     /dev/null
+V/vold    ( 1171):     -s
+V/vold    ( 1171):     TYPE
+V/vold    ( 1171):     -s
+V/vold    ( 1171):     UUID
+V/vold    ( 1171):     -s
+V/vold    ( 1171):     LABEL
+V/vold    ( 1171):     /dev/block/vold/public:11,0
+I/vol.Events( 1480): writeEvent external_ringer_mode_changed normal
+I/vol.Events( 1480): writeEvent internal_ringer_mode_changed normal
+I/OMXClient( 1480): IOmx service obtained
+I/OMXMaster( 1214): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+E/OMXNodeInstance( 1214): getConfig(0xef316360:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+D/KbdSensor( 1332): poll_batch: dev=0x7bfe5d6adf00 sensor_handle=0 flags=0 sampling_period_ns=2000000 max_report_latency_ns=100000000
+D/KbdSensor( 1332): poll_setDelay: dev=0x7bfe5d6adf00 handle=0 ns=2000000
+D/KbdSensor( 1332): poll_activate: dev=0x7bfe5d6adf00 handle=0 enabled=1
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+W/KeyguardServiceDelegate( 1332): onScreenTurningOn(): no keyguard service!
+I/chatty  ( 1183): uid=1000(system) allocator@1.0-s identical 10 lines
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+I/oid.setupwizar( 1615): Background concurrent copying GC freed 12480(790KB) AllocSpace objects, 5(268KB) LOS objects, 49% free, 2MB/5MB, paused 134.016ms total 749.207ms
+W/ActivityManager( 1332): Timeout executing service: ServiceRecord{d59bd36 u0 com.android.systemui/.ImageWallpaper}
+I/FFmpegExtractor( 1208): android-source:0x743c31623000
+I/FFmpegExtractor( 1208): adjust mime(application/ogg -> audio/vorbis)
+D/FFmpegExtractor( 1208): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1208): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+V/vold    ( 1171): /dev/block/vold/public:11,0: LABEL="Android-x86 9.0-r2 (x86_64)" TYPE="iso9660" 
+V/vold    ( 1171): 
+I/OMXClient( 1480): IOmx service obtained
+I/OMXMaster( 1214): makeComponentInstance(OMX.google.vorbis.decoder) in omx@1.0-service process
+E/OMXNodeInstance( 1214): getConfig(0xef316360:google.vorbis.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+I/Binder:1171_1( 1171): type=1400 audit(0.0:298): avc: denied { mount } for name="/" dev="sr0" ino=1856 scontext=u:r:vold:s0 tcontext=u:object_r:unlabeled:s0 tclass=filesystem permissive=1
+I/chatty  ( 1183): uid=1000(system) allocator@1.0-s expire 10 lines
+W/AshmemAllocator( 1183): ashmem_create_region(32768) returning hidl_memory(0x7a86ce42c100, 32768)
+W/DirectBootExitBR( 1711): User is in direct boot mode.
+I/chatty  ( 1711): uid=10008 com.google.android.gms.persistent identical 2 lines
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+W/ProcessCpuTracker( 1332): Skipping unknown process pid 1783
+W/ProcessCpuTracker( 1332): Skipping unknown process pid 1778
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+W/ProcessCpuTracker( 1332): Skipping unknown process pid 1781
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+I/chatty  ( 1711): uid=10008 com.google.android.gms.persistent identical 2 lines
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+I/GmsApplication( 1711): Staging modules and/or updating config
+I/GmsApplication( 1711): Staging modules
+I/FileApkMgr( 1711): Extracting modules...
+I/vol.Events( 1480): writeEvent level_changed STREAM_VOICE_CALL 4
+I/vol.Events( 1480): writeEvent level_changed STREAM_SYSTEM 5
+I/vol.Events( 1480): writeEvent level_changed STREAM_RING 5
+I/vol.Events( 1480): writeEvent level_changed STREAM_MUSIC 5
+I/vol.Events( 1480): writeEvent level_changed STREAM_ALARM 6
+I/vol.Events( 1480): writeEvent level_changed STREAM_BLUETOOTH_SCO 7
+D/SystemUIBootTiming( 1480): StartServicescom.android.systemui.volume.VolumeUI took to complete: 3869ms
+W/SystemUIService( 1480): Initialization of com.android.systemui.volume.VolumeUI took 3869 ms
+I/vol.Events( 1480): writeEvent zen_mode_config_changed [disallowAlarms=false disallowMedia=false disallowSystem=true disallowRinger=false]
+I/system_server( 1332): libdebuggerd_client: started dumping process 1480
+I/ndroid.systemu( 1480): Thread[3,tid=1498,WaitingInMainSignalCatcherLoop,Thread*=0x7bfe63a16400,peer=0x12e80020,"Signal Catcher"]: reacting to signal 3
+I/ndroid.systemu( 1480): 
+I//system/bin/tombstoned( 1218): registered intercept for pid 1480 and type kDebuggerdJavaBacktrace
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+I/FileApkMgr( 1711): Extracting modules completed
+I/GmsApplication( 1711): Staging modules completed
+I/GmsApplication( 1711): Updating config
+W/FileUtils( 1711): Failed to set world readable: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb
+E/ChimeraCfgMgr( 1711): Failed to read module config: java.io.FileNotFoundException: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb (No such file or directory)
+E/GservicesValue( 1711): Gservices key not whitelisted for directboot access: gms:chimera:dev_module_blacklist
+I/GmsModuleFndr( 1711): Beginning GMS chimera module scan
+I/chatty  ( 1711): uid=10008 com.google.android.gms.persistent identical 10 lines
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+W/WindowManager( 1332): Keyguard drawn timeout. Setting mKeyguardDrawComplete
+E/ChimeraCfgMgr( 1711): Failed to read module config: java.io.FileNotFoundException: /data/user_de/0/com.google.android.gms/app_chimera/current_config.fb (No such file or directory)
+W/ActivityManager( 1332): Slow operation: 110ms so far, now at startProcess: building args
+W/ActivityManager( 1332): Slow operation: 116ms so far, now at startProcess: done starting proc!
+W/ActivityManager( 1332): Slow operation: 115ms so far, now at startProcess: asking zygote to start proc
+E/ActivityThread( 1711): Failed to find provider info for com.google.android.gsf.gservices
+I/DynamiteModule( 1711): Considering local module com.google.android.gms.googlecertificates:4 and remote module com.google.android.gms.googlecertificates:0
+I/DynamiteModule( 1711): Selected local version of com.google.android.gms.googlecertificates
+==== 1792277474167
+22:51:14 up 1 min,  0 users,  load average: 6.54, 2.06, 0.73
+running
+
+--------- beginning of system
+I/SystemServer( 1329): MakeDisplayManagerServiceReady
+D/SystemServerTiming( 1329): MakeDisplayManagerServiceReady took to complete: 1ms
+I/SystemServer( 1329): StartDeviceSpecificServices
+D/SystemServerTiming( 1329): StartDeviceSpecificServices took to complete: 5ms
+I/SystemServer( 1329): StartBootPhaseDeviceSpecificServicesReady
+I/SystemServiceManager( 1329): Starting phase 520
+D/SystemServerTiming( 1329): StartBootPhaseDeviceSpecificServicesReady took to complete: 1ms
+W/UsageStatsService( 1329): Event reported without a package name
+I/ActivityManager( 1329): System now ready
+--------- beginning of main
+D/libEGL  ( 1180): loaded /vendor/lib/egl/libEGL_swiftshader.so
+I/SystemServer( 1329): Making services ready
+I/SystemServer( 1329): StartActivityManagerReadyPhase
+I/SystemServiceManager( 1329): Starting phase 550
+W/SystemServiceManager( 1329): Service com.android.server.BatteryService took 107 ms in onBootPhase
+W/ActivityManager( 1329): Unable to start service Intent { act=com.android.ITelecomService cmp=com.android.server.telecom/.components.TelecomService } U=0: not found
+W/SystemServiceManager( 1329): Service com.android.server.content.ContentService$Lifecycle took 783 ms in onBootPhase
+D/BluetoothManagerService( 1329): Bluetooth boot completed
+D/BluetoothManagerService( 1329): Getting adapter name and address
+D/BluetoothManagerService( 1329): MESSAGE_GET_NAME_AND_ADDRESS
+D/BluetoothManagerService( 1329): Binding to service to get name and address
+W/SystemServiceManager( 1329): Service com.android.server.net.watchlist.NetworkWatchlistService$Lifecycle took 136 ms in onBootPhase
+E/BluetoothManagerService( 1329): MESSAGE_TIMEOUT_BIND
+W/SystemServiceManager( 1329): Service com.android.server.InputMethodManagerService$Lifecycle took 3478 ms in onBootPhase
+D/StorageManagerService( 1329): Thinking about init, mSystemReady=true, mDaemonConnected=true
+D/StorageManagerService( 1329): Setting up emulation state, initlocked=false
+W/SystemServiceManager( 1329): Service com.android.server.locksettings.LockSettingsService$Lifecycle took 102 ms in onBootPhase
+W/WindowManager( 1329): Keyguard drawn timeout. Setting mKeyguardDrawComplete
+I/WallpaperManagerService( 1329): No static wallpaper imagery; defaults will be shown
+W/WallpaperManagerService( 1329): no current wallpaper -- first boot?
+W/SystemServiceManager( 1329): Service com.android.server.wallpaper.WallpaperManagerService$Lifecycle took 115 ms in onBootPhase
+D/vold    ( 1170): e4crypt_unlock_user_key 0 serial=0 token_present=0
+I/Binder:1170_1( 1170): type=1400 audit(0.0:272): avc: denied { dac_read_search } for capability=2 scontext=u:r:vold:s0 tcontext=u:r:vold:s0 tclass=capability permissive=1
+E/android.hardware.usb@1.0-service( 1193): Failed to open /sys/class/dual_role_usb
+D/SystemServerTiming( 1329): StartActivityManagerReadyPhase took to complete: 4744ms
+E/UsbPortManager( 1329): port status enquiry failed
+I/SystemServer( 1329): StartObservingNativeCrashes
+D/SystemServerTiming( 1329): StartObservingNativeCrashes took to complete: 1ms
+D/SystemServerInitThreadPool( 1329): Started executing WebViewFactoryPreparation
+I/SystemServer( 1329): WebViewFactoryPreparation
+I/SystemServer( 1329): StartSystemUI
+D/StorageManagerService( 1329): Thinking about reset, mSystemReady=true, mDaemonConnected=true
+D/SystemServerTiming( 1329): StartSystemUI took to complete: 105ms
+I/SystemServer( 1329): MakeNetworkManagementServiceReady
+I/ActivityManager( 1329): Force stopping com.android.providers.media appid=10006 user=-1: vold reset
+D/NetworkManagement( 1329): enabling bandwidth control
+V/StorageManagerService( 1329): Found primary storage at VolumeInfo{emulated}:
+V/StorageManagerService( 1329):     type=EMULATED diskId=null partGuid= mountFlags=0 mountUserId=-1 
+V/StorageManagerService( 1329):     state=UNMOUNTED 
+V/StorageManagerService( 1329):     fsType=null fsUuid=null fsLabel=null 
+V/StorageManagerService( 1329):     path=null internalPath=null 
+I/AudioService( 1329): setBluetoothScoOnInt: false resetBluetoothSco
+W/Looper  ( 1329): Slow dispatch took 160ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=53
+D/BluetoothManagerService( 1329): Trying to bind to profile: 1, while Bluetooth was disabled
+E/BluetoothHearingAid( 1329): Could not bind to Bluetooth Hearing Aid Service with Intent { act=android.bluetooth.IBluetoothHearingAid }
+V/vold    ( 1170): Waiting for FUSE to spin up...
+I/AudioFlinger( 1195): systemReady
+I/chatty  ( 1170): uid=0(root) Binder:1170_4 identical 1 line
+V/vold    ( 1170): Waiting for FUSE to spin up...
+I/sdcard  ( 1461): type=1400 audit(0.0:273): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=6206 scontext=u:r:sdcardd:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+I/sdcard  ( 1461): type=1400 audit(0.0:274): avc: denied { read } for name="vendor" dev="tmpfs" ino=6206 scontext=u:r:sdcardd:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+D/UsbHostManager( 1329): USB device attached: vidpid 0627:0001 mfg/product/ver/serial QEMU/QEMU USB Tablet/0.00/28754-0000:00:01.2-1 hasAudio/HID/Storage: false/true/false
+V/vold    ( 1170): Waiting for FUSE to spin up...
+I/chatty  ( 1170): uid=0(root) Binder:1170_4 identical 2 lines
+V/vold    ( 1170): Waiting for FUSE to spin up...
+W/sdcard  ( 1461): Device explicitly enabled sdcardfs
+I/loop1   ( 1082): type=1400 audit(0.0:275): avc: denied { read } for path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+V/vold    ( 1170): Waiting for FUSE to spin up...
+V/vold    ( 1170): Waiting for FUSE to spin up...
+D/UsbDeviceDescriptor( 1329):   1 configs
+E/NetdConnector( 1329): NDC Command {2 bandwidth enable} took too long (1164ms)
+D/UsbHostManager( 1329): Added device UsbDevice[mName=/dev/bus/usb/001/002,mVendorId=1575,mProductId=1,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=QEMU,mProductName=QEMU USB Tablet,mVersion=0.00,mSerialNumber=28754-0000:00:01.2-1,mConfigurations=[
+D/UsbHostManager( 1329): UsbConfiguration[mId=1,mName=HID Tablet,mAttributes=160,mMaxPower=50,mInterfaces=[
+D/UsbHostManager( 1329): UsbInterface[mId=0,mAlternateSetting=0,mName=null,mClass=3,mSubclass=0,mProtocol=0,mEndpoints=[
+D/UsbHostManager( 1329): UsbEndpoint[mAddress=129,mAttributes=3,mMaxPacketSize=8,mInterval=10]]]]
+W/NetworkManagement( 1329): setDataSaverMode(): already false
+D/SystemServerTiming( 1329): MakeNetworkManagementServiceReady took to complete: 1440ms
+I/SystemServer( 1329): MakeIpSecServiceReady
+E/BatteryExternalStatsWorker( 1329): no controller energy info supplied for wifi
+E/BatteryExternalStatsWorker( 1329): no controller energy info supplied for telephony
+W/KernelWakelockReader( 1329): Reading wakelock stats took 113ms
+D/IpSecService( 1329): IpSecService is ready
+D/SystemServerTiming( 1329): MakeIpSecServiceReady took to complete: 259ms
+I/SystemServer( 1329): MakeNetworkStatsServiceReady
+W/BestClock( 1329): java.time.DateTimeException: Missing NTP fix
+D/SystemServerTiming( 1329): MakeNetworkStatsServiceReady took to complete: 620ms
+W/NetworkPolicy( 1329): setRestrictBackgroundUL: already false
+I/SystemServer( 1329): MakeConnectivityServiceReady
+E/TrafficController( 1178): Failed to clean up chain: fw_standby: [Bad file descriptor] : Get firstKey map -1 failed
+I/loop0   ( 1077): type=1400 audit(0.0:276): avc: denied { read } for path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+D/PermissionMonitor( 1329): Monitoring
+D/Ethernet( 1329): got request NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN Unwanted: ] ] with score 0
+D/PermissionMonitor( 1329): Users: 1, Apps: 80
+D/SystemServerTiming( 1329): MakeConnectivityServiceReady took to complete: 164ms
+I/SystemServer( 1329): MakeNetworkPolicyServiceReady
+W/BestClock( 1329): java.time.DateTimeException: Missing NTP fix
+D/SystemServerTiming( 1329): MakeNetworkPolicyServiceReady took to complete: 125ms
+I/SystemServer( 1329): StartWatchdog
+D/SystemServerTiming( 1329): StartWatchdog took to complete: 1ms
+I/SystemServer( 1329): PhaseThirdPartyAppsCanStart
+W/Looper  ( 1329): Slow dispatch took 107ms android.fg h=android.os.Handler c=com.android.server.Watchdog$HandlerChecker@6cd2831 m=0
+W/MediaExtractorFactory( 1207): couldn't dlopen(/system/lib64/extractors/..) Is a directory
+W/MediaExtractorFactory( 1207): couldn't dlopen(/system/lib64/extractors/.) Is a directory
+W/BroadcastQueue( 1329): Timeout of broadcast BroadcastRecord{a89a549 u-1 android.intent.action.TIME_TICK} - receiver=android.app.LoadedApk$ReceiverDispatcher$InnerReceiver@b875f54, started 10033ms ago
+W/BroadcastQueue( 1329): Receiver during timeout of BroadcastRecord{a89a549 u-1 android.intent.action.TIME_TICK} : BroadcastFilter{8e2b7f2 u0 ReceiverList{6a75efd 1329 system/1000/u0 local:b875f54}}
+I/Binder:1207_1( 1207): type=1400 audit(0.0:277): avc: denied { read } for name="vendor" dev="tmpfs" ino=6206 scontext=u:r:mediaextractor:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+W/MediaExtractorFactory( 1207): couldn't dlopen(/vendor/lib64/extractors/..) Is a directory
+W/MediaExtractorFactory( 1207): couldn't dlopen(/vendor/lib64/extractors/.) Is a directory
+I/FFmpegExtractor( 1207): android-source:0x711d45e23000
+D/vndksupport( 1180): Loading /vendor/lib/egl/libGLESv1_CM_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1180): loaded /vendor/lib/egl/libGLESv1_CM_swiftshader.so
+W/BestClock( 1329): java.time.DateTimeException: Missing NTP fix
+W/BestClock( 1329): java.time.DateTimeException: Missing NTP fix
+I/FFmpegExtractor( 1207): adjust mime(application/ogg -> audio/vorbis)
+W/BestClock( 1329): java.time.DateTimeException: Missing NTP fix
+I/Binder:1178_2( 1178): type=1400 audit(0.0:278): avc: denied { associate } for name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+D/FFmpegExtractor( 1207): supported codec (vorbis) by official Stagefright
+D/FFmpegExtractor( 1207): ffmpeg detected media content as 'audio/vorbis' with confidence 0.08
+D/StagefrightPluginLoader( 1209): Failed to load library: libstagefright_ccodec.so (dlopen failed: library "libstagefright_ccodec.so" not found)
+D/StagefrightPluginLoader( 1209): Handle or CreateInputSurface symbol is null
+D/vndksupport( 1180): Loading /vendor/lib/egl/libGLESv2_swiftshader.so from current namespace instead of sphal namespace.
+D/libEGL  ( 1180): loaded /vendor/lib/egl/libGLESv2_swiftshader.so
+D/StagefrightPluginLoader( 1209): Handle or CreateBuilder symbol is null
+I/Zygote  ( 1180): Preloading shared libraries...
+I/OMXClient( 1209): IOmx service obtained
+I/OMXMaster( 1213): makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+E/storaged( 1211): getDiskStats failed with result NOT_SUPPORTED and size 0
+I/Zygote  ( 1180): Uninstalled ICU cache reference pinning...
+==== 1792277713030
+22:55:13 up 1 min,  0 users,  load average: 5.18, 1.67, 0.59
+running
+
+--------- beginning of main
+D/WakeupController( 1332): WifiWake enabled
+D/WifiController( 1332): isAirplaneModeOn = false, isWifiEnabled = false, isScanningAvailable = false, isLocationModeActive = false
+E/SupplicantStaIfaceHal( 1332): Can't call setDebugParams, ISupplicant is null
+W/WifiDiags( 1332): no ring buffers found
+W/WifiDiags( 1332): Failed to start packet fate monitoring
+I/WifiService( 1332): Registering wifi
+--------- beginning of system
+D/SystemServerTiming( 1332): StartWifi took to complete: 3324ms
+I/SystemServer( 1332): StartWifiScanning
+I/SystemServiceManager( 1332): Starting com.android.server.wifi.scanner.WifiScanningService
+I/WifiScanningService( 1332): Creating wifiscanner
+I/WifiScanningService( 1332): Publishing wifiscanner
+D/SystemServerTiming( 1332): StartWifiScanning took to complete: 23ms
+I/SystemServer( 1332): StartEthernet
+I/SystemServiceManager( 1332): Starting com.android.server.ethernet.EthernetService
+I/EthernetService( 1332): Registering service ethernet
+D/SystemServerTiming( 1332): StartEthernet took to complete: 8ms
+I/SystemServer( 1332): StartConnectivityService
+D/ConnectivityService( 1332): ConnectivityService starting up
+D/ConnectivityService( 1332): wifiOnly=true
+D/ConnectivityService( 1332): networkAttributes - ignoring mobile as this dev is wifiOnly 0
+D/ConnectivityService( 1332): networkAttributes - ignoring mobile as this dev is wifiOnly 2
+D/ConnectivityService( 1332): networkAttributes - ignoring mobile as this dev is wifiOnly 3
+D/ConnectivityService( 1332): networkAttributes - ignoring mobile as this dev is wifiOnly 5
+D/ConnectivityService( 1332): networkAttributes - ignoring mobile as this dev is wifiOnly 10
+D/ConnectivityService( 1332): networkAttributes - ignoring mobile as this dev is wifiOnly 11
+D/ConnectivityService( 1332): networkAttributes - ignoring mobile as this dev is wifiOnly 12
+E/ConnectivityService( 1332): Ignoring protectedNetwork 10
+E/ConnectivityService( 1332): Ignoring protectedNetwork 11
+E/ConnectivityService( 1332): Ignoring protectedNetwork 12
+E/ConnectivityService( 1332): Ignoring protectedNetwork 14
+E/ConnectivityService( 1332): Ignoring protectedNetwork 15
+D/SystemServerTiming( 1332): StartConnectivityService took to complete: 100ms
+I/SystemServer( 1332): StartNsdService
+D/NsdService( 1332): Network service discovery is enabled
+D/SystemServerTiming( 1332): StartNsdService took to complete: 21ms
+I/SystemServer( 1332): StartSystemUpdateManagerService
+I/SystemUpdateManagerService( 1332): No existing info file /data/system/system-update-info.xml
+D/SystemServerTiming( 1332): StartSystemUpdateManagerService took to complete: 19ms
+I/SystemServer( 1332): StartUpdateLockService
+D/SystemServerTiming( 1332): StartUpdateLockService took to complete: 4ms
+I/SystemServer( 1332): StartNotificationManager
+I/SystemServiceManager( 1332): Starting com.android.server.notification.NotificationManagerService
+D/ConditionProviders.SCP( 1332): new ScheduleConditionProvider()
+D/ZenLog  ( 1332): config: readXml,ZenModeConfig[user=0,allowAlarms=true,allowMedia=true,allowSystem=false,allowReminders=false,allowEvents=false,allowCalls=true,allowRepeatCallers=true,allowMessages=false,allowCallsFrom=stars,allowMessagesFrom=contacts,suppressedVisualEffects=511,areChannelsBypassingDnd=false,automaticRules={EVENTS_DEFAULT_RULE=ZenRule[enabled=false,snoozing=false,name=Event,zenMode=ZEN_MODE_IMPORTANT_INTERRUPTIONS,conditionId=condition://android/event?userId=-10000&calendar=&reply=1,condition=Condition[id=condition://android/event?userId=-10000&calendar=&reply=1,summary=...,line1=...,line2=...,icon=0,state=STATE_FALSE,flags=2],component=ComponentInfo{android/com.android.server.notification.EventConditionProvider},id=EVENTS_DEFAULT_RULE,creationTime=1792275015319,enabler=null], EVERY_NIGHT_DEFAULT_RULE=ZenRule[enabled=false,snoozing=false,name=Sleeping,zenMode=ZEN_MODE_IMPORTANT_INTERRUPTIONS,conditionId=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,condition=Condition[id=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,summary=...,line1=...,line2=...,icon=0,state=STATE_TRUE,flags=2],component=ComponentInfo{android/com.android.server.notification.ScheduleConditionProvider},id=EVERY_NIGHT_DEFAULT_RULE,creationTime=1792275015318,enabler=null]},manualRule=null],Diff[automaticRule[EVENTS_DEFAULT_RULE].condition:null->Condition[id=condition://android/event?userId=-10000&calendar=&reply=1,summary=...,line1=...,line2=...,icon=0,state=STATE_FALSE,flags=2],automaticRule[EVENTS_DEFAULT_RULE].creationTime:1792277712982->1792275015319,automaticRule[EVERY_NIGHT_DEFAULT_RULE].condition:null->Condition[id=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,summary=...,line1=...,line2=...,icon=0,state=STATE_TRUE,flags=2],automaticRule[EVERY_NIGHT_DEFAULT_RULE].creationTime:1792277712966->1792275015318]
+I/NotificationListeners( 1332): Read notification listener permissions from xml
+I/ConditionProviders( 1332): Read condition provider permissions from xml
+I/ConditionProviders( 1332): Read condition provider permissions from xml
+D/NotificationAssistants( 1332): Approving default notification assistant for user 0
+D/ZenLog  ( 1332): set_zen_mode: off,init
+W/SystemServiceManager( 1332): Service com.android.server.notification.NotificationManagerService took 168 ms in onStart
+D/SystemServerTiming( 1332): StartNotificationManager took to complete: 211ms
+I/SystemServer( 1332): StartDeviceMonitor
+I/SystemServiceManager( 1332): Starting com.android.server.storage.DeviceStorageMonitorService
+D/SystemServerTiming( 1332): StartDeviceMonitor took to complete: 10ms
+I/SystemServer( 1332): StartLocationManagerService
+D/SystemServerTiming( 1332): StartLocationManagerService took to complete: 4ms
+I/SystemServer( 1332): StartCountryDetectorService
+D/SystemServerTiming( 1332): StartCountryDetectorService took to complete: 5ms
+I/SystemServer( 1332): StartSearchManagerService
+I/SystemServiceManager( 1332): Starting com.android.server.search.SearchManagerService$Lifecycle
+D/SystemServerTiming( 1332): StartSearchManagerService took to complete: 6ms
+I/SystemServer( 1332): StartWallpaperManagerService
+I/SystemServiceManager( 1332): Starting com.android.server.wallpaper.WallpaperManagerService$Lifecycle
+D/SystemServerTiming( 1332): StartWallpaperManagerService took to complete: 9ms
+I/SystemServer( 1332): StartAudioService
+I/SystemServiceManager( 1332): Starting com.android.server.audio.AudioService$Lifecycle
+W/TelecomManager( 1332): Telecom Service not found.
+D/PermissionCache( 1194): checking android.permission.MODIFY_AUDIO_SETTINGS for uid=1000 => granted (16633 us)
+D/PermissionCache( 1194): checking android.permission.MODIFY_AUDIO_ROUTING for uid=1000 => granted (2811 us)
+D/AudioFlinger( 1194): isLowRamDevice:false totalMemory:2088816640 mClientSharedHeapSize:4194304
+D/SystemServerTiming( 1332): StartAudioService took to complete: 196ms
+I/SystemServer( 1332): StartDockObserver
+I/SystemServiceManager( 1332): Starting com.android.server.DockObserver
+W/DockObserver( 1332): This kernel does not have dock station support
+D/SystemServerTiming( 1332): StartDockObserver took to complete: 7ms
+I/SystemServer( 1332): StartWiredAccessoryManager
+W/WiredAccessoryManager( 1332): This kernel does not have usb audio support
+W/WiredAccessoryManager( 1332): This kernel does not have HDMI audio support
+D/SystemServerTiming( 1332): StartWiredAccessoryManager took to complete: 7ms
+I/SystemServer( 1332): StartMidiManager
+I/SystemServiceManager( 1332): Starting com.android.server.midi.MidiService$Lifecycle
+D/SystemServerTiming( 1332): StartMidiManager took to complete: 9ms
+I/SystemServer( 1332): StartUsbService
+I/SystemServiceManager( 1332): Starting com.android.server.usb.UsbService$Lifecycle
+I/android_os_HwBinder( 1332): HwBinder: Starting thread pool for default::android.hidl.manager@1.0::IServiceManager
+I/zygote  ( 1179): Background concurrent copying GC freed 21043(1033KB) AllocSpace objects, 0(0B) LOS objects, 42% free, 2MB/3MB, paused 287us total 186.712ms
+I/Zygote  ( 1179): ...preloaded 6535 classes in 10815ms.
+I/zygote  ( 1179): VMRuntime.preloadDexCaches starting
+I/UsbPortManager( 1332): Usb hal service started android.hardware.usb@1.0::IUsb default
+I/android_os_HwBinder( 1332): HwBinder: Starting thread pool for default::android.hardware.usb@1.0::IUsb
+I/android.hardware.usb@1.0-service( 1192): registering callback
+E/android.hardware.usb@1.0-service( 1192): Failed to open /sys/class/dual_role_usb
+W/SystemServiceManager( 1332): Service com.android.server.usb.UsbService$Lifecycle took 492 ms in onStart
+D/SystemServerTiming( 1332): StartUsbService took to complete: 493ms
+I/SystemServer( 1332): StartSerialService
+E/android.hardware.usb@1.0-service( 1192): creating thread
+D/SystemServerTiming( 1332): StartSerialService took to complete: 4ms
+I/SystemServer( 1332): StartHardwarePropertiesManagerService
+W/hwservicemanager( 1112): getTransport: Cannot find entry android.hardware.thermal@1.0::IThermal/default in either framework or device manifest.
+E/HardwarePropertiesManagerService-JNI( 1332): Unable to get Thermal service.
+D/SystemServerTiming( 1332): StartHardwarePropertiesManagerService took to complete: 123ms
+I/SystemServer( 1332): StartTwilightService
+I/SystemServiceManager( 1332): Starting com.android.server.twilight.TwilightService
+D/SystemServerTiming( 1332): StartTwilightService took to complete: 1ms
+I/SystemServer( 1332): StartJobScheduler
+I/SystemServiceManager( 1332): Starting com.android.server.job.JobSchedulerService
+I/JobStore( 1332): Read 0 jobs
+D/SystemServerTiming( 1332): StartJobScheduler took to complete: 271ms
+I/SystemServer( 1332): StartSoundTrigger
+I/SystemServiceManager( 1332): Starting com.android.server.soundtrigger.SoundTriggerService
+D/SystemServerTiming( 1332): StartSoundTrigger took to complete: 5ms
+I/SystemServer( 1332): StartTrustManager
+I/SystemServiceManager( 1332): Starting com.android.server.trust.TrustManagerService
+D/SystemServerTiming( 1332): StartTrustManager took to complete: 8ms
+I/SystemServer( 1332): StartBackupManager
+I/SystemServiceManager( 1332): Starting com.android.server.backup.BackupManagerService$Lifecycle
+I/system_server( 1332): Background concurrent copying GC freed 24684(2MB) AllocSpace objects, 19(444KB) LOS objects, 42% free, 4MB/8MB, paused 2.015ms total 933.290ms
+D/SystemServerTiming( 1332): StartBackupManager took to complete: 126ms
+I/SystemServer( 1332): StartAppWidgerService
+I/SystemServiceManager( 1332): Starting com.android.server.appwidget.AppWidgetService
+==== 1792277948587
+22:59:09 up 0 min,  0 users,  load average: 5.87, 1.63, 0.56
+running
+
+--------- beginning of main
+E/UsbAlsaJackDetectorJNI( 1333): Can't register UsbAlsaJackDetector native methods
+--------- beginning of system
+D/SystemServerTiming( 1333): InitBeforeStartServices took to complete: 3768ms
+I/SystemServer( 1333): StartServices
+I/SystemServer( 1333): Reading configuration...
+I/SystemServer( 1333): ReadingSystemConfig
+D/SystemServerTiming( 1333): ReadingSystemConfig took to complete: 3ms
+I/SystemServer( 1333): StartInstaller
+I/SystemServiceManager( 1333): Starting com.android.server.pm.Installer
+D/SystemServerInitThreadPool( 1333): Started executing ReadingSystemConfig
+W/SystemServiceManager( 1333): Service com.android.server.pm.Installer took 476 ms in onStart
+D/SystemServerTiming( 1333): StartInstaller took to complete: 590ms
+I/SystemServer( 1333): DeviceIdentifiersPolicyService
+I/SystemServiceManager( 1333): Starting com.android.server.os.DeviceIdentifiersPolicyService
+D/SystemServerTiming( 1333): DeviceIdentifiersPolicyService took to complete: 18ms
+I/SystemServer( 1333): StartActivityManager
+I/SystemServiceManager( 1333): Starting com.android.server.am.ActivityManagerService$Lifecycle
+I/ActivityManager( 1333): Memory class: 192
+I/system-server-i( 1333): type=1400 audit(0.0:244): avc: denied { read } for name="vendor" dev="tmpfs" ino=6804 scontext=u:r:system_server:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+D/SystemServerInitThreadPool( 1333): Finished executing ReadingSystemConfig
+D/BatteryStatsImpl( 1333): Reading daily items from /data/system/batterystats-daily.xml
+E/BluetoothAdapter( 1333): Bluetooth binder is null
+E/BatteryExternalStatsWorker( 1333): no controller energy info supplied for telephony
+E/KernelUidCpuFreqTimeReader( 1333): Failed to read /proc/uid_time_in_state: java.io.FileNotFoundException: /proc/uid_time_in_state (No such file or directory)
+W/KernelCpuProcReader( 1333): File not exist: /proc/uid_cpupower/concurrent_active_time
+W/KernelCpuProcReader( 1333): File not exist: /proc/uid_cpupower/concurrent_policy_time
+E/KernelCpuSpeedReader( 1333): Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state (No such file or directory)
+W/KernelMemoryBandwidthStats( 1333): No kernel memory bandwidth stats available
+I/PowerManagerService-JNI( 1333): Loaded power HAL 1.0 service
+E/KernelUidCpuFreqTimeReader( 1333): Failed to read /proc/uid_time_in_state: java.io.FileNotFoundException: /proc/uid_time_in_state (No such file or directory)
+W/hwservicemanager( 1115): getTransport: Cannot find entry android.hardware.memtrack@1.0::IMemtrack/default in either framework or device manifest.
+W/AppOps  ( 1333): Unknown attribute in 'op' tag: n
+I/chatty  ( 1333): uid=1000 system_server identical 25 lines
+W/AppOps  ( 1333): Unknown attribute in 'op' tag: n
+I/IntentFirewall( 1333): Read new rules (A:0 B:0 S:0)
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1003/pid_1310: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1003: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1001/pid_1215: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1001: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1058/pid_1218: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1058: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1066/pid_1211: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1066: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1046/pid_1214: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1046: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1036/pid_1113: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1036: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1040/pid_1208: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1040: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1002/pid_1186: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1002: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1020/pid_1237: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1020: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1010/pid_1195: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1010/pid_1213: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1010: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1067/pid_1204: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1067: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1193: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1183: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1191: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1115: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1216: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1194: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1192: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1116: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1190: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1114: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1199: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000/pid_1189: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1000: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1019/pid_1203: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1019: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1047/pid_1187: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1047/pid_1202: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1047: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1017/pid_1206: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1017: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1197: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1205: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1201: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1181: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1171: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1198: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1212: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1184: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1200: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1180: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1217: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1179: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0/pid_1102: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_0: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1013/pid_1188: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1013/pid_1210: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1013/pid_1209: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1013/pid_1207: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1013: Permission denied
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1041/pid_1185: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1041/pid_1196: Device or resource busy
+W/libprocessgroup( 1333): Failed to remove /acct/uid_1041: Permission denied
+D/AppOps  ( 1333): AppOpsService published
+W/SystemServiceManager( 1333): Service com.android.server.am.ActivityManagerService$Lifecycle took 373 ms in onStart
+D/SystemServerTiming( 1333): StartActivityManager took to complete: 6673ms
+I/SystemServer( 1333): StartPowerManager
+I/SystemServiceManager( 1333): Starting com.android.server.power.PowerManagerService
+W/ProcessCpuTracker( 1333): Skipping unknown process pid 1362
+I/system_server( 1333): type=1400 audit(0.0:245): avc: denied { write } for name="uinput" dev="tmpfs" ino=7202 scontext=u:r:system_server:s0 tcontext=u:object_r:uhid_device:s0 tclass=chr_file permissive=1
+I/system_server( 1333): type=1400 audit(0.0:246): avc: denied { open } for path="/dev/uinput" dev="tmpfs" ino=7202 scontext=u:r:system_server:s0 tcontext=u:object_r:uhid_device:s0 tclass=chr_file permissive=1
+I/system_server( 1333): type=1400 audit(0.0:247): avc: denied { ioctl } for path="/dev/uinput" dev="tmpfs" ino=7202 ioctlcmd=0x5564 scontext=u:r:system_server:s0 tcontext=u:object_r:uhid_device:s0 tclass=chr_file permissive=1
+I/ueventd ( 1102): type=1400 audit(0.0:248): avc: denied { sys_module } for capability=16 scontext=u:r:ueventd:s0 tcontext=u:r:ueventd:s0 tclass=capability permissive=1
+I/ueventd ( 1102): type=1400 audit(0.0:249): avc: denied { module_load } for path="/system/lib/modules/4.19.110-android-x86_64-g066cc1d/kernel/drivers/macintosh/mac_hid.ko" dev="loop1" ino=2125 scontext=u:r:ueventd:s0 tcontext=u:object_r:system_file:s0 tclass=system permissive=1
+D/PowerManagerService-JNI( 1333): Excessive delay in setInteractive(true) while turning screen on
+D/SystemServerTiming( 1333): StartPowerManager took to complete: 810ms
+I/SystemServer( 1333): InitPowerManagement
+D/SystemServerTiming( 1333): InitPowerManagement took to complete: 11ms
+I/SystemServer( 1333): StartRecoverySystemService
+I/SystemServiceManager( 1333): Starting com.android.server.RecoverySystemService
+I/libsuspend( 1333): open event0(Power Button) ok fd=67
+W/SystemServiceManager( 1333): Service com.android.server.RecoverySystemService took 99 ms in onStart
+D/SystemServerTiming( 1333): StartRecoverySystemService took to complete: 108ms
+W/RescueParty( 1333): Failed to determine if device was on USB
+W/RescueParty( 1333): java.io.FileNotFoundException: /sys/class/android_usb/android0/state (No such file or directory)
+W/RescueParty( 1333): 	at java.io.FileInputStream.open0(Native Method)
+W/RescueParty( 1333): 	at java.io.FileInputStream.open(FileInputStream.java:231)
+W/RescueParty( 1333): 	at java.io.FileInputStream.<init>(FileInputStream.java:165)
+W/RescueParty( 1333): 	at android.os.FileUtils.readTextFile(FileUtils.java:514)
+W/RescueParty( 1333): 	at com.android.server.RescueParty.isUsbActive(RescueParty.java:348)
+W/RescueParty( 1333): 	at com.android.server.RescueParty.isDisabled(RescueParty.java:88)
+W/RescueParty( 1333): 	at com.android.server.RescueParty.noteBoot(RescueParty.java:107)
+W/RescueParty( 1333): 	at com.android.server.SystemServer.startBootstrapServices(SystemServer.java:587)
+W/RescueParty( 1333): 	at com.android.server.SystemServer.run(SystemServer.java:429)
+W/RescueParty( 1333): 	at com.android.server.SystemServer.main(SystemServer.java:294)
+W/RescueParty( 1333): 	at java.lang.reflect.Method.invoke(Native Method)
+W/RescueParty( 1333): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:518)
+W/RescueParty( 1333): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:838)
