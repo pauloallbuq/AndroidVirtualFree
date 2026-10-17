@@ -55,7 +55,8 @@ class GuestE2ETest {
         val cfg = VmConfig(
             qemuBinary = env["AVF_E2E_QEMU"] ?: "qemu-system-x86_64",
             firmwareDir = null,
-            kernel = files.first, initrd = files.second, cmdline = bc.cmdline,
+            // no CI: sem 'quiet' para que kernel/init (inclusive o motivo de reinícios) apareçam no console
+            kernel = files.first, initrd = files.second, cmdline = bc.cmdline.replace(" quiet", "") + " printk.devkmsg=on",
             iso = iso, dataDisk = data,
             vnc = VncEndpoint.Tcp(1),
             serialLog = File(out, "serial-$tag.log"),
@@ -86,7 +87,13 @@ class GuestE2ETest {
     private fun connectConsole(): GuestConsole {
         for (i in 0 until 120) {
             val sock = runCatching { Socket("127.0.0.1", 4555) }.getOrNull()
-            if (sock != null) return GuestConsole(sock.getInputStream(), sock.getOutputStream(), sock).also { console = it }
+            if (sock != null) {
+                val raw = File(out, "console-raw.log").outputStream()
+                val tee = object : java.io.FilterInputStream(sock.getInputStream()) {
+                    override fun read(b: ByteArray, off: Int, len: Int): Int { val n = super.read(b, off, len); if (n > 0) raw.write(b, off, n); return n }
+                }
+                return GuestConsole(tee, sock.getOutputStream(), sock).also { console = it }
+            }
             Thread.sleep(250)
         }
         error("console serial não abriu")
