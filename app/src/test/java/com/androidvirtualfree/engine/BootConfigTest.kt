@@ -40,7 +40,7 @@ class BootConfigTest {
 
     @Test(expected = java.io.IOException::class)
     fun rejectsNonIso() {
-        val f = File.createTempFile("x", ".iso").apply { writeBytes(ByteArray(64 * 2048)) }
+        val f = File.createTempFile("notiso", ".iso").apply { writeBytes(ByteArray(64 * 2048)) }
         IsoReader(f)
     }
 

@@ -65,11 +65,11 @@ class GuestImage(private val ctx: Context) {
 
     private fun downloadOnce(part: File, progress: (Long, Long) -> Unit) {
         var url = URL(ISO_URL)
-        var conn: HttpURLConnection
+        var c: HttpURLConnection? = null
         var redirects = 0
         val have = part.length()
         while (true) {
-            conn = (url.openConnection() as HttpURLConnection).apply {
+            val conn = (url.openConnection() as HttpURLConnection).apply {
                 instanceFollowRedirects = false
                 connectTimeout = 20_000; readTimeout = 60_000
                 setRequestProperty("User-Agent", "Wget/1.21.4")
@@ -86,8 +86,10 @@ class GuestImage(private val ctx: Context) {
             if (code == 416 && have > 0) { conn.disconnect(); return } // já completo
             if (code != 200 && code != 206) throw IOException("HTTP $code")
             if (conn.contentType?.startsWith("text/html") == true) throw IOException("espelho retornou página HTML")
+            c = conn
             break
         }
+        val conn = c!!
         val append = conn.responseCode == 206
         val len = conn.contentLengthLong
         val total = if (len > 0) (if (append) have + len else len) else -1L
