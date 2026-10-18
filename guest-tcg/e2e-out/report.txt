@@ -1,0 +1,39 @@
+cmdline: root=/dev/ram0 quiet androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=10 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 VIRT_WIFI=0
+qemu: qemu-system-x86_64 -M pc -accel tcg,thread=multi,tb-size=256 -cpu qemu64,+ssse3,+sse4.1,+sse4.2,+popcnt,+cx16 -smp 4 -m 2048 -kernel /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/kernel -initrd /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/initrd.img -append root=/dev/ram0 androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=10 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 VIRT_WIFI=0 printk.devkmsg=on -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/data.qcow2,if=ide,index=0,media=disk,format=qcow2,cache=writeback,discard=unmap -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/android-x86_64-9.0-r2.iso,if=ide,index=2,media=cdrom,readonly=on,format=raw -netdev user,id=n0 -device virtio-net-pci,netdev=n0,romfile= -vga std -usb -device usb-tablet -vnc 127.0.0.1:1 -serial file:/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/kernel-boot1.log -monitor stdio -serial tcp:127.0.0.1:4555,server,nowait -serial file:/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/logcat-boot1.log -d cpu_reset,guest_errors -D /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/qemu-debug-boot1.log
+[boot1] VNC conectado: 720x400 'QEMU'
+[boot1] kernel: 8	0	0	0 10 0 cat: /proc/sys/kernel/hung_task_panic: No such file or directory 0 48:	# enable virt_wifi if needed 49:	local eth=`getprop net.virt_wifi eth0` 50:	if [ -d /sys/class/net/$eth -a "$VIRT_WIFI" != "0" ]; then 51:		if [ -n "$wifi" -a "$VIRT_WIFI" = "1" ]; then 56:			ip link set $eth name wifi_eth 57:			ifconfig wifi_eth up 58:			ip link add link wifi_eth name wlan0 type virt_wifi
+[boot1] 19s: aguardando boot; tela 1024x768, frames=176
+[boot1] pacotes pesados desativados no convidado
+[boot1] 240s: aguardando boot; tela 1024x768, frames=1170
+[boot1] 487s: aguardando boot; tela 1024x768, frames=2371
+[boot1] sys.boot_completed=1 após 674s (console root)
+[boot1] chave ADB autorizada e assistente desativado
+[boot1] ADB conectado
+getprop: 9 x86_64,x86,armeabi-v7a,armeabi 1  userdebug 
+df /data: /dev/block/sda  16G   69M   15G   1% /data
+
+install probe: Success
+launch: bash arg: -p   bash arg: com.androidvirtualfree.probe   bash arg: -c   bash arg: android.intent.category.LAUNCHER   bash arg: 1 Events injected: 1 ## Network stats: elapsed time=2386ms (0ms mobile, 0ms wifi, 2386ms not connected) args: [-p, com.androidvirtualfree.probe, -c, android.intent.category.LAUNCHER, 1]  arg: "-p"  arg: "com.androidvirtualfree.probe"  arg: "-c"  arg: "android.intent.category.LAUNCHER"  arg: "1" data="com.androidvirtualfree.probe" data="android.intent.category.LAUNCHER"
+aviso de ANR do convidado fechado (Wait)
+aviso de ANR do convidado fechado (Wait)
+app na tela após 30s
+fração dourada na tela após abrir o probe: 0.82
+root via console: uid=0(root) gid=2000(shell) groups=2000(shell),1007(log),3009(readproc) context=u:r:shell:s0
+root (su 0 id): uid=0(root) gid=0(root) groups=0(root) context=u:r:su:s0
+root (su -c id): uid=0(root) gid=0(root) groups=0(root) context=u:r:su:s0
+persist.sys.root_access=3
+desligamento limpo via 'reboot -p': true (exit=0)
+cmdline: root=/dev/ram0 quiet androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=10 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 VIRT_WIFI=0
+qemu: qemu-system-x86_64 -M pc -accel tcg,thread=multi,tb-size=256 -cpu qemu64,+ssse3,+sse4.1,+sse4.2,+popcnt,+cx16 -smp 4 -m 2048 -kernel /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/kernel -initrd /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/boot/initrd.img -append root=/dev/ram0 androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=10 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 VIRT_WIFI=0 printk.devkmsg=on -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/work/data.qcow2,if=ide,index=0,media=disk,format=qcow2,cache=writeback,discard=unmap -drive file=/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/android-x86_64-9.0-r2.iso,if=ide,index=2,media=cdrom,readonly=on,format=raw -netdev user,id=n0 -device virtio-net-pci,netdev=n0,romfile= -vga std -usb -device usb-tablet -vnc 127.0.0.1:1 -serial file:/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/kernel-boot2.log -monitor stdio -serial tcp:127.0.0.1:4555,server,nowait -serial file:/home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/logcat-boot2.log -d cpu_reset,guest_errors -D /home/runner/work/AndroidVirtualFree/AndroidVirtualFree/e2e-out/qemu-debug-boot2.log
+[boot2] VNC conectado: 1024x768 'QEMU'
+[boot2] kernel: 8	0	0	0 10 0 cat: /proc/sys/kernel/hung_task_panic: No such file or directory 0 48:	# enable virt_wifi if needed 49:	local eth=`getprop net.virt_wifi eth0` 50:	if [ -d /sys/class/net/$eth -a "$VIRT_WIFI" != "0" ]; then 51:		if [ -n "$wifi" -a "$VIRT_WIFI" = "1" ]; then 56:			ip link set $eth name wifi_eth 57:			ifconfig wifi_eth up 58:			ip link add link wifi_eth name wlan0 type virt_wifi
+[boot2] 18s: aguardando boot; tela 1024x768, frames=171
+[boot2] pacotes pesados desativados no convidado
+[boot2] 246s: aguardando boot; tela 1024x768, frames=744
+[boot2] sys.boot_completed=1 após 258s (console root)
+[boot2] chave ADB autorizada e assistente desativado
+[boot2] ADB ainda indisponível: null
+[boot2] rede do convidado: inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0 10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15
+[boot2] ADB conectado
+após reiniciar: pacote instalado=true, marcador='avf-persist'
+RESULTADO: OK

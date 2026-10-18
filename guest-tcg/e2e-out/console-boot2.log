@@ -1,0 +1,69 @@
+==== 1792316893950
+09:48:14 up 0 min,  0 users,  load average: 3.02, 0.63, 0.20
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 130 total,   6 running,  72 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   610756k used,  1429104k free,    70376k buffers
+Swap:        0k total,        0k used,        0k free,   426560k cached
+400%cpu  68%user   2%nice 125%sys 111%idle  89%iow   0%irq   5%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1075 root          0 -20    0    0    0 D 61.3   0.0   0:08.38 [loop1]
+ 1173 audioserver  20   0  33M 9.4M 7.6M R 50.0   0.4   0:01.70 audioserver
+ 1100 logd         30  10  19M 3.6M 2.7M S 47.7   0.1   0:01.79 logd
+ 1281 root         20   0  11M 3.0M 2.5M R 27.2   0.1   0:00.26 top -b -n 1
+    1 root         20   0  15M 3.3M 2.2M S 20.4   0.1   0:04.47 init
+ 1180 cameraserver 20   0  37M  14M  13M R 18.1   0.7   0:01.36 cameraserver
+ 1070 root          0 -20    0    0    0 R 15.9   0.0   0:01.89 [loop0]
+ 1188 media        20   0  33M  14M  11M D  9.0   0.6   0:01.43 mediaserver
+ 1273 root          0 -20  34M 8.0M 7.2M D  6.8   0.4   0:00.49 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+ 1232 root         20   0 9.3M 3.3M 2.8M S  4.5   0.1   0:01.11 logcat -b all -v threadtime
+==== 1792317121604
+09:52:02 up 4 min,  0 users,  load average: 7.34, 5.48, 2.35
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 137 total,   2 running,  86 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1922488k used,   117372k free,   250908k buffers
+Swap:        0k total,        0k used,        0k free,  1195116k cached
+400%cpu   6%user 171%nice  20%sys 203%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 2004 u0_a40008    30  10 1.2G  94M  81M R  197   4.7   2:41.85 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+ 2128 root         20   0  11M 3.1M 2.5M R 20.0   0.1   0:00.24 top -b -n 1
+ 1232 root         20   0 9.3M 3.3M 2.8M S  2.8   0.1   0:04.30 logcat -b all -v threadtime
+ 2129 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.14 head -15
+ 1950 root         20   0    0    0    0 I  0.0   0.0   0:00.13 [kworker/2:2-events_power_efficient]
+ 1942 u0_a17       20   0 3.3G 298M 152M S  0.0  14.9   0:37.17 com.android.systemui
+ 1798 root         20   0    0    0    0 I  0.0   0.0   0:00.06 [kworker/0:2-events]
+ 1791 system       10 -10 3.1G 163M 113M S  0.0   8.1   0:16.82 com.android.settings
+ 1775 radio        20   0 3.0G 105M  87M S  0.0   5.2   0:02.89 com.android.phone
+ 1675 webview_zygote 20 0 1.5G  59M  43M S  0.0   2.9   0:00.47 webview_zygote
+==== 1792317179504
+09:53:00 up 5 min,  0 users,  load average: 8.19, 6.19, 2.79
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 136 total,   1 running,  86 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1807812k used,   232048k free,   262888k buffers
+Swap:        0k total,        0k used,        0k free,  1232520k cached
+400%cpu 358%user  28%nice  75%sys  61%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 2877 system       10 -10 3.1G 154M 104M S  250   7.7   0:04.97 com.android.settings
+ 2522 system       18  -2 3.8G 212M 180M S  119  10.6   0:19.60 system_server
+ 2776 u0_a17       20   0 3.0G 133M 110M S 94.4   6.6   0:04.88 com.android.systemui
+ 2985 root         20   0  11M 3.0M 2.5M R 30.5   0.1   0:00.25 top -b -n 1
+ 1232 root         20   0 9.3M 3.3M 2.8M S  8.3   0.1   0:07.25 logcat -b all -v threadtime
+ 1184 keystore     20   0  21M 7.7M 6.6M S  2.7   0.3   0:00.86 keystore /data/misc/keystore
+ 1175 root         -2  -8 230M  89M  50M S  2.7   4.4   7:11.02 surfaceflinger
+ 1101 system       20   0  11M 3.8M 3.0M S  2.7   0.1   0:02.62 servicemanager
+ 1100 logd         30  10  21M 4.9M 2.7M S  2.7   0.2   0:08.56 logd
+ 1088 root         20   0    0    0    0 S  2.7   0.0   0:00.56 [jbd2/sda-8]
