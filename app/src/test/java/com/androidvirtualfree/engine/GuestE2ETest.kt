@@ -56,7 +56,7 @@ class GuestE2ETest {
             qemuBinary = env["AVF_E2E_QEMU"] ?: "qemu-system-x86_64",
             firmwareDir = null,
             // no CI: sem 'quiet' para que kernel/init (inclusive o motivo de reinícios) apareçam no console
-            kernel = files.first, initrd = files.second, cmdline = bc.cmdline.replace(" quiet", "") + " printk.devkmsg=on",
+            kernel = files.first, initrd = files.second, cmdline = bc.cmdline.replace(" quiet", "") + " printk.devkmsg=on" + (env["AVF_E2E_CMDLINE_EXTRA"]?.let { " $it" } ?: ""),
             iso = iso, dataDisk = data,
             vnc = VncEndpoint.Tcp(1),
             serialLog = File(out, "serial-$tag.log"),
@@ -122,7 +122,7 @@ class GuestE2ETest {
         }
         var lastUp = 0.0; var reboots = 0
         while (!con.bootCompleted()) {
-            if (!kernInfo) kernInfo = kernelInfo().isSuccess
+            if (!kernInfo) kernInfo = con.tuneKernel() && kernelInfo().isSuccess
             runCatching { con.run("pgrep -f 'logcat -b all' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &)", 15_000) }
             val up = runCatching { con.run("cut -d' ' -f1 /proc/uptime", 15_000).trim().toDouble() }.getOrDefault(lastUp)
             if (up + 5 < lastUp) { reboots++; log("[$tag] convidado REINICIOU (uptime $lastUp -> $up), total=$reboots") }

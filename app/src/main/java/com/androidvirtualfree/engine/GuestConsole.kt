@@ -53,6 +53,15 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
         return true
     }
 
+    /**
+     * O init do Android liga panic_on_oops; sob TCG, um aviso do driver de vídeo (ttm_bo_vm_open, ao
+     * depurar o surfaceflinger durante um ANR) vira pânico e reinicia o convidado. Desligamos o pânico:
+     * o processo afetado é encerrado e o Android o reinicia, sem derrubar a máquina virtual.
+     */
+    fun tuneKernel(): Boolean = runCatching {
+        run("echo 0 > /proc/sys/kernel/panic_on_oops; cat /proc/sys/kernel/panic_on_oops", 20_000).trim().endsWith("0")
+    }.getOrDefault(false)
+
     fun bootCompleted(): Boolean = runCatching { run("getprop sys.boot_completed", 15_000) == "1" }.getOrDefault(false)
 
     /**

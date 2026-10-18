@@ -112,6 +112,7 @@ object VmController {
         // conecta ao console root do convidado (ttyS0) e aguarda sys.boot_completed=1
         val t0 = System.currentTimeMillis()
         var con: GuestConsole? = null
+        var tuned = false
         while (true) {
             if (!p.isAlive) throw IllegalStateException(ctx.getString(R.string.msg_qemu_died, p.logTail()))
             if (stopRequested) return
@@ -120,6 +121,7 @@ object VmController {
                 val s = LocalSocket().apply { connect(LocalSocketAddress(consoleSock.absolutePath, LocalSocketAddress.Namespace.FILESYSTEM)) }
                 GuestConsole(s.inputStream, s.outputStream, s)
             }.getOrNull()?.also { console = it }
+            if (con != null && !tuned) tuned = con.tuneKernel()
             if (con != null && con.bootCompleted()) break
             val min = (System.currentTimeMillis() - t0) / 60000
             set(Phase.BOOTING, ctx.getString(R.string.msg_booting_wait, min))

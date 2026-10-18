@@ -37,7 +37,7 @@ android {
         unitTests.all {
             it.maxHeapSize = "2g"
             // Teste ponta-a-ponta do convidado (só roda quando AVF_E2E_ISO está definido)
-            listOf("AVF_E2E_ISO", "AVF_E2E_DATA", "AVF_E2E_PROBE_APK", "AVF_E2E_OUT", "AVF_E2E_ACCEL", "AVF_E2E_QEMU", "AVF_E2E_CPU", "AVF_E2E_NOREBOOT")
+            listOf("AVF_E2E_ISO", "AVF_E2E_DATA", "AVF_E2E_PROBE_APK", "AVF_E2E_OUT", "AVF_E2E_ACCEL", "AVF_E2E_QEMU", "AVF_E2E_CPU", "AVF_E2E_NOREBOOT", "AVF_E2E_CMDLINE_EXTRA")
                 .forEach { k -> System.getenv(k)?.let { v -> it.environment(k, v) } }
             it.testLogging { events("passed", "failed", "skipped", "standardOut", "standardError"); showStandardStreams = true }
         }
