@@ -1,0 +1,46 @@
+==== 1792313090611
+08:44:49 up 0 min,  0 users,  load average: 1.80, 0.39, 0.13
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 131 total,   3 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1481676k used,   558184k free,   170376k buffers
+Swap:        0k total,        0k used,        0k free,  1060020k cached
+400%cpu   4%user   0%nice 100%sys 196%idle  76%iow   0%irq  16%sirq   8%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1193 root         -2  -8 170M  98M  54M S 88.0   4.9   0:03.25 surfaceflinger
+ 1090 root          0 -20    0    0    0 S 56.0   0.0   0:02.82 [loop1]
+ 1085 root          0 -20    0    0    0 S 28.0   0.0   0:01.58 [loop0]
+ 1176 root         20   0 1.4G 127M 115M D  8.0   6.3   0:00.45 zygote
+   43 root         20   0    0    0    0 I  8.0   0.0   0:00.58 [kworker/3:1-ata_sff]
+ 1501 root         20   0  11M 3.0M 2.5M R  4.0   0.1   0:00.00 top -b -n 1
+ 1482 root         20   0 9.2M 3.5M 2.9M S  4.0   0.1   0:00.03 logcat -b all -v threadtime
+ 1077 root          0 -20    0    0    0 I  4.0   0.0   0:00.06 [kworker/3:1H-kblockd]
+   65 root         20   0    0    0    0 I  4.0   0.0   0:00.13 [kworker/1:1-events]
+   33 root         20   0    0    0    0 R  4.0   0.0   0:00.31 [kworker/2:1+ata_sff]
+==== 1792313115500
+08:45:14 up 0 min,  0 users,  load average: 1.92, 0.55, 0.19
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 155 total,   3 running, 104 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1869864k used,   169996k free,   248492k buffers
+Swap:        0k total,        0k used,        0k free,  1042432k cached
+400%cpu  56%user   0%nice   4%sys 340%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1193 root         -2  -8 306M 137M  62M R 60.0   6.8   0:15.67 surfaceflinger
+ 2458 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 2457 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 2390 shell        20   0  14M 1.5M 1.3M S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 2335 u0_a56       20   0 3.0G  86M  69M S  0.0   4.3   0:00.02 com.google.process.gapps
+ 2316 u0_a28       20   0 3.0G  87M  71M S  0.0   4.3   0:00.09 com.google.android.partnersetup
+ 2300 u0_a22       20   0 3.0G  81M  65M S  0.0   4.0   0:00.02 com.google.android.packageinstaller
+ 2282 u0_a16       20   0 3.0G  78M  62M S  0.0   3.9   0:00.01 com.google.android.onetimeinitializer
+ 2264 u0_a13       20   0 3.0G  81M  65M S  0.0   4.0   0:00.02 com.farmerbb.taskbar.androidx86
+ 2247 u0_a60       20   0 3.0G  83M  67M S  0.0   4.1   0:00.02 com.android.traceur
