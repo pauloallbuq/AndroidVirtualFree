@@ -1,0 +1,46 @@
+==== 1792302797119
+00:53:17 up 0 min,  0 users,  load average: 0.52, 0.11, 0.04
+running
+running
+1
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 163 total,   6 running, 109 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1981228k used,    58632k free,   298244k buffers
+Swap:        0k total,        0k used,        0k free,   998040k cached
+400%cpu   4%user   0%nice 250%sys  67%idle  74%iow   0%irq   2%sirq   2%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1838 u0_a8        20   0 3.1G 156M 128M S  180   7.8   0:01.56 com.google.android.gms.persistent
+  405 root         20   0    0    0    0 R  100   0.0   0:00.11 [kcompactd0]
+ 2602 root         20   0 9.3M 3.4M 2.7M S  2.1   0.1   0:00.02 logcat -b all -v threadtime
+ 1240 mdnsr        20   0 5.5M 1.0M 860K S  2.1   0.0   0:00.00 mdnsd
+   67 root         20   0    0    0    0 R  2.1   0.0   0:00.31 [kworker/2:2-ata_sff]
+ 2637 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 2636 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 2612 u0_a23       20   0 3.0G  80M  63M S  0.0   4.0   0:00.00 com.google.android.packageinstaller
+ 2583 u0_a15       20   0 3.0G  78M  61M S  0.0   3.9   0:00.01 com.google.android.onetimeinitializer
+ 2566 u0_a73       20   0 1.0G  82M  68M S  0.0   4.1   0:00.02 com.android.chrome
+==== 1792302811511
+00:53:31 up 0 min,  0 users,  load average: 1.73, 0.39, 0.13
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 164 total,   1 running, 115 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1972028k used,    67832k free,   265292k buffers
+Swap:        0k total,        0k used,        0k free,   988484k cached
+400%cpu   4%user   0%nice   0%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3070 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 3069 root         20   0  11M 4.0M 3.3M R  0.0   0.2   0:00.00 top -b -n 1
+ 3022 shell        20   0  14M 1.5M 1.3M S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 2794 u0_a8        20   0 3.1G 127M 108M S  0.0   6.3   0:00.07 com.google.android.gms.ui
+ 2760 u0_a8        20   0 3.1G 182M 132M S  0.0   9.1   0:00.60 com.google.android.gms.unstable
+ 2641 u0_a56       20   0 3.0G  85M  69M S  0.0   4.2   0:00.01 com.google.process.gapps
+ 2612 u0_a23       20   0 3.0G  80M  64M S  0.0   4.0   0:00.00 com.google.android.packageinstaller
+ 2602 root         20   0 9.3M 3.4M 2.7M S  0.0   0.1   0:00.70 logcat -b all -v threadtime
+ 2583 u0_a15       20   0 3.0G  78M  62M S  0.0   3.8   0:00.01 com.google.android.onetimeinitializer
+ 2566 u0_a73       20   0 1.0G  91M  76M S  0.0   4.5   0:00.23 com.android.chrome

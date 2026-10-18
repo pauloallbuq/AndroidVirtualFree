@@ -1,0 +1,1067 @@
+[    0.000000] Linux version 4.19.110-android-x86_64-g066cc1d (lh@android-x86) (gcc version 4.6 20120106 (prerelease) (GCC)) #1 SMP PREEMPT Wed Mar 25 11:32:46 CST 2020
+[    0.000000] Command line: root=/dev/ram0 androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=0 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 printk.devkmsg=on
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: xstate_offset[5]:  832, xstate_sizes[5]:   64
+[    0.000000] x86/fpu: xstate_offset[6]:  896, xstate_sizes[6]:  512
+[    0.000000] x86/fpu: xstate_offset[7]: 1408, xstate_sizes[7]: 1024
+[    0.000000] x86/fpu: Enabled xstate features 0xe7, context size is 2432 bytes, using 'compacted' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffdffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007ffe0000-0x000000007fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000fd00000000-0x000000ffffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 3.0.0 present.
+[    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 316c8001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 265261643 cycles
+[    0.000001] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000002] tsc: Detected 2596.094 MHz processor
+[    0.001401] last_pfn = 0x7ffe0 max_arch_pfn = 0x400000000
+[    0.001636] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.003137] found SMP MP-table at [mem 0x000f5470-0x000f547f]
+[    0.003200] Using GB pages for direct mapping
+[    0.003275] RAMDISK: [mem 0x7fe94000-0x7ffdffff]
+[    0.003302] ACPI: Early table checksum verification disabled
+[    0.003328] ACPI: RSDP 0x00000000000F52A0 000014 (v00 BOCHS )
+[    0.003329] ACPI: RSDT 0x000000007FFE1E41 000034 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003332] ACPI: FACP 0x000000007FFE1CDD 000074 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003334] ACPI: DSDT 0x000000007FFE0040 001C9D (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003336] ACPI: FACS 0x000000007FFE0000 000040
+[    0.003336] ACPI: APIC 0x000000007FFE1D51 000090 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003337] ACPI: HPET 0x000000007FFE1DE1 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003338] ACPI: WAET 0x000000007FFE1E19 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003476] Zone ranges:
+[    0.003477]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.003478]   DMA32    [mem 0x0000000001000000-0x000000007ffdffff]
+[    0.003478]   Normal   empty
+[    0.003479] Movable zone start for each node
+[    0.003479] Early memory node ranges
+[    0.003479]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.003480]   node   0: [mem 0x0000000000100000-0x000000007ffdffff]
+[    0.003674] Zeroed struct page in unavailable ranges: 130 pages
+[    0.003675] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffdffff]
+[    0.007921] ACPI: PM-Timer IO Port: 0x608
+[    0.007930] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.008010] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.008011] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.008013] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.008013] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.008014] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.008015] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.008017] Using ACPI (MADT) for SMP configuration information
+[    0.008018] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.008032] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.008078] [mem 0x80000000-0xfeffbfff] available for PCI devices
+[    0.008079] Booting paravirtualized kernel on KVM
+[    0.008081] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.008085] setup_percpu: NR_CPUS:8 nr_cpumask_bits:8 nr_cpu_ids:4 nr_node_ids:1
+[    0.008212] percpu: Embedded 43 pages/cpu s138648 r8192 d29288 u524288
+[    0.008244] KVM setup async PF for cpu 0
+[    0.008262] kvm-stealtime: cpu 0, msr 7da15240
+[    0.008264] Built 1 zonelists, mobility grouping on.  Total pages: 515945
+[    0.008265] Kernel command line: root=/dev/ram0 androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=0 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 printk.devkmsg=on
+[    0.008392] You have booted with nomodeset. This means your GPU drivers are DISABLED
+[    0.008392] Any video related functionality will be severely degraded, and you may not even be able to suspend the system properly
+[    0.008392] Unless you actually understand what nomodeset does, you should reboot without enabling it
+[    0.008539] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.008643] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.008694] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.010189] Memory: 2034584K/2096632K available (12319K kernel code, 1182K rwdata, 3684K rodata, 1492K init, 1336K bss, 62048K reserved, 0K cma-reserved)
+[    0.010321] ftrace: allocating 37405 entries in 147 pages
+[    0.020990] rcu: Preemptible hierarchical RCU implementation.
+[    0.020991] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    0.020992] 	RCU CPU stall warnings suppressed (rcu_cpu_stall_suppress).
+[    0.020993] 	Tasks RCU enabled.
+[    0.020993] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.021075] NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+[    0.021322] random: random: get_random_bytes called from start_kernel+0x369/0x57e with crng_init=0
+[    0.021381] Console: colour dummy device 80x25
+[    0.021452] console [tty0] enabled
+[    0.153229] console [ttyS0] enabled
+[    0.153951] ACPI: Core revision 20181003
+[    0.155048] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.157122] APIC: Switch to symmetric I/O mode setup
+[    0.158172] KVM setup pv IPIs
+[    0.161879] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.163157] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x256bd23383a, max_idle_ns: 440795235267 ns
+[    0.165307] Calibrating delay loop (skipped) preset value.. 5192.18 BogoMIPS (lpj=2596094)
+[    0.166308] pid_max: default: 32768 minimum: 301
+[    0.167337] Security Framework initialized
+[    0.168309] SELinux:  Initializing.
+[    0.169347] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.170306] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.171668] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.172678] Last level iTLB entries: 4KB 512, 2MB 255, 4MB 127
+[    0.173309] Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+[    0.174315] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.175308] Spectre V2 : Spectre mitigation: kernel not compiled with retpoline; no mitigation available!
+[    0.175309] Speculative Store Bypass: Vulnerable
+[    0.177468] Freeing SMP alternatives memory: 28K
+[    0.179689] smpboot: CPU0: AMD EPYC 9V45 96-Core Processor (family: 0x1a, model: 0x2, stepping: 0x1)
+[    0.186321] Performance Events: PMU not available due to virtualization, using software events only.
+[    0.190314] rcu: Hierarchical SRCU implementation.
+[    0.193948] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.196314] smp: Bringing up secondary CPUs ...
+[    0.204397] x86: Booting SMP configuration:
+[    0.205252] .... node  #0, CPUs:      #1
+[    0.142063] kvm-clock: cpu 1, msr 316c8041, secondary cpu clock
+[    0.142063] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.212027] KVM setup async PF for cpu 1
+[    0.212306] kvm-stealtime: cpu 1, msr 7da95240
+[    0.221392]  #2
+[    0.142063] kvm-clock: cpu 2, msr 316c8081, secondary cpu clock
+[    0.142063] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.226496] KVM setup async PF for cpu 2
+[    0.227297] kvm-stealtime: cpu 2, msr 7db15240
+[    0.236390]  #3
+[    0.142063] kvm-clock: cpu 3, msr 316c80c1, secondary cpu clock
+[    0.142063] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.243180] KVM setup async PF for cpu 3
+[    0.243306] kvm-stealtime: cpu 3, msr 7db95240
+[    0.245321] smp: Brought up 1 node, 4 CPUs
+[    0.246326] smpboot: Max logical packages: 1
+[    0.247320] smpboot: Total of 4 processors activated (20768.75 BogoMIPS)
+[    0.249350] CPU3: update max cpu_capacity 1024
+[    0.249727] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.252340] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.253316] CPU1: update max cpu_capacity 1024
+[    0.255426] pinctrl core: initialized pinctrl subsystem
+[    0.257328] RTC time:  5:51:31, date: 10/18/26
+[    0.258444] NET: Registered protocol family 16
+[    0.259361] schedtune: configured to support 6 boost groups
+[    0.260378] audit: initializing netlink subsys (disabled)
+[    0.262333] audit: type=2000 audit(1792302692.089:1): state=initialized audit_enabled=0 res=1
+[    0.264317] cpuidle: using governor ladder
+[    0.265316] cpuidle: using governor menu
+[    0.267395] KVM setup pv remote TLB flush
+[    0.268314] ACPI: bus type PCI registered
+[    0.269170] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.269484] PCI: Using configuration type 1 for base access
+[    0.270313] PCI: Using configuration type 1 for extended access
+[    0.272884] cryptd: max_cpu_qlen set to 1000
+[    0.274333] ACPI: Added _OSI(Module Device)
+[    0.275224] ACPI: Added _OSI(Processor Device)
+[    0.275317] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.276277] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.276324] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.277230] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.277535] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.279140] ACPI: Interpreter enabled
+[    0.279321] ACPI: (supports S0 S3 S5)
+[    0.280070] ACPI: Using IOAPIC for interrupt routing
+[    0.280348] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.281383] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.283935] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.284329] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    0.285316] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+[    0.286504] acpiphp: Slot [3] registered
+[    0.287368] acpiphp: Slot [4] registered
+[    0.288252] acpiphp: Slot [5] registered
+[    0.288388] acpiphp: Slot [6] registered
+[    0.289262] acpiphp: Slot [7] registered
+[    0.289368] acpiphp: Slot [8] registered
+[    0.290243] acpiphp: Slot [9] registered
+[    0.290375] acpiphp: Slot [10] registered
+[    0.291247] acpiphp: Slot [11] registered
+[    0.291366] acpiphp: Slot [12] registered
+[    0.292241] acpiphp: Slot [13] registered
+[    0.292366] acpiphp: Slot [14] registered
+[    0.293261] acpiphp: Slot [15] registered
+[    0.293367] acpiphp: Slot [16] registered
+[    0.294237] acpiphp: Slot [17] registered
+[    0.294383] acpiphp: Slot [18] registered
+[    0.295256] acpiphp: Slot [19] registered
+[    0.295367] acpiphp: Slot [20] registered
+[    0.296238] acpiphp: Slot [21] registered
+[    0.296377] acpiphp: Slot [22] registered
+[    0.297252] acpiphp: Slot [23] registered
+[    0.297367] acpiphp: Slot [24] registered
+[    0.298227] acpiphp: Slot [25] registered
+[    0.298382] acpiphp: Slot [26] registered
+[    0.299257] acpiphp: Slot [27] registered
+[    0.299367] acpiphp: Slot [28] registered
+[    0.300253] acpiphp: Slot [29] registered
+[    0.300375] acpiphp: Slot [30] registered
+[    0.301257] acpiphp: Slot [31] registered
+[    0.301331] PCI host bridge to bus 0000:00
+[    0.302223] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.302324] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.303314] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.304313] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfebfffff window]
+[    0.305313] pci_bus 0000:00: root bus resource [mem 0x100000000-0x17fffffff window]
+[    0.306314] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.311635] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.312313] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.313313] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.314313] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.319401] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+[    0.320328] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+[    0.330781] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+[    0.331423] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+[    0.332420] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+[    0.333397] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+[    0.334729] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+[    0.335707] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.336306] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.336323] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.337313] vgaarb: loaded
+[    0.337964] SCSI subsystem initialized
+[    0.338381] ACPI: bus type USB registered
+[    0.339306] usbcore: registered new interface driver usbfs
+[    0.340329] usbcore: registered new interface driver hub
+[    0.341390] usbcore: registered new device driver usb
+[    0.343347] media: Linux media interface: v0.10
+[    0.344338] videodev: Linux video capture interface: v2.00
+[    0.345328] pps_core: LinuxPPS API ver. 1 registered
+[    0.346322] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.349323] PTP clock support registered
+[    0.350362] PCI: Using ACPI for IRQ routing
+[    0.351755] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.352322] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    0.355363] clocksource: Switched to clocksource kvm-clock
+[    0.359769] VFS: Disk quotas dquot_6.6.0
+[    0.360757] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.362464] pnp: PnP ACPI init
+[    0.363575] pnp: PnP ACPI: found 8 devices
+[    0.370293] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.372596] NET: Registered protocol family 2
+[    0.373847] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes)
+[    0.375740] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.377525] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    0.379276] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.380883] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.382373] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.383979] NET: Registered protocol family 1
+[    0.385078] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    0.386521] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.387988] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.395749] PCI Interrupt Link [LNKD] enabled at IRQ 11
+[    0.403431] pci 0000:00:01.2: quirk_usb_early_handoff+0x0/0x720 took 13596 usecs
+[    0.405327] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.407405] Trying to unpack rootfs image as initramfs...
+[    0.419660] Freeing initrd memory: 1328K
+[    0.420770] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x256bd23383a, max_idle_ns: 440795235267 ns
+[    0.424061] Initialise system trusted keyrings
+[    0.425279] workingset: timestamp_bits=45 max_order=19 bucket_order=0
+[    0.427038] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.428573] fuse init (API version 7.27)
+[    0.436385] NET: Registered protocol family 38
+[    0.437551] Key type asymmetric registered
+[    0.438628] Asymmetric key parser 'x509' registered
+[    0.439827] io scheduler noop registered
+[    0.440795] io scheduler deadline registered
+[    0.441885] io scheduler cfq registered (default)
+[    0.443043] io scheduler mq-deadline registered
+[    0.444152] io scheduler kyber registered
+[    0.445519] vesafb: mode is 1024x768x32, linelength=4096, pages=4
+[    0.447060] vesafb: scrolling: redraw
+[    0.448012] vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    0.449393] vesafb: framebuffer at 0xfd000000, mapped to 0x00000000387fa845, using 6144k, total 16384k
+[    0.533756] Console: switching to colour frame buffer device 128x48
+[    0.621047] fb0: VESA VGA frame buffer device
+[    0.623064] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.626229] ACPI: Power Button [PWRF]
+[    0.634953] PCI Interrupt Link [LNKC] enabled at IRQ 10
+[    0.639075] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.667412] 00:04: ttyS2 at I/O 0x3e8 (irq = 4, base_baud = 115200) is a 16550A
+[    0.698360] 00:05: ttyS1 at I/O 0x2f8 (irq = 3, base_baud = 115200) is a 16550A
+[    0.727221] 00:06: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    0.730534] Linux agpgart interface v0.103
+[    0.733618] brd: module loaded
+[    0.735754] loop: module loaded
+[    0.737234] VMware PVSCSI driver - version 1.0.7.0-k
+[    0.739349] hv_vmbus: registering driver hv_storvsc
+[    0.742614] scsi host0: ata_piix
+[    0.744115] scsi host1: ata_piix
+[    0.747182] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc040 irq 14
+[    0.750439] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc048 irq 15
+[    0.753754] tun: Universal TUN/TAP device driver, 1.6
+[    0.756295] Fusion MPT base driver 3.04.20
+[    0.758277] Copyright (c) 1999-2008 LSI Corporation
+[    0.760614] Fusion MPT SPI Host driver 3.04.20
+[    0.762808] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.765892] ehci-pci: EHCI PCI platform driver
+[    0.799900] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.837664] ohci-pci: OHCI PCI platform driver
+[    0.877250] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.917116] ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+[    0.925759] uhci_hcd 0000:00:01.2: UHCI Host Controller
+[    0.958925] ata1.00: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+[    0.997045] uhci_hcd 0000:00:01.2: new USB bus registered, assigned bus number 1
+[    1.033891] ata1.00: 33554432 sectors, multi 16: LBA48 
+[    1.072548] uhci_hcd 0000:00:01.2: detected 2 ports
+[    1.110882] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+[    1.148880] uhci_hcd 0000:00:01.2: irq 11, io base 0x0000c000
+[    1.188678] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    1.188730] sd 0:0:0:0: [sda] 33554432 512-byte logical blocks: (17.2 GB/16.0 GiB)
+[    1.188735] sd 0:0:0:0: [sda] Write Protect is off
+[    1.188741] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.226548] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 4.19
+[    1.226643] sd 0:0:0:0: [sda] Attached SCSI disk
+[    1.266045] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+[    1.306615] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.306616] usb usb1: Product: UHCI Host Controller
+[    1.306617] usb usb1: Manufacturer: Linux 4.19.110-android-x86_64-g066cc1d uhci_hcd
+[    1.306618] usb usb1: SerialNumber: 0000:00:01.2
+[    1.306748] hub 1-0:1.0: USB hub found
+[    1.347456] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    1.387388] hub 1-0:1.0: 2 ports detected
+[    1.429878] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    1.469354] usbcore: registered new interface driver usb-storage
+[    1.512418] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[    1.555912] usbcore: registered new interface driver ums-alauda
+[    1.555917] usbcore: registered new interface driver ums-cypress
+[    1.555919] usbcore: registered new interface driver ums-datafab
+[    1.555922] usbcore: registered new interface driver ums_eneub6250
+[    1.555924] usbcore: registered new interface driver ums-freecom
+[    1.555927] usbcore: registered new interface driver ums-isd200
+[    1.555945] usbcore: registered new interface driver ums-jumpshot
+[    1.555952] usbcore: registered new interface driver ums-onetouch
+[    1.555958] usbcore: registered new interface driver ums-realtek
+[    1.555963] usbcore: registered new interface driver ums-sddr09
+[    1.555965] usbcore: registered new interface driver ums-sddr55
+[    1.555968] usbcore: registered new interface driver ums-usbat
+[    1.556003] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    1.557635] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    2.462715] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    2.500142] hv_vmbus: registering driver hyperv_keyboard
+[    2.538823] mousedev: PS/2 mouse device common for all mice
+[    2.578207] rtc_cmos 00:07: RTC can wake from S4
+[    2.617159] rtc_cmos 00:07: registered as rtc0
+[    2.652004] rtc_cmos 00:07: setting system clock to 2026-10-18 05:51:33 UTC (1792302693)
+[    2.684378] usb 1-1: new full-speed USB device number 2 using uhci_hcd
+[    2.689094] rtc_cmos 00:07: alarms up to one day, y3k, 242 bytes nvram, hpet irqs
+[    2.765034] IR Sharp protocol handler initialized
+[    2.804079] IR XMP protocol handler initialized
+[    2.842171] device-mapper: uevent: version 1.0.3
+[    2.878185] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    2.897990] usb 1-1: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[    2.917132] sdhci: Secure Digital Host Controller Interface driver
+[    2.953198] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=10
+[    2.989416] sdhci: Copyright(c) Pierre Ossman
+[    3.026507] usb 1-1: Product: QEMU USB Tablet
+[    3.063453] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.099607] usb 1-1: Manufacturer: QEMU
+[    3.099609] usb 1-1: SerialNumber: 28754-0000:00:01.2-1
+[    3.137188] hidraw: raw HID events driver (C) Jiri Kosina
+[    3.246595] input: QEMU QEMU USB Tablet as /devices/pci0000:00/0000:00:01.2/usb1/1-1/1-1:1.0/0003:0627:0001.0001/input/input1
+[    3.283422] hid-generic 0003:0627:0001.0001: input,hidraw0: USB HID v0.01 Mouse [QEMU QEMU USB Tablet] on usb-0000:00:01.2-1/input0
+[    3.356649] usbcore: registered new interface driver usbhid
+[    3.392336] usbhid: USB HID core driver
+[    3.428942] ashmem: initialized
+[    3.465209] oprofile: using NMI timer interrupt.
+[    3.501949] xt_time: kernel timezone is -0000
+[    3.538202] Initializing XFRM netlink socket
+[    3.574211] NET: Registered protocol family 10
+[    3.609105] Segment Routing with IPv6
+[    3.643769] mip6: Mobile IPv6
+[    3.678135] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    3.713199] NET: Registered protocol family 17
+[    3.748424] NET: Registered protocol family 15
+[    3.784012] NET: Registered protocol family 35
+[    3.819697] mce: Using 10 MCE banks
+[    3.854971] AVX2 version of gcm_enc/dec engaged.
+[    3.890001] AES CTR mode by8 optimization enabled
+[    3.928151] sched_clock: Marking stable (3787051519, 141063929)->(3980333565, -52218117)
+[    3.966012] registered taskstats version 1
+[    4.005839] Loading compiled-in X.509 certificates
+[    4.043118] Key type ._fscrypt registered
+[    4.081133] Key type .fscrypt registered
+[    4.119016] Key type fscrypt-provisioning registered
+[    4.157298]   Magic number: 14:245:871
+[    4.195737] Freeing unused kernel image memory: 1492K
+[    4.233667] Write protecting the kernel read-only data: 18432k
+[    4.272921] Freeing unused kernel image memory: 2016K
+[    4.313402] Freeing unused kernel image memory: 412K
+[    4.352215] rodata_test: all tests were successful
+[    4.389943] Run /init as init process
+Detecting Android-x86... found at /dev/sr0
+[   15.366519] init: Received control message 'interface_start' for 'android.hardware.vibrator@1.0::IVibrator/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   15.373093] init: Could not find service hosting interface android.hardware.vibrator@1.0::IVibrator/default
+[   15.378597] init: Received control message 'interface_start' for 'android.hardware.vibrator@1.0::IVibrator/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   15.383476] init: Could not find service hosting interface android.hardware.vibrator@1.0::IVibrator/default
+[   15.386090] init: Received control message 'interface_start' for 'android.hardware.vibrator@1.0::IVibrator/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   15.391129] init: Could not find service hosting interface android.hardware.vibrator@1.0::IVibrator/default
+[   15.394395] init: Received control message 'interface_start' for 'android.hardware.ir@1.0::IConsumerIr/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   15.399260] init: Could not find service hosting interface android.hardware.ir@1.0::IConsumerIr/default
+[   15.414456] logd: logdr: UID=0 GID=2000 PID=1424 b tail=0 logMask=ff pid=0 start=0ns timeout=0ns
+[   15.577712] serial8250: too much work for irq4
+[   15.701385] serial8250: too much work for irq4
+[   15.824010] serial8250: too much work for irq4
+[   15.946373] serial8250: too much work for irq4
+[   16.067824] serial8250: too much work for irq4
+[   16.189226] serial8250: too much work for irq4
+[   16.328633] serial8250: too much work for irq4
+[   16.450688] serial8250: too much work for irq4
+[   16.582871] serial8250: too much work for irq4
+[   16.707860] serial8250: too much work for irq4
+[   19.103925] type=1400 audit(1792302706.030:273): avc: denied { read } for pid=1392 comm="cat" name="panic_on_oops" dev="proc" ino=2138 scontext=u:r:shell:s0 tcontext=u:object_r:proc_panic:s0 tclass=file permissive=1
+[   19.111612] type=1400 audit(1792302709.948:284): avc: denied { getattr } for pid=1438 comm="idmap" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   19.229164] type=1400 audit(1792302709.948:284): avc: denied { getattr } for pid=1438 comm="idmap" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   19.238867] type=1400 audit(1792302710.075:285): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   19.294102] init: processing action (sys.sysctl.extra_free_kbytes=*) from (/init.rc:730)
+[   19.316764] init: Received control message 'interface_start' for 'android.hardware.vr@1.0::IVr/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   19.324408] init: Could not find service hosting interface android.hardware.vr@1.0::IVr/default
+[   19.488247] type=1400 audit(1792302710.075:285): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   19.495657] type=1400 audit(1792302710.334:286): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   19.509275] type=1400 audit(1792302710.334:286): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   19.509282] type=1400 audit(1792302710.355:287): avc: denied { ioctl } for pid=1202 comm="surfaceflinger" path="/dev/tty0" dev="tmpfs" ino=1569 ioctlcmd=0x4b3a scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+[   19.615856] audit: audit_lost=208 audit_rate_limit=5 audit_backlog_limit=64
+[   19.615877] type=1400 audit(1792302710.355:287): avc: denied { ioctl } for pid=1202 comm="surfaceflinger" path="/dev/tty0" dev="tmpfs" ino=1569 ioctlcmd=0x4b3a scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+[   19.619028] audit: rate limit exceeded
+[   19.629277] type=1400 audit(1792302710.463:288): avc: denied { ioctl } for pid=1202 comm="surfaceflinger" path="/dev/tty0" dev="tmpfs" ino=1569 ioctlcmd=0x5603 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+[   26.646034] type=1400 audit(1792302710.463:288): avc: denied { ioctl } for pid=1202 comm="surfaceflinger" path="/dev/tty0" dev="tmpfs" ino=1569 ioctlcmd=0x5603 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:gpu_device:s0 tclass=chr_file permissive=1
+[   26.652009] type=1400 audit(1792302717.492:299): avc: denied { read } for pid=1176 comm="Binder:1176_2" name="etc" dev="tmpfs" ino=8270 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   26.657993] type=1400 audit(1792302717.492:299): avc: denied { read } for pid=1176 comm="Binder:1176_2" name="etc" dev="tmpfs" ino=8270 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   26.664134] type=1400 audit(1792302717.492:300): avc: denied { read } for pid=1176 comm="Binder:1176_2" name="fstab.android_x86_64" dev="tmpfs" ino=8256 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   26.666909] init: Received control message 'interface_start' for 'android.hardware.oemlock@1.0::IOemLock/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   26.670751] type=1400 audit(1792302717.492:300): avc: denied { read } for pid=1176 comm="Binder:1176_2" name="fstab.android_x86_64" dev="tmpfs" ino=8256 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   26.676396] init: Could not find service hosting interface android.hardware.oemlock@1.0::IOemLock/default
+[   26.682789] type=1400 audit(1792302717.492:301): avc: denied { open } for pid=1176 comm="Binder:1176_2" path="/fstab.android_x86_64" dev="tmpfs" ino=8256 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   26.682826] type=1400 audit(1792302717.492:301): avc: denied { open } for pid=1176 comm="Binder:1176_2" path="/fstab.android_x86_64" dev="tmpfs" ino=8256 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   26.682829] type=1400 audit(1792302717.492:302): avc: denied { getattr } for pid=1176 comm="Binder:1176_2" path="/fstab.android_x86_64" dev="tmpfs" ino=8256 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   26.682848] type=1400 audit(1792302717.492:302): avc: denied { getattr } for pid=1176 comm="Binder:1176_2" path="/fstab.android_x86_64" dev="tmpfs" ino=8256 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   26.682850] type=1400 audit(1792302717.492:303): avc: denied { dac_read_search } for pid=1176 comm="Binder:1176_2" capability=2 scontext=u:r:vold:s0 tcontext=u:r:vold:s0 tclass=capability permissive=1
+[   27.007467] init: Received control message 'interface_start' for 'android.hardware.thermal@1.0::IThermal/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   27.012116] init: Could not find service hosting interface android.hardware.thermal@1.0::IThermal/default
+[   27.033522] init: Received control message 'interface_start' for 'android.hardware.contexthub@1.0::IContexthub/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   27.037857] init: Could not find service hosting interface android.hardware.contexthub@1.0::IContexthub/default
+[   27.080619] init: Received control message 'interface_start' for 'android.hardware.weaver@1.0::IWeaver/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   27.085623] init: Could not find service hosting interface android.hardware.weaver@1.0::IWeaver/default
+[   27.089027] init: Received control message 'interface_start' for 'android.hardware.authsecret@1.0::IAuthSecret/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   27.094023] init: Could not find service hosting interface android.hardware.authsecret@1.0::IAuthSecret/default
+[   27.138977] audit: audit_lost=218 audit_rate_limit=5 audit_backlog_limit=64
+[   27.141110] audit: rate limit exceeded
+[   27.306952] serial8250_interrupt: 18 callbacks suppressed
+[   27.306953] serial8250: too much work for irq4
+[   27.417747] serial8250: too much work for irq4
+[   27.529011] serial8250: too much work for irq4
+[   27.640468] serial8250: too much work for irq4
+[   27.752152] serial8250: too much work for irq4
+[   27.860803] serial8250: too much work for irq4
+[   27.971405] serial8250: too much work for irq4
+[   27.998122] type=1400 audit(1792302717.492:303): avc: denied { dac_read_search } for pid=1176 comm="Binder:1176_2" capability=2 scontext=u:r:vold:s0 tcontext=u:r:vold:s0 tclass=capability permissive=1
+[   28.005934] type=1400 audit(1792302718.840:308): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   28.014138] type=1400 audit(1792302718.840:308): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   28.022022] type=1400 audit(1792302718.843:309): avc: denied { dac_read_search } for pid=1176 comm="Binder:1176_4" capability=2 scontext=u:r:vold:s0 tcontext=u:r:vold:s0 tclass=capability permissive=1
+[   28.028549] type=1400 audit(1792302718.843:309): avc: denied { dac_read_search } for pid=1176 comm="Binder:1176_4" capability=2 scontext=u:r:vold:s0 tcontext=u:r:vold:s0 tclass=capability permissive=1
+[   28.034423] type=1400 audit(1792302718.861:310): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   28.188087] type=1400 audit(1792302718.861:310): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   28.195651] type=1400 audit(1792302719.034:311): avc: denied { getattr } for pid=1575 comm="sdcard" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:sdcardd:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   28.205817] type=1400 audit(1792302719.034:311): avc: denied { getattr } for pid=1575 comm="sdcard" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:sdcardd:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   28.215421] type=1400 audit(1792302719.034:312): avc: denied { read } for pid=1575 comm="sdcard" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:sdcardd:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   28.288557] audit: audit_lost=222 audit_rate_limit=5 audit_backlog_limit=64
+[   28.291256] audit: rate limit exceeded
+[   28.376272] init: Received control message 'interface_start' for 'android.hardware.gnss@1.1::IGnss/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   28.382993] init: Could not find service hosting interface android.hardware.gnss@1.1::IGnss/default
+[   28.387182] init: Received control message 'interface_start' for 'android.hardware.gnss@1.0::IGnss/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   28.394775] init: Could not find service hosting interface android.hardware.gnss@1.0::IGnss/default
+[   28.446296] sdcardfs version 2.0
+[   28.447505] sdcardfs: dev_name -> /data/media
+[   28.449048] sdcardfs: options -> fsuid=1023,fsgid=1023,multiuser,derive_gid,default_normal,mask=6,userid=0,gid=1015
+[   28.452742] sdcardfs: mnt -> 0000000041fb38dd
+[   28.454246] sdcardfs: mounted on top of /data/media type ext4
+[   28.456294] Remount options were mask=23,gid=9997 for vfsmnt 00000000b0e0428b.
+[   28.458982] sdcardfs : options - debug:1
+[   28.461788] sdcardfs : options - gid:9997
+[   28.463226] sdcardfs : options - mask:23
+[   28.465581] Remount options were mask=7,gid=9997 for vfsmnt 00000000230e532c.
+[   28.468538] sdcardfs : options - debug:1
+[   28.470039] sdcardfs : options - gid:9997
+[   28.472511] sdcardfs : options - mask:7
+[   29.129726] type=1400 audit(1792302719.034:312): avc: denied { read } for pid=1575 comm="sdcard" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:sdcardd:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   29.135902] type=1400 audit(1792302719.976:325): avc: denied { read } for pid=1212 comm="Binder:1212_1" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:mediaextractor:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   29.276133] type=1400 audit(1792302719.976:325): avc: denied { read } for pid=1212 comm="Binder:1212_1" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:mediaextractor:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   29.281981] type=1400 audit(1792302720.120:326): avc: denied { mounton } for pid=1736 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   29.289018] type=1400 audit(1792302720.120:326): avc: denied { mounton } for pid=1736 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   29.296722] type=1400 audit(1792302720.123:327): avc: denied { dac_read_search } for pid=1736 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   29.302883] type=1400 audit(1792302720.123:327): avc: denied { dac_read_search } for pid=1736 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   29.308672] type=1400 audit(1792302720.123:328): avc: denied { read } for pid=1736 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   29.360866] type=1400 audit(1792302720.123:328): avc: denied { read } for pid=1736 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   29.366302] type=1400 audit(1792302720.207:329): avc: denied { mount } for pid=1176 comm="Binder:1176_1" name="/" dev="sr0" ino=1856 scontext=u:r:vold:s0 tcontext=u:object_r:unlabeled:s0 tclass=filesystem permissive=1
+[   29.433182] audit: audit_lost=234 audit_rate_limit=5 audit_backlog_limit=64
+[   29.435945] audit: rate limit exceeded
+[   29.694135] serial8250: too much work for irq4
+[   29.859575] serial8250: too much work for irq4
+[   30.017210] serial8250: too much work for irq4
+[   30.824896] type=1400 audit(1792302720.207:329): avc: denied { mount } for pid=1176 comm="Binder:1176_1" name="/" dev="sr0" ino=1856 scontext=u:r:vold:s0 tcontext=u:object_r:unlabeled:s0 tclass=filesystem permissive=1
+[   30.834229] type=1400 audit(1792302721.669:335): avc: denied { associate } for pid=1183 comm="Binder:1183_2" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[   30.874912] type=1400 audit(1792302721.669:335): avc: denied { associate } for pid=1183 comm="Binder:1183_2" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[   30.886545] type=1400 audit(1792302721.689:336): avc: denied { search } for pid=1583 comm="RenderThread" name="graphics" dev="tmpfs" ino=1543 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+[   30.954182] type=1400 audit(1792302721.689:336): avc: denied { search } for pid=1583 comm="RenderThread" name="graphics" dev="tmpfs" ino=1543 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+[   30.962526] type=1400 audit(1792302721.689:337): avc: denied { mounton } for pid=1957 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   30.970116] type=1400 audit(1792302721.689:337): avc: denied { mounton } for pid=1957 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   30.976530] type=1400 audit(1792302721.689:338): avc: denied { dac_read_search } for pid=1957 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   30.984811] type=1400 audit(1792302721.689:338): avc: denied { dac_read_search } for pid=1957 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   30.990454] type=1400 audit(1792302721.689:339): avc: denied { read } for pid=1957 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   31.135227] audit: audit_lost=239 audit_rate_limit=5 audit_backlog_limit=64
+[   31.138283] audit: rate limit exceeded
+[   31.822732] type=1400 audit(1792302721.689:339): avc: denied { read } for pid=1957 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   31.830361] type=1400 audit(1792302722.669:342): avc: denied { search } for pid=1736 comm="RenderThread" name="graphics" dev="tmpfs" ino=1543 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+[   32.225751] serial8250_interrupt: 9 callbacks suppressed
+[   32.225752] serial8250: too much work for irq4
+[   32.702219] type=1400 audit(1792302722.669:342): avc: denied { search } for pid=1736 comm="RenderThread" name="graphics" dev="tmpfs" ino=1543 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+[   32.709122] type=1400 audit(1792302723.548:343): avc: denied { mounton } for pid=2060 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   32.717479] type=1400 audit(1792302723.548:343): avc: denied { mounton } for pid=2060 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   32.724599] type=1400 audit(1792302723.552:344): avc: denied { dac_read_search } for pid=2060 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   32.731569] type=1400 audit(1792302723.552:344): avc: denied { dac_read_search } for pid=2060 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   32.739335] type=1400 audit(1792302723.552:345): avc: denied { read } for pid=2060 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   32.911165] init: Service 'bootanim' (pid 1320) exited with status 0
+[   33.073636] init: processing action (sys.boot_completed=1) from (/init.rc:724)
+[   33.075898] init: processing action (sys.boot_completed=1) from (/init.android_x86_64.rc:108)
+[   33.077270] type=1400 audit(1792302723.552:345): avc: denied { read } for pid=2060 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   33.079723] init: starting service 'exec 4 (/system/bin/logwrapper /system/bin/sh /system/etc/init.sh bootcomplete)'...
+[   33.086362] type=1400 audit(1792302723.923:346): avc: denied { dac_read_search } for pid=1176 comm="Binder:1176_1" capability=2 scontext=u:r:vold:s0 tcontext=u:r:vold:s0 tclass=capability permissive=1
+[   33.089513] init: SVC_EXEC pid 2090 (uid 0 gid 0+0 context u:r:init:s0) started; waiting...
+[   33.095374] type=1400 audit(1792302723.923:346): avc: denied { dac_read_search } for pid=1176 comm="Binder:1176_1" capability=2 scontext=u:r:vold:s0 tcontext=u:r:vold:s0 tclass=capability permissive=1
+[   33.105112] type=1400 audit(1792302723.926:347): avc: denied { write } for pid=1 comm="init" name="ctrl-alt-del" dev="proc" ino=21098 scontext=u:r:init:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   33.106282] init: Async property child exited with status 0
+[   33.107910] audit: audit_lost=241 audit_rate_limit=5 audit_backlog_limit=64
+[   33.107911] audit: rate limit exceeded
+[   33.114216] type=1400 audit(1792302723.926:347): avc: denied { write } for pid=1 comm="init" name="ctrl-alt-del" dev="proc" ino=21098 scontext=u:r:init:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   33.114220] type=1400 audit(1792302723.926:348): avc: denied { open } for pid=1 comm="init" path="/proc/sys/kernel/ctrl-alt-del" dev="proc" ino=21098 scontext=u:r:init:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   33.114229] type=1400 audit(1792302723.926:348): avc: denied { open } for pid=1 comm="init" path="/proc/sys/kernel/ctrl-alt-del" dev="proc" ino=21098 scontext=u:r:init:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   33.114232] type=1400 audit(1792302723.936:349): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   33.114241] type=1400 audit(1792302723.936:349): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   33.114245] type=1400 audit(1792302723.945:350): avc: denied { execute_no_trans } for pid=2090 comm="init" path="/system/bin/logwrapper" dev="loop1" ino=768 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   33.114346] type=1400 audit(1792302723.945:350): avc: denied { execute_no_trans } for pid=2090 comm="init" path="/system/bin/logwrapper" dev="loop1" ino=768 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   33.114350] type=1400 audit(1792302723.953:351): avc: denied { execute_no_trans } for pid=2100 comm="logwrapper" path="/system/bin/sh" dev="loop1" ino=678 scontext=u:r:init:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   33.173743] init: Async property child exited with status 0
+[   33.313930] modprobe: net-pf-31 
+[   33.321166] serial8250: too much work for irq4
+[   33.588884] serial8250: too much work for irq4
+[   33.734836] serial8250: too much work for irq4
+[   33.888359] serial8250: too much work for irq4
+[   34.018350] serial8250: too much work for irq4
+[   34.147577] serial8250: too much work for irq4
+[   34.216830] Bluetooth: Core ver 2.22
+[   34.218232] NET: Registered protocol family 31
+[   34.220368] Bluetooth: HCI device and connection manager initialized
+[   34.223049] Bluetooth: HCI socket layer initialized
+[   34.225076] Bluetooth: L2CAP socket layer initialized
+[   34.226246] type=1400 audit(1792302723.953:351): avc: denied { execute_no_trans } for pid=2100 comm="logwrapper" path="/system/bin/sh" dev="loop1" ino=678 scontext=u:r:init:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   34.227070] Bluetooth: SCO socket layer initialized
+[   34.243111] type=1400 audit(1792302725.072:378): avc: denied { mounton } for pid=2269 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   34.264603] type=1400 audit(1792302725.072:378): avc: denied { mounton } for pid=2269 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   34.276807] type=1400 audit(1792302725.072:379): avc: denied { dac_read_search } for pid=2269 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   34.285515] type=1400 audit(1792302725.072:379): avc: denied { dac_read_search } for pid=2269 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   34.296575] type=1400 audit(1792302725.084:380): avc: denied { ioctl } for pid=2110 comm="hciconfig" path="socket:[22076]" dev="sockfs" ino=22076 ioctlcmd=0x48d2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=bluetooth_socket permissive=1
+[   34.304460] type=1400 audit(1792302725.084:380): avc: denied { ioctl } for pid=2110 comm="hciconfig" path="socket:[22076]" dev="sockfs" ino=22076 ioctlcmd=0x48d2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=bluetooth_socket permissive=1
+[   34.312831] type=1400 audit(1792302725.085:381): avc: denied { execute_no_trans } for pid=2280 comm="sh" path="/system/bin/pm" dev="loop1" ino=822 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   34.328336] type=1400 audit(1792302725.085:381): avc: denied { execute_no_trans } for pid=2280 comm="sh" path="/system/bin/pm" dev="loop1" ino=822 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   34.339121] type=1400 audit(1792302725.158:382): avc: denied { read } for pid=2295 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   34.401107] audit: audit_lost=267 audit_rate_limit=5 audit_backlog_limit=64
+[   34.404180] audit: rate limit exceeded
+[   34.484244] selinux: avc:  denied  { set } for property=persist.sys.root_access pid=2369 uid=0 gid=0 scontext=u:r:toolbox:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+[   34.484244] 
+[   34.553503] init: Service 'exec 4 (/system/bin/logwrapper /system/bin/sh /system/etc/init.sh bootcomplete)' (pid 2090) exited with status 0 waiting took 1.464000 seconds
+[   34.561372] init: processing action (sys.boot_completed=1 && sys.logbootcomplete=1) from (/system/etc/init/bootstat.rc:70)
+[   34.569460] init: starting service 'exec 5 (/system/bin/bootstat --set_system_boot_reason --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)'...
+[   34.583107] init: processing action (sys.boot_completed=1 && sys.wifitracing.started=0) from (/system/etc/init/wifi-events.rc:20)
+[   34.666813] init: processing action (persist.sys.root_access=3) from (/init.superuser.rc:15)
+[   34.670819] init: starting service 'su_daemon'...
+[   34.673220] init: processing action (init.svc.su_daemon=running) from (/init.superuser.rc:18)
+[   34.698362] logd: logdr: UID=1000 GID=1007 PID=2415 n tail=0 logMask=80 pid=0 start=0ns timeout=0ns
+[   34.711235] init: processing action (ro.boot.bootreason=*) from (/system/etc/init/bootstat.rc:4)
+[   34.714702] init: Service 'exec 5 (/system/bin/bootstat --set_system_boot_reason --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)' (pid 2415) exited with status 0
+[   35.608463] serial8250: too much work for irq4
+[   35.838759] type=1400 audit(1792302725.158:382): avc: denied { read } for pid=2295 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   35.848101] type=1400 audit(1792302726.685:421): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   35.858567] type=1400 audit(1792302726.685:421): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   35.869542] type=1400 audit(1792302726.685:422): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   36.651512] type=1400 audit(1792302726.685:422): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   36.660045] type=1400 audit(1792302727.402:423): avc: denied { mounton } for pid=2723 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   36.669882] type=1400 audit(1792302727.402:423): avc: denied { mounton } for pid=2723 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   36.675909] type=1400 audit(1792302727.402:424): avc: denied { dac_read_search } for pid=2723 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   36.692361] serial8250: too much work for irq4
+[   36.930862] serial8250: too much work for irq4
+[   36.947881] type=1400 audit(1792302727.402:424): avc: denied { dac_read_search } for pid=2723 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   36.958914] type=1400 audit(1792302727.779:425): avc: denied { read } for pid=2757 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   37.462978] serial8250_interrupt: 2 callbacks suppressed
+[   37.462979] serial8250: too much work for irq4
+[   37.633487] serial8250: too much work for irq4
+[   37.923393] type=1400 audit(1792302727.779:425): avc: denied { read } for pid=2757 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   37.931840] type=1400 audit(1792302728.768:426): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   38.166620] type=1400 audit(1792302728.768:426): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   38.172948] type=1400 audit(1792302729.013:427): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   38.337542] type=1400 audit(1792302729.013:427): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   38.350767] type=1400 audit(1792302729.184:428): avc: denied { mounton } for pid=2938 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   38.415426] binder_alloc: 2757: binder_alloc_buf, no vma
+[   38.419507] binder: 1343:1355 transaction failed 29189/-3, size 8-0 line 3249
+[   38.422570] binder: send failed reply for transaction 54149 to 2757:2958
+[   38.426080] binder: undelivered transaction 54153, process died.
+[   38.428775] binder: undelivered TRANSACTION_COMPLETE
+[   38.428929] type=1400 audit(1792302729.184:428): avc: denied { mounton } for pid=2938 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   38.430878] binder: undelivered TRANSACTION_ERROR: 29189
+[   38.476365] type=1400 audit(1792302729.275:429): avc: denied { dac_read_search } for pid=2961 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   38.482779] type=1400 audit(1792302729.275:429): avc: denied { dac_read_search } for pid=2961 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   38.490760] type=1400 audit(1792302729.291:430): avc: denied { read } for pid=2961 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   38.727920] serial8250: too much work for irq4
+[   38.742505] audit: audit_lost=305 audit_rate_limit=5 audit_backlog_limit=64
+[   38.748192] audit: rate limit exceeded
+[   38.891644] serial8250: too much work for irq4
+[   39.041836] serial8250: too much work for irq4
+[   39.197613] serial8250: too much work for irq4
+[   39.241222] type=1400 audit(1792302729.291:430): avc: denied { read } for pid=2961 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   39.249464] type=1400 audit(1792302730.087:432): avc: denied { search } for pid=3017 comm="idmap" name="/" dev="tmpfs" ino=1439 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   39.257671] type=1400 audit(1792302730.087:432): avc: denied { search } for pid=3017 comm="idmap" name="/" dev="tmpfs" ino=1439 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   39.263765] type=1400 audit(1792302730.087:433): avc: denied { getattr } for pid=3017 comm="idmap" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   39.270894] type=1400 audit(1792302730.087:433): avc: denied { getattr } for pid=3017 comm="idmap" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   39.277175] type=1400 audit(1792302730.087:434): avc: denied { read } for pid=3017 comm="idmap" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   39.403194] type=1400 audit(1792302730.087:434): avc: denied { read } for pid=3017 comm="idmap" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:idmap:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   39.410249] type=1400 audit(1792302730.249:435): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   39.457002] type=1400 audit(1792302730.249:435): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   39.478929] type=1400 audit(1792302730.303:436): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   40.494591] type=1400 audit(1792302730.303:436): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   40.504084] type=1400 audit(1792302731.341:443): avc: denied { getattr } for pid=3210 comm="mkdir" path="/data/misc/adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   40.518015] type=1400 audit(1792302731.341:443): avc: denied { getattr } for pid=3210 comm="mkdir" path="/data/misc/adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   40.518442] audit: audit_lost=312 audit_rate_limit=5 audit_backlog_limit=64
+[   40.528454] type=1400 audit(1792302731.362:444): avc: denied { search } for pid=3213 comm="grep" name="adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   40.530879] logd: logdr: UID=10008 GID=10008 PID=2002 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   40.531407] audit: rate limit exceeded
+[   40.535588] type=1400 audit(1792302731.362:444): avc: denied { search } for pid=3213 comm="grep" name="adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   40.549886] type=1400 audit(1792302731.365:445): avc: denied { dac_override } for pid=1204 comm="sh" capability=1 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   40.556764] type=1400 audit(1792302731.365:445): avc: denied { dac_override } for pid=1204 comm="sh" capability=1 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   40.563470] type=1400 audit(1792302731.365:446): avc: denied { write } for pid=1204 comm="sh" name="adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   40.581616] type=1400 audit(1792302731.365:446): avc: denied { write } for pid=1204 comm="sh" name="adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   40.596302] type=1400 audit(1792302731.365:447): avc: denied { add_name } for pid=1204 comm="sh" name="adb_keys" scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   41.520598] init: Received control message 'start' for 'wpa_supplicant' from pid: 1217 (/system/bin/wificond)
+[   41.531052] init: starting service 'wpa_supplicant'...
+[   41.534024] type=1400 audit(1792302731.365:447): avc: denied { add_name } for pid=1204 comm="sh" name="adb_keys" scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   41.534742] init: Created socket '/dev/socket/wpa_wlan0', mode 660, user 1010, group 1010
+[   41.544587] type=1400 audit(1792302732.381:461): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   41.577794] type=1400 audit(1792302732.381:461): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   41.586422] type=1400 audit(1792302732.424:462): avc: denied { getattr } for pid=3333 comm="wpa_supplicant" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:hal_wifi_supplicant_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   41.598152] type=1400 audit(1792302732.424:462): avc: denied { getattr } for pid=3333 comm="wpa_supplicant" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:hal_wifi_supplicant_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   41.607656] type=1400 audit(1792302732.424:463): avc: denied { read } for pid=3333 comm="wpa_supplicant" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:hal_wifi_supplicant_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   41.625858] type=1400 audit(1792302732.424:463): avc: denied { read } for pid=3333 comm="wpa_supplicant" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:hal_wifi_supplicant_default:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   41.638347] type=1400 audit(1792302732.469:464): avc: denied { search } for pid=3334 comm="ip" name="net" dev="sda" ino=28 scontext=u:r:shell:s0 tcontext=u:object_r:net_data_file:s0 tclass=dir permissive=1
+[   41.643978] logd: logdr: UID=10008 GID=10008 PID=2002 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   41.767704] type=1400 audit(1792302732.469:464): avc: denied { search } for pid=3334 comm="ip" name="net" dev="sda" ino=28 scontext=u:r:shell:s0 tcontext=u:object_r:net_data_file:s0 tclass=dir permissive=1
+[   41.769493] init: Received control message 'interface_start' for 'android.hardware.wifi.offload@1.0::IOffload/default' from pid: 1120 (/system/bin/hwservicemanager)
+[   41.774782] type=1400 audit(1792302732.613:465): avc: denied { read } for pid=1217 comm="wificond" name="lib64" dev="tmpfs" ino=8274 scontext=u:r:wificond:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   41.789125] init: Could not find service hosting interface android.hardware.wifi.offload@1.0::IOffload/default
+[   41.797073] audit: audit_lost=325 audit_rate_limit=5 audit_backlog_limit=64
+[   41.799413] audit: rate limit exceeded
+[   41.885490] modprobe: net-pf-16-proto-4-type-10 
+[   41.937015] ieee80211 phy0: scan
+[   42.033523] modprobe: net-pf-16-proto-4-type-2-6 
+[   42.251122] logd: logdr: UID=10008 GID=10008 PID=2002 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   42.673338] serial8250: too much work for irq4
+[   42.841523] serial8250: too much work for irq4
+[   43.001368] logd: logdr: UID=10008 GID=10008 PID=2002 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   43.009312] serial8250: too much work for irq4
+[   43.141783] serial8250: too much work for irq4
+[   43.267661] serial8250: too much work for irq4
+[   43.388833] serial8250: too much work for irq4
+[   43.509878] serial8250: too much work for irq4
+[   43.631757] serial8250: too much work for irq4
+[   43.755681] serial8250: too much work for irq4
+[   43.878010] serial8250: too much work for irq4
+[   44.219605] ieee80211 phy0: connect
+[   46.308033] ieee80211 phy0: get_station
+[   46.347466] type=1400 audit(1792302732.613:465): avc: denied { read } for pid=1217 comm="wificond" name="lib64" dev="tmpfs" ino=8274 scontext=u:r:wificond:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   46.350976] init: processing action (sys.sysctl.tcp_def_init_rwnd=*) from (/init.rc:734)
+[   46.355578] type=1400 audit(1792302737.191:474): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   46.359757] init: processing action (net.dns1=*) from (/init.android_x86_64.rc:112)
+[   46.377434] init: starting service 'exec 6 (/system/bin/logwrapper /system/bin/sh /system/etc/init.sh netconsole)'...
+[   46.382111] init: SVC_EXEC pid 3449 (uid 0 gid 0+0 context u:r:init:s0) started; waiting...
+[   46.388472] type=1400 audit(1792302737.191:474): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   46.407809] audit: audit_lost=333 audit_rate_limit=5 audit_backlog_limit=64
+[   46.410037] audit: rate limit exceeded
+[   46.422395] type=1400 audit(1792302737.235:475): avc: denied { execute_no_trans } for pid=3449 comm="init" path="/system/bin/logwrapper" dev="loop1" ino=768 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   46.431047] type=1400 audit(1792302737.235:475): avc: denied { execute_no_trans } for pid=3449 comm="init" path="/system/bin/logwrapper" dev="loop1" ino=768 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   46.438926] type=1400 audit(1792302737.246:476): avc: denied { execute_no_trans } for pid=3451 comm="logwrapper" path="/system/bin/sh" dev="loop1" ino=678 scontext=u:r:init:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   46.446669] type=1400 audit(1792302737.246:476): avc: denied { execute_no_trans } for pid=3451 comm="logwrapper" path="/system/bin/sh" dev="loop1" ino=678 scontext=u:r:init:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   46.453930] type=1400 audit(1792302737.246:477): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   46.460143] type=1400 audit(1792302737.246:477): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   46.466257] type=1400 audit(1792302737.249:478): avc: denied { ioctl } for pid=3451 comm="sh" path="/dev/pts/0" dev="devpts" ino=3 ioctlcmd=0x5401 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+[   46.567442] init: Service 'exec 6 (/system/bin/logwrapper /system/bin/sh /system/etc/init.sh netconsole)' (pid 3449) exited with status 0 waiting took 0.185000 seconds
+[   46.576097] init: processing action (sys.sysctl.tcp_def_init_rwnd=*) from (/init.rc:734)
+[   47.362843] init: processing action (sys.sysctl.tcp_def_init_rwnd=*) from (/init.rc:734)
+[   47.652127] type=1400 audit(1792302737.249:478): avc: denied { ioctl } for pid=3451 comm="sh" path="/dev/pts/0" dev="devpts" ino=3 ioctlcmd=0x5401 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+[   47.660967] type=1400 audit(1792302738.498:492): avc: denied { search } for pid=3544 comm="ip" name="net" dev="sda" ino=28 scontext=u:r:shell:s0 tcontext=u:object_r:net_data_file:s0 tclass=dir permissive=1
+[   47.728792] selinux: avc:  denied  { set } for property=persist.adb.tcp.port pid=3550 uid=0 gid=2000 scontext=u:r:shell:s0 tcontext=u:object_r:default_prop:s0 tclass=property_service permissive=1
+[   47.728792] 
+[   47.743277] init: Received control message 'stop' for 'adbd' from pid: 3552 (stop adbd)
+[   47.746703] init: Sending signal 9 to service 'adbd' (pid 1205) process group...
+[   47.749463] type=1400 audit(1792302738.498:492): avc: denied { search } for pid=3544 comm="ip" name="net" dev="sda" ino=28 scontext=u:r:shell:s0 tcontext=u:object_r:net_data_file:s0 tclass=dir permissive=1
+[   47.757209] type=1400 audit(1792302738.595:493): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   47.764507] libprocessgroup: Successfully killed process cgroup uid 0 pid 1205 in 15ms
+[   47.768803] init: Service 'adbd' (pid 1205) received signal 9
+[   47.771839] init: processing action (init.svc.adbd=stopped) from (/init.usb.configfs.rc:14)
+[   47.782255] init: Received control message 'start' for 'adbd' from pid: 3553 (start adbd)
+[   47.801865] init: starting service 'adbd'...
+[   47.803765] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[   49.312635] ieee80211 phy0: get_station
+[   49.727251] serial8250_interrupt: 2 callbacks suppressed
+[   49.727252] serial8250: too much work for irq4
+[   49.741222] type=1400 audit(1792302738.595:493): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   49.749589] type=1400 audit(1792302740.578:494): avc: denied { mounton } for pid=3584 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   49.758884] type=1400 audit(1792302740.578:494): avc: denied { mounton } for pid=3584 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   49.767610] type=1400 audit(1792302740.578:495): avc: denied { dac_read_search } for pid=3584 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   49.774496] type=1400 audit(1792302740.578:495): avc: denied { dac_read_search } for pid=3584 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   49.781001] type=1400 audit(1792302740.578:496): avc: denied { read } for pid=3584 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   49.788437] type=1400 audit(1792302740.578:496): avc: denied { read } for pid=3584 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   49.797068] type=1400 audit(1792302740.578:497): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   49.886954] serial8250: too much work for irq4
+[   49.985514] type=1400 audit(1792302740.578:497): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   50.137546] type=1400 audit(1792302740.821:498): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   50.155636] type=1400 audit(1792302740.821:498): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   50.168818] type=1400 audit(1792302740.997:499): avc: denied { read write } for pid=3615 comm="cmd" path="/dev/ttyS1" dev="tmpfs" ino=1541 scontext=u:r:system_server:s0 tcontext=u:object_r:serial_device:s0 tclass=chr_file permissive=1
+[   50.178623] type=1400 audit(1792302740.997:499): avc: denied { read write } for pid=3615 comm="cmd" path="/dev/ttyS1" dev="tmpfs" ino=1541 scontext=u:r:system_server:s0 tcontext=u:object_r:serial_device:s0 tclass=chr_file permissive=1
+[   50.193521] type=1400 audit(1792302740.997:500): avc: denied { dac_override } for pid=3615 comm="cmd" capability=1 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   50.546731] type=1400 audit(1792302740.997:500): avc: denied { dac_override } for pid=3615 comm="cmd" capability=1 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   50.555834] audit: audit_lost=346 audit_rate_limit=5 audit_backlog_limit=64
+[   50.559645] audit: rate limit exceeded
+[   50.574587] type=1400 audit(1792302741.385:501): avc: denied { open } for pid=3250 comm="IntentService[D" path="/sys/block" dev="sysfs" ino=2124 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+[   50.783903] serial8250: too much work for irq4
+[   50.901198] serial8250: too much work for irq4
+[   50.949241] type=1400 audit(1792302741.385:501): avc: denied { open } for pid=3250 comm="IntentService[D" path="/sys/block" dev="sysfs" ino=2124 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+[   50.957377] type=1400 audit(1792302741.795:506): avc: denied { read } for pid=1343 comm="android.anim" name="lib64" dev="tmpfs" ino=8274 scontext=u:r:system_server:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   51.118570] type=1400 audit(1792302741.795:506): avc: denied { read } for pid=1343 comm="android.anim" name="lib64" dev="tmpfs" ino=8274 scontext=u:r:system_server:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   51.134617] type=1400 audit(1792302741.953:507): avc: denied { mounton } for pid=3696 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   51.143628] type=1400 audit(1792302741.953:507): avc: denied { mounton } for pid=3696 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   51.153241] type=1400 audit(1792302741.953:508): avc: denied { dac_read_search } for pid=3696 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   51.160439] type=1400 audit(1792302741.953:508): avc: denied { dac_read_search } for pid=3696 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   51.166388] type=1400 audit(1792302741.953:509): avc: denied { read } for pid=3696 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   51.242795] serial8250: too much work for irq4
+[   51.349812] serial8250: too much work for irq4
+[   51.711535] serial8250: too much work for irq4
+[   51.834303] audit: audit_lost=350 audit_rate_limit=5 audit_backlog_limit=64
+[   51.836275] type=1400 audit(1792302741.953:509): avc: denied { read } for pid=3696 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   51.838430] audit: rate limit exceeded
+[   51.846173] type=1400 audit(1792302742.679:510): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   52.184726] type=1400 audit(1792302742.679:510): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   52.190805] type=1400 audit(1792302743.031:512): avc: denied { open } for pid=3250 comm="IntentService[D" path="/sys/block" dev="sysfs" ino=2124 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+[   52.197950] type=1400 audit(1792302743.031:512): avc: denied { open } for pid=3250 comm="IntentService[D" path="/sys/block" dev="sysfs" ino=2124 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+[   52.204704] type=1400 audit(1792302743.031:513): avc: denied { read } for pid=3250 comm="IntentService[D" name="backing_file" dev="sysfs" ino=10499 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   52.211536] type=1400 audit(1792302743.031:513): avc: denied { read } for pid=3250 comm="IntentService[D" name="backing_file" dev="sysfs" ino=10499 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   52.218036] type=1400 audit(1792302743.031:514): avc: denied { open } for pid=3250 comm="IntentService[D" path="/sys/devices/virtual/block/loop1/loop/backing_file" dev="sysfs" ino=10499 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   52.230917] type=1400 audit(1792302743.031:514): avc: denied { open } for pid=3250 comm="IntentService[D" path="/sys/devices/virtual/block/loop1/loop/backing_file" dev="sysfs" ino=10499 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   52.239797] type=1400 audit(1792302743.066:515): avc: denied { open } for pid=3250 comm="Binder:3250_3" path="/proc/bus/pci/devices" dev="proc" ino=4026532078 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   52.396229] ieee80211 phy0: get_station
+[   52.604192] type=1400 audit(1792302743.066:515): avc: denied { open } for pid=3250 comm="Binder:3250_3" path="/proc/bus/pci/devices" dev="proc" ino=4026532078 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   52.612214] type=1400 audit(1792302743.450:516): avc: denied { getattr } for pid=3250 comm="IntentService[D" path="/proc/bus/pci/devices" dev="proc" ino=4026532078 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   55.401479] ieee80211 phy0: get_station
+[   58.406023] ieee80211 phy0: get_station
+[   59.762404] type=1400 audit(1792302743.450:516): avc: denied { getattr } for pid=3250 comm="IntentService[D" path="/proc/bus/pci/devices" dev="proc" ino=4026532078 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   59.775559] type=1400 audit(1792302750.608:517): avc: denied { mounton } for pid=3806 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   59.786247] type=1400 audit(1792302750.608:517): avc: denied { mounton } for pid=3806 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   59.792536] type=1400 audit(1792302750.609:518): avc: denied { dac_read_search } for pid=3806 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   59.799069] type=1400 audit(1792302750.609:518): avc: denied { dac_read_search } for pid=3806 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   59.805433] type=1400 audit(1792302750.609:519): avc: denied { read } for pid=3806 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   60.060187] serial8250: too much work for irq4
+[   60.233257] serial8250: too much work for irq4
+[   60.402148] serial8250: too much work for irq4
+[   61.407995] ieee80211 phy0: get_station
+[   64.411549] ieee80211 phy0: get_station
+[   65.496515] ieee80211 phy0: scan
+[   67.415109] ieee80211 phy0: get_station
+[   70.419529] ieee80211 phy0: get_station
+[   70.870353] type=1400 audit(1792302750.609:519): avc: denied { read } for pid=3806 comm="main" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   70.875691] type=1400 audit(1792302761.716:520): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   70.931719] type=1400 audit(1792302761.716:520): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   70.938852] type=1400 audit(1792302761.778:521): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   72.154614] type=1400 audit(1792302761.778:521): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   72.162149] type=1400 audit(1792302763.000:522): avc: denied { dac_read_search } for pid=1209 comm="Binder:1209_6" capability=2 scontext=u:r:installd:s0 tcontext=u:r:installd:s0 tclass=capability permissive=1
+[   72.524976] type=1400 audit(1792302763.000:522): avc: denied { dac_read_search } for pid=1209 comm="Binder:1209_6" capability=2 scontext=u:r:installd:s0 tcontext=u:r:installd:s0 tclass=capability permissive=1
+[   72.533568] type=1400 audit(1792302763.370:523): avc: denied { map } for pid=4017 comm="app_process" path="/dev/event-log-tags" dev="tmpfs" ino=8349 scontext=u:r:shell:s0 tcontext=u:object_r:runtime_event_log_tags_file:s0 tclass=file permissive=1
+[   72.588354] type=1400 audit(1792302763.370:523): avc: denied { map } for pid=4017 comm="app_process" path="/dev/event-log-tags" dev="tmpfs" ino=8349 scontext=u:r:shell:s0 tcontext=u:object_r:runtime_event_log_tags_file:s0 tclass=file permissive=1
+[   72.596490] type=1400 audit(1792302763.435:524): avc: denied { mounton } for pid=4017 comm="main" path="/proc/cpuinfo" dev="proc" ino=4026532022 scontext=u:r:shell:s0 tcontext=u:object_r:proc_cpuinfo:s0 tclass=file permissive=1
+[   72.692171] type=1400 audit(1792302763.435:524): avc: denied { mounton } for pid=4017 comm="main" path="/proc/cpuinfo" dev="proc" ino=4026532022 scontext=u:r:shell:s0 tcontext=u:object_r:proc_cpuinfo:s0 tclass=file permissive=1
+[   72.692999] audit: audit_lost=351 audit_rate_limit=5 audit_backlog_limit=64
+[   72.698819] type=1400 audit(1792302763.538:525): avc: denied { mounton } for pid=4027 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   72.701860] audit: rate limit exceeded
+[   72.712934] type=1400 audit(1792302763.538:525): avc: denied { mounton } for pid=4027 comm="main" path="/storage" dev="tmpfs" ino=8293 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   72.720172] type=1400 audit(1792302763.539:526): avc: denied { dac_read_search } for pid=4027 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   72.829652] serial8250: too much work for irq4
+[   73.157666] type=1400 audit(1792302763.539:526): avc: denied { dac_read_search } for pid=4027 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   73.180514] type=1400 audit(1792302764.002:528): avc: denied { map } for pid=4027 comm="rtualfree.probe" path="/dev/event-log-tags" dev="tmpfs" ino=8349 scontext=u:r:untrusted_app:s0:c76,c256,c512,c768 tcontext=u:object_r:runtime_event_log_tags_file:s0 tclass=file permissive=1
+[   73.208399] type=1400 audit(1792302764.002:528): avc: denied { map } for pid=4027 comm="rtualfree.probe" path="/dev/event-log-tags" dev="tmpfs" ino=8349 scontext=u:r:untrusted_app:s0:c76,c256,c512,c768 tcontext=u:object_r:runtime_event_log_tags_file:s0 tclass=file permissive=1
+[   73.216283] type=1400 audit(1792302764.054:529): avc: denied { search } for pid=1343 comm="RenderThread" name="graphics" dev="tmpfs" ino=1543 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+[   73.223156] type=1400 audit(1792302764.054:529): avc: denied { search } for pid=1343 comm="RenderThread" name="graphics" dev="tmpfs" ino=1543 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+[   73.229364] type=1400 audit(1792302764.055:530): avc: denied { read } for pid=1343 comm="RenderThread" name="fb0" dev="tmpfs" ino=1544 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+[   73.235493] type=1400 audit(1792302764.055:530): avc: denied { read } for pid=1343 comm="RenderThread" name="fb0" dev="tmpfs" ino=1544 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+[   73.241733] type=1400 audit(1792302764.055:531): avc: denied { open } for pid=1343 comm="RenderThread" path="/dev/graphics/fb0" dev="tmpfs" ino=1544 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+[   73.248818] type=1400 audit(1792302764.055:531): avc: denied { open } for pid=1343 comm="RenderThread" path="/dev/graphics/fb0" dev="tmpfs" ino=1544 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+[   73.255446] type=1400 audit(1792302764.055:532): avc: denied { ioctl } for pid=1343 comm="RenderThread" path="/dev/graphics/fb0" dev="tmpfs" ino=1544 ioctlcmd=0x4600 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+[   73.424634] ieee80211 phy0: get_station
+[   76.429274] ieee80211 phy0: get_station
+[   79.433888] ieee80211 phy0: get_station
+[   82.438595] ieee80211 phy0: get_station
+[   85.443400] ieee80211 phy0: get_station
+[   87.048157] ieee80211 phy0: scan
+[   87.154387] type=1400 audit(1792302764.055:532): avc: denied { ioctl } for pid=1343 comm="RenderThread" path="/dev/graphics/fb0" dev="tmpfs" ino=1544 ioctlcmd=0x4600 scontext=u:r:system_server:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+[   87.162211] type=1400 audit(1792302778.001:536): avc: denied { search } for pid=4060 comm="dex2oat" name="/" dev="tmpfs" ino=1439 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   87.169032] type=1400 audit(1792302778.001:536): avc: denied { search } for pid=4060 comm="dex2oat" name="/" dev="tmpfs" ino=1439 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   87.176193] type=1400 audit(1792302778.001:537): avc: denied { getattr } for pid=4060 comm="dex2oat" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   87.183929] type=1400 audit(1792302778.001:537): avc: denied { getattr } for pid=4060 comm="dex2oat" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   87.191684] type=1400 audit(1792302778.001:538): avc: denied { read } for pid=4060 comm="dex2oat" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   87.196899] type=1400 audit(1792302778.001:538): avc: denied { read } for pid=4060 comm="dex2oat" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   87.203117] type=1400 audit(1792302778.001:539): avc: denied { search } for pid=4060 comm="dex2oat" name="/" dev="tmpfs" ino=1439 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   87.210493] type=1400 audit(1792302778.001:539): avc: denied { search } for pid=4060 comm="dex2oat" name="/" dev="tmpfs" ino=1439 scontext=u:r:dex2oat:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   87.215227] type=1400 audit(1792302778.001:540): avc: denied { map } for pid=4060 comm="dex2oat" path="/dev/event-log-tags" dev="tmpfs" ino=8349 scontext=u:r:dex2oat:s0 tcontext=u:object_r:runtime_event_log_tags_file:s0 tclass=file permissive=1
+[   88.108234] init: Untracked pid 4089 exited with status 0
+[   88.163772] init: Untracked pid 4115 exited with status 0
+[   88.176554] type=1400 audit(1792302778.001:540): avc: denied { map } for pid=4060 comm="dex2oat" path="/dev/event-log-tags" dev="tmpfs" ino=8349 scontext=u:r:dex2oat:s0 tcontext=u:object_r:runtime_event_log_tags_file:s0 tclass=file permissive=1
+[   88.202884] type=1400 audit(1792302779.023:541): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   88.235457] init: Received sys.powerctl='shutdown,shell' from pid: 4137 (reboot)
+[   88.237927] init: Clear action queue and start shutdown trigger
+[   88.246394] init: processing action (shutdown_done) from (<Builtin Action>:0)
+[   88.249402] init: Reboot start, reason: shutdown,shell, rebootTarget: 
+[   88.276565] init: Shutdown timeout: 6000 ms
+[   88.278344] init: starting service 'blank_screen'...
+[   88.280636] init: terminating init services
+[   88.281237] type=1400 audit(1792302779.023:541): avc: denied { read } for pid=1090 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   88.282067] init: Sending signal 15 to service 'wpa_supplicant' (pid 3333) process group...
+[   88.293717] ieee80211 phy0: disconnect
+[   88.296878] init: Sending signal 15 to service 'su_daemon' (pid 2422) process group...
+[   88.300644] init: Sending signal 15 to service 'mdnsd' (pid 1239) process group...
+[   88.301506] type=1400 audit(1792302779.127:542): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   88.304966] init: Sending signal 15 to service 'perfprofd' (pid 1221) process group...
+[   88.309601] type=1400 audit(1792302779.127:542): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   88.318998] type=1400 audit(1792302779.140:543): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   88.326865] type=1400 audit(1792302779.140:543): avc: denied { read } for pid=1085 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   88.328110] init: Sending signal 15 to service 'gatekeeperd' (pid 1220) process group...
+[   88.329165] binder: release 4100:4100 transaction 332604 out, still active
+[   88.329166] binder: unexpected work type, 4, not freed
+[   88.329167] binder: unexpected work type, 4, not freed
+[   88.329168] binder: undelivered TRANSACTION_COMPLETE
+[   88.334938] type=1400 audit(1792302779.150:544): avc: denied { getattr } for pid=4161 comm="blank_screen" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:blank_screen:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   88.337446] init: Sending signal 15 to service 'ril-daemon' (pid 1219) process group...
+[   88.341629] type=1400 audit(1792302779.150:544): avc: denied { getattr } for pid=4161 comm="blank_screen" path="/vendor" dev="tmpfs" ino=8298 scontext=u:r:blank_screen:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   88.342938] init: Sending signal 15 to service 'vendor.media.omx' (pid 1218) process group...
+[   88.344138] type=1400 audit(1792302779.150:545): avc: denied { read } for pid=4161 comm="blank_screen" name="vendor" dev="tmpfs" ino=8298 scontext=u:r:blank_screen:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   88.350753] init: Sending signal 15 to service 'wificond' (pid 1217) process group...
+[   88.374768] init: Sending signal 15 to service 'storaged' (pid 1216) process group...
+[   88.378442] init: Sending signal 15 to service 'statsd' (pid 1215) process group...
+[   88.382062] init: Sending signal 15 to service 'media' (pid 1214) process group...
+[   88.387671] init: Sending signal 15 to service 'mediametrics' (pid 1213) process group...
+[   88.392547] init: Sending signal 15 to service 'mediaextractor' (pid 1212) process group...
+[   88.395946] binder: send failed reply for transaction 332665 to 1343:1511
+[   88.396789] init: Sending signal 15 to service 'mediadrm' (pid 1211) process group...
+[   88.402644] init: Sending signal 15 to service 'keystore' (pid 1210) process group...
+[   88.406521] init: Sending signal 15 to service 'installd' (pid 1209) process group...
+[   88.410636] init: Sending signal 15 to service 'incidentd' (pid 1208) process group...
+[   88.414302] init: Sending signal 15 to service 'drm' (pid 1207) process group...
+[   88.417767] init: Sending signal 15 to service 'cameraserver' (pid 1206) process group...
+[   88.421498] init: Sending signal 15 to service 'console' (pid 1204) process group...
+[   88.422503] binder: release 1209:1413 transaction 332573 in, still active
+[   88.424876] init: Sending signal 15 to service 'thermalservice' (pid 1203) process group...
+[   88.427751] binder: send failed reply for transaction 332573 to 1343:4059
+[   88.431732] init: Sending signal 15 to service 'lmkd' (pid 1201) process group...
+[   88.434382] init: Sending signal 15 to service 'audioserver' (pid 1200) process group...
+[   88.437044] init: Sending signal 15 to service 'vendor.wifi_hal_legacy' (pid 1199) process group...
+[   88.440192] init: Sending signal 15 to service 'vendor.usb-hal-1-0' (pid 1198) process group...
+[   88.443226] init: Sending signal 15 to service 'vendor.power-hal-1-0' (pid 1197) process group...
+[   88.446076] init: Sending signal 15 to service 'vendor.memtrack-hal-1-0' (pid 1196) process group...
+[   88.450497] init: Sending signal 15 to service 'vendor.dumpstate-1-0' (pid 1194) process group...
+[   88.457083] init: Sending signal 15 to service 'vendor.cas-hal-1-0' (pid 1192) process group...
+[   88.463888] init: Sending signal 15 to service 'vendor.camera-provider-2-4' (pid 1191) process group...
+[   88.471251] init: Sending signal 15 to service 'vendor.bluetooth-1-0' (pid 1190) process group...
+[   88.478439] init: Sending signal 15 to service 'vendor.audio-hal-2-0' (pid 1189) process group...
+[   88.484507] init: Sending signal 15 to service 'healthd' (pid 1188) process group...
+[   88.498813] init: Sending signal 15 to service 'hidl_memory' (pid 1187) process group...
+[   88.506400] init: Sending signal 15 to service 'zygote_secondary' (pid 1185) process group...
+[   88.508582] init: Sending signal 15 to service 'zygote' (pid 1184) process group...
+[   88.512033] init: Sending signal 15 to service 'netd' (pid 1183) process group...
+[   88.514444] init: Service 'zygote_secondary' (pid 1185) received signal 15
+[   88.516708] init: Sending signal 9 to service 'zygote_secondary' (pid 1185) process group...
+[   88.519509] libprocessgroup: Successfully killed process cgroup uid 0 pid 1185 in 0ms
+[   88.521973] init: Service 'hidl_memory' (pid 1187) received signal 15
+[   88.523680] init: Sending signal 9 to service 'hidl_memory' (pid 1187) process group...
+[   88.524502] binder: release 4145:4145 transaction 332865 out, still active
+[   88.526062] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1187 in 0ms
+[   88.527973] binder: unexpected work type, 4, not freed
+[   88.530348] init: Service 'healthd' (pid 1188) received signal 15
+[   88.531867] binder: unexpected work type, 4, not freed
+[   88.533485] init: Sending signal 9 to service 'healthd' (pid 1188) process group...
+[   88.534860] binder: unexpected work type, 4, not freed
+[   88.534861] binder: unexpected work type, 4, not freed
+[   88.534861] binder: undelivered TRANSACTION_COMPLETE
+[   88.541055] libprocessgroup: Successfully killed process cgroup uid 0 pid 1188 in 0ms
+[   88.543341] init: Service 'netd' (pid 1183) received signal 15
+[   88.545251] init: Sending signal 9 to service 'netd' (pid 1183) process group...
+[   88.547692] libprocessgroup: Successfully killed process cgroup uid 0 pid 1183 in 0ms
+[   88.550038] init: Service 'zygote' (pid 1184) received signal 15
+[   88.552130] init: Sending signal 9 to service 'zygote' (pid 1184) process group...
+[   88.579113] binder: release 1603:1603 transaction 332808 out, still active
+[   88.581017] binder: undelivered TRANSACTION_COMPLETE
+[   88.582477] binder: release 1603:3669 transaction 332820 out, still active
+[   88.584246] binder: undelivered TRANSACTION_COMPLETE
+[   88.591920] libprocessgroup: Successfully killed process cgroup uid 0 pid 1184 in 37ms
+[   88.594051] init: Service 'vendor.audio-hal-2-0' (pid 1189) received signal 15
+[   88.595882] init: Service 'vendor.bluetooth-1-0' (pid 1190) received signal 15
+[   88.597723] init: Sending signal 9 to service 'vendor.bluetooth-1-0' (pid 1190) process group...
+[   88.600015] libprocessgroup: Successfully killed process cgroup uid 1002 pid 1190 in 0ms
+[   88.602067] init: Service 'vendor.camera-provider-2-4' (pid 1191) received signal 15
+[   88.604048] init: Sending signal 9 to service 'vendor.camera-provider-2-4' (pid 1191) process group...
+[   88.606422] libprocessgroup: Successfully killed process cgroup uid 1047 pid 1191 in 0ms
+[   88.608520] init: Service 'vendor.cas-hal-1-0' (pid 1192) received signal 15
+[   88.610255] init: Sending signal 9 to service 'vendor.cas-hal-1-0' (pid 1192) process group...
+[   88.612385] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1192 in 0ms
+[   88.614474] init: Service 'vendor.dumpstate-1-0' (pid 1194) received signal 15
+[   88.616279] init: Sending signal 9 to service 'vendor.dumpstate-1-0' (pid 1194) process group...
+[   88.618511] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1194 in 0ms
+[   88.620515] init: Service 'vendor.memtrack-hal-1-0' (pid 1196) received signal 15
+[   88.622389] init: Sending signal 9 to service 'vendor.memtrack-hal-1-0' (pid 1196) process group...
+[   88.624662] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1196 in 0ms
+[   88.626689] init: Service 'vendor.power-hal-1-0' (pid 1197) received signal 15
+[   88.628441] init: Sending signal 9 to service 'vendor.power-hal-1-0' (pid 1197) process group...
+[   88.630650] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1197 in 0ms
+[   88.632698] init: Service 'vendor.usb-hal-1-0' (pid 1198) received signal 15
+[   88.634457] init: Sending signal 9 to service 'vendor.usb-hal-1-0' (pid 1198) process group...
+[   88.636578] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1198 in 0ms
+[   88.638644] init: Service 'vendor.wifi_hal_legacy' (pid 1199) received signal 15
+[   88.640459] init: Sending signal 9 to service 'vendor.wifi_hal_legacy' (pid 1199) process group...
+[   88.642658] libprocessgroup: Successfully killed process cgroup uid 1010 pid 1199 in 0ms
+[   88.644675] init: Service 'audioserver' (pid 1200) received signal 15
+[   88.646344] init: Sending signal 9 to service 'audioserver' (pid 1200) process group...
+[   88.648343] libprocessgroup: Successfully killed process cgroup uid 1041 pid 1200 in 0ms
+[   88.650354] init: Service 'lmkd' (pid 1201) received signal 15
+[   88.651765] init: Sending signal 9 to service 'lmkd' (pid 1201) process group...
+[   88.653544] libprocessgroup: Successfully killed process cgroup uid 0 pid 1201 in 0ms
+[   88.655476] init: Service 'thermalservice' (pid 1203) received signal 15
+[   88.657057] init: Sending signal 9 to service 'thermalservice' (pid 1203) process group...
+[   88.659053] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1203 in 0ms
+[   88.661017] init: Service 'cameraserver' (pid 1206) received signal 15
+[   88.662612] init: Sending signal 9 to service 'cameraserver' (pid 1206) process group...
+[   88.664601] libprocessgroup: Successfully killed process cgroup uid 1047 pid 1206 in 0ms
+[   88.666648] init: Service 'drm' (pid 1207) received signal 15
+[   88.668041] init: Sending signal 9 to service 'drm' (pid 1207) process group...
+[   88.669831] libprocessgroup: Successfully killed process cgroup uid 1019 pid 1207 in 0ms
+[   88.671867] init: Service 'incidentd' (pid 1208) received signal 15
+[   88.673381] init: Sending signal 9 to service 'incidentd' (pid 1208) process group...
+[   88.675355] libprocessgroup: Successfully killed process cgroup uid 1067 pid 1208 in 0ms
+[   88.677394] init: Service 'installd' (pid 1209) received signal 15
+[   88.678924] init: Sending signal 9 to service 'installd' (pid 1209) process group...
+[   88.680827] libprocessgroup: Successfully killed process cgroup uid 0 pid 1209 in 0ms
+[   88.682762] init: Service 'keystore' (pid 1210) received signal 15
+[   88.684254] init: Sending signal 9 to service 'keystore' (pid 1210) process group...
+[   88.686158] libprocessgroup: Successfully killed process cgroup uid 1017 pid 1210 in 0ms
+[   88.688249] init: Service 'mediadrm' (pid 1211) received signal 15
+[   88.689737] init: Sending signal 9 to service 'mediadrm' (pid 1211) process group...
+[   88.691721] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1211 in 0ms
+[   88.693474] init: Service 'mediaextractor' (pid 1212) received signal 15
+[   88.694878] init: Sending signal 9 to service 'mediaextractor' (pid 1212) process group...
+[   88.696651] libprocessgroup: Successfully killed process cgroup uid 1040 pid 1212 in 0ms
+[   88.698398] init: Service 'mediametrics' (pid 1213) received signal 15
+[   88.699776] init: Sending signal 9 to service 'mediametrics' (pid 1213) process group...
+[   88.701476] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1213 in 0ms
+[   88.703159] init: Service 'media' (pid 1214) received signal 15
+[   88.704449] init: Sending signal 9 to service 'media' (pid 1214) process group...
+[   88.706023] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1214 in 0ms
+[   88.707786] init: Service 'statsd' (pid 1215) received signal 15
+[   88.709095] init: Sending signal 9 to service 'statsd' (pid 1215) process group...
+[   88.710720] libprocessgroup: Successfully killed process cgroup uid 1066 pid 1215 in 0ms
+[   88.712530] init: Service 'storaged' (pid 1216) received signal 15
+[   88.713842] init: Sending signal 9 to service 'storaged' (pid 1216) process group...
+[   88.715510] libprocessgroup: Successfully killed process cgroup uid 0 pid 1216 in 0ms
+[   88.717167] init: Service 'wificond' (pid 1217) exited with status 0
+[   88.718534] init: Sending signal 9 to service 'wificond' (pid 1217) process group...
+[   88.720154] libprocessgroup: Successfully killed process cgroup uid 1010 pid 1217 in 0ms
+[   88.721894] init: Service 'vendor.media.omx' (pid 1218) received signal 15
+[   88.723359] init: Sending signal 9 to service 'vendor.media.omx' (pid 1218) process group...
+[   88.725168] libprocessgroup: Successfully killed process cgroup uid 1046 pid 1218 in 0ms
+[   88.726976] init: Service 'ril-daemon' (pid 1219) received signal 15
+[   88.728339] init: Sending signal 9 to service 'ril-daemon' (pid 1219) process group...
+[   88.730019] libprocessgroup: Successfully killed process cgroup uid 1001 pid 1219 in 0ms
+[   88.731772] init: Service 'gatekeeperd' (pid 1220) received signal 15
+[   88.733140] init: Sending signal 9 to service 'gatekeeperd' (pid 1220) process group...
+[   88.734893] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1220 in 0ms
+[   88.736593] init: Service 'perfprofd' (pid 1221) received signal 15
+[   88.738259] init: Service 'mdnsd' (pid 1239) exited with status 4
+[   88.739571] init: Untracked pid 1424 received signal 15
+[   88.740697] init: Service 'su_daemon' (pid 2422) received signal 15
+[   88.742082] init: Service 'wpa_supplicant' (pid 3333) exited with status 0
+[   88.743597] init: Untracked pid 4100 received signal 15
+[   88.744794] init: Untracked pid 4126 received signal 15
+[   88.745990] init: Service 'blank_screen' (pid 4161) exited with status 1
+[   88.747428] init: Untracked pid 4069 received signal 15
+[   88.748560] init: Untracked pid 1623 received signal 15
+[   88.749710] init: Untracked pid 2131 received signal 15
+[   88.751013] init: Untracked pid 2333 received signal 15
+[   88.752143] init: Untracked pid 3464 received signal 15
+[   88.753294] init: Untracked pid 1246 received signal 15
+[   88.754545] init: Untracked pid 1247 received signal 15
+[   88.755660] init: Untracked pid 1343 received signal 15
+[   88.756820] init: Untracked pid 1583 received signal 15
+[   88.757945] init: Untracked pid 1603 received signal 15
+[   88.759106] init: Untracked pid 1664 received signal 15
+[   88.760292] init: Untracked pid 1992 received signal 15
+[   88.761409] init: Untracked pid 2002 received signal 15
+[   88.762635] init: Untracked pid 2060 received signal 15
+[   88.763763] init: Untracked pid 2158 received signal 15
+[   88.764877] init: Untracked pid 2173 received signal 15
+[   88.765966] init: Untracked pid 2205 received signal 15
+[   88.767134] init: Untracked pid 2269 received signal 15
+[   88.768343] init: Untracked pid 2377 received signal 15
+[   88.769466] init: Untracked pid 2398 received signal 15
+[   88.770100] binder: release 1343:1355 transaction 332604 in, still active
+[   88.770925] init: Untracked pid 2523 received signal 15
+[   88.772774] binder: send failed reply for transaction 332604, target dead
+[   88.774152] init: Untracked pid 2666 received signal 15
+[   88.776065] binder: release 1343:1917 transaction 332865 in, still active
+[   88.777342] init: Untracked pid 2850 received signal 15
+[   88.777360] init: Untracked pid 2961 received signal 15
+[   88.779367] binder: send failed reply for transaction 332865, target dead
+[   88.780623] init: Untracked pid 3115 received signal 15
+[   88.782039] binder: release 1343:2259 transaction 332820 in, still active
+[   88.782040] binder: send failed reply for transaction 332820, target dead
+[   88.782045] binder: release 1343:2478 transaction 332808 in, still active
+[   88.782046] binder: send failed reply for transaction 332808, target dead
+[   88.783765] init: Untracked pid 3250 received signal 15
+[   88.785894] binder: undelivered death notification, 0000796ea6261fa0
+[   88.787079] init: Untracked pid 3584 received signal 15
+[   88.795403] init: Untracked pid 3696 received signal 15
+[   88.796781] init: Untracked pid 3708 received signal 15
+[   88.798105] init: Untracked pid 3736 received signal 15
+[   88.799430] init: Untracked pid 3806 received signal 15
+[   88.800759] init: Untracked pid 3913 received signal 15
+[   88.802057] init: Untracked pid 3978 received signal 15
+[   88.803390] init: Untracked pid 4027 received signal 15
+[   88.804696] init: Untracked pid 4145 received signal 15
+[   88.806060] init: Terminating running services took 556ms with remaining services:0
+[   88.807973] init: Sending signal 9 to service 'console' (pid 1204) process group...
+[   88.815040] libprocessgroup: Successfully killed process cgroup uid 0 pid 1204 in 5ms
+[   88.817117] init: Service 'console' (pid 1204) received signal 9
+[   88.821729] audit: audit_lost=355 audit_rate_limit=5 audit_backlog_limit=64
+[   88.823498] audit: rate limit exceeded
+[   88.827828] vdc: Waited 0ms for vold
+[   88.828815] binder: 1176:1178 transaction failed 29189/-22, size 88-0 line 3080
+[   88.872926] init: Sending signal 9 to service 'vold' (pid 1176) process group...
+[   88.880075] libprocessgroup: Successfully killed process cgroup uid 0 pid 1176 in 5ms
+[   88.882071] init: Sending signal 9 to service 'adbd' (pid 3554) process group...
+[   88.889195] libprocessgroup: Successfully killed process cgroup uid 0 pid 3554 in 5ms
+[   88.891159] init: Sending signal 9 to service 'tombstoned' (pid 1222) process group...
+[   88.898290] libprocessgroup: Successfully killed process cgroup uid 1058 pid 1222 in 5ms
+[   88.900391] init: Sending signal 9 to service 'logd' (pid 1118) process group...
+[   88.907355] libprocessgroup: Successfully killed process cgroup uid 1036 pid 1118 in 5ms
+[   88.916137] init: Unmounting /dev/block/sda:/data opts rw,seclabel,noatime
+[   88.942758] init: Umounted /dev/block/sda:/data opts rw,seclabel,noatime
+[   89.044632] init: powerctl_shutdown_time_ms:795:0
+[   89.045868] init: Reboot ending, jumping to kernel
+[   89.047843] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[   89.049371] sd 0:0:0:0: [sda] Stopping disk
+[   89.050760] rtc_cmos 00:07: suspend, ctrl 02
+[   89.051941] ACPI: Preparing to enter system sleep state S5
+[   89.053421] reboot: Power down
+[   89.057200] acpi_power_off called
