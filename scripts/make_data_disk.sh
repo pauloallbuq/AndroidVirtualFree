@@ -76,7 +76,6 @@ cat > "$WORK/root/misc/wifi/WifiConfigStore.xml" <<'XML'
 </IpConfiguration>
 </Network>
 </NetworkList>
-<DeletedEphemeralSSIDList />
 </WifiConfigStoreData>
 XML
 chmod 0600 "$WORK/root/misc/wifi/WifiConfigStore.xml"
