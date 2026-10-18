@@ -1,0 +1,141 @@
+--------- beginning of main
+10-18 09:04:10.133  3806  3806 I AVF     : PREPARING Preparando a máquina virtual…
+10-18 09:04:10.662  3806  4578 I AVF     : PREPARING Extraindo kernel do Android…
+10-18 09:04:10.911  3806  4578 I AVF     : BOOTING Iniciando o Android virtual…
+10-18 09:04:10.920  3806  4578 I AVF     : BOOTING Android carregando (0 min). A primeira inicialização pode levar vários minutos.
+10-18 09:04:10.956  3806  4584 D AVF     : vnc: No such file or directory
+10-18 09:04:55.970  3806  4578 I AVF     : BOOTING Android carregando (0 min). A primeira inicialização pode levar vários minutos.
+10-18 09:05:22.677  3806  4578 I AVF     : BOOTING Android carregando (1 min). A primeira inicialização pode levar vários minutos.
+10-18 09:05:34.349  3806  4578 I AVF     : BOOTING Android carregando (1 min). A primeira inicialização pode levar vários minutos.
+10-18 09:05:44.967  3806  4578 I AVF     : BOOTING Android carregando (1 min). A primeira inicialização pode levar vários minutos.
+10-18 09:05:55.982  3806  4578 I AVF     : BOOTING Android carregando (1 min). A primeira inicialização pode levar vários minutos.
+10-18 09:06:06.855  3806  4578 I AVF     : BOOTING Android carregando (1 min). A primeira inicialização pode levar vários minutos.
+10-18 09:06:18.671  3806  4578 I AVF     : BOOTING Android carregando (2 min). A primeira inicialização pode levar vários minutos.
+10-18 09:06:32.110  3806  4578 I AVF     : BOOTING Android carregando (2 min). A primeira inicialização pode levar vários minutos.
+10-18 09:06:43.568  3806  4578 I AVF     : BOOTING Android carregando (2 min). A primeira inicialização pode levar vários minutos.
+10-18 09:06:55.481  3806  4578 I AVF     : BOOTING Android carregando (2 min). A primeira inicialização pode levar vários minutos.
+10-18 09:07:07.994  3806  4578 I AVF     : BOOTING Android carregando (2 min). A primeira inicialização pode levar vários minutos.
+10-18 09:07:22.414  3806  4578 I AVF     : BOOTING Android carregando (3 min). A primeira inicialização pode levar vários minutos.
+10-18 09:07:35.079  3806  4578 I AVF     : BOOTING Android carregando (3 min). A primeira inicialização pode levar vários minutos.
+10-18 09:07:49.601  3806  4578 I AVF     : BOOTING Android carregando (3 min). A primeira inicialização pode levar vários minutos.
+10-18 09:08:01.712  3806  4578 I AVF     : BOOTING Android carregando (3 min). A primeira inicialização pode levar vários minutos.
+10-18 09:08:15.129  3806  4578 I AVF     : BOOTING Android carregando (4 min). A primeira inicialização pode levar vários minutos.
+10-18 09:08:27.041  3806  4578 I AVF     : BOOTING Android carregando (4 min). A primeira inicialização pode levar vários minutos.
+10-18 09:08:39.759  3806  4578 I AVF     : BOOTING Android carregando (4 min). A primeira inicialização pode levar vários minutos.
+10-18 09:08:53.978  3806  4578 I AVF     : BOOTING Android carregando (4 min). A primeira inicialização pode levar vários minutos.
+10-18 09:09:05.691  3806  4578 I AVF     : BOOTING Android carregando (4 min). A primeira inicialização pode levar vários minutos.
+10-18 09:09:18.006  3806  4578 I AVF     : BOOTING Android carregando (5 min). A primeira inicialização pode levar vários minutos.
+10-18 09:10:24.494  3806  4578 I AVF     : BOOTING Android carregando (6 min). A primeira inicialização pode levar vários minutos.
+10-18 09:10:35.403  3806  4578 I AVF     : BOOTING Android carregando (6 min). A primeira inicialização pode levar vários minutos.
+10-18 09:10:46.516  3806  4578 I AVF     : BOOTING Android carregando (6 min). A primeira inicialização pode levar vários minutos.
+10-18 09:10:58.031  3806  4578 I AVF     : BOOTING Android carregando (6 min). A primeira inicialização pode levar vários minutos.
+10-18 09:11:09.291  3806  4578 I AVF     : BOOTING Android carregando (6 min). A primeira inicialização pode levar vários minutos.
+10-18 09:11:19.844  3806  4578 I AVF     : BOOTING Android carregando (7 min). A primeira inicialização pode levar vários minutos.
+10-18 09:11:30.548  3806  4578 I AVF     : BOOTING Android carregando (7 min). A primeira inicialização pode levar vários minutos.
+10-18 09:11:41.656  3806  4578 I AVF     : BOOTING Android carregando (7 min). A primeira inicialização pode levar vários minutos.
+10-18 09:11:52.409  3806  4578 I AVF     : BOOTING Android carregando (7 min). A primeira inicialização pode levar vários minutos.
+10-18 09:12:02.560  3806  4578 I AVF     : BOOTING Android carregando (7 min). A primeira inicialização pode levar vários minutos.
+10-18 09:12:13.915  3806  4578 I AVF     : BOOTING Android carregando (8 min). A primeira inicialização pode levar vários minutos.
+10-18 09:12:25.874  3806  4578 I AVF     : BOOTING Android carregando (8 min). A primeira inicialização pode levar vários minutos.
+10-18 09:12:37.480  3806  4578 I AVF     : BOOTING Android carregando (8 min). A primeira inicialização pode levar vários minutos.
+10-18 09:12:54.911  3806  4578 I AVF     : BOOTING Android carregando (8 min). A primeira inicialização pode levar vários minutos.
+10-18 09:13:05.764  3806  4578 I AVF     : BOOTING Android carregando (8 min). A primeira inicialização pode levar vários minutos.
+10-18 09:13:16.016  3806  4578 I AVF     : BOOTING Android carregando (9 min). A primeira inicialização pode levar vários minutos.
+10-18 09:13:28.074  3806  4578 I AVF     : BOOTING Android carregando (9 min). A primeira inicialização pode levar vários minutos.
+10-18 09:13:39.031  3806  4578 I AVF     : BOOTING Android carregando (9 min). A primeira inicialização pode levar vários minutos.
+10-18 09:13:50.490  3806  4578 I AVF     : BOOTING Android carregando (9 min). A primeira inicialização pode levar vários minutos.
+10-18 09:14:01.144  3806  4578 I AVF     : BOOTING Android carregando (9 min). A primeira inicialização pode levar vários minutos.
+10-18 09:14:11.398  3806  4578 I AVF     : BOOTING Android carregando (10 min). A primeira inicialização pode levar vários minutos.
+10-18 09:14:22.561  3806  4578 I AVF     : BOOTING Android carregando (10 min). A primeira inicialização pode levar vários minutos.
+10-18 09:14:32.716  3806  4578 I AVF     : BOOTING Android carregando (10 min). A primeira inicialização pode levar vários minutos.
+10-18 09:14:43.326  3806  4578 I AVF     : BOOTING Android carregando (10 min). A primeira inicialização pode levar vários minutos.
+10-18 09:14:53.982  3806  4578 I AVF     : BOOTING Android carregando (10 min). A primeira inicialização pode levar vários minutos.
+10-18 09:15:04.692  3806  4578 I AVF     : BOOTING Android carregando (10 min). A primeira inicialização pode levar vários minutos.
+10-18 09:15:14.898  3806  4578 I AVF     : BOOTING Android carregando (11 min). A primeira inicialização pode levar vários minutos.
+10-18 09:15:26.561  3806  4578 I AVF     : BOOTING Android carregando (11 min). A primeira inicialização pode levar vários minutos.
+10-18 09:15:36.964  3806  4578 I AVF     : BOOTING Android carregando (11 min). A primeira inicialização pode levar vários minutos.
+10-18 09:15:47.719  3806  4578 I AVF     : BOOTING Android carregando (11 min). A primeira inicialização pode levar vários minutos.
+10-18 09:15:58.576  3806  4578 I AVF     : BOOTING Android carregando (11 min). A primeira inicialização pode levar vários minutos.
+10-18 09:16:09.632  3806  4578 I AVF     : BOOTING Android carregando (11 min). A primeira inicialização pode levar vários minutos.
+10-18 09:16:20.643  3806  4578 I AVF     : BOOTING Android carregando (12 min). A primeira inicialização pode levar vários minutos.
+10-18 09:16:31.900  3806  4578 I AVF     : BOOTING Android carregando (12 min). A primeira inicialização pode levar vários minutos.
+10-18 09:16:42.661  3806  4578 I AVF     : BOOTING Android carregando (12 min). A primeira inicialização pode levar vários minutos.
+10-18 09:16:53.266  3806  4578 I AVF     : BOOTING Android carregando (12 min). A primeira inicialização pode levar vários minutos.
+10-18 09:17:03.675  3806  4578 I AVF     : BOOTING Android carregando (12 min). A primeira inicialização pode levar vários minutos.
+10-18 09:17:14.229  3806  4578 I AVF     : BOOTING Android carregando (13 min). A primeira inicialização pode levar vários minutos.
+10-18 09:17:25.085  3806  4578 I AVF     : BOOTING Android carregando (13 min). A primeira inicialização pode levar vários minutos.
+10-18 09:17:35.588  3806  4578 I AVF     : BOOTING Android carregando (13 min). A primeira inicialização pode levar vários minutos.
+10-18 09:17:46.241  3806  4578 I AVF     : BOOTING Android carregando (13 min). A primeira inicialização pode levar vários minutos.
+10-18 09:17:57.144  3806  4578 I AVF     : BOOTING Android carregando (13 min). A primeira inicialização pode levar vários minutos.
+10-18 09:18:08.106  3806  4578 I AVF     : BOOTING Android carregando (13 min). A primeira inicialização pode levar vários minutos.
+10-18 09:18:18.964  3806  4578 I AVF     : BOOTING Android carregando (14 min). A primeira inicialização pode levar vários minutos.
+10-18 09:18:30.220  3806  4578 I AVF     : BOOTING Android carregando (14 min). A primeira inicialização pode levar vários minutos.
+10-18 09:18:41.175  3806  4578 I AVF     : BOOTING Android carregando (14 min). A primeira inicialização pode levar vários minutos.
+10-18 09:18:52.533  3806  4578 I AVF     : BOOTING Android carregando (14 min). A primeira inicialização pode levar vários minutos.
+10-18 09:19:03.236  3806  4578 I AVF     : BOOTING Android carregando (14 min). A primeira inicialização pode levar vários minutos.
+10-18 09:19:14.190  3806  4578 I AVF     : BOOTING Android carregando (15 min). A primeira inicialização pode levar vários minutos.
+10-18 09:19:25.147  3806  4578 I AVF     : BOOTING Android carregando (15 min). A primeira inicialização pode levar vários minutos.
+10-18 09:19:36.456  3806  4578 I AVF     : BOOTING Android carregando (15 min). A primeira inicialização pode levar vários minutos.
+10-18 09:19:47.766  3806  4578 I AVF     : BOOTING Android carregando (15 min). A primeira inicialização pode levar vários minutos.
+10-18 09:19:58.223  3806  4578 I AVF     : BOOTING Android carregando (15 min). A primeira inicialização pode levar vários minutos.
+10-18 09:20:09.179  3806  4578 I AVF     : BOOTING Android carregando (15 min). A primeira inicialização pode levar vários minutos.
+10-18 09:20:20.438  3806  4578 I AVF     : BOOTING Android carregando (16 min). A primeira inicialização pode levar vários minutos.
+10-18 09:20:31.245  3806  4578 I AVF     : BOOTING Android carregando (16 min). A primeira inicialização pode levar vários minutos.
+10-18 09:20:42.101  3806  4578 I AVF     : BOOTING Android carregando (16 min). A primeira inicialização pode levar vários minutos.
+10-18 09:20:53.507  3806  4578 I AVF     : BOOTING Android carregando (16 min). A primeira inicialização pode levar vários minutos.
+10-18 09:21:05.264  3806  4578 I AVF     : BOOTING Android carregando (16 min). A primeira inicialização pode levar vários minutos.
+10-18 09:21:16.928  3806  4578 I AVF     : BOOTING Android carregando (17 min). A primeira inicialização pode levar vários minutos.
+10-18 09:21:28.684  3806  4578 I AVF     : BOOTING Android carregando (17 min). A primeira inicialização pode levar vários minutos.
+10-18 09:21:39.589  3806  4578 I AVF     : BOOTING Android carregando (17 min). A primeira inicialização pode levar vários minutos.
+10-18 09:21:50.844  3806  4578 I AVF     : BOOTING Android carregando (17 min). A primeira inicialização pode levar vários minutos.
+10-18 09:22:01.748  3806  4578 I AVF     : BOOTING Android carregando (17 min). A primeira inicialização pode levar vários minutos.
+10-18 09:22:12.702  3806  4578 I AVF     : BOOTING Android carregando (18 min). A primeira inicialização pode levar vários minutos.
+10-18 09:22:23.960  3806  4578 I AVF     : BOOTING Android carregando (18 min). A primeira inicialização pode levar vários minutos.
+10-18 09:22:35.922  3806  4578 I AVF     : BOOTING Android carregando (18 min). A primeira inicialização pode levar vários minutos.
+10-18 09:22:46.577  3806  4578 I AVF     : BOOTING Android carregando (18 min). A primeira inicialização pode levar vários minutos.
+10-18 09:22:58.434  3806  4578 I AVF     : BOOTING Android carregando (18 min). A primeira inicialização pode levar vários minutos.
+10-18 09:23:09.189  3806  4578 I AVF     : BOOTING Android carregando (18 min). A primeira inicialização pode levar vários minutos.
+10-18 09:23:20.646  3806  4578 I AVF     : BOOTING Android carregando (19 min). A primeira inicialização pode levar vários minutos.
+10-18 09:23:30.900  3806  4578 I AVF     : BOOTING Android carregando (19 min). A primeira inicialização pode levar vários minutos.
+10-18 09:23:42.657  3806  4578 I AVF     : BOOTING Android carregando (19 min). A primeira inicialização pode levar vários minutos.
+10-18 09:23:53.261  3806  4578 I AVF     : BOOTING Android carregando (19 min). A primeira inicialização pode levar vários minutos.
+10-18 09:24:04.419  3806  4578 I AVF     : BOOTING Android carregando (19 min). A primeira inicialização pode levar vários minutos.
+10-18 09:24:14.972  3806  4578 I AVF     : BOOTING Android carregando (20 min). A primeira inicialização pode levar vários minutos.
+10-18 09:24:25.978  3806  4578 I AVF     : BOOTING Android carregando (20 min). A primeira inicialização pode levar vários minutos.
+10-18 09:24:36.933  3806  4578 I AVF     : BOOTING Android carregando (20 min). A primeira inicialização pode levar vários minutos.
+10-18 09:24:47.938  3806  4578 I AVF     : BOOTING Android carregando (20 min). A primeira inicialização pode levar vários minutos.
+10-18 09:24:59.042  3806  4578 I AVF     : BOOTING Android carregando (20 min). A primeira inicialização pode levar vários minutos.
+10-18 09:25:09.846  3806  4578 I AVF     : BOOTING Android carregando (20 min). A primeira inicialização pode levar vários minutos.
+10-18 09:25:20.449  3806  4578 I AVF     : BOOTING Android carregando (21 min). A primeira inicialização pode levar vários minutos.
+10-18 09:25:31.203  3806  4578 I AVF     : BOOTING Android carregando (21 min). A primeira inicialização pode levar vários minutos.
+10-18 09:25:41.756  3806  4578 I AVF     : BOOTING Android carregando (21 min). A primeira inicialização pode levar vários minutos.
+10-18 09:25:52.008  3806  4578 I AVF     : BOOTING Android carregando (21 min). A primeira inicialização pode levar vários minutos.
+10-18 09:26:03.262  3806  4578 I AVF     : BOOTING Android carregando (21 min). A primeira inicialização pode levar vários minutos.
+10-18 09:26:14.569  3806  4578 I AVF     : BOOTING Android carregando (22 min). A primeira inicialização pode levar vários minutos.
+10-18 09:26:25.422  3806  4578 I AVF     : BOOTING Android carregando (22 min). A primeira inicialização pode levar vários minutos.
+10-18 09:26:36.679  3806  4578 I AVF     : BOOTING Android carregando (22 min). A primeira inicialização pode levar vários minutos.
+10-18 09:26:48.586  3806  4578 I AVF     : BOOTING Android carregando (22 min). A primeira inicialização pode levar vários minutos.
+10-18 09:26:59.139  3806  4578 I AVF     : BOOTING Android carregando (22 min). A primeira inicialização pode levar vários minutos.
+10-18 09:27:09.945  3806  4578 I AVF     : BOOTING Android carregando (22 min). A primeira inicialização pode levar vários minutos.
+10-18 09:27:20.549  3806  4578 I AVF     : BOOTING Android carregando (23 min). A primeira inicialização pode levar vários minutos.
+10-18 09:27:30.907  3806  4578 I AVF     : BOOTING Android carregando (23 min). A primeira inicialização pode levar vários minutos.
+10-18 09:27:41.211  3806  4578 I AVF     : BOOTING Android carregando (23 min). A primeira inicialização pode levar vários minutos.
+10-18 09:27:51.873  3806  4578 I AVF     : BOOTING Android carregando (23 min). A primeira inicialização pode levar vários minutos.
+10-18 09:28:02.883  3806  4578 I AVF     : BOOTING Android carregando (23 min). A primeira inicialização pode levar vários minutos.
+10-18 09:28:16.702  3806  4578 I AVF     : BOOTING Android carregando (24 min). A primeira inicialização pode levar vários minutos.
+10-18 09:28:27.606  3806  4578 I AVF     : BOOTING Android carregando (24 min). A primeira inicialização pode levar vários minutos.
+10-18 09:28:38.962  3806  4578 I AVF     : BOOTING Android carregando (24 min). A primeira inicialização pode levar vários minutos.
+10-18 09:28:47.199  3806  4584 D AVF     : vnc: null
+10-18 09:28:48.200  3806  4584 D AVF     : vnc: Connection refused
+10-18 09:28:48.969  3806  4578 E AVF     : falha
+10-18 09:28:48.969  3806  4578 E AVF     : java.lang.IllegalStateException: A máquina virtual parou inesperadamente.
+10-18 09:28:48.969  3806  4578 E AVF     : QEMU 11.1.2 monitor - type 'help' for more information
+10-18 09:28:48.969  3806  4578 E AVF     : 	at com.androidvirtualfree.VmController.boot(VmController.kt:121)
+10-18 09:28:48.969  3806  4578 E AVF     : 	at com.androidvirtualfree.VmController.start$lambda$2(VmController.kt:64)
+10-18 09:28:48.969  3806  4578 E AVF     : 	at com.androidvirtualfree.VmController.$r8$lambda$MfK-rReFFbz4fY0Wb2h4T-Wze7E(Unknown Source:0)
+10-18 09:28:48.969  3806  4578 E AVF     : 	at com.androidvirtualfree.VmController$$ExternalSyntheticLambda5.run(D8$$SyntheticClass:0)
+10-18 09:28:48.969  3806  4578 E AVF     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-18 09:28:48.969  3806  4578 E AVF     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-18 09:28:48.969  3806  4578 E AVF     : 	at java.lang.Thread.run(Thread.java:1012)
+10-18 09:28:48.971  3806  4578 I AVF     : ERROR Erro: A máquina virtual parou inesperadamente.
+10-18 09:28:48.971  3806  4578 I AVF     : QEMU 11.1.2 monitor - type 'help' for more information
