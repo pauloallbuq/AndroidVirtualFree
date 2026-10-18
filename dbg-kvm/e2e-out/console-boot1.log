@@ -1,0 +1,23 @@
+==== 1792298861404
+04:47:40 up 0 min,  0 users,  load average: 1.18, 0.26, 0.09
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 132 total,   5 running,  79 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2013428k used,    26432k free,   344632k buffers
+Swap:        0k total,        0k used,        0k free,  1380388k cached
+400%cpu 248%user  11%nice  81%sys  41%idle   7%iow   0%irq   4%sirq   7%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1430 u0_a40071    18  -2 1.2G  59M  42M R  262   2.9   0:05.42 dex2oat --zip-fd=16 --zip-location=Chrome.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@app@Chrome@Chrome.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/app/Chrome --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:29 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1190 root         -2  -8 177M 102M  57M R 48.1   5.1   0:05.90 surfaceflinger
+ 1077 root          0 -20    0    0    0 R 22.2   0.0   0:04.34 [loop1]
+ 1328 system       18  -2 3.6G 148M 120M S 11.1   7.4   0:01.92 system_server
+ 1106 logd         30  10  19M 3.8M 2.7M S 11.1   0.1   0:00.10 logd
+ 1072 root          0 -20    0    0    0 S  7.4   0.0   0:01.93 [loop0]
+ 1065 root         20   0    0    0    0 R  3.7   0.0   0:00.54 [kworker/3:2+ata_sff]
+  702 root         20   0    0    0    0 S  3.7   0.0   0:00.06 [kswapd0]
+   30 root         20   0    0    0    0 I  3.7   0.0   0:00.03 [kworker/u8:1-events_unbound]
+ 1454 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15

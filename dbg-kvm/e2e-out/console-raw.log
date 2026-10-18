@@ -1,0 +1,127 @@
+console:/ # 
+console:/ # echo __AVS$((2+0))__; echo 0 > /proc/sys/kernel/panic_on_oops; cat2+0))__; echo 0 > /proc/sys/kernel/panic_on_oops; cat                         < /proc/sys/kernel/panic_oys/kernel/panic_on_oops; cat /proc/sys/kernel/panic_o                         <n_oops; echo __AVF$((2+0)cat /proc/sys/kernel/panic_on_oops; echo __AVF$((2+0)                         <)__
+__AVS2__
+0
+__AVF2__
+console:/ # 
+console:/ # echo __AVS$((3+0))__; echo 8 > /proc/sys/kernel/printk; cat /proc/3+0))__; echo 8 > /proc/sys/kernel/printk; cat /proc/                         <sys/kernel/printk /proc/sys/kernel/printk; cat /proc/sys/kernel/printk /proc/s                         <ys/kernel/panic /proc/sysoc/sys/kernel/printk /proc/sys/kernel/panic /proc/sys                         </kernel/softlockup_panic c/sys/kernel/panic /proc/sys/kernel/softlockup_panic                          </proc/sys/kernel/hung_tassys/kernel/softlockup_panic /proc/sys/kernel/hung_tas                         <k_panic /proc/sys/kernel/ic /proc/sys/kernel/hung_task_panic /proc/sys/kernel/                         <panic_on_oops 2>&1; zcat task_panic /proc/sys/kernel/panic_on_oops 2>&1; zcat                          </proc/config.gz 2>/dev/nuel/panic_on_oops 2>&1; zcat /proc/config.gz 2>/dev/nu                         <ll | grep -E 'PANIC|LOCKUat /proc/config.gz 2>/dev/null | grep -E 'PANIC|LOCKU                         <P|HUNG_TASK|WATCHDOG' | g/null | grep -E 'PANIC|LOCKUP|HUNG_TASK|WATCHDOG' | g                         <rep -v '^#'; echo __AVF$(CKUP|HUNG_TASK|WATCHDOG' | grep -v '^#'; echo __AVF$(                         <(3+0))__
+__AVS3__
+8	0	0	0
+0
+0
+cat: /proc/sys/kernel/hung_task_panic: No such file or directory
+0
+CONFIG_CLOCKSOURCE_WATCHDOG=y
+CONFIG_ACPI_WATCHDOG=y
+CONFIG_HAVE_HARDLOCKUP_DETECTOR_PERF=y
+CONFIG_WATCHDOG=y
+CONFIG_WATCHDOG_CORE=y
+CONFIG_WATCHDOG_HANDLE_BOOT_ENABLED=y
+CONFIG_SBC_FITPC2_WATCHDOG=m
+CONFIG_HP_WATCHDOG=m
+CONFIG_PCIPCWATCHDOG=m
+CONFIG_USBPCWATCHDOG=m
+CONFIG_PVPANIC=m
+CONFIG_LOCKUP_DETECTOR=y
+CONFIG_SOFTLOCKUP_DETECTOR=y
+CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC_VALUE=0
+CONFIG_HARDLOCKUP_DETECTOR_PERF=y
+CONFIG_HARDLOCKUP_CHECK_TIMESTAMP=y
+CONFIG_HARDLOCKUP_DETECTOR=y
+CONFIG_BOOTPARAM_HARDLOCKUP_PANIC_VALUE=0
+CONFIG_PANIC_ON_OOPS_VALUE=0
+CONFIG_PANIC_TIMEOUT=5
+__AVF3__
+console:/ # 
+' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo __AVF$((4+0))__
+console:/ # echo __AVS$((4+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc4+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((4+0))__
+__AVS4__
+__AVF4__
+console:/ # 
+console:/ # echo __AVS$((5+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5+05+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5+0                         <))__
+__AVS5__
+15.19
+__AVF5__
+console:/ # 
+ init.svc.zygote; getprop sys.boot_completed; getprop persist.adb.tcp.port; getprop service.adb.tcp.portconsole:/ # echo __AVS$((6+0))__; uptime; getprop init.svc.adbd; getprop init.6+0))__; uptime; getprop init.svc.adbd; getprop init.                         <svc.zygote; getprop sys.binit.svc.adbd; getprop init.svc.zygote; getprop sys.b                         <oot_completed; getprop peit.svc.zygote; getprop sys.boot_completed; getprop pe                         <rsist.adb.tcp.port; getprs.boot_completed; getprop persist.adb.tcp.port; getpr                         <op service.adb.tcp.port;  persist.adb.tcp.port; getprop service.adb.tcp.port;                          <netstat -ltn 2>/dev/null tprop service.adb.tcp.port; netstat -ltn 2>/dev/null                          <| grep 5555; top -b -n 1 t; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                          <| head -15; echo __AVF$((ll | grep 5555; top -b -n 1 | head -15; echo __AVF$((                         <6+0))__
+__AVS6__
+ 21:49:11 up 0 min,  0 users,  load average: 1.08, 0.24, 0.08
+running
+running
+1
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 168 total,   2 running, 116 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1820352k used,   219508k free,   219008k buffers
+Swap:        0k total,        0k used,        0k free,   826952k cached
+400%cpu   0%user   0%nice  76%sys 320%idle   0%iow   0%irq   4%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 2896 root         20   0 9.2M 3.4M 2.8M R  100   0.1   0:00.18 logcat -b all -v threadtime
+ 2912 root         20   0  11M 3.2M 2.7M S  0.0   0.1   0:00.00 head -15
+ 2911 root         20   0  11M 4.0M 3.3M R  0.0   0.2   0:00.00 top -b -n 1
+ 2805 u0_a22       20   0 3.0G  98M  79M S  0.0   4.8   0:00.01 com.android.dialer
+ 2712 u0_a8        20   0 3.1G 175M 127M S  0.0   8.7   0:00.28 com.google.android.gms.unstable
+ 2690 u0_a8        20   0 3.1G 125M 107M S  0.0   6.2   0:00.06 com.google.android.gms.ui
+ 2596 u0_a57       20   0 3.0G  85M  68M S  0.0   4.2   0:00.01 com.google.process.gapps
+ 2571 u0_a23       20   0 3.0G  80M  63M S  0.0   4.0   0:00.00 com.google.android.packageinstaller
+ 2548 u0_a15       20   0 3.0G  79M  61M S  0.0   3.9   0:00.01 com.google.android.onetimeinitializer
+ 2531 u0_a71       20   0 1.0G  91M  75M S  0.0   4.5   0:00.24 com.android.chrome
+__AVF6__
+console:/ # 
+console:/ # echo __AVS$((7+0))__; getprop sys.boot_completed; echo __AVF$((7+07+0))__; getprop sys.boot_completed; echo __AVF$((7+0                         <))__
+__AVS7__
+1
+__AVF7__
+console:/ # 
+console:/ # echo __AVS$((8+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAACOU88+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAACOU8                         <GF1RDFJVJk1utZ+UThzS1e6t2isc/adb; grep -qF 'QAAAACOU8GF1RDFJVJk1utZ+UThzS1e6t2                         <lIQGEId4fw1K30wEiOYGXP3V8OU8GF1RDFJVJk1utZ+UThzS1e6t2lIQGEId4fw1K30wEiOYGXP3V8                         <HhNkzZJNqDFjj5ciPjL+zqII86t2lIQGEId4fw1K30wEiOYGXP3V8HhNkzZJNqDFjj5ciPjL+zqII8                         <mMcRt5d1oHH2/C2HLhKAyvpLY3V8HhNkzZJNqDFjj5ciPjL+zqII8mMcRt5d1oHH2/C2HLhKAyvpLY                         <7mNII02g9P5ySYOgv4hR587EoII8mMcRt5d1oHH2/C2HLhKAyvpLY7mNII02g9P5ySYOgv4hR587Eo                         <EAIrriqBX81aGhYDo49t24RSIpLY7mNII02g9P5ySYOgv4hR587EoEAIrriqBX81aGhYDo49t24RSI                         <NhN4SOkJ3QNBzrWVDK9d0+mff7EoEAIrriqBX81aGhYDo49t24RSINhN4SOkJ3QNBzrWVDK9d0+mff                         <VBpDPZ7nZODDecmW55P0LDz5QRSINhN4SOkJ3QNBzrWVDK9d0+mffVBpDPZ7nZODDecmW55P0LDz5Q                         <c3tdjdyzmEYFe4cpyITqNCRlZmffVBpDPZ7nZODDecmW55P0LDz5Qc3tdjdyzmEYFe4cpyITqNCRlZ                         </FbRayv8TUCeLmLCKL815AUjPz5Qc3tdjdyzmEYFe4cpyITqNCRlZ/FbRayv8TUCeLmLCKL815AUjP                         <ZPN8EWFE9NDsN9CkGbhK3o3CpRlZ/FbRayv8TUCeLmLCKL815AUjPZPN8EWFE9NDsN9CkGbhK3o3Cp                         <hDl1UTRJ07g0Hhgja6LeMXbXBUjPZPN8EWFE9NDsN9CkGbhK3o3CphDl1UTRJ07g0Hhgja6LeMXbXB                         <Z/+nhcJJG3ljupt/ZeLmtFodA3CphDl1UTRJ07g0Hhgja6LeMXbXBZ/+nhcJJG3ljupt/ZeLmtFodA                         <Bsw2/f+8G9lEeAKyebrREzIv2bXBZ/+nhcJJG3ljupt/ZeLmtFodABsw2/f+8G9lEeAKyebrREzIv2                         <pwSwulqrTuniLU7GRx0AmvXmbodABsw2/f+8G9lEeAKyebrREzIv2pwSwulqrTuniLU7GRx0AmvXmb                         <0KbKcHFN/v8ZQloNx3Fh/p7GHIv2pwSwulqrTuniLU7GRx0AmvXmb0KbKcHFN/v8ZQloNx3Fh/p7GH                         <9A0n0gUWL2oC6Rq6SKHnLDVcyXmb0KbKcHFN/v8ZQloNx3Fh/p7GH9A0n0gUWL2oC6Rq6SKHnLDVcy                         <Iqj1BUXMO0Tz+fxEosJS0fV4K7GH9A0n0gUWL2oC6Rq6SKHnLDVcyIqj1BUXMO0Tz+fxEosJS0fV4K                         <WfO3q2lMWtgRd7JYVUR6rwIuDVcyIqj1BUXMO0Tz+fxEosJS0fV4KWfO3q2lMWtgRd7JYVUR6rwIuD                         <xM+Su+oubBll75gWOXogkwVqSV4KWfO3q2lMWtgRd7JYVUR6rwIuDxM+Su+oubBll75gWOXogkwVqS                         <0Vg0gnRIGttJAzeCYm/r+01v5IuDxM+Su+oubBll75gWOXogkwVqS0Vg0gnRIGttJAzeCYm/r+01v5                         <C1IzNlo8hhnOesrV+l/A5FbFnVqS0Vg0gnRIGttJAzeCYm/r+01v5C1IzNlo8hhnOesrV+l/A5FbFn                         <uagNw7XQ+vKdC7ApMRig8Qe8W1v5C1IzNlo8hhnOesrV+l/A5FbFnuagNw7XQ+vKdC7ApMRig8Qe8W                         <368OGoFQg+cFgdlf3v8qLkdhDbFnuagNw7XQ+vKdC7ApMRig8Qe8W368OGoFQg+cFgdlf3v8qLkdhD                         <KsvkjWfdF3EU6mYeg1PAR3z5Ke8W368OGoFQg+cFgdlf3v8qLkdhDKsvkjWfdF3EU6mYeg1PAR3z5K                         <3cMaAVkWNXuC8BMbP/Ae9HXV2dhDKsvkjWfdF3EU6mYeg1PAR3z5K3cMaAVkWNXuC8BMbP/Ae9HXV2                         <bubE8emihhT0v9b4iBh5XJZnqz5K3cMaAVkWNXuC8BMbP/Ae9HXV2bubE8emihhT0v9b4iBh5XJZnq                         <Pi5HITDnQQEAAQA= unknown@XV2bubE8emihhT0v9b4iBh5XJZnqPi5HITDnQQEAAQA= unknown@                         <unknown' /data/misc/adb/aZnqPi5HITDnQQEAAQA= unknown@unknown' /data/misc/adb/a                         <db_keys 2>/dev/null || ecwn@unknown' /data/misc/adb/adb_keys 2>/dev/null || ec                         <ho 'QAAAACOU8GF1RDFJVJk1ub/adb_keys 2>/dev/null || echo 'QAAAACOU8GF1RDFJVJk1u                         <tZ+UThzS1e6t2lIQGEId4fw1K echo 'QAAAACOU8GF1RDFJVJk1utZ+UThzS1e6t2lIQGEId4fw1K                         <30wEiOYGXP3V8HhNkzZJNqDFjk1utZ+UThzS1e6t2lIQGEId4fw1K30wEiOYGXP3V8HhNkzZJNqDFj                         <j5ciPjL+zqII8mMcRt5d1oHH2w1K30wEiOYGXP3V8HhNkzZJNqDFjj5ciPjL+zqII8mMcRt5d1oHH2                         </C2HLhKAyvpLY7mNII02g9P5yDFjj5ciPjL+zqII8mMcRt5d1oHH2/C2HLhKAyvpLY7mNII02g9P5y                         <SYOgv4hR587EoEAIrriqBX81aHH2/C2HLhKAyvpLY7mNII02g9P5ySYOgv4hR587EoEAIrriqBX81a                         <GhYDo49t24RSINhN4SOkJ3QNBP5ySYOgv4hR587EoEAIrriqBX81aGhYDo49t24RSINhN4SOkJ3QNB                         <zrWVDK9d0+mffVBpDPZ7nZODD81aGhYDo49t24RSINhN4SOkJ3QNBzrWVDK9d0+mffVBpDPZ7nZODD                         <ecmW55P0LDz5Qc3tdjdyzmEYFQNBzrWVDK9d0+mffVBpDPZ7nZODDecmW55P0LDz5Qc3tdjdyzmEYF                         <e4cpyITqNCRlZ/FbRayv8TUCeODDecmW55P0LDz5Qc3tdjdyzmEYFe4cpyITqNCRlZ/FbRayv8TUCe                         <LmLCKL815AUjPZPN8EWFE9NDsEYFe4cpyITqNCRlZ/FbRayv8TUCeLmLCKL815AUjPZPN8EWFE9NDs                         <N9CkGbhK3o3CphDl1UTRJ07g0UCeLmLCKL815AUjPZPN8EWFE9NDsN9CkGbhK3o3CphDl1UTRJ07g0                         <Hhgja6LeMXbXBZ/+nhcJJG3ljNDsN9CkGbhK3o3CphDl1UTRJ07g0Hhgja6LeMXbXBZ/+nhcJJG3lj                         <upt/ZeLmtFodABsw2/f+8G9lE7g0Hhgja6LeMXbXBZ/+nhcJJG3ljupt/ZeLmtFodABsw2/f+8G9lE                         <eAKyebrREzIv2pwSwulqrTuni3ljupt/ZeLmtFodABsw2/f+8G9lEeAKyebrREzIv2pwSwulqrTuni                         <LU7GRx0AmvXmb0KbKcHFN/v8Z9lEeAKyebrREzIv2pwSwulqrTuniLU7GRx0AmvXmb0KbKcHFN/v8Z                         <QloNx3Fh/p7GH9A0n0gUWL2oCuniLU7GRx0AmvXmb0KbKcHFN/v8ZQloNx3Fh/p7GH9A0n0gUWL2oC                         <6Rq6SKHnLDVcyIqj1BUXMO0Tzv8ZQloNx3Fh/p7GH9A0n0gUWL2oC6Rq6SKHnLDVcyIqj1BUXMO0Tz                         <+fxEosJS0fV4KWfO3q2lMWtgR2oC6Rq6SKHnLDVcyIqj1BUXMO0Tz+fxEosJS0fV4KWfO3q2lMWtgR                         <d7JYVUR6rwIuDxM+Su+oubBll0Tz+fxEosJS0fV4KWfO3q2lMWtgRd7JYVUR6rwIuDxM+Su+oubBll                         <75gWOXogkwVqS0Vg0gnRIGttJtgRd7JYVUR6rwIuDxM+Su+oubBll75gWOXogkwVqS0Vg0gnRIGttJ                         <AzeCYm/r+01v5C1IzNlo8hhnOBll75gWOXogkwVqS0Vg0gnRIGttJAzeCYm/r+01v5C1IzNlo8hhnO                         <esrV+l/A5FbFnuagNw7XQ+vKdttJAzeCYm/r+01v5C1IzNlo8hhnOesrV+l/A5FbFnuagNw7XQ+vKd                         <C7ApMRig8Qe8W368OGoFQg+cFhnOesrV+l/A5FbFnuagNw7XQ+vKdC7ApMRig8Qe8W368OGoFQg+cF                         <gdlf3v8qLkdhDKsvkjWfdF3EUvKdC7ApMRig8Qe8W368OGoFQg+cFgdlf3v8qLkdhDKsvkjWfdF3EU                         <6mYeg1PAR3z5K3cMaAVkWNXuC+cFgdlf3v8qLkdhDKsvkjWfdF3EU6mYeg1PAR3z5K3cMaAVkWNXuC                         <8BMbP/Ae9HXV2bubE8emihhT03EU6mYeg1PAR3z5K3cMaAVkWNXuC8BMbP/Ae9HXV2bubE8emihhT0                         <v9b4iBh5XJZnqPi5HITDnQQEAXuC8BMbP/Ae9HXV2bubE8emihhT0v9b4iBh5XJZnqPi5HITDnQQEA                         <AQA= unknown@unknown' >> hT0v9b4iBh5XJZnqPi5HITDnQQEAAQA= unknown@unknown' >>                          </data/misc/adb/adb_keys; QEAAQA= unknown@unknown' >> /data/misc/adb/adb_keys;                          <chown system:shell /data/>> /data/misc/adb/adb_keys; chown system:shell /data/                         <misc/adb/adb_keys; chmod s; chown system:shell /data/misc/adb/adb_keys; chmod                          <0640 /data/misc/adb/adb_kta/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_k                         <eys; echo __AVF$((8+0))__od 0640 /data/misc/adb/adb_keys; echo __AVF$((8+0))__                         <
+__AVS8__
+__AVF8__
+console:/ # 
+console:/ # echo __AVS$((9+0))__; settings put global wifi_on 1; svc wifi enab9+0))__; settings put global wifi_on 1; svc wifi enab                         <le; for i in $(seq 1 45);bal wifi_on 1; svc wifi enable; for i in $(seq 1 45);                         < do ip -4 addr 2>/dev/nulnable; for i in $(seq 1 45); do ip -4 addr 2>/dev/nul                         <l | grep -q 'inet 10\.0\.5); do ip -4 addr 2>/dev/null | grep -q 'inet 10\.0\.                         <2\.' && break; sleep 2; dnull | grep -q 'inet 10\.0\.2\.' && break; sleep 2; d                         <one; ip -4 addr | grep 'i0\.2\.' && break; sleep 2; done; ip -4 addr | grep 'i                         <net 10\.0\.2\.' || echo N; done; ip -4 addr | grep 'inet 10\.0\.2\.' || echo N                         <ET_FAIL; echo __AVF$((9+0 'inet 10\.0\.2\.' || echo NET_FAIL; echo __AVF$((9+0                         <))__
+__AVS9__
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global wlan0
+__AVF9__
+console:/ # 
+console:/ # echo __AVS$((10+0))__; setprop persist.adb.tcp.port 5555; setprop 10+0))__; setprop persist.adb.tcp.port 5555; setprop                          <service.adb.tcp.port 5555.adb.tcp.port 5555; setprop service.adb.tcp.port 5555                         <; stop adbd; start adbd; op service.adb.tcp.port 5555; stop adbd; start adbd;                          <sleep 2; netstat -ltn 2>/555; stop adbd; start adbd; sleep 2; netstat -ltn 2>/                         <dev/null | grep -q ':5555d; sleep 2; netstat -ltn 2>/dev/null | grep -q ':5555                         <' && echo ADB_TCP_OK || e2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || e                         <cho ADB_TCP_FAIL; echo __555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL; echo __                         <AVF$((10+0))__
+__AVS10__
+ADB_TCP_OK
+__AVF10__
+console:/ # 
+console:/ # echo __AVS$((11+0))__; settings put global device_provisioned 1; s11+0))__; settings put global device_provisioned 1; s                         <ettings put secure user_sobal device_provisioned 1; settings put secure user_s                         <etup_complete 1; pm disab; settings put secure user_setup_complete 1; pm disab                         <le-user --user 0 com.googr_setup_complete 1; pm disable-user --user 0 com.goog                         <le.android.setupwizard >/sable-user --user 0 com.google.android.setupwizard >/                         <dev/null 2>&1; settings poogle.android.setupwizard >/dev/null 2>&1; settings p                         <ut global window_animatio >/dev/null 2>&1; settings put global window_animatio                         <n_scale 0; settings put gs put global window_animation_scale 0; settings put g                         <lobal transition_animatiotion_scale 0; settings put global transition_animatio                         <n_scale 0; settings put gt global transition_animation_scale 0; settings put g                         <lobal animator_duration_stion_scale 0; settings put global animator_duration_s                         <cale 0; settings put systt global animator_duration_scale 0; settings put syst                         <em screen_off_timeout 214n_scale 0; settings put system screen_off_timeout 214                         <7483647; echo __AVF$((11+ystem screen_off_timeout 2147483647; echo __AVF$((11+                         <0))__
+__AVS11__
+__AVF11__
+console:/ # 
+console:/ # echo __AVS$((12+0))__; ip -4 addr show eth0 | grep inet; ip route 12+0))__; ip -4 addr show eth0 | grep inet; ip route                          <| head -3; getprop ro.adb eth0 | grep inet; ip route | head -3; getprop ro.adb                         <.secure; echo __AVF$((12+te | head -3; getprop ro.adb.secure; echo __AVF$((12+                         <0))__
+__AVS12__
+Device "eth0" does not exist.
+10.0.2.0/24 dev wlan0 proto kernel scope link src 10.0.2.15 
+
+__AVF12__
+console:/ # 
+console:/ # echo __AVS$((13+0))__; uptime; getprop init.svc.adbd; getprop init13+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop pnit.svc.zygote; getprop sys.boot_completed; getprop p                         <ersist.adb.tcp.port; getpys.boot_completed; getprop persist.adb.tcp.port; getp                         <rop service.adb.tcp.port;p persist.adb.tcp.port; getprop service.adb.tcp.port;                         < netstat -ltn 2>/dev/nulletprop service.adb.tcp.port; netstat -ltn 2>/dev/null                         < | grep 5555; top -b -n 1rt; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                         < | head -15; echo __AVF$(ull | grep 5555; top -b -n 1 | head -15; echo __AVF$(                         <(13+0))__
+__AVS13__
+ 21:49:25 up 0 min,  0 users,  load average: 1.71, 0.40, 0.13
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 168 total,   1 running, 117 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1923184k used,   116676k free,   230356k buffers
+Swap:        0k total,        0k used,        0k free,   923936k cached
+400%cpu   0%user   4%nice   0%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3078 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 3077 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 3025 shell        20   0  14M 1.5M 1.3M S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 2896 root         20   0 9.3M 3.4M 2.8M S  0.0   0.1   0:07.07 logcat -b all -v threadtime
+ 2805 u0_a22       20   0 3.0G  97M  80M S  0.0   4.8   0:00.01 com.android.dialer
+ 2712 u0_a8        20   0 3.1G 210M 132M S  0.0  10.5   0:01.06 com.google.android.gms.unstable
+ 2690 u0_a8        20   0 3.1G 126M 108M S  0.0   6.3   0:00.06 com.google.android.gms.ui
+ 2596 u0_a57       20   0 3.0G  84M  68M S  0.0   4.2   0:00.02 com.google.process.gapps
+ 2571 u0_a23       20   0 3.0G  79M  63M S  0.0   3.9   0:00.00 com.google.android.packageinstaller
+ 2548 u0_a15       20   0 3.0G  78M  62M S  0.0   3.8   0:00.01 com.google.android.onetimeinitializer
+__AVF13__
+console:/ # 
