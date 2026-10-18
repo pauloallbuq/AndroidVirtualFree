@@ -1,0 +1,46 @@
+==== 1792314041323
+09:00:40 up 0 min,  0 users,  load average: 1.00, 0.21, 0.07
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 137 total,   3 running,  85 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2012812k used,    27048k free,   221008k buffers
+Swap:        0k total,        0k used,        0k free,  1365768k cached
+400%cpu   4%user   0%nice  12%sys 380%idle   4%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1119 logd         30  10  19M 4.1M 2.7M S  8.0   0.2   0:00.22 logd
+ 1863 root         20   0 9.2M 3.3M 2.7M S  4.0   0.1   0:00.15 logcat -b all -v threadtime
+ 1495 u0_a17       20   0 3.2G 268M 142M R  4.0  13.4   0:01.12 com.android.systemui
+ 1086 root          0 -20    0    0    0 S  4.0   0.0   0:01.91 [loop0]
+ 1881 root         20   0 6.9M 1.4M 1.2M D  0.0   0.0   0:00.00 head -15
+ 1880 root         20   0  11M 3.1M 2.6M R  0.0   0.1   0:00.00 top -b -n 1
+ 1583 system       10 -10 3.1G 131M 106M S  0.0   6.5   0:00.05 com.android.settings
+ 1568 radio        20   0 3.0G 103M  85M S  0.0   5.1   0:00.10 com.android.phone
+ 1528 webview_zygote 20 0 1.5G  58M  44M S  0.0   2.9   0:00.00 webview_zygote
+ 1474 u0_a69       20   0 3.0G  97M  79M S  0.0   4.8   0:00.04 com.android.inputmethod.latin
+==== 1792314056659
+09:00:55 up 0 min,  0 users,  load average: 0.78, 0.20, 0.07
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 156 total,   1 running, 106 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2005804k used,    34056k free,   248452k buffers
+Swap:        0k total,        0k used,        0k free,  1179636k cached
+400%cpu   0%user   0%nice   4%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 2007 u0_a47       20   0 3.0G  80M  64M S  4.0   4.0   0:00.01 com.android.printspooler
+ 2429 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 2428 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 2348 u0_a56       20   0 3.0G  85M  68M S  0.0   4.2   0:00.02 com.google.process.gapps
+ 2330 u0_a29       20   0 3.0G  88M  71M S  0.0   4.4   0:00.02 com.google.android.partnersetup
+ 2314 u0_a23       20   0 3.0G  81M  64M S  0.0   4.0   0:00.01 com.google.android.packageinstaller
+ 2296 u0_a14       20   0 3.0G  78M  61M S  0.0   3.9   0:00.00 com.google.android.onetimeinitializer
+ 2278 u0_a15       20   0 3.0G  79M  63M S  0.0   3.9   0:00.02 com.farmerbb.taskbar.androidx86
+ 2261 u0_a60       20   0 3.0G  83M  67M S  0.0   4.1   0:00.01 com.android.traceur
+ 2248 shell        20   0 9.3M 808K 724K S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
