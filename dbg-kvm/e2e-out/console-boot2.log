@@ -1,0 +1,46 @@
+==== 1792311257290
+08:14:16 up 0 min,  0 users,  load average: 0.77, 0.17, 0.05
+running
+running
+1
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 142 total,   6 running,  86 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2007408k used,    32452k free,   226424k buffers
+Swap:        0k total,        0k used,        0k free,  1283484k cached
+400%cpu  27%user   4%nice 188%sys  96%idle  58%iow   0%irq  19%sirq   8%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1916 root         20   0  11M 5.3M 1.8M R 92.3   0.2   0:00.01 modprobe -q -- net-pf-31
+ 1192 root         -2  -8 228M  89M  48M R 84.6   4.4   0:04.64 surfaceflinger
+ 1090 root          0 -20    0    0    0 D 34.6   0.0   0:03.68 [loop1]
+ 1337 system       18  -2 3.8G 207M 176M S 26.9  10.4   0:01.26 system_server
+ 1085 root          0 -20    0    0    0 S 15.3   0.0   0:01.90 [loop0]
+ 1200 root         20   0  20M 5.9M 4.8M S 11.5   0.2   0:00.26 installd
+ 1875 root         20   0 9.2M 3.3M 2.8M R  7.6   0.1   0:00.11 logcat -b all -v threadtime
+   71 root         20   0    0    0    0 I  7.6   0.0   0:00.25 [kworker/1:1-events_power_efficient]
+ 1914 root         20   0  11M 3.1M 2.6M R  3.8   0.1   0:00.00 top -b -n 1
+ 1885 u0_a58       20   0 3.6G  75M  59M D  3.8   3.7   0:00.00 com.android.deskclock
+==== 1792311272536
+08:14:31 up 0 min,  0 users,  load average: 2.25, 0.53, 0.18
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 156 total,   2 running, 105 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1897664k used,   142196k free,   248364k buffers
+Swap:        0k total,        0k used,        0k free,  1001672k cached
+400%cpu   8%user   0%nice   4%sys 388%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1192 root         -2  -8 308M 136M  60M R  8.0   6.8   0:17.45 surfaceflinger
+ 2043 u0_a18       20   0 3.0G 100M  82M S  4.0   4.9   0:00.08 com.android.dialer
+ 2461 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 2460 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 2373 u0_a55       20   0 3.0G  86M  69M S  0.0   4.3   0:00.02 com.google.process.gapps
+ 2354 u0_a29       20   0 3.0G  88M  71M S  0.0   4.4   0:00.02 com.google.android.partnersetup
+ 2349 shell        20   0  14M 1.6M 1.3M S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 2333 u0_a23       20   0 3.0G  81M  65M S  0.0   4.0   0:00.01 com.google.android.packageinstaller
+ 2312 u0_a16       20   0 3.0G  80M  63M S  0.0   4.0   0:00.01 com.google.android.onetimeinitializer
+ 2294 u0_a13       20   0 3.0G  81M  64M S  0.0   4.0   0:00.01 com.farmerbb.taskbar.androidx86
