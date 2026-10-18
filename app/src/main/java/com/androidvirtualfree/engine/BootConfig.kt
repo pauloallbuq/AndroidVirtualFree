@@ -7,6 +7,8 @@ import java.io.IOException
 data class BootConfig(val kernelPath: String, val initrdPath: String, val cmdline: String) {
     companion object {
         const val DEFAULT_CMDLINE = "root=/dev/ram0 androidboot.selinux=permissive quiet"
+        val TCG_SAFE_ARGS = listOf("nowatchdog", "nmi_watchdog=0", "softlockup_panic=0", "hung_task_panic=0",
+            "panic=0", "panic_on_oops=0", "rcupdate.rcu_cpu_stall_suppress=1", "tsc=reliable")
 
         /**
          * Lê a primeira entrada de boot da ISO e acrescenta DATA=sda (disco persistente),
@@ -44,6 +46,9 @@ data class BootConfig(val kernelPath: String, val initrdPath: String, val cmdlin
             if (kept.none { it.startsWith("androidboot.selinux=") }) kept.add("androidboot.selinux=permissive")
             // ttyS0 = log do kernel (arquivo, sem contrapressão); ttyS1 = shell root do convidado (socket do app)
             kept += listOf("DATA=sda", "video=$video", "console=tty0", "console=ttyS0,115200", "androidboot.console=ttyS1")
+            // Emulação por software (TCG) é lenta e irregular: os detectores de travamento do kernel
+            // confundiriam lentidão com falha e reiniciariam o convidado. Pânico real fica visível (panic=0).
+            kept += TCG_SAFE_ARGS
             return BootConfig(kernel, initrd, kept.distinct().joinToString(" "))
         }
 

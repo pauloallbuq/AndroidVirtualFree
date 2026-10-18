@@ -114,8 +114,15 @@ class GuestE2ETest {
         val t0 = System.currentTimeMillis()
         val con = connectConsole()
         var shot = 0
+        var kernInfo = false
+        fun kernelInfo() = runCatching {
+            log("[$tag] kernel: " + con.run("echo 8 > /proc/sys/kernel/printk; cat /proc/sys/kernel/printk /proc/sys/kernel/panic " +
+                "/proc/sys/kernel/softlockup_panic /proc/sys/kernel/hung_task_panic /proc/sys/kernel/panic_on_oops 2>&1; " +
+                "zcat /proc/config.gz 2>/dev/null | grep -E 'PANIC|LOCKUP|HUNG_TASK|WATCHDOG' | grep -v '^#'", 60_000).replace('\n', ' '))
+        }
         var lastUp = 0.0; var reboots = 0
         while (!con.bootCompleted()) {
+            if (!kernInfo) kernInfo = kernelInfo().isSuccess
             runCatching { con.run("pgrep -f 'logcat -b all' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &)", 15_000) }
             val up = runCatching { con.run("cut -d' ' -f1 /proc/uptime", 15_000).trim().toDouble() }.getOrDefault(lastUp)
             if (up + 5 < lastUp) { reboots++; log("[$tag] convidado REINICIOU (uptime $lastUp -> $up), total=$reboots") }
