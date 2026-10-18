@@ -180,9 +180,15 @@ class GuestE2ETest {
         assertNull("instalação no convidado falhou: $err", err)
         assertTrue("pacote não listado no convidado", adb.isInstalled(PROBE_PKG))
         log("launch: " + adb.launch(PROBE_PKG).trim().replace('\n', ' '))
-        Thread.sleep(15_000)
+        var gold = 0.0
+        val tg = System.currentTimeMillis()
+        while (System.currentTimeMillis() - tg < 120_000) {  // TCG: o primeiro desenho pode levar dezenas de segundos
+            Thread.sleep(5_000)
+            gold = screen.fraction { r, g, b -> r in 180..240 && g in 145..205 && b in 25..90 }
+            if (gold > 0.30) break
+        }
+        log("app na tela após ${(System.currentTimeMillis() - tg) / 1000}s")
         screen.savePpm(File(out, "boot1-probe.ppm"))
-        val gold = screen.fraction { r, g, b -> r in 180..240 && g in 145..205 && b in 25..90 }
         log("fração dourada na tela após abrir o probe: ${"%.2f".format(gold)}")
         assertTrue("o app instalado não apareceu na tela do convidado (fração dourada $gold)", gold > 0.30)
 

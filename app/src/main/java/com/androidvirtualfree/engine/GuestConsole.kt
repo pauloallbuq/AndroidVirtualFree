@@ -95,7 +95,9 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
         run("settings put global device_provisioned 1; settings put secure user_setup_complete 1; " +
             "pm disable-user --user 0 com.google.android.setupwizard >/dev/null 2>&1; " +
             "settings put global window_animation_scale 0; settings put global transition_animation_scale 0; " +
-            "settings put global animator_duration_scale 0; settings put system screen_off_timeout 2147483647", 120_000)
+            "settings put global animator_duration_scale 0; settings put system screen_off_timeout 2147483647; " +
+            // sob emulação lenta o Android acusa "não está respondendo" à toa; não cobrir a tela com esses avisos
+            "settings put global hide_error_dialogs 1; settings put secure anr_show_background 0", 120_000)
     }
 
     fun powerOff() { runCatching { output.write("\nsync; reboot -p\n".toByteArray()); output.flush() } }

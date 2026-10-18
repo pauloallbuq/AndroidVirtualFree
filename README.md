@@ -41,7 +41,8 @@ Botão Voltar do celular = tecla Esc (Voltar) no convidado.
 ## Limitações (importante)
 
 - **Desempenho**: sem KVM (indisponível para apps sem root) o QEMU emula a CPU x86_64 em software sobre o ARM do celular. O boot pode levar de vários a dezenas de minutos e a interface do convidado é lenta. Jogos 3D pesados não são jogáveis.
-- **Gráficos**: renderização por software (sem aceleração GPU no convidado).
+- **Gráficos**: renderização por software (SwiftShader) em framebuffer VESA 1024x768; sem aceleração GPU no convidado.
+- **Apps do Google desativados**: Play Services, Play Store, Chrome, Gmail etc. vêm na ISO mas são desativados no convidado porque, sob emulação por software, fazem o Watchdog do Android reiniciar o sistema. Reversível (como root no convidado: `pm enable com.google.android.gms`), mas deixa tudo mais lento.
 - **Arquitetura**: o convidado é **x86_64**. APKs com bibliotecas apenas ARM (muitos jogos) falham com `INSTALL_FAILED_NO_MATCHING_ABIS`, a menos que um tradutor ARM (native bridge/libhoudini, proprietário, não incluído) seja ativado no convidado. APKs Java/Kotlin puros e APKs com x86/x86_64 funcionam.
 - **APKS/XAPK**: não suportados nesta versão (apenas `.apk`).
 - **Android 12+**: o sistema pode encerrar processos-filho com uso alto de CPU em segundo plano; mantenha o app em primeiro plano.
