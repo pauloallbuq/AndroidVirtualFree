@@ -1,0 +1,656 @@
+[    0.000000] Linux version 4.19.110-android-x86_64-g066cc1d (lh@android-x86) (gcc version 4.6 20120106 (prerelease) (GCC)) #1 SMP PREEMPT Wed Mar 25 11:32:46 CST 2020
+[    0.000000] Command line: root=/dev/ram0 androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=10 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 VIRT_WIFI=0 printk.devkmsg=on
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: xstate_offset[5]:  832, xstate_sizes[5]:   64
+[    0.000000] x86/fpu: xstate_offset[6]:  896, xstate_sizes[6]:  512
+[    0.000000] x86/fpu: xstate_offset[7]: 1408, xstate_sizes[7]: 1024
+[    0.000000] x86/fpu: Enabled xstate features 0xe7, context size is 2432 bytes, using 'compacted' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffdffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007ffe0000-0x000000007fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 3.0.0 present.
+[    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 638c8001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 288643940 cycles
+[    0.000002] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000004] tsc: Detected 2299.998 MHz processor
+[    0.002117] last_pfn = 0x7ffe0 max_arch_pfn = 0x400000000
+[    0.002417] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.005569] found SMP MP-table at [mem 0x000f5470-0x000f547f]
+[    0.005663] Using GB pages for direct mapping
+[    0.005758] RAMDISK: [mem 0x7fe94000-0x7ffdffff]
+[    0.005804] ACPI: Early table checksum verification disabled
+[    0.005846] ACPI: RSDP 0x00000000000F52A0 000014 (v00 BOCHS )
+[    0.005849] ACPI: RSDT 0x000000007FFE1E41 000034 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.005852] ACPI: FACP 0x000000007FFE1CDD 000074 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.005856] ACPI: DSDT 0x000000007FFE0040 001C9D (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.005858] ACPI: FACS 0x000000007FFE0000 000040
+[    0.005859] ACPI: APIC 0x000000007FFE1D51 000090 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.005861] ACPI: HPET 0x000000007FFE1DE1 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.005863] ACPI: WAET 0x000000007FFE1E19 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.006164] Zone ranges:
+[    0.006165]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.006166]   DMA32    [mem 0x0000000001000000-0x000000007ffdffff]
+[    0.006167]   Normal   empty
+[    0.006168] Movable zone start for each node
+[    0.006168] Early memory node ranges
+[    0.006169]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.006170]   node   0: [mem 0x0000000000100000-0x000000007ffdffff]
+[    0.006650] Zeroed struct page in unavailable ranges: 130 pages
+[    0.006652] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffdffff]
+[    0.018787] ACPI: PM-Timer IO Port: 0x608
+[    0.018792] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.018904] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.018905] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.018907] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.018908] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.018908] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.018909] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.018913] Using ACPI (MADT) for SMP configuration information
+[    0.018914] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.018929] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.018991] [mem 0x80000000-0xfeffbfff] available for PCI devices
+[    0.018992] Booting paravirtualized kernel on KVM
+[    0.018994] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.018997] setup_percpu: NR_CPUS:8 nr_cpumask_bits:8 nr_cpu_ids:4 nr_node_ids:1
+[    0.019318] percpu: Embedded 43 pages/cpu s138648 r8192 d29288 u524288
+[    0.019359] KVM setup async PF for cpu 0
+[    0.019385] kvm-stealtime: cpu 0, msr 7da15240
+[    0.019387] Built 1 zonelists, mobility grouping on.  Total pages: 515945
+[    0.019389] Kernel command line: root=/dev/ram0 androidboot.selinux=permissive DATA=sda video=1280x720 console=tty0 console=ttyS0,115200 androidboot.console=ttyS1 nowatchdog nmi_watchdog=0 softlockup_panic=0 hung_task_panic=0 panic=10 panic_on_oops=0 rcupdate.rcu_cpu_stall_suppress=1 tsc=reliable nomodeset vga=0x344 HWACCEL=0 VIRT_WIFI=0 printk.devkmsg=on
+[    0.019473] You have booted with nomodeset. This means your GPU drivers are DISABLED
+[    0.019474] Any video related functionality will be severely degraded, and you may not even be able to suspend the system properly
+[    0.019474] Unless you actually understand what nomodeset does, you should reboot without enabling it
+[    0.019931] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.020339] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.020436] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.023182] Memory: 2034584K/2096632K available (12319K kernel code, 1182K rwdata, 3684K rodata, 1492K init, 1336K bss, 62048K reserved, 0K cma-reserved)
+[    0.023480] ftrace: allocating 37405 entries in 147 pages
+[    0.037149] rcu: Preemptible hierarchical RCU implementation.
+[    0.037151] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    0.037152] 	RCU CPU stall warnings suppressed (rcu_cpu_stall_suppress).
+[    0.037153] 	Tasks RCU enabled.
+[    0.037153] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.037255] NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+[    0.037507] random: random: get_random_bytes called from start_kernel+0x369/0x57e with crng_init=0
+[    0.037597] Console: colour dummy device 80x25
+[    0.037699] console [tty0] enabled
+[    0.278669] console [ttyS0] enabled
+[    0.279974] ACPI: Core revision 20181003
+[    0.281837] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.285405] APIC: Switch to symmetric I/O mode setup
+[    0.287279] KVM setup pv IPIs
+[    0.292745] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.295057] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x212733415c7, max_idle_ns: 440795236380 ns
+[    0.298882] Calibrating delay loop (skipped) preset value.. 4599.99 BogoMIPS (lpj=2299998)
+[    0.299883] pid_max: default: 32768 minimum: 301
+[    0.300910] Security Framework initialized
+[    0.301883] SELinux:  Initializing.
+[    0.302910] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.303887] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.305895] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.307238] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.307882] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.308891] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.309884] Spectre V2 : Spectre mitigation: kernel not compiled with retpoline; no mitigation available!
+[    0.309884] Speculative Store Bypass: Vulnerable
+[    0.313080] Freeing SMP alternatives memory: 28K
+[    0.315783] smpboot: CPU0: Intel INTEL(R) XEON(R) PLATINUM 8573C (family: 0x6, model: 0xcf, stepping: 0x2)
+[    0.321897] Performance Events: unsupported p6 CPU model 207 no PMU driver, software events only.
+[    0.324892] rcu: Hierarchical SRCU implementation.
+[    0.328105] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.330891] smp: Bringing up secondary CPUs ...
+[    0.339999] x86: Booting SMP configuration:
+[    0.340892] .... node  #0, CPUs:      #1
+[    0.258412] kvm-clock: cpu 1, msr 638c8041, secondary cpu clock
+[    0.258412] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.349193] KVM setup async PF for cpu 1
+[    0.349881] kvm-stealtime: cpu 1, msr 7da95240
+[    0.360001]  #2
+[    0.258412] kvm-clock: cpu 2, msr 638c8081, secondary cpu clock
+[    0.258412] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.367521] KVM setup async PF for cpu 2
+[    0.367881] kvm-stealtime: cpu 2, msr 7db15240
+[    0.377992]  #3
+[    0.258412] kvm-clock: cpu 3, msr 638c80c1, secondary cpu clock
+[    0.258412] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+[    0.387438] KVM setup async PF for cpu 3
+[    0.387881] kvm-stealtime: cpu 3, msr 7db95240
+[    0.389901] smp: Brought up 1 node, 4 CPUs
+[    0.390895] smpboot: Max logical packages: 1
+[    0.391891] smpboot: Total of 4 processors activated (18399.98 BogoMIPS)
+[    0.393921] CPU3: update max cpu_capacity 1024
+[    0.394380] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.395907] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.396985] pinctrl core: initialized pinctrl subsystem
+[    0.397982] CPU3: update max cpu_capacity 1024
+[    0.398282] RTC time:  9:34:55, date: 10/18/26
+[    0.400066] NET: Registered protocol family 16
+[    0.400967] schedtune: configured to support 6 boost groups
+[    0.401922] audit: initializing netlink subsys (disabled)
+[    0.402908] audit: type=2000 audit(1792316096.065:1): state=initialized audit_enabled=0 res=1
+[    0.405893] cpuidle: using governor ladder
+[    0.407892] cpuidle: using governor menu
+[    0.409001] KVM setup pv remote TLB flush
+[    0.409900] ACPI: bus type PCI registered
+[    0.410891] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.412199] PCI: Using configuration type 1 for base access
+[    0.416138] cryptd: max_cpu_qlen set to 1000
+[    0.418073] ACPI: Added _OSI(Module Device)
+[    0.418923] ACPI: Added _OSI(Processor Device)
+[    0.421145] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.422904] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.424893] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.426903] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.428343] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.432184] ACPI: Interpreter enabled
+[    0.433900] ACPI: (supports S0 S3 S5)
+[    0.434905] ACPI: Using IOAPIC for interrupt routing
+[    0.436917] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.440037] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.445249] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.447897] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.449909] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+[    0.451893] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.456893] acpiphp: Slot [3] registered
+[    0.458001] acpiphp: Slot [4] registered
+[    0.460014] acpiphp: Slot [5] registered
+[    0.460994] acpiphp: Slot [6] registered
+[    0.463015] acpiphp: Slot [7] registered
+[    0.463993] acpiphp: Slot [8] registered
+[    0.466012] acpiphp: Slot [9] registered
+[    0.466996] acpiphp: Slot [10] registered
+[    0.469038] acpiphp: Slot [11] registered
+[    0.469993] acpiphp: Slot [12] registered
+[    0.472020] acpiphp: Slot [13] registered
+[    0.473996] acpiphp: Slot [14] registered
+[    0.475030] acpiphp: Slot [15] registered
+[    0.476996] acpiphp: Slot [16] registered
+[    0.478893] acpiphp: Slot [17] registered
+[    0.480008] acpiphp: Slot [18] registered
+[    0.482024] acpiphp: Slot [19] registered
+[    0.482999] acpiphp: Slot [20] registered
+[    0.485029] acpiphp: Slot [21] registered
+[    0.486996] acpiphp: Slot [22] registered
+[    0.488016] acpiphp: Slot [23] registered
+[    0.489993] acpiphp: Slot [24] registered
+[    0.491896] acpiphp: Slot [25] registered
+[    0.492994] acpiphp: Slot [26] registered
+[    0.495016] acpiphp: Slot [27] registered
+[    0.495999] acpiphp: Slot [28] registered
+[    0.498013] acpiphp: Slot [29] registered
+[    0.498995] acpiphp: Slot [30] registered
+[    0.501013] acpiphp: Slot [31] registered
+[    0.502936] PCI host bridge to bus 0000:00
+[    0.503906] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.505896] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.508904] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.510895] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfebfffff window]
+[    0.513904] pci_bus 0000:00: root bus resource [mem 0x100000000-0x17fffffff window]
+[    0.516895] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.526289] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.528908] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.531891] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.533912] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.542355] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+[    0.544919] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+[    0.565527] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+[    0.567111] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+[    0.570037] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+[    0.572068] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+[    0.573993] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+[    0.576503] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.576881] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.580892] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.583907] vgaarb: loaded
+[    0.585031] SCSI subsystem initialized
+[    0.585955] ACPI: bus type USB registered
+[    0.587944] usbcore: registered new interface driver usbfs
+[    0.589924] usbcore: registered new interface driver hub
+[    0.591993] usbcore: registered new device driver usb
+[    0.593950] media: Linux media interface: v0.10
+[    0.594912] videodev: Linux video capture interface: v2.00
+[    0.597929] pps_core: LinuxPPS API ver. 1 registered
+[    0.598905] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.602922] PTP clock support registered
+[    0.604081] PCI: Using ACPI for IRQ routing
+[    0.606512] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.607892] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    0.613999] clocksource: Switched to clocksource kvm-clock
+[    0.620965] VFS: Disk quotas dquot_6.6.0
+[    0.622421] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.624922] pnp: PnP ACPI init
+[    0.626526] pnp: PnP ACPI: found 8 devices
+[    0.634144] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.637408] NET: Registered protocol family 2
+[    0.639150] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes)
+[    0.641959] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.644595] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    0.647015] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.649408] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.651586] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.653980] NET: Registered protocol family 1
+[    0.655647] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    0.657657] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.659598] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.677356] PCI Interrupt Link [LNKD] enabled at IRQ 11
+[    0.695094] pci 0000:00:01.2: quirk_usb_early_handoff+0x0/0x720 took 32707 usecs
+[    0.697616] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.700385] Trying to unpack rootfs image as initramfs...
+[    0.719449] Freeing initrd memory: 1328K
+[    0.720877] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x212733415c7, max_idle_ns: 440795236380 ns
+[    0.725281] Initialise system trusted keyrings
+[    0.727142] workingset: timestamp_bits=45 max_order=19 bucket_order=0
+[    0.729807] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.731955] fuse init (API version 7.27)
+[    0.748785] NET: Registered protocol family 38
+[    0.750514] Key type asymmetric registered
+[    0.752071] Asymmetric key parser 'x509' registered
+[    0.753791] io scheduler noop registered
+[    0.755256] io scheduler deadline registered
+[    0.756777] io scheduler cfq registered (default)
+[    0.758495] io scheduler mq-deadline registered
+[    0.760100] io scheduler kyber registered
+[    0.762093] vesafb: mode is 1024x768x32, linelength=4096, pages=4
+[    0.764326] vesafb: scrolling: redraw
+[    0.765698] vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    0.767742] vesafb: framebuffer at 0xfd000000, mapped to 0x000000004f9da874, using 6144k, total 16384k
+[    0.778768] Console: switching to colour frame buffer device 128x48
+[    0.781758] fb0: VESA VGA frame buffer device
+[    0.783484] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.786296] ACPI: Power Button [PWRF]
+[    0.804748] PCI Interrupt Link [LNKC] enabled at IRQ 10
+[    0.809548] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.840626] 00:04: ttyS2 at I/O 0x3e8 (irq = 4, base_baud = 115200) is a 16550A
+[    0.872538] 00:05: ttyS1 at I/O 0x2f8 (irq = 3, base_baud = 115200) is a 16550A
+[    0.901576] 00:06: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    0.904526] Linux agpgart interface v0.103
+[    0.907541] brd: module loaded
+[    0.910216] loop: module loaded
+[    0.911522] VMware PVSCSI driver - version 1.0.7.0-k
+[    0.913233] hv_vmbus: registering driver hv_storvsc
+[    0.916771] scsi host0: ata_piix
+[    0.918292] scsi host1: ata_piix
+[    0.919555] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc040 irq 14
+[    0.922067] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc048 irq 15
+[    0.924648] tun: Universal TUN/TAP device driver, 1.6
+[    0.926824] Fusion MPT base driver 3.04.20
+[    0.928354] Copyright (c) 1999-2008 LSI Corporation
+[    0.930155] Fusion MPT SPI Host driver 3.04.20
+[    0.931855] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.934243] ehci-pci: EHCI PCI platform driver
+[    0.936411] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.939148] ohci-pci: OHCI PCI platform driver
+[    0.941231] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.960393] uhci_hcd 0000:00:01.2: UHCI Host Controller
+[    0.962740] uhci_hcd 0000:00:01.2: new USB bus registered, assigned bus number 1
+[    0.965907] uhci_hcd 0000:00:01.2: detected 2 ports
+[    0.968529] uhci_hcd 0000:00:01.2: irq 11, io base 0x0000c000
+[    0.971256] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 4.19
+[    0.974584] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.977732] usb usb1: Product: UHCI Host Controller
+[    0.979967] usb usb1: Manufacturer: Linux 4.19.110-android-x86_64-g066cc1d uhci_hcd
+[    0.983182] usb usb1: SerialNumber: 0000:00:01.2
+[    0.985413] hub 1-0:1.0: USB hub found
+[    0.987331] hub 1-0:1.0: 2 ports detected
+[    0.989576] usbcore: registered new interface driver usb-storage
+[    0.992291] usbcore: registered new interface driver ums-alauda
+[    0.994940] usbcore: registered new interface driver ums-cypress
+[    0.997756] usbcore: registered new interface driver ums-datafab
+[    1.000514] usbcore: registered new interface driver ums_eneub6250
+[    1.003202] usbcore: registered new interface driver ums-freecom
+[    1.005780] usbcore: registered new interface driver ums-isd200
+[    1.008304] usbcore: registered new interface driver ums-jumpshot
+[    1.010941] usbcore: registered new interface driver ums-onetouch
+[    1.013587] usbcore: registered new interface driver ums-realtek
+[    1.016246] usbcore: registered new interface driver ums-sddr09
+[    1.018728] usbcore: registered new interface driver ums-sddr55
+[    1.021312] usbcore: registered new interface driver ums-usbat
+[    1.023848] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    1.038258] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.040526] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.042828] hv_vmbus: registering driver hyperv_keyboard
+[    1.045233] mousedev: PS/2 mouse device common for all mice
+[    1.047860] rtc_cmos 00:07: RTC can wake from S4
+[    1.051038] rtc_cmos 00:07: registered as rtc0
+[    1.053319] rtc_cmos 00:07: setting system clock to 2026-10-18 09:34:56 UTC (1792316096)
+[    1.056666] rtc_cmos 00:07: alarms up to one day, y3k, 242 bytes nvram, hpet irqs
+[    1.059776] IR Sharp protocol handler initialized
+[    1.061926] IR XMP protocol handler initialized
+[    1.063992] device-mapper: uevent: version 1.0.3
+[    1.066203] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    1.069962] sdhci: Secure Digital Host Controller Interface driver
+[    1.072582] sdhci: Copyright(c) Pierre Ossman
+[    1.074622] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.077248] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.080244] usbcore: registered new interface driver usbhid
+[    1.083018] usbhid: USB HID core driver
+[    1.083226] ashmem: initialized
+[    1.085578] ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+[    1.089361] oprofile: using NMI timer interrupt.
+[    1.089820] ata1.00: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+[    1.092575] xt_time: kernel timezone is -0000
+[    1.095038] ata1.00: 33554432 sectors, multi 16: LBA48 
+[    1.097709] Initializing XFRM netlink socket
+[    1.102779] NET: Registered protocol family 10
+[    1.103253] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+[    1.105228] Segment Routing with IPv6
+[    1.108314] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    1.108340] sd 0:0:0:0: [sda] 33554432 512-byte logical blocks: (17.2 GB/16.0 GiB)
+[    1.108346] sd 0:0:0:0: [sda] Write Protect is off
+[    1.108355] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.109865] sd 0:0:0:0: [sda] Attached SCSI disk
+[    1.110674] mip6: Mobile IPv6
+[    1.113738] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+[    1.116164] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.121327] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    1.123162] NET: Registered protocol family 17
+[    1.125120] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    1.126707] NET: Registered protocol family 15
+[    1.126713] NET: Registered protocol family 35
+[    1.145332] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[    1.145809] mce: Using 10 MCE banks
+[    1.149786] AVX2 version of gcm_enc/dec engaged.
+[    1.151977] AES CTR mode by8 optimization enabled
+[    1.155508] sched_clock: Marking stable (898091451, 257412237)->(1205363001, -49859313)
+[    1.159022] registered taskstats version 1
+[    1.161152] Loading compiled-in X.509 certificates
+[    1.163498] Key type ._fscrypt registered
+[    1.165582] Key type .fscrypt registered
+[    1.175998] Key type fscrypt-provisioning registered
+[    1.178639]   Magic number: 14:360:576
+[    1.186604] Freeing unused kernel image memory: 1492K
+[    1.188945] Write protecting the kernel read-only data: 18432k
+[    1.192290] Freeing unused kernel image memory: 2016K
+[    1.194711] Freeing unused kernel image memory: 412K
+[    1.197018] rodata_test: all tests were successful
+[    1.199376] Run /init as init process
+Detecting Android-x86... found at /dev/sr0
+[   15.258469] type=1400 audit(1792316110.659:386): avc: denied { read } for pid=2273 comm="cat" name="panic_on_oops" dev="proc" ino=17067 scontext=u:r:shell:s0 tcontext=u:object_r:proc_panic:s0 tclass=file permissive=1
+[   15.265945] type=1400 audit(1792316110.704:387): avc: denied { write } for pid=1195 comm="sh" name="printk" dev="proc" ino=7229 scontext=u:r:shell:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   15.273774] type=1400 audit(1792316110.704:387): avc: denied { write } for pid=1195 comm="sh" name="printk" dev="proc" ino=7229 scontext=u:r:shell:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   15.281283] type=1400 audit(1792316110.704:388): avc: denied { open } for pid=1195 comm="sh" path="/proc/sys/kernel/printk" dev="proc" ino=7229 scontext=u:r:shell:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   15.288277] type=1400 audit(1792316110.704:388): avc: denied { open } for pid=1195 comm="sh" path="/proc/sys/kernel/printk" dev="proc" ino=7229 scontext=u:r:shell:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   15.295134] type=1400 audit(1792316110.707:389): avc: denied { read } for pid=2274 comm="cat" name="printk" dev="proc" ino=7229 scontext=u:r:shell:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   15.427531] type=1400 audit(1792316110.707:389): avc: denied { read } for pid=2274 comm="cat" name="printk" dev="proc" ino=7229 scontext=u:r:shell:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+[   15.427558] audit: audit_lost=292 audit_rate_limit=5 audit_backlog_limit=64
+[   15.433579] type=1400 audit(1792316110.873:390): avc: denied { dac_override } for pid=2281 comm="cmd" capability=1 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   15.441919] audit: rate limit exceeded
+[   15.594731] logd: logdr: UID=0 GID=2000 PID=2344 b tail=0 logMask=ff pid=0 start=0ns timeout=0ns
+[   16.710210] serial8250: too much work for irq4
+[   17.032340] serial8250: too much work for irq4
+[   18.072616] serial8250: too much work for irq4
+[   20.696622] serial8250: too much work for irq4
+[   21.100709] serial8250: too much work for irq4
+[   21.388341] serial8250: too much work for irq4
+[   22.218890] serial8250: too much work for irq4
+[   22.910301] serial8250: too much work for irq4
+[   23.576927] serial8250: too much work for irq4
+[   23.825354] serial8250: too much work for irq4
+[   25.676537] serial8250: too much work for irq4
+[   26.395819] serial8250: too much work for irq3
+[   26.407129] type=1400 audit(1792316110.873:390): avc: denied { dac_override } for pid=2281 comm="cmd" capability=1 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   26.413601] type=1400 audit(1792316121.853:393): avc: denied { getattr } for pid=2365 comm="mkdir" path="/data/misc/adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   26.421235] type=1400 audit(1792316121.853:393): avc: denied { getattr } for pid=2365 comm="mkdir" path="/data/misc/adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   26.429153] type=1400 audit(1792316121.856:394): avc: denied { search } for pid=2366 comm="grep" name="adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   26.433672] audit: audit_lost=294 audit_rate_limit=5 audit_backlog_limit=64
+[   26.436044] type=1400 audit(1792316121.856:394): avc: denied { search } for pid=2366 comm="grep" name="adb" dev="sda" ino=60 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=dir permissive=1
+[   26.445720] type=1400 audit(1792316121.859:395): avc: denied { getattr } for pid=2366 comm="grep" path="/data/misc/adb/adb_keys" dev="sda" ino=379 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=file permissive=1
+[   26.449796] audit: rate limit exceeded
+[   26.453555] type=1400 audit(1792316121.859:395): avc: denied { getattr } for pid=2366 comm="grep" path="/data/misc/adb/adb_keys" dev="sda" ino=379 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=file permissive=1
+[   26.462752] type=1400 audit(1792316121.859:396): avc: denied { read } for pid=2366 comm="grep" name="adb_keys" dev="sda" ino=379 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=file permissive=1
+[   26.470031] type=1400 audit(1792316121.859:396): avc: denied { read } for pid=2366 comm="grep" name="adb_keys" dev="sda" ino=379 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=file permissive=1
+[   26.477590] type=1400 audit(1792316121.859:397): avc: denied { open } for pid=2366 comm="grep" path="/data/misc/adb/adb_keys" dev="sda" ino=379 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=file permissive=1
+[   26.773590] init: Received control message 'start' for 'wpa_supplicant' from pid: 1209 (/system/bin/wificond)
+[   26.778438] init: starting service 'wpa_supplicant'...
+[   26.781294] init: Created socket '/dev/socket/wpa_wlan0', mode 660, user 1010, group 1010
+[   26.878593] selinux: avc:  denied  { set } for property=persist.adb.tcp.port pid=2389 uid=0 gid=2000 scontext=u:r:shell:s0 tcontext=u:object_r:default_prop:s0 tclass=property_service permissive=1
+[   26.878593] 
+[   26.890848] init: Received control message 'stop' for 'wpa_supplicant' from pid: 1209 (/system/bin/wificond)
+[   26.895258] init: Sending signal 9 to service 'wpa_supplicant' (pid 2383) process group...
+[   26.903845] libprocessgroup: Successfully killed process cgroup uid 0 pid 2383 in 5ms
+[   26.907329] init: Service 'wpa_supplicant' (pid 2383) received signal 9
+[   26.910689] init: Received control message 'stop' for 'adbd' from pid: 2391 (stop adbd)
+[   26.913964] init: Sending signal 9 to service 'adbd' (pid 1196) process group...
+[   26.922245] libprocessgroup: Successfully killed process cgroup uid 0 pid 1196 in 5ms
+[   26.925659] init: Service 'adbd' (pid 1196) received signal 9
+[   26.928459] init: processing action (init.svc.adbd=stopped) from (/init.usb.configfs.rc:14)
+[   26.932043] init: Received control message 'start' for 'adbd' from pid: 2392 (start adbd)
+[   26.935505] init: starting service 'adbd'...
+[   26.937629] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[   29.160583] type=1400 audit(1792316121.859:397): avc: denied { open } for pid=2366 comm="grep" path="/data/misc/adb/adb_keys" dev="sda" ino=379 scontext=u:r:shell:s0 tcontext=u:object_r:adb_keys_file:s0 tclass=file permissive=1
+[   29.170169] type=1400 audit(1792316124.604:409): avc: denied { read write } for pid=2432 comm="cmd" path="/dev/ttyS1" dev="tmpfs" ino=6859 scontext=u:r:system_server:s0 tcontext=u:object_r:serial_device:s0 tclass=chr_file permissive=1
+[   29.534793] type=1400 audit(1792316124.604:409): avc: denied { read write } for pid=2432 comm="cmd" path="/dev/ttyS1" dev="tmpfs" ino=6859 scontext=u:r:system_server:s0 tcontext=u:object_r:serial_device:s0 tclass=chr_file permissive=1
+[   29.543320] type=1400 audit(1792316124.980:410): avc: denied { net_raw } for pid=2442 comm="ip" capability=13 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   41.227663] type=1400 audit(1792316124.980:410): avc: denied { net_raw } for pid=2442 comm="ip" capability=13 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+[   41.252173] type=1400 audit(1792316136.673:411): avc: denied { mounton } for pid=2472 comm="main" path="/storage" dev="tmpfs" ino=1087 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   41.258993] type=1400 audit(1792316136.673:411): avc: denied { mounton } for pid=2472 comm="main" path="/storage" dev="tmpfs" ino=1087 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   41.274587] type=1400 audit(1792316136.673:412): avc: denied { dac_read_search } for pid=2472 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   49.992755] type=1400 audit(1792316136.673:412): avc: denied { dac_read_search } for pid=2472 comm="main" capability=2 scontext=u:r:zygote:s0 tcontext=u:r:zygote:s0 tclass=capability permissive=1
+[   50.000081] type=1400 audit(1792316145.438:413): avc: denied { read } for pid=1081 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   50.000763] init: Received sys.powerctl='shutdown,shell' from pid: 2492 (reboot)
+[   50.008438] type=1400 audit(1792316145.438:413): avc: denied { read } for pid=1081 comm="loop1" path="/sfs/system.img" dev="loop0" ino=1 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   50.011425] init: Clear action queue and start shutdown trigger
+[   50.011459] init: processing action (shutdown_done) from (<Builtin Action>:0)
+[   50.011464] init: Reboot start, reason: shutdown,shell, rebootTarget: 
+[   50.021983] init: Shutdown timeout: 6000 ms
+[   50.022157] init: starting service 'blank_screen'...
+[   50.022611] init: terminating init services
+[   50.022643] init: Sending signal 15 to service 'mdnsd' (pid 1232) process group...
+[   50.022714] init: Sending signal 15 to service 'perfprofd' (pid 1213) process group...
+[   50.023351] init: Sending signal 15 to service 'gatekeeperd' (pid 1212) process group...
+[   50.023380] init: Sending signal 15 to service 'ril-daemon' (pid 1211) process group...
+[   50.023668] init: Sending signal 15 to service 'vendor.media.omx' (pid 1210) process group...
+[   50.023779] init: Sending signal 15 to service 'wificond' (pid 1209) process group...
+[   50.024139] init: Sending signal 15 to service 'storaged' (pid 1208) process group...
+[   50.024169] init: Sending signal 15 to service 'statsd' (pid 1207) process group...
+[   50.024218] init: Sending signal 15 to service 'media' (pid 1206) process group...
+[   50.024256] init: Sending signal 15 to service 'mediametrics' (pid 1205) process group...
+[   50.024291] init: Sending signal 15 to service 'mediaextractor' (pid 1204) process group...
+[   50.024354] init: Sending signal 15 to service 'mediadrm' (pid 1203) process group...
+[   50.024390] init: Sending signal 15 to service 'keystore' (pid 1202) process group...
+[   50.024434] init: Sending signal 15 to service 'installd' (pid 1201) process group...
+[   50.024477] init: Sending signal 15 to service 'incidentd' (pid 1200) process group...
+[   50.024537] init: Sending signal 15 to service 'drm' (pid 1199) process group...
+[   50.024573] init: Sending signal 15 to service 'cameraserver' (pid 1198) process group...
+[   50.024625] init: Sending signal 15 to service 'su_daemon' (pid 1197) process group...
+[   50.024649] init: Sending signal 15 to service 'console' (pid 1195) process group...
+[   50.025947] init: Sending signal 15 to service 'thermalservice' (pid 1194) process group...
+[   50.035554] type=1400 audit(1792316145.438:414): avc: denied { read } for pid=1076 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   50.037010] init: Sending signal 15 to service 'lmkd' (pid 1192) process group...
+[   50.039857] type=1400 audit(1792316145.438:414): avc: denied { read } for pid=1076 comm="loop0" path="/mnt/system.sfs" dev="sr0" ino=1897 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   50.042160] init: Sending signal 15 to service 'audioserver' (pid 1191) process group...
+[   50.045168] type=1400 audit(1792316145.468:415): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   50.046036] init: Sending signal 15 to service 'vendor.wifi_hal_legacy' (pid 1190) process group...
+[   50.047624] type=1400 audit(1792316145.468:415): avc: denied { dac_read_search } for pid=1 comm="init" capability=2 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[   50.050444] init: Sending signal 15 to service 'vendor.usb-hal-1-0' (pid 1189) process group...
+[   50.053663] type=1400 audit(1792316145.472:416): avc: denied { getattr } for pid=2493 comm="blank_screen" path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:blank_screen:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   50.053781] type=1400 audit(1792316145.472:416): avc: denied { getattr } for pid=2493 comm="blank_screen" path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:blank_screen:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   50.056596] init: Sending signal 15 to service 'vendor.power-hal-1-0' (pid 1188) process group...
+[   50.058485] audit: audit_lost=305 audit_rate_limit=5 audit_backlog_limit=64
+[   50.058486] audit: rate limit exceeded
+[   50.060068] type=1400 audit(1792316145.472:417): avc: denied { read } for pid=2493 comm="blank_screen" name="vendor" dev="tmpfs" ino=1092 scontext=u:r:blank_screen:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   50.060107] type=1400 audit(1792316145.472:417): avc: denied { read } for pid=2493 comm="blank_screen" name="vendor" dev="tmpfs" ino=1092 scontext=u:r:blank_screen:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   50.060430] logd: logdr: UID=1000 GID=1000 PID=2496 n tail=127 logMask=19 pid=0 start=0ns timeout=0ns
+[   50.064004] init: Sending signal 15 to service 'vendor.memtrack-hal-1-0' (pid 1187) process group...
+[   50.067343] type=1400 audit(1792316145.502:418): avc: denied { getattr } for pid=2496 comm="logcat" path="/vendor" dev="tmpfs" ino=1092 scontext=u:r:system_server:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   50.068816] logd: logdr: UID=1000 GID=1000 PID=2500 n tail=127 logMask=19 pid=0 start=0ns timeout=0ns
+[   50.070633] init: Sending signal 15 to service 'vendor.dumpstate-1-0' (pid 1185) process group...
+[   50.191756] init: Sending signal 15 to service 'vendor.cas-hal-1-0' (pid 1183) process group...
+[   50.194796] init: Sending signal 15 to service 'vendor.camera-provider-2-4' (pid 1182) process group...
+[   50.198173] init: Sending signal 15 to service 'vendor.bluetooth-1-0' (pid 1181) process group...
+[   50.201272] init: Sending signal 15 to service 'vendor.audio-hal-2-0' (pid 1180) process group...
+[   50.204291] init: Sending signal 15 to service 'healthd' (pid 1179) process group...
+[   50.207032] init: Sending signal 15 to service 'hidl_memory' (pid 1178) process group...
+[   50.209737] init: Sending signal 15 to service 'zygote_secondary' (pid 1176) process group...
+[   50.212767] init: Sending signal 15 to service 'zygote' (pid 1175) process group...
+[   50.217670] init: Sending signal 15 to service 'netd' (pid 1174) process group...
+[   50.221146] init: Service 'zygote_secondary' (pid 1176) received signal 15
+[   50.223860] init: Sending signal 9 to service 'zygote_secondary' (pid 1176) process group...
+[   50.227231] libprocessgroup: Successfully killed process cgroup uid 0 pid 1176 in 0ms
+[   50.230772] init: Service 'netd' (pid 1174) received signal 15
+[   50.233400] init: Sending signal 9 to service 'netd' (pid 1174) process group...
+[   50.236540] libprocessgroup: Successfully killed process cgroup uid 0 pid 1174 in 0ms
+[   50.240130] init: Service 'hidl_memory' (pid 1178) received signal 15
+[   50.242957] init: Sending signal 9 to service 'hidl_memory' (pid 1178) process group...
+[   50.246473] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1178 in 0ms
+[   50.250103] init: Service 'zygote' (pid 1175) received signal 15
+[   50.252637] init: Sending signal 9 to service 'zygote' (pid 1175) process group...
+[   50.430221] libprocessgroup: Successfully killed process cgroup uid 0 pid 1175 in 174ms
+[   50.433341] init: Service 'healthd' (pid 1179) received signal 15
+[   50.435694] init: Sending signal 9 to service 'healthd' (pid 1179) process group...
+[   50.438698] libprocessgroup: Successfully killed process cgroup uid 0 pid 1179 in 0ms
+[   50.441665] init: Service 'vendor.audio-hal-2-0' (pid 1180) received signal 15
+[   50.444459] init: Service 'vendor.bluetooth-1-0' (pid 1181) received signal 15
+[   50.447207] init: Sending signal 9 to service 'vendor.bluetooth-1-0' (pid 1181) process group...
+[   50.450444] libprocessgroup: Successfully killed process cgroup uid 1002 pid 1181 in 0ms
+[   50.453486] init: Service 'vendor.camera-provider-2-4' (pid 1182) received signal 15
+[   50.456367] init: Sending signal 9 to service 'vendor.camera-provider-2-4' (pid 1182) process group...
+[   50.459785] libprocessgroup: Successfully killed process cgroup uid 1047 pid 1182 in 0ms
+[   50.462755] init: Service 'vendor.cas-hal-1-0' (pid 1183) received signal 15
+[   50.465531] init: Sending signal 9 to service 'vendor.cas-hal-1-0' (pid 1183) process group...
+[   50.468648] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1183 in 0ms
+[   50.471773] init: Service 'vendor.dumpstate-1-0' (pid 1185) received signal 15
+[   50.474543] init: Sending signal 9 to service 'vendor.dumpstate-1-0' (pid 1185) process group...
+[   50.477808] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1185 in 0ms
+[   50.480945] init: Service 'vendor.memtrack-hal-1-0' (pid 1187) received signal 15
+[   50.483760] init: Sending signal 9 to service 'vendor.memtrack-hal-1-0' (pid 1187) process group...
+[   50.487121] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1187 in 0ms
+[   50.490099] init: Service 'vendor.power-hal-1-0' (pid 1188) received signal 15
+[   50.492825] init: Sending signal 9 to service 'vendor.power-hal-1-0' (pid 1188) process group...
+[   50.496156] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1188 in 0ms
+[   50.499233] init: Service 'vendor.usb-hal-1-0' (pid 1189) received signal 15
+[   50.501846] init: Sending signal 9 to service 'vendor.usb-hal-1-0' (pid 1189) process group...
+[   50.505057] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1189 in 0ms
+[   50.508005] init: Service 'vendor.wifi_hal_legacy' (pid 1190) received signal 15
+[   50.510651] init: Sending signal 9 to service 'vendor.wifi_hal_legacy' (pid 1190) process group...
+[   50.514033] libprocessgroup: Successfully killed process cgroup uid 1010 pid 1190 in 0ms
+[   50.516844] init: Service 'audioserver' (pid 1191) received signal 15
+[   50.519056] init: Sending signal 9 to service 'audioserver' (pid 1191) process group...
+[   50.521839] libprocessgroup: Successfully killed process cgroup uid 1041 pid 1191 in 0ms
+[   50.524635] init: Service 'lmkd' (pid 1192) received signal 15
+[   50.526613] init: Sending signal 9 to service 'lmkd' (pid 1192) process group...
+[   50.529081] libprocessgroup: Successfully killed process cgroup uid 0 pid 1192 in 0ms
+[   50.531775] init: Service 'thermalservice' (pid 1194) received signal 15
+[   50.534022] init: Sending signal 9 to service 'thermalservice' (pid 1194) process group...
+[   50.536848] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1194 in 0ms
+[   50.539564] init: Service 'su_daemon' (pid 1197) received signal 15
+[   50.541669] init: Service 'cameraserver' (pid 1198) received signal 15
+[   50.543838] init: Sending signal 9 to service 'cameraserver' (pid 1198) process group...
+[   50.546522] libprocessgroup: Successfully killed process cgroup uid 1047 pid 1198 in 0ms
+[   50.549287] init: Service 'drm' (pid 1199) received signal 15
+[   50.551231] init: Sending signal 9 to service 'drm' (pid 1199) process group...
+[   50.553702] libprocessgroup: Successfully killed process cgroup uid 1019 pid 1199 in 0ms
+[   50.556499] init: Service 'incidentd' (pid 1200) received signal 15
+[   50.558655] init: Sending signal 9 to service 'incidentd' (pid 1200) process group...
+[   50.561379] libprocessgroup: Successfully killed process cgroup uid 1067 pid 1200 in 0ms
+[   50.564116] init: Service 'installd' (pid 1201) received signal 15
+[   50.566251] init: Sending signal 9 to service 'installd' (pid 1201) process group...
+[   50.568852] libprocessgroup: Successfully killed process cgroup uid 0 pid 1201 in 0ms
+[   50.571488] init: Service 'keystore' (pid 1202) received signal 15
+[   50.573552] init: Sending signal 9 to service 'keystore' (pid 1202) process group...
+[   50.576056] libprocessgroup: Successfully killed process cgroup uid 1017 pid 1202 in 0ms
+[   50.579247] init: Service 'mediadrm' (pid 1203) received signal 15
+[   50.581756] init: Sending signal 9 to service 'mediadrm' (pid 1203) process group...
+[   50.584641] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1203 in 0ms
+[   50.587717] init: Service 'mediaextractor' (pid 1204) received signal 15
+[   50.590208] init: Sending signal 9 to service 'mediaextractor' (pid 1204) process group...
+[   50.593284] libprocessgroup: Successfully killed process cgroup uid 1040 pid 1204 in 0ms
+[   50.596467] init: Service 'mediametrics' (pid 1205) received signal 15
+[   50.598975] init: Sending signal 9 to service 'mediametrics' (pid 1205) process group...
+[   50.602032] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1205 in 0ms
+[   50.605132] init: Service 'media' (pid 1206) received signal 15
+[   50.607399] init: Sending signal 9 to service 'media' (pid 1206) process group...
+[   50.610142] libprocessgroup: Successfully killed process cgroup uid 1013 pid 1206 in 0ms
+[   50.613389] init: Service 'statsd' (pid 1207) received signal 15
+[   50.615575] init: Sending signal 9 to service 'statsd' (pid 1207) process group...
+[   50.618431] libprocessgroup: Successfully killed process cgroup uid 1066 pid 1207 in 0ms
+[   50.621546] init: Service 'storaged' (pid 1208) received signal 15
+[   50.623822] init: Sending signal 9 to service 'storaged' (pid 1208) process group...
+[   50.626644] libprocessgroup: Successfully killed process cgroup uid 0 pid 1208 in 0ms
+[   50.629524] init: Service 'wificond' (pid 1209) exited with status 0
+[   50.631832] init: Sending signal 9 to service 'wificond' (pid 1209) process group...
+[   50.634696] libprocessgroup: Successfully killed process cgroup uid 1010 pid 1209 in 0ms
+[   50.637744] init: Service 'vendor.media.omx' (pid 1210) received signal 15
+[   50.640288] init: Sending signal 9 to service 'vendor.media.omx' (pid 1210) process group...
+[   50.643417] libprocessgroup: Successfully killed process cgroup uid 1046 pid 1210 in 0ms
+[   50.646493] init: Service 'ril-daemon' (pid 1211) received signal 15
+[   50.648808] init: Sending signal 9 to service 'ril-daemon' (pid 1211) process group...
+[   50.651778] libprocessgroup: Successfully killed process cgroup uid 1001 pid 1211 in 0ms
+[   50.654855] init: Service 'gatekeeperd' (pid 1212) received signal 15
+[   50.657500] init: Sending signal 9 to service 'gatekeeperd' (pid 1212) process group...
+[   50.660563] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1212 in 0ms
+[   50.663572] init: Service 'perfprofd' (pid 1213) received signal 15
+[   50.665929] init: Service 'mdnsd' (pid 1232) exited with status 4
+[   50.668193] init: Untracked pid 2344 received signal 15
+[   50.670125] init: Service 'blank_screen' (pid 2493) exited with status 1
+[   50.672612] init: Untracked pid 1529 received signal 15
+[   50.674522] init: Untracked pid 1244 received signal 15
+[   50.676467] init: Untracked pid 1245 received signal 15
+[   50.678361] init: Untracked pid 1337 received signal 15
+[   50.680373] init: Untracked pid 1487 received signal 15
+[   50.682269] init: Untracked pid 1492 received signal 15
+[   50.684210] init: Untracked pid 1620 received signal 15
+[   50.686150] init: Untracked pid 1634 received signal 15
+[   50.688136] init: Untracked pid 1837 received signal 15
+[   50.690098] init: Untracked pid 1855 received signal 15
+[   50.692135] init: Untracked pid 1862 received signal 15
+[   50.694067] init: Untracked pid 1889 received signal 15
+[   50.696113] init: Untracked pid 1925 received signal 15
+[   50.698075] init: Untracked pid 1958 received signal 15
+[   50.700057] init: Untracked pid 1997 received signal 15
+[   50.701990] init: Untracked pid 2027 received signal 15
+[   50.703957] init: Untracked pid 2065 received signal 15
+[   50.705918] init: Untracked pid 2087 received signal 15
+[   50.707925] init: Untracked pid 2105 received signal 15
+[   50.709860] init: Untracked pid 2120 received signal 15
+[   50.711993] init: Untracked pid 2147 received signal 15
+[   50.713925] init: Untracked pid 2165 received signal 15
+[   50.715939] init: Untracked pid 2182 received signal 15
+[   50.717866] init: Untracked pid 2200 received signal 15
+[   50.719852] init: Untracked pid 2218 received signal 15
+[   50.721782] init: Untracked pid 2234 received signal 15
+[   50.723737] init: Untracked pid 2253 received signal 15
+[   50.725648] init: Untracked pid 2472 received signal 15
+[   50.727623] init: Terminating running services took 716ms with remaining services:0
+[   50.730351] init: Sending signal 9 to service 'console' (pid 1195) process group...
+[   50.738558] libprocessgroup: Successfully killed process cgroup uid 0 pid 1195 in 5ms
+[   50.741421] init: Service 'console' (pid 1195) received signal 9
+[   50.748644] vdc: Waited 0ms for vold
+[   50.750153] binder: 1167:1171 transaction failed 29189/-22, size 88-0 line 3080
+[   50.795667] init: Sending signal 9 to service 'vold' (pid 1167) process group...
+[   50.803767] libprocessgroup: Successfully killed process cgroup uid 0 pid 1167 in 5ms
+[   50.806711] init: Sending signal 9 to service 'adbd' (pid 2393) process group...
+[   50.814740] libprocessgroup: Successfully killed process cgroup uid 0 pid 2393 in 5ms
+[   50.817799] init: Sending signal 9 to service 'tombstoned' (pid 1214) process group...
+[   50.825962] libprocessgroup: Successfully killed process cgroup uid 1058 pid 1214 in 5ms
+[   50.828978] init: Sending signal 9 to service 'logd' (pid 1119) process group...
+[   50.836869] libprocessgroup: Successfully killed process cgroup uid 1036 pid 1119 in 5ms
+[   50.840715] init: Unmounting /dev/block/sda:/data opts rw,seclabel,noatime
+[   50.859472] init: Umounted /dev/block/sda:/data opts rw,seclabel,noatime
+[   50.962730] init: powerctl_shutdown_time_ms:951:0
+[   50.964563] init: Reboot ending, jumping to kernel
+[   50.966971] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[   50.969261] sd 0:0:0:0: [sda] Stopping disk
+[   50.972042] rtc_cmos 00:07: suspend, ctrl 02
+[   50.973852] ACPI: Preparing to enter system sleep state S5
+[   50.975998] reboot: Power down
+[   50.981801] acpi_power_off called
