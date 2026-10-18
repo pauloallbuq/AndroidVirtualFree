@@ -113,6 +113,7 @@ object VmController {
         val t0 = System.currentTimeMillis()
         var con: GuestConsole? = null
         var tuned = false
+        var trimmed = false
         while (true) {
             if (!p.isAlive) throw IllegalStateException(ctx.getString(R.string.msg_qemu_died, p.logTail()))
             if (stopRequested) return
@@ -122,6 +123,7 @@ object VmController {
                 GuestConsole(s.inputStream, s.outputStream, s)
             }.getOrNull()?.also { console = it }
             if (con != null && !tuned) tuned = con.tuneKernel()
+            if (con != null && tuned && !trimmed) trimmed = con.trimGuest()
             if (con != null && con.bootCompleted()) break
             val min = (System.currentTimeMillis() - t0) / 60000
             set(Phase.BOOTING, ctx.getString(R.string.msg_booting_wait, min))

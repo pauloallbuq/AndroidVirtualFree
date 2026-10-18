@@ -62,6 +62,20 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
         run("echo 0 > /proc/sys/kernel/panic_on_oops; cat /proc/sys/kernel/panic_on_oops", 20_000).trim().endsWith("0")
     }.getOrDefault(false)
 
+    /**
+     * Sob emulação por software, serviços pesados que vêm na ISO (Google Play Services, Chrome, Gmail…)
+     * saturam a CPU e fazem o Watchdog do Android reiniciar o system_server. Desativa-os no convidado
+     * assim que o PackageManager responde (reversível: `pm enable <pacote>` como root).
+     * Retorna true quando concluído.
+     */
+    fun trimGuest(): Boolean = runCatching {
+        val list = HEAVY_PACKAGES.joinToString(" ")
+        val out = run("if service check package | grep -q ': found'; then " +
+            "for p in $list; do pm list packages -e \$p 2>/dev/null | grep -qx \"package:\$p\" && pm disable \$p >/dev/null 2>&1; done; " +
+            "echo TRIM_DONE; else echo TRIM_WAIT; fi", 300_000)
+        out.contains("TRIM_DONE")
+    }.getOrDefault(false)
+
     fun bootCompleted(): Boolean = runCatching { run("getprop sys.boot_completed", 15_000) == "1" }.getOrDefault(false)
 
     /**
@@ -85,6 +99,16 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
     }
 
     fun powerOff() { runCatching { output.write("\nsync; reboot -p\n".toByteArray()); output.flush() } }
+
+    companion object {
+        val HEAVY_PACKAGES = listOf(
+            "com.google.android.gms", "com.google.android.gsf", "com.android.vending", "com.android.chrome",
+            "com.google.android.gm", "com.google.android.youtube", "com.google.android.apps.maps",
+            "com.google.android.music", "com.google.android.apps.photos", "com.google.android.apps.docs",
+            "com.google.android.videos", "com.google.android.apps.restore", "com.google.android.setupwizard",
+            "com.google.android.googlequicksearchbox", "org.android_x86.analytics",
+        )
+    }
 
     override fun close() { runCatching { closer?.close() } }
 }

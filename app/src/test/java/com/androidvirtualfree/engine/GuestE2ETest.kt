@@ -115,6 +115,7 @@ class GuestE2ETest {
         val con = connectConsole()
         var shot = 0
         var kernInfo = false
+        var trimmed = false
         fun kernelInfo() = runCatching {
             log("[$tag] kernel: " + con.run("echo 8 > /proc/sys/kernel/printk; cat /proc/sys/kernel/printk /proc/sys/kernel/panic " +
                 "/proc/sys/kernel/softlockup_panic /proc/sys/kernel/hung_task_panic /proc/sys/kernel/panic_on_oops 2>&1; " +
@@ -123,6 +124,7 @@ class GuestE2ETest {
         var lastUp = 0.0; var reboots = 0
         while (!con.bootCompleted()) {
             if (!kernInfo) kernInfo = con.tuneKernel() && kernelInfo().isSuccess
+            if (kernInfo && !trimmed) { trimmed = con.trimGuest(); if (trimmed) log("[$tag] pacotes pesados desativados no convidado") }
             runCatching { con.run("pgrep -f 'logcat -b all' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &)", 15_000) }
             val up = runCatching { con.run("cut -d' ' -f1 /proc/uptime", 15_000).trim().toDouble() }.getOrDefault(lastUp)
             if (up + 5 < lastUp) { reboots++; log("[$tag] convidado REINICIOU (uptime $lastUp -> $up), total=$reboots") }

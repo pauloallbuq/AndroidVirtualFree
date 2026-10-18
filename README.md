@@ -10,9 +10,13 @@ Um **Android 9 real** (Android-x86 9.0-r2, x86_64) rodando dentro de uma máquin
 | Binários | Pacotes oficiais do Termux (bionic), baixados no CI e empacotados como `lib*.so` em `jniLibs` | O Android 10+ só permite executar código de `nativeLibraryDir` (regra W^X). |
 | Sistema convidado | ISO oficial do Android-x86 9.0-r2 (baixada uma vez, ~920 MB, SourceForge) | Imagem pública que inicia em QEMU padrão. O app extrai `kernel`/`initrd` da ISO (leitor ISO9660 próprio) e usa a linha de boot da própria ISO. |
 | Persistência | `data.qcow2` (ext4, 16 GB virtuais, cresce sob demanda) montado como `/data` (`DATA=sda`) | Apps e dados continuam após encerrar/reabrir. |
-| Tela e toque | VNC do QEMU por **socket UNIX privado** do app + cliente RFB próprio + `usb-tablet` (coordenadas absolutas) | Nenhuma porta de rede exposta para a tela. |
+| Tela e toque | Framebuffer VESA 1024x768 (32 bits) → VNC do QEMU por **socket UNIX privado** do app + cliente RFB próprio + `usb-tablet` (coordenadas absolutas) | Nenhuma porta de rede exposta. VESA em vez de `bochs_drm`: o driver TTM do kernel 4.19 dá *oops* quando o surfaceflinger faz fork (comum sob TCG), travando o convidado. |
+| Rede | Wi-Fi virtual (`VirtWifi`) já salvo no disco `/data` + Wi-Fi ligado após o boot | O convidado recebe IP (10.0.2.15) via NAT do QEMU. |
 | Instalar APK | Seletor de documentos → cópia → **`adb` do convidado** (biblioteca `dadb`) → `cmd package install` dentro do Android virtual → abre o app | Instalação real pelo PackageManager do convidado; nada é instalado no celular físico. |
-| Root | `su` do próprio Android-x86 (`persist.sys.root_access=3`) | Root só dentro do convidado. |
+| Root | `su` do próprio Android-x86 (`persist.sys.root_access`), botão **Root** liga/desliga | Root só dentro do convidado; o celular físico não é alterado. |
+| Backup | **Backup** / **Restaurar** do disco `/data` (qcow2, cabeçalho validado) pelo seletor de arquivos | Com a VM desligada. |
+| Sem internet | **Importar ISO**: usa uma ISO do Android-x86 já baixada (validada pelo leitor ISO9660) | Evita o download de ~920 MB no celular. |
+| Arquivos | **Enviar arquivo**: copia para `/sdcard/Download` do convidado (tamanho conferido) | |
 
 Memória do convidado: 2 GB em aparelhos com ≥ 5 GB de RAM total (1,5 GB abaixo disso), 4 vCPUs TCG.
 
@@ -21,7 +25,9 @@ Memória do convidado: 2 GB em aparelhos com ≥ 5 GB de RAM total (1,5 GB abaix
 1. Abra o app e toque em **Iniciar Android** (na primeira vez ele baixa a ISO; precisa de ~3 GB livres).
 2. Aguarde o boot (vários minutos — veja limitações).
 3. Toque em **Instalar APK**, escolha o arquivo; ele é instalado e aberto dentro do Android virtual.
-4. **Encerrar** desliga o convidado com `reboot -p` (grava o disco) e fecha a VM.
+4. **Enviar arquivo**, **Root**, **Reiniciar** e **Encerrar** ficam na barra superior durante a execução.
+5. **Encerrar** desliga o convidado com `reboot -p` (grava o disco) e fecha a VM.
+6. Com a VM desligada: **Importar ISO**, **Backup**, **Restaurar** e o painel de RAM/armazenamento.
 
 Botão Voltar do celular = tecla Esc (Voltar) no convidado.
 
@@ -29,7 +35,7 @@ Botão Voltar do celular = tecla Esc (Voltar) no convidado.
 
 `.github/workflows/android-build.yml`:
 - **build**: baixa o QEMU do Termux (arm64-v8a + x86_64), cria o disco `/data`, roda os testes unitários, compila o APK de debug, verifica o conteúdo e publica o artefato `AndroidVirtualFree-debug-apk`.
-- **guest-e2e**: usa as mesmas classes do app para dar boot no Android-x86 no QEMU (TCG), instalar um APK de teste dentro do convidado, conferir na tela (VNC) que ele abriu, testar `su`, desligar, reiniciar e conferir a persistência. Publica capturas de tela e relatório.
+- **guest-e2e** (KVM e TCG): usa as mesmas classes do app para dar boot no Android-x86 no QEMU (TCG), instalar um APK de teste dentro do convidado, conferir na tela (VNC) que ele abriu, testar `su`, desligar, reiniciar e conferir a persistência. Publica capturas de tela e relatório.
 - **device-test**: instala o APK num emulador Android 14 (x86_64), executa o QEMU empacotado com o uid do app (sem root) e roda o fluxo da interface (Iniciar Android → convidado pronto → Encerrar).
 
 ## Limitações (importante)
@@ -41,6 +47,10 @@ Botão Voltar do celular = tecla Esc (Voltar) no convidado.
 - **Android 12+**: o sistema pode encerrar processos-filho com uso alto de CPU em segundo plano; mantenha o app em primeiro plano.
 - **Segurança**: a porta ADB do convidado (127.0.0.1:15555) é aberta apenas durante o boot e as instalações.
 - **Root/Magisk**: o root testado é o `su` do Android-x86. Magisk no convidado (ex.: projeto *initrd-magisk*) não foi integrado.
+
+## Análise do VPhoneGaGa
+
+Veja [`docs/ANALISE_VPHONEGAGA.md`](docs/ANALISE_VPHONEGAGA.md): por que ele é rápido (núcleo Linux proprietário em espaço de usuário + ROM ARM baixada do servidor dele) e por que esse caminho não pode ser copiado.
 
 ## Licenças
 
