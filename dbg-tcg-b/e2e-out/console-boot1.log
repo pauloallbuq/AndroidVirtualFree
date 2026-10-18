@@ -1,0 +1,92 @@
+==== 1792312696894
+08:38:16 up 0 min,  0 users,  load average: 3.18, 0.66, 0.21
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 128 total,   6 running,  63 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   420196k used,  1619664k free,    45256k buffers
+Swap:        0k total,        0k used,        0k free,   280192k cached
+400%cpu 175%user   1%nice 149%sys  70%idle   1%iow   0%irq   3%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1076 root          0 -20    0    0    0 R 75.3   0.0   0:05.63 [loop1]
+ 1164 audioserver  20   0  15M 4.8M 4.4M D 33.3   0.2   0:00.36 android.hardware.audio@2.0-service
+ 1193 mediacodec   20   0 4.1M 2.7M 2.5M D 31.8   0.1   0:00.19 android.hardware.media.omx@1.0-service
+ 1182 drm          20   0 4.4M 2.8M 2.6M D 24.6   0.1   0:00.18 drmserver
+ 1181 cameraserver 20   0 5.1M 3.3M 3.1M D 23.1   0.1   0:00.19 cameraserver
+ 1177 root         20   0 4.4M 2.9M 2.6M D 23.1   0.1   0:00.18 surfaceflinger
+ 1238 root         20   0  11M 3.1M 2.5M R 17.3   0.1   0:00.33 top -b -n 1
+ 1166 cameraserver 20   0 8.1M 3.0M 2.5M D 17.3   0.1   0:00.35 android.hardware.camera.provider@2.4-service
+ 1158 root         20   0  16M 6.9M 5.9M D 17.3   0.3   0:00.50 netd
+ 1167 media        20   0 7.7M 2.9M 2.4M D 15.9   0.1   0:00.32 android.hardware.cas@1.0-service
+==== 1792312929373
+08:42:11 up 4 min,  0 users,  load average: 11.10, 6.35, 2.65
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 131 total,   3 running,  79 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2014400k used,    25460k free,   340956k buffers
+Swap:        0k total,        0k used,        0k free,  1392040k cached
+400%cpu 482%user   3%nice  25%sys 110%idle   0%iow   0%irq   1%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1177 root         -2  -8 171M  98M  54M R  306   4.9   8:57.86 surfaceflinger
+ 1575 u0_a40071    18  -2 1.2G  61M  42M R  125   3.0   0:30.19 dex2oat --zip-fd=16 --zip-location=Chrome.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@app@Chrome@Chrome.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/app/Chrome --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:29 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1308 graphics     16  -4 2.1G  92M  53M S 48.6   4.6   1:55.47 bootanimation
+ 1597 root         20   0  11M 3.1M 2.6M R 13.0   0.1   0:00.34 top -b -n 1
+ 1076 root          0 -20    0    0    0 D  4.3   0.0   0:43.97 [loop1]
+ 1345 system       18  -2 3.6G 151M 122M S  3.4   7.5   0:40.48 system_server
+ 1203 root         20   0 9.3M 3.5M 2.8M S  2.6   0.1   0:03.31 logcat -b all -v threadtime
+ 1101 logd         30  10  19M 4.2M 2.8M S  2.6   0.2   0:03.80 logd
+   10 root         20   0    0    0    0 I  1.7   0.0   0:01.43 [rcu_preempt]
+   37 root         20   0    0    0    0 I  0.8   0.0   0:00.39 [kworker/0:1-mm_percpu_wq]
+==== 1792313165733
+08:46:06 up 8 min,  0 users,  load average: 10.34, 8.45, 4.35
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 125 total,   2 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2014104k used,    25756k free,   466044k buffers
+Swap:        0k total,        0k used,        0k free,  1238924k cached
+400%cpu 126%user   0%nice   7%sys 267%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1177 root         -2  -8 171M  98M  54M S 80.8   4.9  18:59.47 surfaceflinger
+ 1606 u0_a40008    18  -2 1.2G 117M  75M R 70.9   5.8   2:25.92 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1308 graphics     16  -4 2.1G  93M  53M S 29.0   4.6   3:46.02 bootanimation
+ 1674 root         20   0  11M 3.0M 2.5M R  8.6   0.1   0:00.32 top -b -n 1
+ 1101 logd         30  10  19M 4.4M 2.8M S  1.2   0.2   0:05.95 logd
+   10 root         20   0    0    0    0 I  1.2   0.0   0:01.73 [rcu_preempt]
+ 1203 root         20   0 9.3M 3.5M 2.8M S  0.6   0.1   0:05.62 logcat -b all -v threadtime
+ 1675 root         20   0  11M 3.2M 2.7M S  0.0   0.1   0:00.17 head -15
+ 1630 root         20   0    0    0    0 I  0.0   0.0   0:00.14 [kworker/u8:0-flush-8:0]
+ 1345 system       18  -2 3.6G 138M 109M S  0.0   6.9   1:01.33 system_server
+==== 1792313409311
+08:50:10 up 12 min,  0 users,  load average: 13.41, 10.64, 6.14
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 135 total,   2 running,  87 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2012164k used,    27696k free,   422564k buffers
+Swap:        0k total,        0k used,        0k free,  1110240k cached
+400%cpu 174%user  26%nice  24%sys 176%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1177 root         -2  -8 186M 103M  59M S  198   5.1  29:07.91 surfaceflinger
+ 1345 system       18  -2 3.8G 263M 201M S 37.8  13.2   1:33.75 system_server
+ 1308 graphics     16  -4 2.1G  93M  53M S 34.8   4.6   5:37.56 bootanimation
+ 1812 u0_a16       20   0 3.1G 259M 135M S 25.7  12.9   0:22.56 com.android.systemui
+ 2166 u0_a40008    30  10 1.2G  35M  32M R 18.1   1.7   0:02.85 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+ 2197 root         20   0  11M 3.2M 2.6M R 16.6   0.1   0:00.27 top -b -n 1
+ 1089 root         20   0    0    0    0 S  1.5   0.0   0:00.73 [jbd2/sda-8]
+ 1072 root          0 -20    0    0    0 S  1.5   0.0   0:16.00 [loop0]
+  701 root         20   0    0    0    0 S  1.5   0.0   0:05.04 [kswapd0]
+   18 root         20   0    0    0    0 I  1.5   0.0   0:01.38 [kworker/1:0-events_power_efficient]
