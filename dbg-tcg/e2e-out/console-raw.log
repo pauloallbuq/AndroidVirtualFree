@@ -1,0 +1,566 @@
+VS$((1+0))__; getprop sys.boot_completed; echo __AVF$((1+0))__
+console:/ # 
+-b all -v threadtime > /dev/ttyS2 2>&1 &); echo __AVF$((2+0))__
+console:/ # echo __AVS$((2+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc2+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((2+0))__
+__AVS2__
+__AVF2__
+console:/ # 
+console:/ # echo __AVS$((3+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3+03+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3+0                         <))__
+__AVS3__
+15.71
+__AVF3__
+console:/ # 
+console:/ # echo __AVS$((4+0))__; uptime; getprop init.svc.adbd; getprop init.4+0))__; uptime; getprop init.svc.adbd; getprop init.                         <svc.zygote; getprop sys.binit.svc.adbd; getprop init.svc.zygote; getprop sys.b                         <oot_completed; getprop peit.svc.zygote; getprop sys.boot_completed; getprop pe                         <rsist.adb.tcp.port; getprs.boot_completed; getprop persist.adb.tcp.port; getpr                         <op service.adb.tcp.port;  persist.adb.tcp.port; getprop service.adb.tcp.port;                          <netstat -ltn 2>/dev/null tprop service.adb.tcp.port; netstat -ltn 2>/dev/null                          <| grep 5555; top -b -n 1 t; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                          <| head -15; echo __AVF$((ll | grep 5555; top -b -n 1 | head -15; echo __AVF$((                         <4+0))__
+__AVS4__
+ 04:21:39 up 0 min,  0 users,  load average: 1.57, 0.33, 0.11
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 131 total,   5 running,  74 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   649824k used,  1390036k free,    75268k buffers
+Swap:        0k total,        0k used,        0k free,   456588k cached
+400%cpu  52%user   2%nice  95%sys 205%idle  41%iow   0%irq   5%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1074 root          0 -20    0    0    0 R 53.5   0.0   0:06.49 [loop1]
+ 1182 audioserver  20   0  38M  14M  12M R 48.2   0.6   0:01.19 audioserver
+ 1251 root         20   0 9.3M 3.4M 2.8M R 17.8   0.1   0:00.75 logcat -b all -v threadtime
+ 1069 root          0 -20    0    0    0 S 16.0   0.0   0:01.42 [loop0]
+ 1284 root         20   0  11M 3.2M 2.7M R 14.2   0.1   0:00.20 top -b -n 1
+ 1200 mediacodec   20   0  62M  16M  12M R 10.7   0.7   0:01.35 media.codec hw/android.hardware.media.omx@1.0-service
+ 1184 root         12  -8  68M  25M  19M D  7.1   1.2   0:00.85 surfaceflinger
+ 1099 logd         30  10  19M 3.6M 2.7M S  7.1   0.1   0:00.71 logd
+ 1288 root          0 -20  16M 6.6M 5.8M D  5.3   0.3   0:00.31 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+ 1101 system       20   0  16M 6.3M 5.2M S  5.3   0.3   0:00.62 hwservicemanager
+__AVF4__
+console:/ # 
+console:/ # echo __AVS$((5+0))__; getprop sys.boot_completed; echo __AVF$((5+05+0))__; getprop sys.boot_completed; echo __AVF$((5+0                         <))__
+__AVS5__
+
+__AVF5__
+console:/ # 
+console:/ # echo __AVS$((6+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc6+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((6+0))__
+__AVS6__
+__AVF6__
+console:/ # 
+__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7+0)console:/ # echo __AVS$((7+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7+07+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7+0                         <))__
+__AVS7__
+30.28
+__AVF7__
+console:/ # 
+console:/ # echo __AVS$((8+0))__; getprop sys.boot_completed; echo __AVF$((8+08+0))__; getprop sys.boot_completed; echo __AVF$((8+0                         <))__
+__AVS8__
+
+__AVF8__
+console:/ # 
+console:/ # echo __AVS$((9+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc9+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((9+0))__
+__AVS9__
+__AVF9__
+console:/ # 
+console:/ # echo __AVS$((10+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1010+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((10                         <+0))__
+__AVS10__
+42.18
+__AVF10__
+console:/ # 
+console:/ # echo __AVS$((11+0))__; getprop sys.boot_completed; echo __AVF$((1111+0))__; getprop sys.boot_completed; echo __AVF$((11                         <+0))__
+__AVS11__
+
+__AVF11__
+console:/ # 
+console:/ # echo __AVS$((12+0))__; pgrep -f 'logcat -b all' >/dev/null || (log12+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((12+0))__
+__AVS12__
+__AVF12__
+console:/ # 
+console:/ # echo __AVS$((13+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1313+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((13                         <+0))__
+__AVS13__
+53.97
+__AVF13__
+console:/ # 
+p sys.boot_completed; echo __AVF$((14+0))__
+console:/ # echo __AVS$((14+0))__; getprop sys.boot_completed; echo __AVF$((1414+0))__; getprop sys.boot_completed; echo __AVF$((14                         <+0))__
+__AVS14__
+
+__AVF14__
+console:/ # 
+console:/ # echo __AVS$((15+0))__; pgrep -f 'logcat -b all' >/dev/null || (log15+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((15+0))__
+__AVS15__
+__AVF15__
+console:/ # 
+console:/ # echo __AVS$((16+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1616+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((16                         <+0))__
+__AVS16__
+64.51
+__AVF16__
+console:/ # 
+console:/ # echo __AVS$((17+0))__; getprop sys.boot_completed; echo __AVF$((1717+0))__; getprop sys.boot_completed; echo __AVF$((17                         <+0))__
+__AVS17__
+
+__AVF17__
+console:/ # 
+AVS$((18+0))__; pgrep -f 'logcat -b all' >/console:/ # echo __AVS$((18+0))__; pgrep -f 'logcat -b all' >/dev/null || (log18+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((18+0))__
+__AVS18__
+__AVF18__
+console:/ # 
+console:/ # echo __AVS$((19+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1919+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((19                         <+0))__
+__AVS19__
+76.87
+__AVF19__
+console:/ # 
+VS$((20+0))__; getprop sys.boot_completed; echo __AVF$((20+0))__
+console:/ # echo __AVS$((20+0))__; getprop sys.boot_completed; echo __AVF$((2020+0))__; getprop sys.boot_completed; echo __AVF$((20                         <+0))__
+__AVS20__
+
+__AVF20__
+console:/ # 
+console:/ # echo __AVS$((21+0))__; pgrep -f 'logcat -b all' >/dev/null || (log21+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((21+0))__
+__AVS21__
+__AVF21__
+console:/ # 
+console:/ # echo __AVS$((22+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((2222+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((22                         <+0))__
+__AVS22__
+88.19
+__AVF22__
+console:/ # 
+console:/ # echo __AVS$((23+0))__; getprop sys.boot_completed; echo __AVF$((2323+0))__; getprop sys.boot_completed; echo __AVF$((23                         <+0))__
+__AVS23__
+
+__AVF23__
+console:/ # 
+console:/ # echo __AVS$((24+0))__; pgrep -f 'logcat -b all' >/dev/null || (log24+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((24+0))__
+__AVS24__
+__AVF24__
+console:/ # 
+console:/ # echo __AVS$((25+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((2525+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((25                         <+0))__
+__AVS25__
+100.67
+__AVF25__
+console:/ # 
+console:/ # echo __AVS$((26+0))__; getprop sys.boot_completed; echo __AVF$((2626+0))__; getprop sys.boot_completed; echo __AVF$((26                         <+0))__
+__AVS26__
+
+__AVF26__
+console:/ # 
+console:/ # echo __AVS$((27+0))__; pgrep -f 'logcat -b all' >/dev/null || (log27+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((27+0))__
+__AVS27__
+__AVF27__
+console:/ # 
+console:/ # echo __AVS$((28+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((2828+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((28                         <+0))__
+__AVS28__
+112.74
+__AVF28__
+console:/ # 
+console:/ # echo __AVS$((29+0))__; getprop sys.boot_completed; echo __AVF$((2929+0))__; getprop sys.boot_completed; echo __AVF$((29                         <+0))__
+__AVS29__
+
+__AVF29__
+console:/ # 
+console:/ # echo __AVS$((30+0))__; pgrep -f 'logcat -b all' >/dev/null || (log30+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((30+0))__
+__AVS30__
+__AVF30__
+console:/ # 
+console:/ # echo __AVS$((31+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3131+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((31                         <+0))__
+__AVS31__
+125.48
+__AVF31__
+console:/ # 
+console:/ # echo __AVS$((32+0))__; getprop sys.boot_completed; echo __AVF$((3232+0))__; getprop sys.boot_completed; echo __AVF$((32                         <+0))__
+__AVS32__
+
+__AVF32__
+console:/ # 
+console:/ # echo __AVS$((33+0))__; pgrep -f 'logcat -b all' >/dev/null || (log33+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((33+0))__
+__AVS33__
+__AVF33__
+console:/ # 
+console:/ # echo __AVS$((34+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3434+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((34                         <+0))__
+__AVS34__
+137.07
+__AVF34__
+console:/ # 
+console:/ # echo __AVS$((35+0))__; getprop sys.boot_completed; echo __AVF$((3535+0))__; getprop sys.boot_completed; echo __AVF$((35                         <+0))__
+__AVS35__
+
+__AVF35__
+console:/ # 
+console:/ # echo __AVS$((36+0))__; pgrep -f 'logcat -b all' >/dev/null || (log36+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((36+0))__
+__AVS36__
+__AVF36__
+console:/ # 
+console:/ # echo __AVS$((37+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3737+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((37                         <+0))__
+__AVS37__
+149.14
+__AVF37__
+console:/ # 
+console:/ # echo __AVS$((38+0))__; getprop sys.boot_completed; echo __AVF$((3838+0))__; getprop sys.boot_completed; echo __AVF$((38                         <+0))__
+__AVS38__
+
+__AVF38__
+console:/ # 
+console:/ # echo __AVS$((39+0))__; pgrep -f 'logcat -b all' >/dev/null || (log39+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((39+0))__
+__AVS39__
+__AVF39__
+console:/ # 
+console:/ # echo __AVS$((40+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4040+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((40                         <+0))__
+__AVS40__
+161.51
+__AVF40__
+console:/ # 
+console:/ # echo __AVS$((41+0))__; getprop sys.boot_completed; echo __AVF$((4141+0))__; getprop sys.boot_completed; echo __AVF$((41                         <+0))__
+__AVS41__
+
+__AVF41__
+
+echo __AVS$((42+0))__; pgrep -f 'logcat -b all' >/dev/nuconsole:/ # 
+v/ttyS2 console:/ # echo __AVS$((42+0))__; pgrep -f 'logcat -b all' >/dev/null || (log42+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((42+0))__
+__AVS42__
+__AVF42__
+console:/ # 
+console:/ # echo __AVS$((43+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4343+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((43                         <+0))__
+__AVS43__
+174.96
+__AVF43__
+console:/ # 
+console:/ # echo __AVS$((44+0))__; getprop sys.boot_completed; echo __AVF$((4444+0))__; getprop sys.boot_completed; echo __AVF$((44                         <+0))__
+__AVS44__
+
+__AVF44__
+
+echo __AVS$((45+0))__; pgrep -f 'logcat -b all' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo __AVF$((45+0))__
+console:/ # 
+console:/ # echo __AVS$((45+0))__; pgrep -f 'logcat -b all' >/dev/null || (log45+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((45+0))__
+__AVS45__
+__AVF45__
+console:/ # 
+console:/ # echo __AVS$((46+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4646+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((46                         <+0))__
+__AVS46__
+188.27
+__AVF46__
+console:/ # 
+console:/ # echo __AVS$((47+0))__; getprop sys.boot_completed; echo __AVF$((4747+0))__; getprop sys.boot_completed; echo __AVF$((47                         <+0))__
+__AVS47__
+
+__AVF47__
+
+echo __AVS$((48+0))__; pgrep -f 'logcat -b all' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo __AVF$((48+0))__
+console:/ # 
+console:/ # echo __AVS$((48+0))__; pgrep -f 'logcat -b all' >/dev/null || (log48+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((48+0))__
+__AVS48__
+__AVF48__
+console:/ # 
+console:/ # echo __AVS$((49+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4949+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((49                         <+0))__
+__AVS49__
+200.65
+__AVF49__
+console:/ # 
+console:/ # echo __AVS$((50+0))__; getprop sys.boot_completed; echo __AVF$((5050+0))__; getprop sys.boot_completed; echo __AVF$((50                         <+0))__
+__AVS50__
+
+__AVF50__
+console:/ # 
+console:/ # echo __AVS$((51+0))__; pgrep -f 'logcat -b all' >/dev/null || (log51+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((51+0))__
+__AVS51__
+__AVF51__
+console:/ # 
+console:/ # echo __AVS$((52+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5252+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((52                         <+0))__
+__AVS52__
+211.44
+__AVF52__
+console:/ # 
+console:/ # echo __AVS$((53+0))__; getprop sys.boot_completed; echo __AVF$((5353+0))__; getprop sys.boot_completed; echo __AVF$((53                         <+0))__
+__AVS53__
+
+__AVF53__
+console:/ # 
+console:/ # echo __AVS$((54+0))__; pgrep -f 'logcat -b all' >/dev/null || (log54+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((54+0))__
+__AVS54__
+__AVF54__
+console:/ # 
+console:/ # echo __AVS$((55+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5555+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((55                         <+0))__
+__AVS55__
+224.00
+__AVF55__
+console:/ # 
+console:/ # echo __AVS$((56+0))__; getprop sys.boot_completed; echo __AVF$((5656+0))__; getprop sys.boot_completed; echo __AVF$((56                         <+0))__
+__AVS56__
+
+__AVF56__
+console:/ # 
+console:/ # echo __AVS$((57+0))__; pgrep -f 'logcat -b all' >/dev/null || (log57+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((57+0))__
+__AVS57__
+__AVF57__
+console:/ # 
+console:/ # echo __AVS$((58+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5858+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((58                         <+0))__
+__AVS58__
+236.15
+__AVF58__
+console:/ # 
+ __AVF$((59+0))__
+console:/ # echo __AVS$((59+0))__; getprop sys.boot_completed; echo __AVF$((5959+0))__; getprop sys.boot_completed; echo __AVF$((59                         <+0))__
+__AVS59__
+
+__AVF59__
+console:/ # 
+console:/ # echo __AVS$((60+0))__; pgrep -f 'logcat -b all' >/dev/null || (log60+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((60+0))__
+__AVS60__
+__AVF60__
+console:/ # 
+console:/ # echo __AVS$((61+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((6161+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((61                         <+0))__
+__AVS61__
+248.77
+__AVF61__
+console:/ # 
+console:/ # echo __AVS$((62+0))__; uptime; getprop init.svc.adbd; getprop init62+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop pnit.svc.zygote; getprop sys.boot_completed; getprop p                         <ersist.adb.tcp.port; getpys.boot_completed; getprop persist.adb.tcp.port; getp                         <rop service.adb.tcp.port;p persist.adb.tcp.port; getprop service.adb.tcp.port;                         < netstat -ltn 2>/dev/nulletprop service.adb.tcp.port; netstat -ltn 2>/dev/null                         < | grep 5555; top -b -n 1rt; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                         < | head -15; echo __AVF$(ull | grep 5555; top -b -n 1 | head -15; echo __AVF$(                         <(62+0))__
+__AVS62__
+ 04:25:31 up 4 min,  0 users,  load average: 9.17, 5.29, 2.19
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 132 total,   5 running,  79 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2013116k used,    26744k free,   464036k buffers
+Swap:        0k total,        0k used,        0k free,  1253416k cached
+400%cpu 603%user  13%nice 101%sys 319%idle   0%iow   0%irq   1%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1184 root         -2  -8 178M 102M  56M S  450   5.1  10:00.73 surfaceflinger
+ 1492 u0_a40008    18  -2 1.2G 105M  79M R  105   5.2   0:27.22 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1311 graphics     16  -4 2.1G  95M  54M S 72.4   4.7   1:37.89 bootanimation
+ 1338 system       18  -2 3.6G 135M 107M S 17.3   6.7   0:33.80 system_server
+ 1074 root          0 -20    0    0    0 R 14.4   0.0   0:42.18 [loop1]
+ 1520 root         20   0  11M 3.1M 2.5M R 11.5   0.1   0:00.19 top -b -n 1
+ 1521 root         20   0  11M 3.0M 2.6M R  2.8   0.1   0:00.08 head -15
+ 1251 root         20   0 9.3M 3.4M 2.8M S  2.8   0.1   0:02.50 logcat -b all -v threadtime
+  702 root         20   0    0    0    0 S  2.8   0.0   0:01.81 [kswapd0]
+ 1099 logd         30  10  19M 4.1M 2.7M S  1.4   0.2   0:02.03 logd
+__AVF62__
+console:/ # 
+console:/ # echo __AVS$((63+0))__; getprop sys.boot_completed; echo __AVF$((6363+0))__; getprop sys.boot_completed; echo __AVF$((63                         <+0))__
+__AVS63__
+
+__AVF63__
+console:/ # 
+console:/ # echo __AVS$((64+0))__; pgrep -f 'logcat -b all' >/dev/null || (log64+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((64+0))__
+__AVS64__
+__AVF64__
+console:/ # 
+console:/ # echo __AVS$((65+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((6565+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((65                         <+0))__
+__AVS65__
+269.47
+__AVF65__
+console:/ # 
+console:/ # echo __AVS$((66+0))__; getprop sys.boot_completed; echo __AVF$((6666+0))__; getprop sys.boot_completed; echo __AVF$((66                         <+0))__
+__AVS66__
+
+__AVF66__
+console:/ # 
+console:/ # echo __AVS$((67+0))__; pgrep -f 'logcat -b all' >/dev/null || (log67+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((67+0))__
+__AVS67__
+__AVF67__
+console:/ # 
+console:/ # echo __AVS$((68+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((6868+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((68                         <+0))__
+__AVS68__
+282.89
+__AVF68__
+console:/ # 
+console:/ # echo __AVS$((69+0))__; getprop sys.boot_completed; echo __AVF$((6969+0))__; getprop sys.boot_completed; echo __AVF$((69                         <+0))__
+__AVS69__
+
+__AVF69__
+console:/ # 
+console:/ # echo __AVS$((70+0))__; pgrep -f 'logcat -b all' >/dev/null || (log70+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((70+0))__
+__AVS70__
+__AVF70__
+console:/ # 
+console:/ # echo __AVS$((71+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7171+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((71                         <+0))__
+__AVS71__
+296.20
+__AVF71__
+console:/ # 
+console:/ # echo __AVS$((72+0))__; getprop sys.boot_completed; echo __AVF$((7272+0))__; getprop sys.boot_completed; echo __AVF$((72                         <+0))__
+__AVS72__
+
+__AVF72__
+console:/ # 
+console:/ # echo __AVS$((73+0))__; pgrep -f 'logcat -b all' >/dev/null || (log73+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((73+0))__
+__AVS73__
+__AVF73__
+console:/ # 
+__AVF$((74+0))__
+console:/ # echo __AVS$((74+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7474+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((74                         <+0))__
+__AVS74__
+310.71
+__AVF74__
+console:/ # 
+console:/ # echo __AVS$((75+0))__; getprop sys.boot_completed; echo __AVF$((7575+0))__; getprop sys.boot_completed; echo __AVF$((75                         <+0))__
+__AVS75__
+
+__AVF75__
+console:/ # 
+console:/ # echo __AVS$((76+0))__; pgrep -f 'logcat -b all' >/dev/null || (log76+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((76+0))__
+__AVS76__
+__AVF76__
+console:/ # 
+console:/ # echo __AVS$((77+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7777+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((77                         <+0))__
+__AVS77__
+324.08
+__AVF77__
+console:/ # 
+console:/ # echo __AVS$((78+0))__; getprop sys.boot_completed; echo __AVF$((7878+0))__; getprop sys.boot_completed; echo __AVF$((78                         <+0))__
+__AVS78__
+
+__AVF78__
+console:/ # 
+ -f 'logcat -b all' >/dev/null || (console:/ # echo __AVS$((79+0))__; pgrep -f 'logcat -b all' >/dev/null || (log79+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((79+0))__
+__AVS79__
+__AVF79__
+console:/ # 
+console:/ # echo __AVS$((80+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((8080+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((80                         <+0))__
+__AVS80__
+337.39
+__AVF80__
+console:/ # 
+console:/ # echo __AVS$((81+0))__; getprop sys.boot_completed; echo __AVF$((8181+0))__; getprop sys.boot_completed; echo __AVF$((81                         <+0))__
+__AVS81__
+
+__AVF81__
+console:/ # 
+console:/ # echo __AVS$((82+0))__; pgrep -f 'logcat -b all' >/dev/null || (log82+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((82+0))__
+__AVS82__
+__AVF82__
+console:/ # 
+console:/ # echo __AVS$((83+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((8383+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((83                         <+0))__
+__AVS83__
+350.13
+__AVF83__
+console:/ # 
+console:/ # echo __AVS$((84+0))__; getprop sys.boot_completed; echo __AVF$((8484+0))__; getprop sys.boot_completed; echo __AVF$((84                         <+0))__
+__AVS84__
+
+__AVF84__
+console:/ # 
+console:/ # echo __AVS$((85+0))__; pgrep -f 'logcat -b all' >/dev/null || (log85+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((85+0))__
+__AVS85__
+__AVF85__
+console:/ # 
+console:/ # echo __AVS$((86+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((8686+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((86                         <+0))__
+__AVS86__
+363.32
+__AVF86__
+console:/ # 
+console:/ # echo __AVS$((87+0))__; getprop sys.boot_completed; echo __AVF$((8787+0))__; getprop sys.boot_completed; echo __AVF$((87                         <+0))__
+__AVS87__
+
+__AVF87__
+console:/ # 
+console:/ # echo __AVS$((88+0))__; pgrep -f 'logcat -b all' >/dev/null || (log88+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((88+0))__
+__AVS88__
+__AVF88__
+console:/ # 
+echo __AVF$((89+0))__
+console:/ # echo __AVS$((89+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((8989+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((89                         <+0))__
+__AVS89__
+374.76
+__AVF89__
+console:/ # 
+console:/ # echo __AVS$((90+0))__; getprop sys.boot_completed; echo __AVF$((9090+0))__; getprop sys.boot_completed; echo __AVF$((90                         <+0))__
+__AVS90__
+
+__AVF90__
+console:/ # 
+console:/ # echo __AVS$((91+0))__; pgrep -f 'logcat -b all' >/dev/null || (log91+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((91+0))__
+__AVS91__
+__AVF91__
+console:/ # 
+console:/ # echo __AVS$((92+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((9292+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((92                         <+0))__
+__AVS92__
+387.81
+__AVF92__
+console:/ # 
+cho __AVF$((93+0))__
+console:/ # echo __AVS$((93+0))__; getprop sys.boot_completed; echo __AVF$((9393+0))__; getprop sys.boot_completed; echo __AVF$((93                         <+0))__
+__AVS93__
+
+__AVF93__
+console:/ # 
+F$((94+0))__
+console:/ # echo __AVS$((94+0))__; pgrep -f 'logcat -b all' >/dev/null || (log94+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((94+0))__
+__AVS94__
+__AVF94__
+console:/ # 
+console:/ # echo __AVS$((95+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((9595+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((95                         <+0))__
+__AVS95__
+399.37
+__AVF95__
+console:/ # 
+console:/ # echo __AVS$((96+0))__; getprop sys.boot_completed; echo __AVF$((9696+0))__; getprop sys.boot_completed; echo __AVF$((96                         <+0))__
+__AVS96__
+
+__AVF96__
+console:/ # 
+console:/ # echo __AVS$((97+0))__; pgrep -f 'logcat -b all' >/dev/null || (log97+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((97+0))__
+__AVS97__
+__AVF97__
+console:/ # 
+console:/ # echo __AVS$((98+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((9898+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((98                         <+0))__
+__AVS98__
+411.18
+__AVF98__
+console:/ # 
+console:/ # echo __AVS$((99+0))__; getprop sys.boot_completed; echo __AVF$((9999+0))__; getprop sys.boot_completed; echo __AVF$((99                         <+0))__
+__AVS99__
+
+__AVF99__
+console:/ # 
+ime > /dev/ttyS2 2>&1 &); echo __AVF$((100+0))__
+console:/ # echo __AVS$((100+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo100+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo                         <gcat -b all -v threadtimeat -b all' >/dev/null || (logcat -b all -v threadtime                         < > /dev/ttyS2 2>&1 &); ec(logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ec                         <ho __AVF$((100+0))__
+__AVS100__
+__AVF100__
+console:/ # 
+console:/ # echo __AVS$((101+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1101+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1                         <01+0))__
+__AVS101__
+422.43
+__AVF101__
+console:/ # 
+.boot_completed; echo __AVF$((102+0))__
+console:/ # echo __AVS$((102+0))__; getprop sys.boot_completed; echo __AVF$((1102+0))__; getprop sys.boot_completed; echo __AVF$((1                         <02+0))__
+__AVS102__
+
+__AVF102__
+console:/ # 
+console:/ # echo __AVS$((103+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo103+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo                         <gcat -b all -v threadtimeat -b all' >/dev/null || (logcat -b all -v threadtime                         < > /dev/ttyS2 2>&1 &); ec(logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ec                         <ho __AVF$((103+0))__
+__AVS103__
+__AVF103__
+console:/ # 
+console:/ # echo __AVS$((104+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1104+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1                         <04+0))__
+__AVS104__
+436.71
+__AVF104__
+console:/ # 
+rop sys.boot_completed; echo __AVF$((105+0))__
+console:/ # echo __AVS$((105+0))__; getprop sys.boot_completed; echo __AVF$((1105+0))__; getprop sys.boot_completed; echo __AVF$((1                         <05+0))__
+__AVS105__
+
+__AVF105__
+console:/ # 
+console:/ # echo __AVS$((106+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo106+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo                         <gcat -b all -v threadtimeat -b all' >/dev/null || (logcat -b all -v threadtime                         < > /dev/ttyS2 2>&1 &); ec(logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ec                         <ho __AVF$((106+0))__
+__AVS106__
+__AVF106__
+console:/ # 
+console:/ # echo __AVS$((107+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1107+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1                         <07+0))__
+__AVS107__
+450.26
+__AVF107__
+console:/ # 
+console:/ # echo __AVS$((108+0))__; getprop sys.boot_completed; echo __AVF$((1108+0))__; getprop sys.boot_completed; echo __AVF$((1                         <08+0))__
+__AVS108__
+
+__AVF108__
+console:/ # 
+console:/ # echo __AVS$((109+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo109+0))__; pgrep -f 'logcat -b all' >/dev/null || (lo                         <gcat -b all -v threadtimeat -b all' >/dev/null || (logcat -b all -v threadtime                         < > /dev/ttyS2 2>&1 &); ec(logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ec                         <ho __AVF$((109+0))__
+__AVS109__
+__AVF109__
+console:/ # 
+console:/ # echo __AVS$((110+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1110+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1                         <10+0))__
+__AVS110__
