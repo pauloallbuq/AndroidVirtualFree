@@ -1,6 +1,11 @@
 package com.androidvirtualfree
 
 import android.app.Activity
+import android.app.ActivityManager
+import android.app.AlertDialog
+import android.os.StatFs
+import android.text.format.Formatter
+import com.androidvirtualfree.engine.GuestImage
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -27,6 +32,8 @@ class MainActivity : Activity() {
     private lateinit var progress: ProgressBar
     private lateinit var btnStart: Button
     private lateinit var btnInstall: Button
+    private lateinit var info: TextView
+    @Volatile private var busy = false
 
     private val listener: (VmState) -> Unit = { render(it) }
 
@@ -43,11 +50,24 @@ class MainActivity : Activity() {
         btnInstall = findViewById(R.id.btn_install)
 
         btnStart.setOnClickListener {
+            if (busy) return@setOnClickListener
             if (Build.VERSION.SDK_INT >= 33) requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 1)
             VmService.start(this)
         }
         btnInstall.setOnClickListener { pickApk() }
         findViewById<Button>(R.id.btn_stop).setOnClickListener { VmController.stop(this) }
+        findViewById<Button>(R.id.btn_restart).setOnClickListener { VmController.restart(this) }
+        findViewById<Button>(R.id.btn_push).setOnClickListener { pick(REQ_PUSH, "*/*") }
+        findViewById<Button>(R.id.btn_root).setOnClickListener { rootDialog() }
+        findViewById<Button>(R.id.btn_import_iso).setOnClickListener { if (stoppedOrWarn()) pick(REQ_ISO, "*/*") }
+        findViewById<Button>(R.id.btn_restore).setOnClickListener { if (stoppedOrWarn()) pick(REQ_RESTORE, "*/*") }
+        findViewById<Button>(R.id.btn_backup).setOnClickListener {
+            if (stoppedOrWarn()) startActivityForResult(Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE); type = "application/octet-stream"
+                putExtra(Intent.EXTRA_TITLE, "avf-backup-${System.currentTimeMillis() / 1000}.qcow2")
+            }, REQ_BACKUP)
+        }
+        info = findViewById(R.id.info)
         vnc.onDisconnected = { if (VmController.isActive) VmController.vncSocket.let { vnc.connect(it) } }
         enterFullscreen()
     }
@@ -65,6 +85,7 @@ class MainActivity : Activity() {
         btnStart.isEnabled = s.phase == Phase.STOPPED || s.phase == Phase.ERROR
         btnStart.text = getString(if (s.phase == Phase.PREPARING) R.string.btn_preparing else R.string.btn_start)
         status.text = s.message
+        if (!showVm) refreshInfo()
         progress.visibility = if (s.phase == Phase.PREPARING) View.VISIBLE else View.GONE
         progress.isIndeterminate = s.progress < 0
         if (s.progress >= 0) progress.progress = s.progress
@@ -86,9 +107,79 @@ class MainActivity : Activity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val uri = data?.data
-        if (requestCode != REQ_APK || resultCode != RESULT_OK || uri == null) return
-        showMessage(getString(R.string.msg_installing))
-        Thread { prepareAndInstall(uri) }.start()
+        if (resultCode != RESULT_OK || uri == null) return
+        when (requestCode) {
+            REQ_APK -> { showMessage(getString(R.string.msg_installing)); Thread { prepareAndInstall(uri) }.start() }
+            REQ_PUSH -> Thread { pushToGuest(uri) }.start()
+            REQ_ISO -> fileOp(R.string.msg_iso_ok) { img, p -> contentResolver.openInputStream(uri)!!.use { img.importIso(it, p) } }
+            REQ_RESTORE -> fileOp(R.string.msg_restore_ok) { img, p -> contentResolver.openInputStream(uri)!!.use { img.restoreData(it, p) } }
+            REQ_BACKUP -> fileOp(R.string.msg_backup_ok, (GuestImage(this).dataDisk.length() shr 20).toInt()) { img, p ->
+                contentResolver.openOutputStream(uri, "wt")!!.use { img.backupData(it, p) } }
+        }
+    }
+
+    private fun pick(req: Int, mime: String) = startActivityForResult(Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+        addCategory(Intent.CATEGORY_OPENABLE); type = mime
+    }, req)
+
+    private fun stoppedOrWarn(): Boolean {
+        val ok = !VmController.isActive && !busy
+        if (!ok) status.text = getString(R.string.msg_need_stopped)
+        return ok
+    }
+
+    /** Operação de arquivo longa (ISO/backup) fora da thread de UI, com progresso real em MB. */
+    private fun fileOp(okMsg: Int, vararg args: Any, op: (GuestImage, (Long) -> Unit) -> Unit) {
+        busy = true
+        Thread {
+            val msg = try {
+                op(GuestImage(this)) { done -> runOnUiThread { status.text = getString(R.string.msg_copying, (done shr 20).toInt()) } }
+                getString(okMsg, *args)
+            } catch (e: Exception) { getString(R.string.msg_op_failed, e.message ?: e.javaClass.simpleName) }
+            runOnUiThread { busy = false; status.text = msg; refreshInfo() }
+        }.start()
+    }
+
+    private fun pushToGuest(uri: Uri) {
+        val name = contentResolver.query(uri, arrayOf(android.provider.OpenableColumns.DISPLAY_NAME), null, null, null)
+            ?.use { c -> if (c.moveToFirst()) c.getString(0) else null } ?: "arquivo"
+        val f = File(cacheDir, "push-${System.currentTimeMillis()}")
+        try {
+            contentResolver.openInputStream(uri)!!.use { i -> FileOutputStream(f).use { i.copyTo(it, 1 shl 20) } }
+            runOnUiThread { showMessage(getString(R.string.msg_copying, (f.length() shr 20).toInt())); VmController.pushFile(this, f, name) { showMessage(it) } }
+        } catch (e: Exception) {
+            f.delete(); runOnUiThread { showMessage(getString(R.string.msg_push_failed, e.message ?: "?")) }
+        }
+    }
+
+    private fun rootDialog() {
+        Thread {
+            val cur = VmController.guestRootEnabled()
+            runOnUiThread {
+                val label = getString(when (cur) { true -> R.string.root_on; false -> R.string.root_off; null -> R.string.root_unknown })
+                AlertDialog.Builder(this)
+                    .setTitle(R.string.root_title)
+                    .setMessage(getString(R.string.root_text, label))
+                    .setPositiveButton(if (cur == true) R.string.root_disable else R.string.root_enable) { _, _ ->
+                        VmController.setGuestRoot(this, cur != true) { showMessage(it) }
+                    }
+                    .setNegativeButton(R.string.cancel, null)
+                    .show()
+            }
+        }.start()
+    }
+
+    /** Memória e armazenamento reais do aparelho e do convidado. */
+    private fun refreshInfo() {
+        val img = GuestImage(this)
+        val mi = ActivityManager.MemoryInfo().also { getSystemService(ActivityManager::class.java).getMemoryInfo(it) }
+        val free = StatFs(img.dir.path).availableBytes
+        info.text = getString(R.string.info_fmt,
+            Formatter.formatShortFileSize(this, mi.availMem), Formatter.formatShortFileSize(this, mi.totalMem),
+            VmController.memoryForDevice(this),
+            Formatter.formatShortFileSize(this, free),
+            if (img.dataDisk.exists()) Formatter.formatShortFileSize(this, img.dataDisk.length()) else "—",
+            getString(if (img.iso.exists()) R.string.info_iso_ok else R.string.info_iso_missing))
     }
 
     private fun prepareAndInstall(uri: Uri) {
@@ -155,5 +246,11 @@ class MainActivity : Activity() {
         }
     }
 
-    companion object { private const val REQ_APK = 42 }
+    companion object {
+        private const val REQ_APK = 42
+        private const val REQ_PUSH = 43
+        private const val REQ_ISO = 44
+        private const val REQ_BACKUP = 45
+        private const val REQ_RESTORE = 46
+    }
 }

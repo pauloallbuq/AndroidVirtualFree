@@ -37,6 +37,7 @@ object VmController {
     @Volatile var state = VmState(Phase.STOPPED); private set
     @Volatile private var qemu: QemuProcess? = null
     @Volatile private var stopRequested = false
+    @Volatile private var restartRequested = false
     lateinit var vncSocket: File; private set
     private lateinit var adb: GuestAdb
     @Volatile private var console: GuestConsole? = null
@@ -136,7 +137,7 @@ object VmController {
     }
 
     /** Guest RAM: 2 GB em aparelhos com ≥ 6 GB; 1,5 GB abaixo disso. */
-    private fun memoryForDevice(ctx: Context): Int {
+    fun memoryForDevice(ctx: Context): Int {
         val am = ctx.getSystemService(android.app.ActivityManager::class.java)
         val mi = android.app.ActivityManager.MemoryInfo().also { am.getMemoryInfo(it) }
         return if (mi.totalMem >= 5L * 1024 * 1024 * 1024) 2048 else 1536
@@ -156,8 +157,58 @@ object VmController {
                 qemu = null
                 console?.close(); console = null
                 set(Phase.STOPPED, ctx.getString(R.string.msg_stopped))
+                if (restartRequested) { restartRequested = false; main.post { VmService.start(ctx) } }
             }
         }.start()
+    }
+
+    /** Reinicia: desliga o convidado de forma limpa e inicia de novo (mesmo disco). */
+    fun restart(ctx: Context) {
+        if (state.phase != Phase.RUNNING) return
+        restartRequested = true
+        stop(ctx)
+    }
+
+    /** Liga/desliga o root (su) dentro do convidado. Nada muda no celular físico. */
+    fun setGuestRoot(ctx: Context, enabled: Boolean, onDone: (String) -> Unit) {
+        val con = console
+        if (con == null || state.phase != Phase.RUNNING) { onDone(ctx.getString(R.string.msg_not_running)); return }
+        ops.execute {
+            val msg = runCatching {
+                con.run("setprop persist.sys.root_access ${if (enabled) 3 else 0}")
+                val v = con.run("getprop persist.sys.root_access").trim()
+                if (v == (if (enabled) "3" else "0")) ctx.getString(if (enabled) R.string.msg_root_on else R.string.msg_root_off)
+                else ctx.getString(R.string.msg_root_fail, v)
+            }.getOrElse { ctx.getString(R.string.msg_root_fail, it.message ?: "?") }
+            main.post { onDone(msg) }
+        }
+    }
+
+    /** Lê o estado atual do root no convidado (null se a VM não estiver pronta). */
+    fun guestRootEnabled(): Boolean? = runCatching {
+        console?.takeIf { state.phase == Phase.RUNNING }?.run("getprop persist.sys.root_access", 10_000)?.trim()?.let { it == "3" || it == "1" }
+    }.getOrNull()
+
+    /** Envia um arquivo do celular para /sdcard/Download do convidado. */
+    fun pushFile(ctx: Context, file: File, name: String, onDone: (String) -> Unit) {
+        val p = qemu
+        if (p == null || state.phase != Phase.RUNNING) { onDone(ctx.getString(R.string.msg_not_running)); return }
+        ops.execute {
+            val safe = name.replace(Regex("[^A-Za-z0-9._ -]"), "_").ifBlank { "arquivo" }
+            val msg = try {
+                p.openAdbForward(ADB_PORT)
+                adb.push(file, "/sdcard/Download/$safe")
+                val size = adb.shell("stat -c %s '/sdcard/Download/$safe'").trim().toLongOrNull()
+                if (size == file.length()) ctx.getString(R.string.msg_push_ok, safe)
+                else ctx.getString(R.string.msg_push_failed, "tamanho no convidado: $size")
+            } catch (t: Throwable) {
+                ctx.getString(R.string.msg_push_failed, t.message ?: t.javaClass.simpleName)
+            } finally {
+                runCatching { p.closeAdbForward(ADB_PORT) }
+                file.delete()
+            }
+            main.post { onDone(msg) }
+        }
     }
 
     /** Instala um APK dentro do Android convidado e o abre. */

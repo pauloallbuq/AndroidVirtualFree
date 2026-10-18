@@ -63,6 +63,9 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
         val key = adbPublicKey.trim().replace("'", "")
         run("mkdir -p /data/misc/adb; grep -qF '$key' /data/misc/adb/adb_keys 2>/dev/null || echo '$key' >> /data/misc/adb/adb_keys; " +
             "chown system:shell /data/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_keys")
+        // adbd do convidado escutando na rede interna do QEMU (porta 5555; só o app alcança via hostfwd)
+        run("setprop persist.adb.tcp.port 5555; setprop service.adb.tcp.port 5555; stop adbd; start adbd; sleep 2; " +
+            "netstat -ltn 2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL", 60_000)
         run("settings put global device_provisioned 1; settings put secure user_setup_complete 1; " +
             "pm disable-user --user 0 com.google.android.setupwizard >/dev/null 2>&1; " +
             "settings put global window_animation_scale 0; settings put global transition_animation_scale 0; " +

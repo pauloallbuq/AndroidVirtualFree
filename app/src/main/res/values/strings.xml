@@ -31,4 +31,33 @@
     <string name="err_sdk">o APK exige uma versão do Android mais nova que a 9.</string>
     <string name="err_storage">espaço insuficiente dentro do Android virtual.</string>
     <string name="warn_arm_only">Aviso: este APK contém apenas bibliotecas ARM; pode não instalar no convidado x86_64.</string>
+
+    <string name="btn_import_iso">Importar ISO</string>
+    <string name="btn_backup">Backup</string>
+    <string name="btn_restore">Restaurar</string>
+    <string name="btn_push">Enviar arquivo</string>
+    <string name="btn_root">Root</string>
+    <string name="btn_restart">Reiniciar</string>
+    <string name="info_fmt">RAM do celular: %1$s livre de %2$s · Memória do convidado: %3$d MB\nArmazenamento livre: %4$s · Disco do convidado: %5$s · Sistema: %6$s</string>
+    <string name="info_iso_ok">Android-x86 9.0 pronto</string>
+    <string name="info_iso_missing">será baixado no 1º início (~920 MB)</string>
+    <string name="msg_copying">Copiando… %1$d MB</string>
+    <string name="msg_iso_ok">ISO do Android-x86 importada e validada.</string>
+    <string name="msg_backup_ok">Backup salvo (%1$d MB).</string>
+    <string name="msg_restore_ok">Backup restaurado. Inicie o Android virtual.</string>
+    <string name="msg_op_failed">Falha: %1$s</string>
+    <string name="msg_need_stopped">Encerre o Android virtual antes desta operação.</string>
+    <string name="msg_push_ok">%1$s enviado para Download no Android virtual.</string>
+    <string name="msg_push_failed">Falha ao enviar o arquivo: %1$s</string>
+    <string name="root_title">Root no Android virtual</string>
+    <string name="root_text">Estado atual: %1$s.\n\nO root vale só dentro do Android virtual (su do Android-x86). O celular físico não é alterado. Apps como o GameGuardian pedem acesso pelo su.</string>
+    <string name="root_on">ligado</string>
+    <string name="root_off">desligado</string>
+    <string name="root_unknown">desconhecido</string>
+    <string name="root_enable">Ligar root</string>
+    <string name="root_disable">Desligar root</string>
+    <string name="cancel">Cancelar</string>
+    <string name="msg_root_on">Root ligado dentro do Android virtual.</string>
+    <string name="msg_root_off">Root desligado dentro do Android virtual.</string>
+    <string name="msg_root_fail">Não foi possível alterar o root: %1$s</string>
 </resources>

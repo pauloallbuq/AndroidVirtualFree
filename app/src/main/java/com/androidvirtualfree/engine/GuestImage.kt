@@ -4,6 +4,8 @@ import android.content.Context
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import java.io.InputStream
+import java.io.OutputStream
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -125,7 +127,57 @@ class GuestImage(private val ctx: Context) {
         progress(done, total)
     }
 
+    /** Importa uma ISO escolhida pelo usuário (sem internet). Valida que é Android-x86 antes de aceitar. */
+    fun importIso(input: InputStream, progress: (Long) -> Unit) {
+        val part = File(dir, "$ISO_NAME.import")
+        try {
+            FileOutputStream(part).use { copy(input, it, progress) }
+            IsoReader(part).use { r ->
+                r.find("kernel") ?: throw IOException("kernel ausente")
+                if (r.find("system.sfs") == null && r.find("system.img") == null) throw IOException("system.sfs ausente")
+            }
+        } catch (e: Exception) {
+            part.delete(); throw IOException("A ISO escolhida não é do Android-x86 (${e.message})", e)
+        }
+        iso.delete(); bootDir.deleteRecursively()
+        if (!part.renameTo(iso)) throw IOException("Falha ao salvar a ISO")
+    }
+
+    /** Backup do disco /data do convidado (apps e dados). Só com a VM desligada. */
+    fun backupData(out: OutputStream, progress: (Long) -> Unit) {
+        if (!dataDisk.exists()) throw IOException("Ainda não há dados para salvar (inicie o Android virtual uma vez).")
+        dataDisk.inputStream().use { copy(it, out, progress) }
+    }
+
+    /** Restaura um backup. Valida o cabeçalho qcow2 antes de substituir o disco atual. */
+    fun restoreData(input: InputStream, progress: (Long) -> Unit) {
+        val tmp = File(dir, "data.qcow2.restore")
+        try {
+            FileOutputStream(tmp).use { copy(input, it, progress) }
+            val magic = ByteArray(4).also { b -> tmp.inputStream().use { it.read(b) } }
+            if (!magic.contentEquals(QCOW_MAGIC)) throw IOException("o arquivo não é um backup do Android Virtual Free (qcow2)")
+        } catch (e: Exception) {
+            tmp.delete(); throw if (e is IOException) e else IOException(e.message, e)
+        }
+        dataDisk.delete()
+        if (!tmp.renameTo(dataDisk)) throw IOException("Falha ao restaurar o disco")
+    }
+
+    /** Apaga o disco /data (volta ao Android "de fábrica" no próximo início). */
+    fun resetData() { dataDisk.delete() }
+
+    private fun copy(i: InputStream, o: OutputStream, progress: (Long) -> Unit) {
+        val buf = ByteArray(1 shl 20); var done = 0L; var last = 0L
+        while (true) {
+            val n = i.read(buf); if (n < 0) break
+            o.write(buf, 0, n); done += n
+            if (done - last > (8 shl 20)) { progress(done); last = done }
+        }
+        progress(done)
+    }
+
     companion object {
+        private val QCOW_MAGIC = byteArrayOf(0x51, 0x46, 0x49, 0xfb.toByte())
         const val ISO_NAME = "android-x86_64-9.0-r2.iso"
         const val ISO_URL = "https://downloads.sourceforge.net/project/android-x86/Release%209.0/android-x86_64-9.0-r2.iso"
         const val REQUIRED_FREE_BYTES = 3L * 1024 * 1024 * 1024

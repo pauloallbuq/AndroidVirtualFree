@@ -39,6 +39,8 @@ class GuestAdb(private val port: Int, keyDir: File) {
         }
     }
 
+    fun push(file: File, remotePath: String) = session { it.push(file, remotePath) }
+
     fun isInstalled(pkg: String): Boolean =
         shell("pm list packages $pkg").lines().any { it.trim() == "package:$pkg" }
 

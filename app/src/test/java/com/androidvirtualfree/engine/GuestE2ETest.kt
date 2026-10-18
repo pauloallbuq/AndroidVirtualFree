@@ -105,7 +105,7 @@ class GuestE2ETest {
 
     private fun diag(tag: String, con: GuestConsole) = runCatching {
         File(out, "console-$tag.log").appendText("==== ${System.currentTimeMillis()}\n" +
-            con.run("uptime; getprop init.svc.adbd; getprop init.svc.zygote; getprop sys.boot_completed; getprop dev.bootcomplete; top -b -n 1 | head -15", 60_000) + "\n")
+            con.run("uptime; getprop init.svc.adbd; getprop init.svc.zygote; getprop sys.boot_completed; getprop persist.adb.tcp.port; getprop service.adb.tcp.port; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1 | head -15", 60_000) + "\n")
     }
 
     private fun waitBoot(tag: String, q: QemuProcess, adb: GuestAdb, screen: Screen): Long {
