@@ -1,0 +1,23 @@
+==== 1792297301852
+04:21:42 up 0 min,  0 users,  load average: 1.42, 0.31, 0.10
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 133 total,   3 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2013960k used,    25900k free,   450864k buffers
+Swap:        0k total,        0k used,        0k free,  1264680k cached
+400%cpu 164%user  20%nice 148%sys  44%idle   8%iow   0%irq   8%sirq   8%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1450 u0_a40008    18  -2 1.2G 105M  80M R  164   5.2   0:02.21 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1457 root         20   0 9.3M 3.4M 2.8M R 80.0   0.1   0:00.27 logcat -b all -v threadtime
+ 1201 root         -2  -8 177M 106M  60M S 40.0   5.2   0:05.42 surfaceflinger
+ 1079 root          0 -20    0    0    0 S 36.0   0.0   0:05.85 [loop1]
+ 1339 system       18  -2 3.6G 136M 109M S 32.0   6.8   0:02.98 system_server
+ 1073 root          0 -20    0    0    0 S 12.0   0.0   0:02.24 [loop0]
+ 1316 graphics     16  -4 2.1G  94M  54M S  4.0   4.7   0:00.78 bootanimation
+ 1066 root          0 -20    0    0    0 I  4.0   0.0   0:00.18 [kworker/3:1H-kblockd]
+ 1469 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 1468 root         20   0  11M 3.1M 2.6M R  0.0   0.1   0:00.00 top -b -n 1
