@@ -1,0 +1,345 @@
+==== 1792298861165
+04:47:40 up 0 min,  0 users,  load average: 1.96, 0.41, 0.13
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 130 total,   5 running,  75 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   659868k used,  1379992k free,    77228k buffers
+Swap:        0k total,        0k used,        0k free,   464556k cached
+400%cpu  38%user   0%nice 103%sys 147%idle 106%iow   0%irq   6%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1077 root          0 -20    0    0    0 R 64.7   0.0   0:06.40 [loop1]
+ 1203 mediacodec   20   0  64M  17M  13M R 38.2   0.8   0:01.09 media.codec hw/android.hardware.media.omx@1.0-service
+ 1072 root          0 -20    0    0    0 S 20.5   0.0   0:01.33 [loop0]
+ 1308 root         20   0  11M 3.2M 2.7M R 11.7   0.1   0:00.19 top -b -n 1
+ 1279 root         20   0 9.3M 3.4M 2.8M R 11.7   0.1   0:00.92 logcat -b all -v threadtime
+ 1187 root         12  -8  51M  21M  17M D  8.8   1.0   0:00.74 surfaceflinger
+ 1302 root          0 -20  37M 8.4M 7.6M D  2.9   0.4   0:00.33 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+ 1296 root          0 -20  41M 8.9M 8.2M D  2.9   0.4   0:00.38 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86_64 --instruction-set=x86_64 --verify
+ 1102 system       20   0  11M 3.8M 3.1M S  2.9   0.1   0:00.24 servicemanager
+ 1054 root          0 -20    0    0    0 I  2.9   0.0   0:00.06 [kworker/1:1H-kblockd]
+==== 1792299089062
+04:51:28 up 4 min,  0 users,  load average: 6.75, 3.80, 1.58
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 129 total,   2 running,  79 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1612548k used,   427312k free,   195888k buffers
+Swap:        0k total,        0k used,        0k free,  1240496k cached
+400%cpu 197%user   3%nice  41%sys 159%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 4150 graphics     16  -4 2.1G  52M  35M S  106   2.6   0:01.82 bootanimation
+ 4120 nobody        0 -20 3.4G 115M  96M R 86.2   5.7   0:03.65 zygote64
+ 4207 root         20   0  11M 3.1M 2.5M R 20.6   0.1   0:00.13 top -b -n 1
+ 1101 logd         30  10  19M 5.1M 2.6M S 10.3   0.2   0:12.08 logd
+ 4123 cameraserver 20   0  37M  14M  12M S  3.4   0.6   0:00.92 cameraserver
+ 1279 root         20   0 9.3M 3.5M 2.8M S  3.4   0.1   0:09.58 logcat -b all -v threadtime
+   22 root         20   0    0    0    0 S  3.4   0.0   0:00.32 [ksoftirqd/2]
+ 4208 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.08 head -15
+ 4130 root         20   0 9.3M 3.2M 2.5M S  0.0   0.1   0:00.13 ip6tables-restore --noflush -w -v
+ 4129 root         20   0 9.2M 2.3M 1.9M S  0.0   0.1   0:00.15 iptables-restore --noflush -w -v
+==== 1792299323522
+04:55:23 up 8 min,  0 users,  load average: 6.94, 5.32, 2.70
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 129 total,   4 running,  78 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1682716k used,   357144k free,   199100k buffers
+Swap:        0k total,        0k used,        0k free,  1257660k cached
+400%cpu 200%user   0%nice  25%sys  84%idle  91%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 7174 root         -2  -8 133M  66M  32M R  100   3.3   0:03.80 surfaceflinger
+ 7213 graphics     16  -4 2.1G  86M  47M S 96.8   4.2   0:03.57 bootanimation
+ 7279 root         20   0  11M 3.0M 2.5M R 21.8   0.1   0:00.15 top -b -n 1
+ 7171 cameraserver 20   0  37M  14M  12M S  3.1   0.6   0:01.00 cameraserver
+ 7280 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.08 head -15
+ 7262 system       20   0 3.6G  54M  36M S  0.0   2.7   0:00.31 system_server
+ 7178 root         20   0 9.3M 3.2M 2.6M S  0.0   0.1   0:00.13 ip6tables-restore --noflush -w -v
+ 7177 root         20   0 9.2M 2.5M 2.1M S  0.0   0.1   0:00.16 iptables-restore --noflush -w -v
+ 7176 audioserver  20   0  23M  11M  10M S  0.0   0.5   0:00.54 android.hardware.audio@2.0-service
+ 7175 wifi         20   0  16M 5.8M 4.9M S  0.0   0.2   0:00.25 wificond
+==== 1792299569841
+04:59:29 up 12 min,  0 users,  load average: 6.49, 6.07, 3.62
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 129 total,   2 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1717868k used,   321992k free,   201604k buffers
+Swap:        0k total,        0k used,        0k free,  1271244k cached
+400%cpu 176%user  35%nice  41%sys 147%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+10464 system       18  -2 3.6G 129M 102M R  150   6.4   0:02.90 system_server
+10445 graphics     16  -4 2.1G  90M  50M S 97.0   4.4   0:04.91 bootanimation
+10517 root         20   0  11M 3.0M 2.5M R 20.5   0.1   0:00.19 top -b -n 1
+10381 cameraserver 20   0  37M  14M  12M S  2.9   0.6   0:01.07 cameraserver
+10380 audioserver  20   0  47M  19M  17M S  2.9   0.9   0:01.49 audioserver
+ 1279 root         20   0 9.3M 3.5M 2.8M S  2.9   0.1   0:28.37 logcat -b all -v threadtime
+ 1101 logd         30  10  21M 6.2M 2.6M S  2.9   0.3   0:36.55 logd
+10518 root         20   0  11M 3.2M 2.7M S  0.0   0.1   0:00.11 head -15
+10388 root         20   0 9.3M 3.3M 2.6M S  0.0   0.1   0:00.11 ip6tables-restore --noflush -w -v
+10387 root         20   0 9.2M 2.4M 1.9M S  0.0   0.1   0:00.14 iptables-restore --noflush -w -v
+==== 1792299805102
+05:03:24 up 16 min,  0 users,  load average: 6.39, 6.17, 4.20
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 127 total,   2 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1716336k used,   323524k free,   202588k buffers
+Swap:        0k total,        0k used,        0k free,  1271292k cached
+400%cpu 179%user  27%nice  36%sys 158%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+13525 system       18  -2 3.6G 126M 102M R  136   6.3   0:02.60 system_server
+13469 graphics     16  -4 2.1G  90M  50M S 96.9   4.5   0:05.27 bootanimation
+13579 root         20   0  11M 3.1M 2.6M R 21.2   0.1   0:00.16 top -b -n 1
+ 1101 logd         30  10  21M 6.3M 2.6M S  6.0   0.3   0:48.49 logd
+13441 audioserver  20   0  47M  19M  17M S  3.0   0.9   0:01.44 audioserver
+ 1279 root         20   0 9.3M 3.5M 2.8M S  3.0   0.1   0:37.59 logcat -b all -v threadtime
+   10 root         20   0    0    0    0 I  3.0   0.0   0:10.87 [rcu_preempt]
+13580 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.08 head -15
+13449 root         20   0 9.3M 3.3M 2.6M S  0.0   0.1   0:00.12 ip6tables-restore --noflush -w -v
+13448 root         20   0 9.2M 2.5M 2.0M S  0.0   0.1   0:00.15 iptables-restore --noflush -w -v
+==== 1792300051101
+05:07:30 up 20 min,  0 users,  load average: 6.84, 6.32, 4.70
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 127 total,   1 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1713276k used,   326584k free,   207152k buffers
+Swap:        0k total,        0k used,        0k free,  1280992k cached
+400%cpu 213%user   0%nice  61%sys 126%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+16718 graphics     16  -4 2.1G  55M  37M S  116   2.7   0:01.79 bootanimation
+16674 root          0 -20 3.4G 118M  98M S  103   5.8   0:03.78 zygote64
+16680 root         -2  -8  92M  37M  27M S 25.8   1.8   0:01.98 surfaceflinger
+16761 root         20   0  11M 3.0M 2.5M R 22.5   0.1   0:00.15 top -b -n 1
+16677 cameraserver 20   0  37M  14M  12M S  3.2   0.6   0:00.93 cameraserver
+ 1102 system       20   0  11M 3.9M 3.1M S  3.2   0.1   0:17.25 servicemanager
+ 1101 logd         30  10  21M 6.3M 2.6M S  3.2   0.3   1:01.08 logd
+16762 root         20   0  11M 3.1M 2.5M S  0.0   0.1   0:00.08 head -15
+16684 root         20   0 9.3M 3.3M 2.7M S  0.0   0.1   0:00.18 ip6tables-restore --noflush -w -v
+16683 root         20   0 9.2M 2.3M 1.9M S  0.0   0.1   0:00.19 iptables-restore --noflush -w -v
+==== 1792300286602
+05:11:26 up 24 min,  0 users,  load average: 6.91, 6.44, 5.09
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 131 total,   2 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1707844k used,   332016k free,   208204k buffers
+Swap:        0k total,        0k used,        0k free,  1291320k cached
+400%cpu 269%user  47%nice  75%sys   9%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+19824 system       18  -2 3.6G 127M 102M R  137   6.3   0:02.49 system_server
+19768 graphics     16  -4 2.1G  90M  50M S  112   4.5   0:06.17 bootanimation
+19870 root         -2  -8  54M  12M 4.7M S 87.5   0.6   0:00.56 crash_dump64 19745 19863 1
+19883 root         20   0  11M 3.0M 2.5M R 15.6   0.1   0:00.17 top -b -n 1
+ 1101 logd         30  10  22M 6.6M 2.6M S  9.3   0.3   1:13.44 logd
+ 1279 root         20   0 9.3M 3.5M 2.8M S  3.1   0.1   0:56.55 logcat -b all -v threadtime
+19884 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.09 head -15
+19872 root         -2  -8 150M  45M 4.1M t  0.0   2.2   0:00.00 surfaceflinger
+19749 root         20   0 9.3M 3.1M 2.5M S  0.0   0.1   0:00.12 ip6tables-restore --noflush -w -v
+19748 root         20   0 9.2M 2.3M 1.9M S  0.0   0.1   0:00.14 iptables-restore --noflush -w -v
+==== 1792300523055
+05:15:22 up 28 min,  0 users,  load average: 5.82, 6.21, 5.31
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 127 total,   2 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1726876k used,   312984k free,   209096k buffers
+Swap:        0k total,        0k used,        0k free,  1284604k cached
+400%cpu 188%user   0%nice  66%sys 125%idle  19%iow   0%irq   3%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+22923 system       18  -2 3.6G 105M  85M R  121   5.2   0:00.91 system_server
+22879 graphics     16  -4 2.1G  86M  47M S  103   4.3   0:04.28 bootanimation
+22946 root         20   0  11M 3.0M 2.5M R 18.7   0.1   0:00.16 top -b -n 1
+ 1279 root         20   0 9.3M 3.5M 2.8M S  9.3   0.1   1:05.78 logcat -b all -v threadtime
+ 1103 system       20   0  16M 6.4M 5.3M S  9.3   0.3   0:36.62 hwservicemanager
+22837 audioserver  20   0  47M  19M  17M S  6.2   0.9   0:01.51 audioserver
+ 1101 logd         30  10  21M 6.6M 2.6M S  6.2   0.3   1:26.13 logd
+22840 root         20   0  34M 7.1M 6.0M S  3.1   0.3   0:00.35 netd
+22838 cameraserver 20   0  37M  13M  12M S  3.1   0.6   0:01.00 cameraserver
+18636 root         20   0    0    0    0 I  3.1   0.0   0:00.30 [kworker/0:2-events]
+==== 1792300768967
+05:19:28 up 32 min,  0 users,  load average: 5.94, 5.82, 5.34
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 130 total,   1 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1733200k used,   306660k free,   210200k buffers
+Swap:        0k total,        0k used,        0k free,  1284664k cached
+400%cpu 174%user  38%nice  41%sys 147%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+26113 system       18  -2 3.6G 122M 100M S  164   6.1   0:02.27 system_server
+26061 graphics     16  -4 2.1G  86M  47M S 85.2   4.3   0:04.69 bootanimation
+26159 root         20   0  11M 3.0M 2.5M R 11.7   0.1   0:00.26 top -b -n 1
+26028 root         20   0 1.2G  64M  58M S  2.9   3.1   0:02.62 zygote
+22974 root         20   0    0    0    0 I  2.9   0.0   0:00.19 [kworker/0:1-events]
+26160 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.15 head -15
+26037 root         20   0 9.3M 3.2M 2.5M S  0.0   0.1   0:00.12 ip6tables-restore --noflush -w -v
+26036 root         20   0 9.2M 2.4M 2.0M S  0.0   0.1   0:00.15 iptables-restore --noflush -w -v
+26035 audioserver  20   0  23M  11M  10M S  0.0   0.5   0:00.59 android.hardware.audio@2.0-service
+26034 wifi         20   0  16M 6.0M 5.1M S  0.0   0.3   0:00.21 wificond
+==== 1792301005118
+05:23:24 up 36 min,  0 users,  load average: 6.91, 6.23, 5.60
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 128 total,   1 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1642276k used,   397584k free,   211364k buffers
+Swap:        0k total,        0k used,        0k free,  1278716k cached
+400%cpu 147%user   3%nice  80%sys 127%idle  43%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+29139 graphics     16  -4 2.1G  89M  50M S 96.6   4.4   0:05.69 bootanimation
+29230 root         20   0  11M 3.0M 2.5M R 16.6   0.1   0:00.12 top -b -n 1
+29106 root         -2  -8 151M  83M  43M S 13.3   4.1   0:04.89 surfaceflinger
+22370 root         20   0    0    0    0 I 10.0   0.0   0:01.06 [kworker/u8:0-events_unbound]
+ 1101 logd         30  10  21M 6.9M 2.6M S 10.0   0.3   1:55.45 logd
+29185 system       18  -2 3.6G 115M  94M S  6.6   5.7   0:01.47 system_server
+ 1207 tombstoned   20   0 8.8M 2.3M 2.0M S  6.6   0.1   0:04.64 tombstoned
+ 1103 system       20   0  16M 6.4M 5.3M S  6.6   0.3   0:47.16 hwservicemanager
+29103 cameraserver 20   0  36M  14M  12M S  3.3   0.6   0:01.11 cameraserver
+29102 audioserver  20   0  47M  19M  17M S  3.3   0.9   0:01.41 audioserver
+==== 1792301244174
+05:27:23 up 40 min,  0 users,  load average: 5.43, 6.00, 5.65
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 128 total,   5 running,  76 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1724296k used,   315564k free,   212556k buffers
+Swap:        0k total,        0k used,        0k free,  1281620k cached
+400%cpu 284%user   0%nice  47%sys  69%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+32318 graphics     16  -4 2.1G  80M  42M S  106   4.0   0:02.11 bootanimation
+32288 root         -2  -8 130M  62M  28M R  103   3.1   0:02.08 surfaceflinger
+32282 root          0 -20 3.4G 139M 119M R  103   6.9   0:03.89 zygote64
+32371 root         20   0  11M 3.0M 2.5M R 25.0   0.1   0:00.15 top -b -n 1
+32284 audioserver  20   0  47M  19M  17M S  6.2   0.9   0:01.43 audioserver
+32285 cameraserver 20   0  37M  14M  12M R  3.1   0.6   0:00.90 cameraserver
+ 1279 root         20   0 9.3M 3.5M 2.8M S  3.1   0.1   1:34.07 logcat -b all -v threadtime
+32372 root         20   0  11M 3.2M 2.7M S  0.0   0.1   0:00.10 head -15
+32292 root         20   0 9.3M 3.1M 2.5M S  0.0   0.1   0:00.12 ip6tables-restore --noflush -w -v
+32291 root         20   0 9.2M 2.3M 1.9M S  0.0   0.1   0:00.13 iptables-restore --noflush -w -v
+==== 1792301490232
+05:31:29 up 44 min,  0 users,  load average: 6.42, 6.19, 5.81
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 128 total,   2 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1736176k used,   303684k free,   213896k buffers
+Swap:        0k total,        0k used,        0k free,  1285196k cached
+400%cpu 227%user  23%nice  57%sys  90%idle   0%iow   0%irq   3%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3197 system       18  -2 3.6G 122M 100M R  210   6.1   0:01.91 system_server
+ 3146 graphics     16  -4 2.1G  86M  47M S  123   4.3   0:04.68 bootanimation
+ 3237 root         20   0  11M 3.0M 2.5M R 30.0   0.1   0:00.12 top -b -n 1
+ 3114 cameraserver 20   0  37M  14M  12M S  6.6   0.6   0:01.02 cameraserver
+ 3113 audioserver  20   0  47M  19M  17M S  6.6   0.9   0:01.40 audioserver
+ 3112 root         20   0 1.2G  63M  58M S  6.6   3.1   0:02.48 zygote
+ 1101 logd         30  10  21M 7.0M 2.6M S  6.6   0.3   2:25.25 logd
+ 1279 root         20   0 9.3M 3.5M 2.8M S  3.3   0.1   1:43.71 logcat -b all -v threadtime
+ 1102 system       20   0  11M 3.9M 3.1M S  3.3   0.1   0:37.93 servicemanager
+   10 root         20   0    0    0    0 I  3.3   0.0   0:30.24 [rcu_preempt]
+==== 1792301725492
+05:35:25 up 48 min,  0 users,  load average: 6.83, 6.71, 6.13
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 128 total,   2 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1753516k used,   286344k free,   217424k buffers
+Swap:        0k total,        0k used,        0k free,  1299832k cached
+400%cpu 179%user  10%nice 103%sys 103%idle   0%iow   0%irq   3%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 6267 system       18  -2 3.6G 109M  88M R  124   5.4   0:01.30 system_server
+ 6219 graphics     16  -4 2.1G  86M  47M S  100   4.3   0:04.22 bootanimation
+ 1279 root         20   0 9.3M 3.5M 2.8M S 34.4   0.1   1:52.55 logcat -b all -v threadtime
+ 1101 logd         30  10  21M 7.0M 2.6M S 24.1   0.3   2:40.44 logd
+ 1094 root         20   0  13M 4.7M 1.8M S 17.2   0.2   0:13.48 ueventd
+ 6296 root         20   0  11M 3.2M 2.7M R 13.7   0.1   0:00.11 top -b -n 1
+ 6186 root         -2  -8 139M  74M  36M S  6.8   3.6   0:04.73 surfaceflinger
+ 6185 root         20   0  34M 7.0M 6.0M S  6.8   0.3   0:00.38 netd
+ 6182 audioserver  20   0  47M  19M  17M S  3.4   0.9   0:01.50 audioserver
+ 1182 system       20   0  12M 4.2M 3.6M S  3.4   0.2   0:03.84 android.hardware.power@1.0-service
+==== 1792301971046
+05:39:30 up 52 min,  0 users,  load average: 6.24, 6.56, 6.21
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 129 total,   2 running,  79 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1709636k used,   330224k free,   222248k buffers
+Swap:        0k total,        0k used,        0k free,  1314312k cached
+400%cpu 190%user   0%nice  27%sys 183%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 9392 nobody        0 -20 3.4G 113M  95M R  100   5.6   0:03.44 zygote64
+ 9446 graphics     16  -4 2.1G  36M  29M S 86.6   1.8   0:01.41 bootanimation
+ 9480 root         20   0  11M 3.1M 2.5M R 20.0   0.1   0:00.13 top -b -n 1
+ 9398 root         -2  -8  90M  37M  27M S  6.6   1.8   0:01.88 surfaceflinger
+ 1103 system       20   0  16M 6.5M 5.3M S  6.6   0.3   1:08.36 hwservicemanager
+ 1101 logd         30  10  21M 6.9M 2.6M S  6.6   0.3   2:57.13 logd
+ 9395 cameraserver 20   0  37M  14M  12M S  3.3   0.6   0:00.93 cameraserver
+ 9394 audioserver  20   0  47M  19M  17M S  3.3   0.9   0:01.34 audioserver
+ 1178 system       20   0  17M 4.5M 3.8M S  3.3   0.2   0:07.55 android.hardware.configstore@1.1-service
+ 1102 system       20   0  11M 3.9M 3.1M S  3.3   0.1   0:44.73 servicemanager
+==== 1792302204130
+05:43:23 up 56 min,  0 users,  load average: 5.64, 6.20, 6.15
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 127 total,   2 running,  79 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1736868k used,   302992k free,   223352k buffers
+Swap:        0k total,        0k used,        0k free,  1317416k cached
+400%cpu 158%user   0%nice  48%sys 194%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+12495 graphics     16  -4 2.1G  55M  38M S 77.4   2.7   0:02.04 bootanimation
+12460 nobody        0 -20 3.4G 118M  98M R 38.7   5.9   0:03.68 zygote64
+12466 root         -2  -8  93M  37M  27M S 19.3   1.8   0:01.92 surfaceflinger
+12549 root         20   0  11M 3.1M 2.6M R 16.1   0.1   0:00.14 top -b -n 1
+ 1279 root         20   0 9.3M 3.4M 2.8M S  3.2   0.1   2:11.59 logcat -b all -v threadtime
+ 1101 logd         30  10  21M 7.0M 2.6M S  3.2   0.3   3:12.10 logd
+   10 root         20   0    0    0    0 I  3.2   0.0   0:38.45 [rcu_preempt]
+12550 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.08 head -15
+12470 root         20   0 9.3M 3.2M 2.6M S  0.0   0.1   0:00.12 ip6tables-restore --noflush -w -v
+12469 root         20   0 9.2M 2.4M 1.9M S  0.0   0.1   0:00.14 iptables-restore --noflush -w -v
