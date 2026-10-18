@@ -1,0 +1,92 @@
+==== 1792296730456
+04:12:10 up 0 min,  0 users,  load average: 4.56, 1.00, 0.33
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 131 total,   3 running,  76 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   631024k used,  1408836k free,    72220k buffers
+Swap:        0k total,        0k used,        0k free,   440656k cached
+400%cpu  52%user   0%nice  88%sys 185%idle  73%iow   0%irq   2%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1088 root          0 -20    0    0    0 R 60.4   0.0   0:10.44 [loop1]
+ 1318 root          0 -20  15M 3.9M 3.4M R 37.5   0.2   0:00.21 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+ 1316 root         20   0  11M 3.0M 2.5M R 18.7   0.1   0:00.29 top -b -n 1
+ 1084 root          0 -20    0    0    0 S 14.5   0.0   0:02.39 [loop0]
+ 1204 root         12  -8  68M  22M  18M D 12.5   1.0   0:01.20 surfaceflinger
+ 1315 root          0 -20  16M 6.6M 5.9M D  8.3   0.3   0:00.46 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86_64 --instruction-set=x86_64 --verify
+ 1202 audioserver  20   0  47M  19M  17M S  2.0   0.9   0:02.18 audioserver
+ 1119 system       20   0  11M 3.6M 3.0M S  2.0   0.1   0:00.37 servicemanager
+ 1076 root          0 -20    0    0    0 I  2.0   0.0   0:00.16 [kworker/3:1H-kblockd]
+   65 root         20   0    0    0    0 I  2.0   0.0   0:00.16 [kworker/2:1-events_power_efficient]
+==== 1792296944107
+04:15:44 up 4 min,  0 users,  load average: 10.28, 5.60, 2.30
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 133 total,   2 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2010472k used,    29388k free,   309256k buffers
+Swap:        0k total,        0k used,        0k free,  1405544k cached
+400%cpu 333%user   4%nice  36%sys  27%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1204 root         -2  -8 177M 104M  59M S  304   5.2   9:18.10 surfaceflinger
+ 1482 u0_a40071    18  -2 1.2G  75M  46M R 67.3   3.7   0:44.12 dex2oat --zip-fd=16 --zip-location=Chrome.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.dex --instruction-set=x86_64 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/app/Chrome --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:29 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1328 graphics     16  -4 2.1G  94M  54M S 39.1   4.7   1:41.16 bootanimation
+ 1510 root         20   0  11M 3.0M 2.5M R 10.8   0.1   0:00.30 top -b -n 1
+ 1359 system       18  -2 3.6G 151M 123M S  6.5   7.5   0:35.97 system_server
+ 1088 root          0 -20    0    0    0 S  5.0   0.0   0:45.02 [loop1]
+ 1118 logd         30  10  19M 3.9M 2.6M S  2.1   0.2   0:02.81 logd
+ 1352 root         20   0 9.3M 3.6M 2.9M S  0.7   0.1   0:03.29 logcat -b all -v threadtime
+ 1084 root          0 -20    0    0    0 S  0.7   0.0   0:10.27 [loop0]
+  702 root         20   0    0    0    0 S  0.7   0.0   0:00.96 [kswapd0]
+==== 1792297191411
+04:19:52 up 8 min,  0 users,  load average: 11.64, 8.73, 4.36
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 126 total,   3 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2009176k used,    30684k free,   455652k buffers
+Swap:        0k total,        0k used,        0k free,  1251212k cached
+400%cpu 251%user   1%nice  52%sys  95%idle   0%iow   0%irq   1%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1204 root         -2  -8 177M 104M  59M S  227   5.2  20:06.88 surfaceflinger
+ 1542 u0_a40008    18  -2 1.2G 108M  79M R 57.6   5.4   1:31.97 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1328 graphics     16  -4 2.1G  95M  54M S 33.6   4.7   3:23.08 bootanimation
+ 1593 root         20   0  11M 3.2M 2.7M R 13.0   0.1   0:00.27 top -b -n 1
+ 1088 root          0 -20    0    0    0 S  4.3   0.0   1:13.19 [loop1]
+ 1359 system       18  -2 3.6G 135M 107M S  2.1   6.7   0:57.85 system_server
+  702 root         20   0    0    0    0 S  2.1   0.0   0:03.22 [kswapd0]
+   65 root         20   0    0    0    0 I  1.0   0.0   0:00.81 [kworker/2:1-events_power_efficient]
+ 1594 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.15 head -15
+ 1561 root         20   0    0    0    0 I  0.0   0.0   0:00.06 [kworker/u8:0-events_unbound]
+==== 1792297421067
+04:23:40 up 12 min,  0 users,  load average: 9.21, 9.51, 5.68
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 124 total,   4 running,  78 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1977124k used,    62736k free,   446076k buffers
+Swap:        0k total,        0k used,        0k free,  1256184k cached
+400%cpu 409%user  11%nice  30%sys  51%idle   0%iow   0%irq   1%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1204 root         -2  -8 177M 104M  59M S  370   5.2  30:11.68 surfaceflinger
+ 1328 graphics     16  -4 2.1G  95M  54M S 47.1   4.7   5:01.40 bootanimation
+ 1359 system       18  -2 3.6G 141M 109M R 20.0   7.0   1:03.81 system_server
+ 1670 root         20   0  11M 3.1M 2.6M R 17.1   0.1   0:00.26 top -b -n 1
+ 1088 root          0 -20    0    0    0 S 10.0   0.0   1:18.61 [loop1]
+ 1118 logd         30  10  19M 4.1M 2.6M S  4.2   0.2   0:06.08 logd
+ 1671 root         20   0  11M 3.0M 2.5M R  1.4   0.1   0:00.14 head -15
+ 1352 root         20   0 9.3M 3.6M 2.9M S  1.4   0.1   0:07.30 logcat -b all -v threadtime
+   65 root         20   0    0    0    0 I  1.4   0.0   0:01.04 [kworker/2:1-events_power_efficient]
+ 1561 root         20   0    0    0    0 I  0.0   0.0   0:00.16 [kworker/u8:0-events_unbound]
