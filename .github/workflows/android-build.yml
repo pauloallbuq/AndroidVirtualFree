@@ -114,7 +114,11 @@ jobs:
           done
 
   guest-e2e:
-    name: Convidado real (boot, instalar APK, root, persistência)
+    strategy:
+      fail-fast: false
+      matrix:
+        accel: [ kvm, tcg ]
+    name: Convidado real ${{ matrix.accel }} (boot, instalar APK, root, persistência)
     needs: build
     runs-on: ubuntu-24.04
     timeout-minutes: 150
@@ -126,6 +130,11 @@ jobs:
         with: { gradle-version: '8.9' }
       - name: QEMU do host
         run: sudo apt-get update -qq && sudo apt-get install -y -qq qemu-system-x86 python3-pil && qemu-system-x86_64 --version
+      - name: Habilitar KVM
+        if: matrix.accel == 'kvm'
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=kvm
       - uses: actions/download-artifact@v4
         with: { name: e2e-inputs, path: e2e-inputs }
       - name: Cache da ISO Android-x86
@@ -135,7 +144,10 @@ jobs:
           key: iso-${{ env.ISO_NAME }}
       - name: Baixar ISO Android-x86 9.0-r2
         run: |
-          [ -s "$ISO_NAME" ] || curl -fL --retry 5 --retry-delay 10 -A "Wget/1.21.4" -o "$ISO_NAME" "$ISO_URL"
+          for i in 1 2 3 4 5 6; do
+            [ -s "$ISO_NAME" ] && [ "$(stat -c %s "$ISO_NAME")" -gt 900000000 ] && break
+            curl -fL -C - --retry 5 --retry-delay 10 -A "Wget/1.21.4" -o "$ISO_NAME" "$ISO_URL" || sleep 20
+          done
           ls -la "$ISO_NAME"; sha256sum "$ISO_NAME"
       - name: Teste ponta-a-ponta (TCG, sem KVM — mesmo modo do celular)
         env:
@@ -143,6 +155,7 @@ jobs:
           AVF_E2E_DATA: ${{ github.workspace }}/e2e-inputs/app/src/main/assets/vm/data.qcow2
           AVF_E2E_PROBE_APK: ${{ github.workspace }}/e2e-inputs/probe/build/outputs/apk/debug/probe-debug.apk
           AVF_E2E_OUT: ${{ github.workspace }}/e2e-out
+          AVF_E2E_ACCEL: ${{ matrix.accel == 'kvm' && 'kvm' || 'tcg,thread=multi,tb-size=256' }}
         run: |
           mkdir -p app/src/main/assets/vm && cp "$AVF_E2E_DATA" app/src/main/assets/vm/data.qcow2
           gradle --no-daemon :app:testDebugUnitTest --tests '*GuestE2ETest*'
@@ -159,7 +172,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: guest-e2e-results
+          name: guest-e2e-results-${{ matrix.accel }}
           path: |
             e2e-out/*.png
             e2e-out/*.txt
@@ -177,7 +190,7 @@ jobs:
           git -c user.name=ci -c user.email=ci@local add -A && git -c user.name=ci -c user.email=ci@local commit -qm "$J run ${{ github.run_id }}"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" ci-results:ci-results/$J-${{ github.run_id }}
         env:
-          J: guest
+          J: guest-${{ matrix.accel }}
       - name: Relatar erro (anotações)
         if: failure()
         shell: bash
@@ -205,7 +218,12 @@ jobs:
           path: ${{ env.ISO_NAME }}
           key: iso-${{ env.ISO_NAME }}
       - name: Baixar ISO Android-x86 9.0-r2
-        run: '[ -s "$ISO_NAME" ] || curl -fL --retry 5 --retry-delay 10 -A "Wget/1.21.4" -o "$ISO_NAME" "$ISO_URL"'
+        run: |
+          for i in 1 2 3 4 5 6; do
+            [ -s "$ISO_NAME" ] && [ "$(stat -c %s "$ISO_NAME")" -gt 900000000 ] && break
+            curl -fL -C - --retry 5 --retry-delay 10 -A "Wget/1.21.4" -o "$ISO_NAME" "$ISO_URL" || sleep 20
+          done
+          ls -la "$ISO_NAME"; sha256sum "$ISO_NAME"
       - name: Habilitar KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules

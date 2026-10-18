@@ -13,7 +13,10 @@ import java.io.OutputStream
  * Cliente RFB/VNC mínimo (sem autenticação; o socket do QEMU é privado do app).
  * Encodings: Raw, CopyRect e DesktopSize. Pixels entregues como ARGB_8888.
  */
-class RfbClient(input: InputStream, output: OutputStream, private val closer: Closeable?, private val listener: Listener) : Closeable {
+class RfbClient(
+    input: InputStream, output: OutputStream, private val closer: Closeable?, private val listener: Listener,
+    private val swapRedBlue: Boolean = false,
+) : Closeable {
 
     interface Listener {
         fun onResize(width: Int, height: Int)
@@ -58,9 +61,8 @@ class RfbClient(input: InputStream, output: OutputStream, private val closer: Cl
         serverName = String(ByteArray(inp.readInt()).also { inp.readFully(it) }, Charsets.UTF_8)
 
         // 32 bpp, little-endian, R<<16 G<<8 B -> já é ARGB ao ler como int LE.
-        // O Android-x86 9 grava o framebuffer da VGA padrão do QEMU com vermelho/azul trocados
-        // (formato do gralloc ≠ formato anunciado pelo bochs-drm); pedimos ao QEMU os canais invertidos.
-        val (rShift, bShift) = if (GUEST_SWAPS_RED_BLUE) 0 to 16 else 16 to 0
+        // Com bochs-drm o Android-x86 9 gravava R/B trocados (visto no CI); com VESA (padrão atual) não.
+        val (rShift, bShift) = if (swapRedBlue) 0 to 16 else 16 to 0
         synchronized(out) {
             out.writeByte(0); out.write(ByteArray(3))
             out.writeByte(32); out.writeByte(24); out.writeByte(0); out.writeByte(1)
@@ -157,8 +159,6 @@ class RfbClient(input: InputStream, output: OutputStream, private val closer: Cl
         const val ENC_DESKTOP_SIZE = -223
         private const val OPAQUE = -0x1000000
 
-        /** Comprovado no CI: app com fundo dourado aparecia azul (R e B trocados). */
-        const val GUEST_SWAPS_RED_BLUE = true
         const val KEY_ESCAPE = 0xff1b
         const val KEY_RETURN = 0xff0d
         const val KEY_BACKSPACE = 0xff08
