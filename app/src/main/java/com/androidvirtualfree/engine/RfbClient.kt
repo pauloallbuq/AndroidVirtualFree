@@ -57,12 +57,15 @@ class RfbClient(input: InputStream, output: OutputStream, private val closer: Cl
         inp.skipBytes(16)
         serverName = String(ByteArray(inp.readInt()).also { inp.readFully(it) }, Charsets.UTF_8)
 
-        // 32 bpp, little-endian, R<<16 G<<8 B -> já é ARGB ao ler como int LE
+        // 32 bpp, little-endian, R<<16 G<<8 B -> já é ARGB ao ler como int LE.
+        // O Android-x86 9 grava o framebuffer da VGA padrão do QEMU com vermelho/azul trocados
+        // (formato do gralloc ≠ formato anunciado pelo bochs-drm); pedimos ao QEMU os canais invertidos.
+        val (rShift, bShift) = if (GUEST_SWAPS_RED_BLUE) 0 to 16 else 16 to 0
         synchronized(out) {
             out.writeByte(0); out.write(ByteArray(3))
             out.writeByte(32); out.writeByte(24); out.writeByte(0); out.writeByte(1)
             out.writeShort(255); out.writeShort(255); out.writeShort(255)
-            out.writeByte(16); out.writeByte(8); out.writeByte(0); out.write(ByteArray(3))
+            out.writeByte(rShift); out.writeByte(8); out.writeByte(bShift); out.write(ByteArray(3))
             val enc = intArrayOf(ENC_COPYRECT, ENC_RAW, ENC_DESKTOP_SIZE)
             out.writeByte(2); out.writeByte(0); out.writeShort(enc.size)
             enc.forEach { out.writeInt(it) }
@@ -154,6 +157,8 @@ class RfbClient(input: InputStream, output: OutputStream, private val closer: Cl
         const val ENC_DESKTOP_SIZE = -223
         private const val OPAQUE = -0x1000000
 
+        /** Comprovado no CI: app com fundo dourado aparecia azul (R e B trocados). */
+        const val GUEST_SWAPS_RED_BLUE = true
         const val KEY_ESCAPE = 0xff1b
         const val KEY_RETURN = 0xff0d
         const val KEY_BACKSPACE = 0xff08
