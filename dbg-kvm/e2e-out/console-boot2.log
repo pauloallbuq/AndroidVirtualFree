@@ -1,0 +1,46 @@
+==== 1792304364651
+06:19:24 up 0 min,  0 users,  load average: 1.24, 0.26, 0.09
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 138 total,   3 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1865872k used,   173988k free,   214236k buffers
+Swap:        0k total,        0k used,        0k free,  1348888k cached
+400%cpu  32%user   0%nice  84%sys 224%idle  32%iow   0%irq  20%sirq   8%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1119 logd         30  10  19M 3.9M 2.6M S 80.0   0.1   0:00.26 logd
+ 1341 system       18  -2 3.8G 208M 176M S 32.0  10.4   0:00.87 system_server
+ 1620 radio        20   0 3.0G  77M  61M D 20.0   3.8   0:00.02 com.android.phone
+ 1092 root          0 -20    0    0    0 D 20.0   0.0   0:03.49 [loop1]
+ 1221 mediacodec   20   0  81M  24M  18M S 16.0   1.1   0:00.15 media.codec hw/android.hardware.media.omx@1.0-service
+ 1636 system       10 -10 3.0G  92M  75M D  8.0   4.5   0:00.00 com.android.settings
+ 1215 mediaex      20   0 2.0G  24M  19M S  8.0   1.1   0:00.06 media.extractor aextractor
+ 1086 root          0 -20    0    0    0 R  8.0   0.0   0:01.83 [loop0]
+ 1079 root         20   0    0    0    0 I  8.0   0.0   0:00.58 [kworker/3:2-ata_sff]
+ 1760 root         20   0 9.2M 3.3M 2.7M S  4.0   0.1   0:00.01 logcat -b all -v threadtime
+==== 1792304388479
+06:19:48 up 0 min,  0 users,  load average: 1.73, 0.46, 0.15
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   2 running, 106 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1919408k used,   120452k free,   248544k buffers
+Swap:        0k total,        0k used,        0k free,  1036484k cached
+400%cpu   0%user   0%nice   4%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1760 root         20   0 9.3M 3.3M 2.7M S  4.0   0.1   0:02.25 logcat -b all -v threadtime
+ 2447 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 2446 root         20   0  11M 4.1M 3.5M R  0.0   0.2   0:00.00 top -b -n 1
+ 2400 shell        20   0  14M 1.6M 1.3M S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 2329 u0_a56       20   0 3.0G  85M  68M S  0.0   4.2   0:00.02 com.google.process.gapps
+ 2310 u0_a29       20   0 3.0G  87M  71M S  0.0   4.3   0:00.03 com.google.android.partnersetup
+ 2294 u0_a23       20   0 3.0G  79M  63M S  0.0   3.9   0:00.02 com.google.android.packageinstaller
+ 2276 u0_a15       20   0 3.0G  77M  61M S  0.0   3.8   0:00.02 com.google.android.onetimeinitializer
+ 2258 u0_a14       20   0 3.0G  79M  63M S  0.0   3.9   0:00.01 com.farmerbb.taskbar.androidx86
+ 2241 u0_a60       20   0 3.0G  81M  65M S  0.0   4.0   0:00.04 com.android.traceur
