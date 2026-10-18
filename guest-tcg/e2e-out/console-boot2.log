@@ -1,0 +1,46 @@
+==== 1792316998285
+09:50:00 up 0 min,  0 users,  load average: 4.46, 0.97, 0.32
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 131 total,   3 running,  75 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   610736k used,  1429124k free,    70052k buffers
+Swap:        0k total,        0k used,        0k free,   426044k cached
+400%cpu  54%user   2%nice 129%sys 141%idle  71%iow   0%irq   2%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1074 root          0 -20    0    0    0 R 65.8   0.0   0:08.76 [loop1]
+ 1174 audioserver  20   0  34M  12M  10M R 51.2   0.5   0:01.82 audioserver
+ 1287 root         20   0  11M 3.2M 2.7M R 26.8   0.1   0:00.27 top -b -n 1
+ 1070 root          0 -20    0    0    0 S 17.0   0.0   0:02.12 [loop0]
+ 1100 logd         30  10  19M 3.4M 2.6M S 12.1   0.1   0:02.30 logd
+    1 root         20   0  15M 3.3M 2.2M S 12.1   0.1   0:04.82 init
+ 1163 audioserver  20   0  21M  10M 9.4M S  9.7   0.5   0:00.89 android.hardware.audio@2.0-service
+ 1277 root          0 -20  35M 8.3M 7.6M D  7.3   0.4   0:00.51 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86_64 --instruction-set=x86_64 --verify
+ 1193 mediacodec   20   0  64M  14M  13M D  7.3   0.7   0:01.16 media.codec hw/android.hardware.media.omx@1.0-service
+ 1102 system       20   0  16M 6.4M 5.4M S  7.3   0.3   0:00.94 hwservicemanager
+==== 1792317273626
+09:54:33 up 4 min,  0 users,  load average: 9.44, 6.45, 2.82
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   3 running, 106 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1695688k used,   344172k free,   274440k buffers
+Swap:        0k total,        0k used,        0k free,   976700k cached
+400%cpu 273%user 149%nice  82%sys 104%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 2127 u0_a40008    30  10 1.2G  95M  81M R  133   4.7   1:58.48 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+ 2813 u0_a17       20   0 3.0G 121M 101M R  131   6.0   0:02.38 com.android.systemui
+ 2861 root         20   0  11M 4.0M 3.3M R 33.3   0.2   0:00.30 top -b -n 1
+ 1193 mediacodec   20   0  83M  24M  18M S 24.4   1.2   0:07.95 media.codec hw/android.hardware.media.omx@1.0-service
+ 1342 system       18  -2 3.8G 222M 180M S 22.2  11.1   1:05.47 system_server
+ 1174 audioserver  20   0  51M  19M  17M S  4.4   0.9   0:03.92 audioserver
+ 1161 system       20   0  11M 4.2M 3.6M S  4.4   0.2   0:00.51 android.hidl.allocator@1.0-service
+ 1100 logd         30  10  21M 4.5M 2.6M S  4.4   0.2   0:08.62 logd
+ 2045 system       10 -10 3.1G 138M 117M S  2.2   6.9   0:06.74 system:ui
+ 1232 root         20   0 9.3M 3.3M 2.7M S  2.2   0.1   0:06.99 logcat -b all -v threadtime
