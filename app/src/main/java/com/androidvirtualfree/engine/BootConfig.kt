@@ -36,13 +36,14 @@ data class BootConfig(val kernelPath: String, val initrdPath: String, val cmdlin
                     tok.startsWith("initrd=") -> initrd = tok.removePrefix("initrd=")
                     tok == "CMDLINE" -> kept.addAll(DEFAULT_CMDLINE.split(' '))
                     tok.startsWith("SRC=") || tok.startsWith("DATA=") || tok.startsWith("video=") ||
-                        tok.startsWith("console=") || tok.startsWith("vga=") -> Unit
+                        tok.startsWith("console=") || tok.startsWith("vga=") || tok.startsWith("androidboot.console=") -> Unit
                     else -> kept.add(tok)
                 }
             }
             if (kept.none { it.startsWith("root=") }) kept.add(0, "root=/dev/ram0")
             if (kept.none { it.startsWith("androidboot.selinux=") }) kept.add("androidboot.selinux=permissive")
-            kept += listOf("DATA=sda", "video=$video", "console=tty0", "console=ttyS0,115200")
+            // ttyS0 = log do kernel (arquivo, sem contrapressão); ttyS1 = shell root do convidado (socket do app)
+            kept += listOf("DATA=sda", "video=$video", "console=tty0", "console=ttyS0,115200", "androidboot.console=ttyS1")
             return BootConfig(kernel, initrd, kept.distinct().joinToString(" "))
         }
 

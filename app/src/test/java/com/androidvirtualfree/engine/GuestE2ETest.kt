@@ -61,7 +61,11 @@ class GuestE2ETest {
             vnc = VncEndpoint.Tcp(1),
             serialLog = File(out, "serial-$tag.log"),
             accel = env["AVF_E2E_ACCEL"] ?: "tcg,thread=multi,tb-size=256",
-            serialSpec = "tcp:127.0.0.1:4555,server,nowait",
+            // ttyS0: kernel em arquivo; ttyS1: shell root (tcp); ttyS2: logcat contínuo em arquivo
+            serialSpec = "file:${File(out, "kernel-$tag.log").absolutePath}",
+            extraArgs = listOf("-serial", "tcp:127.0.0.1:4555,server,nowait",
+                "-serial", "file:${File(out, "logcat-$tag.log").absolutePath}") +
+                (if (env["AVF_E2E_NOREBOOT"] == "1") listOf("-no-reboot") else emptyList()),
         )
         log("qemu: ${cfg.args().joinToString(" ")}")
         val q = QemuProcess(cfg, emptyMap(), File(out, "qemu-$tag.log"))
@@ -101,7 +105,7 @@ class GuestE2ETest {
 
     private fun diag(tag: String, con: GuestConsole) = runCatching {
         File(out, "console-$tag.log").appendText("==== ${System.currentTimeMillis()}\n" +
-            con.run("uptime; getprop init.svc.adbd; getprop ro.adb.secure; logcat -d -v brief -b main,system,crash -t 120", 60_000) + "\n")
+            con.run("uptime; getprop init.svc.adbd; getprop init.svc.zygote; getprop sys.boot_completed; getprop dev.bootcomplete; top -b -n 1 | head -15", 60_000) + "\n")
     }
 
     private fun waitBoot(tag: String, q: QemuProcess, adb: GuestAdb, screen: Screen): Long {
@@ -110,6 +114,7 @@ class GuestE2ETest {
         var shot = 0
         var lastUp = 0.0; var reboots = 0
         while (!con.bootCompleted()) {
+            runCatching { con.run("pgrep -f 'logcat -b all' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &)", 15_000) }
             val up = runCatching { con.run("cut -d' ' -f1 /proc/uptime", 15_000).trim().toDouble() }.getOrDefault(lastUp)
             if (up + 5 < lastUp) { reboots++; log("[$tag] convidado REINICIOU (uptime $lastUp -> $up), total=$reboots") }
             lastUp = up

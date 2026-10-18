@@ -94,7 +94,8 @@ object VmController {
             vnc = VncEndpoint.Unix(vncSocket),
             serialLog = File(img.dir, "serial.log"),
             memoryMb = memoryForDevice(ctx),
-            serialSpec = "unix:${consoleSock.absolutePath},server=on,wait=off",
+            // ttyS0 (kernel) vai para serial.log; ttyS1 = shell root do convidado
+            extraArgs = listOf("-serial", "unix:${consoleSock.absolutePath},server=on,wait=off"),
         )
         val env = mapOf(
             "LD_LIBRARY_PATH" to "${img.libLinks.absolutePath}:$nativeDir",

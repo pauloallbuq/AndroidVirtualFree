@@ -24,6 +24,7 @@ data class VmConfig(
     val cpus: Int = 4,
     val accel: String = "tcg,thread=multi,tb-size=256",
     val serialSpec: String? = null,  // ex.: tcp:127.0.0.1:4555,server,nowait (console root do convidado, testes)
+    val extraArgs: List<String> = emptyList(),
 ) {
     fun args(): List<String> {
         val a = ArrayList<String>()
@@ -46,6 +47,7 @@ data class VmConfig(
             "-serial", serialSpec ?: "file:${serialLog.absolutePath}",
             "-monitor", "stdio",
         )
+        a += extraArgs
         return a
     }
 
