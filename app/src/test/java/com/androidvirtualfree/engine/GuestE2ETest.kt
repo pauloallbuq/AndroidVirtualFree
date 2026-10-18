@@ -138,7 +138,10 @@ class GuestE2ETest {
         q.openAdbForward(PORT)
         val ta = System.currentTimeMillis()
         while (!adb.isBootCompleted()) {
-            assertTrue("ADB do convidado não respondeu", System.currentTimeMillis() - ta < 5 * 60 * 1000)
+            val e = runCatching { adb.shell("echo ok") }.exceptionOrNull()
+            log("[$tag] ADB ainda indisponível: ${e?.let { it.javaClass.simpleName + ": " + it.message + " / " + it.cause } }")
+            runCatching { log("[$tag] rede do convidado: " + con.run("ip -4 addr show eth0 | grep inet; ip route | head -3; getprop ro.adb.secure", 20_000).replace('\n', ' ')) }
+            assertTrue("ADB do convidado não respondeu", System.currentTimeMillis() - ta < 3 * 60 * 1000)
             diag(tag, con); Thread.sleep(10_000)
         }
         log("[$tag] ADB conectado")

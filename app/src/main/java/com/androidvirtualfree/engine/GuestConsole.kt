@@ -63,6 +63,9 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
         val key = adbPublicKey.trim().replace("'", "")
         run("mkdir -p /data/misc/adb; grep -qF '$key' /data/misc/adb/adb_keys 2>/dev/null || echo '$key' >> /data/misc/adb/adb_keys; " +
             "chown system:shell /data/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_keys")
+        // rede do convidado (Wi-Fi virtual sobre a placa do QEMU): liga o Wi-Fi e espera o IP
+        run("settings put global wifi_on 1; svc wifi enable; for i in $(seq 1 45); do " +
+            "ip -4 addr 2>/dev/null | grep -q 'inet 10\\.0\\.2\\.' && break; sleep 2; done; ip -4 addr | grep 'inet 10\\.0\\.2\\.' || echo NET_FAIL", 150_000)
         // adbd do convidado escutando na rede interna do QEMU (porta 5555; só o app alcança via hostfwd)
         run("setprop persist.adb.tcp.port 5555; setprop service.adb.tcp.port 5555; stop adbd; start adbd; sleep 2; " +
             "netstat -ltn 2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL", 60_000)
