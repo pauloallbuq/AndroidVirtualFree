@@ -73,8 +73,18 @@ class GuestAdb(private val port: Int, keyDir: File) {
         shell("am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS >/dev/null 2>&1; " +
             "monkey -p $pkg -c android.intent.category.LAUNCHER 1")
 
-    /** Fecha avisos "não está respondendo" que a lentidão da emulação provoca. */
-    fun closeSystemDialogs() { runCatching { shell("am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS") } }
+    /**
+     * Fecha avisos "não está respondendo" que a lentidão da emulação provoca, tocando em "Wait"/"Aguardar"
+     * (lê a posição real do botão com o uiautomator do convidado). Retorna true se havia um aviso.
+     */
+    fun dismissAnrDialogs(): Boolean = runCatching {
+        val out = shell("uiautomator dump /data/local/tmp/avf-ui.xml >/dev/null 2>&1; " +
+            "tr '>' '\\n' < /data/local/tmp/avf-ui.xml | grep -E 'text=\"(Wait|Aguardar)\"' | grep -o 'bounds=\"[^\"]*\"' | head -1")
+        val n = Regex("\\d+").findAll(out).map { it.value.toInt() }.toList()
+        if (n.size < 4) return false
+        shell("input tap ${(n[0] + n[2]) / 2} ${(n[1] + n[3]) / 2}")
+        true
+    }.getOrDefault(false)
 
     private companion object {
         val TRANSIENT = listOf("Broken pipe", "Can't find service", "DeadObject", "Connection reset", "closed", "timeout", "Timeout")

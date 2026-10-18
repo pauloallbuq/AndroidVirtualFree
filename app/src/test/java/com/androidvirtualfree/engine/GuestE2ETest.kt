@@ -184,7 +184,7 @@ class GuestE2ETest {
         val tg = System.currentTimeMillis()
         while (System.currentTimeMillis() - tg < 120_000) {  // TCG: o primeiro desenho pode levar dezenas de segundos
             Thread.sleep(5_000)
-            adb.closeSystemDialogs()
+            if (adb.dismissAnrDialogs()) log("aviso de ANR do convidado fechado (Wait)")
             gold = screen.fraction { r, g, b -> r in 180..240 && g in 145..205 && b in 25..90 }
             if (gold > 0.30) break
         }

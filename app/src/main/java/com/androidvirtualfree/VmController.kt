@@ -227,6 +227,7 @@ object VmController {
                     err != null -> ctx.getString(R.string.msg_install_failed, explain(ctx, err))
                     pkg != null && !adb.isInstalled(pkg) -> ctx.getString(R.string.msg_install_failed, "pacote não aparece no convidado")
                     else -> {
+                        adb.dismissAnrDialogs()
                         pkg?.let { adb.launch(it) }
                         ctx.getString(R.string.msg_install_ok, pkg ?: apk.name)
                     }

@@ -12,7 +12,9 @@ data class BootConfig(val kernelPath: String, val initrdPath: String, val cmdlin
          * do surfaceflinger (ex.: coleta de pilha num ANR, comum sob TCG) dispara um oops em
          * ttm_bo_vm_open que trava ou reinicia o convidado. VESA 0x144 = 1024x768, 32 bits.
          */
-        val DISPLAY_ARGS = listOf("nomodeset", "vga=0x344", "HWACCEL=0")
+        val DISPLAY_ARGS = listOf("nomodeset", "vga=0x344", "HWACCEL=0",
+            // rede: mantém a placa do QEMU como Ethernet (DHCP automático no boot, sem depender do Wi-Fi virtual)
+            "VIRT_WIFI=0")
         val TCG_SAFE_ARGS = listOf("nowatchdog", "nmi_watchdog=0", "softlockup_panic=0", "hung_task_panic=0",
             "panic=0", "panic_on_oops=0", "rcupdate.rcu_cpu_stall_suppress=1", "tsc=reliable")
 
@@ -45,7 +47,7 @@ data class BootConfig(val kernelPath: String, val initrdPath: String, val cmdlin
                     tok == "CMDLINE" -> kept.addAll(DEFAULT_CMDLINE.split(' '))
                     tok.startsWith("SRC=") || tok.startsWith("DATA=") || tok.startsWith("video=") ||
                         tok.startsWith("console=") || tok.startsWith("vga=") || tok.startsWith("androidboot.console=") ||
-                        tok == "nomodeset" || tok.startsWith("HWACCEL=") -> Unit
+                        tok == "nomodeset" || tok.startsWith("HWACCEL=") || tok.startsWith("VIRT_WIFI=") -> Unit
                     else -> kept.add(tok)
                 }
             }
