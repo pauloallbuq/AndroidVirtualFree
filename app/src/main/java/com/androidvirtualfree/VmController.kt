@@ -28,6 +28,7 @@ object VmController {
     const val ADB_PORT = 15555
     const val VIDEO = "1280x720"
     private const val BOOT_TIMEOUT_MS = 90L * 60 * 1000
+    private const val CONSOLE_DEADLINE_MS = 10L * 60 * 1000
 
     private val main = Handler(Looper.getMainLooper())
     private val worker = Executors.newSingleThreadExecutor()
@@ -114,6 +115,8 @@ object VmController {
         var con: GuestConsole? = null
         var tuned = false
         var trimmed = false
+        var resets = 0
+        var lastReset = t0
         while (true) {
             if (!p.isAlive) throw IllegalStateException(ctx.getString(R.string.msg_qemu_died, p.logTail()))
             if (stopRequested) return
@@ -123,6 +126,13 @@ object VmController {
                 GuestConsole(s.inputStream, s.outputStream, s)
             }.getOrNull()?.also { console = it }
             if (con != null && !tuned) tuned = con.tuneKernel()
+            // Raramente o convidado para logo no início (tela preta, console mudo). Sem resposta do console
+            // em CONSOLE_DEADLINE_MS, reinicia a máquina virtual (no máximo 2 vezes).
+            if (!tuned && resets < 2 && System.currentTimeMillis() - lastReset > CONSOLE_DEADLINE_MS) {
+                Log.w(TAG, "console mudo: system_reset")
+                runCatching { p.monitor("system_reset") }
+                resets++; lastReset = System.currentTimeMillis()
+            }
             if (con != null && tuned && !trimmed) trimmed = con.trimGuest()
             if (con != null && con.bootCompleted()) break
             val min = (System.currentTimeMillis() - t0) / 60000
