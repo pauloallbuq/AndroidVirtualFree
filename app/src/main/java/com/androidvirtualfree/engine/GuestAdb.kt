@@ -70,7 +70,11 @@ class GuestAdb(private val port: Int, keyDir: File) {
         shell("pm list packages $pkg").lines().any { it.trim() == "package:$pkg" }
 
     fun launch(pkg: String): String =
-        shell("monkey -p $pkg -c android.intent.category.LAUNCHER 1")
+        shell("am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS >/dev/null 2>&1; " +
+            "monkey -p $pkg -c android.intent.category.LAUNCHER 1")
+
+    /** Fecha avisos "não está respondendo" que a lentidão da emulação provoca. */
+    fun closeSystemDialogs() { runCatching { shell("am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS") } }
 
     private companion object {
         val TRANSIENT = listOf("Broken pipe", "Can't find service", "DeadObject", "Connection reset", "closed", "timeout", "Timeout")

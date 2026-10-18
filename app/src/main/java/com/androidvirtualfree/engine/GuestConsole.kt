@@ -97,7 +97,10 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
             "settings put global window_animation_scale 0; settings put global transition_animation_scale 0; " +
             "settings put global animator_duration_scale 0; settings put system screen_off_timeout 2147483647; " +
             // sob emulação lenta o Android acusa "não está respondendo" à toa; não cobrir a tela com esses avisos
-            "settings put global hide_error_dialogs 1; settings put secure anr_show_background 0", 120_000)
+            "settings put global hide_error_dialogs 1; settings put secure anr_show_background 0; " +
+            // a configuração só é relida numa mudança de configuração: alterna o modo noturno e volta
+            "cmd uimode night yes >/dev/null 2>&1; cmd uimode night no >/dev/null 2>&1; " +
+            "am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS >/dev/null 2>&1", 120_000)
     }
 
     fun powerOff() { runCatching { output.write("\nsync; reboot -p\n".toByteArray()); output.flush() } }
