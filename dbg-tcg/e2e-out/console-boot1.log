@@ -1,0 +1,23 @@
+==== 1792312655792
+08:37:35 up 0 min,  0 users,  load average: 3.17, 0.70, 0.23
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 129 total,   3 running,  75 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   979892k used,  1059968k free,   111540k buffers
+Swap:        0k total,        0k used,        0k free,   717952k cached
+400%cpu 131%user   7%nice  76%sys 128%idle  59%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1292 graphics     16  -4 2.1G  54M  37M S 75.8   2.7   0:01.45 bootanimation
+ 1076 root          0 -20    0    0    0 D 58.6   0.0   0:06.55 [loop1]
+ 1160 root          0 -20 1.2G  54M  49M D 34.4   2.7   0:01.96 zygote
+ 1159 root          0 -20 3.3G  58M  52M D 34.4   2.9   0:01.78 zygote64
+ 1071 root          0 -20    0    0    0 R 13.7   0.0   0:01.32 [loop0]
+ 1323 root         20   0  11M 3.0M 2.5M R 10.3   0.1   0:00.11 top -b -n 1
+ 1211 root         30  10  19M 5.5M 4.7M S 10.3   0.2   0:00.20 storaged
+ 1181 root         20   0  12M 4.3M 3.6M S  6.8   0.2   0:00.13 healthd
+ 1304 root         20   0 9.3M 3.4M 2.8M S  3.4   0.1   0:00.67 logcat -b all -v threadtime
+ 1101 logd         30  10  19M 3.6M 2.7M S  3.4   0.1   0:00.53 logd
