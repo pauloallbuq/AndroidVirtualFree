@@ -277,15 +277,17 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with: { name: AndroidVirtualFree-debug-apk, path: apk }
-      - name: Release "latest"
+      - name: Release
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
+          set -o pipefail
           cp apk/app-debug.apk AndroidVirtualFree.apk
           sha256sum AndroidVirtualFree.apk | tee sha256.txt
-          gh release delete latest -y --cleanup-tag || true
-          gh release create latest AndroidVirtualFree.apk sha256.txt --target "${{ github.sha }}" \
+          TAG="build-${{ github.run_number }}"
+          gh release create "$TAG" AndroidVirtualFree.apk sha256.txt --target "${{ github.sha }}" --latest \
             --title "Android Virtual Free — build ${{ github.run_number }}" \
-            --notes "APK gerado e aprovado no CI: build + testes unitários, convidado real em KVM e em TCG (modo do celular: boot, instalar APK, root no convidado, persistência) e app no emulador Android. Commit ${{ github.sha }}."
+            --notes "APK aprovado no CI: build e testes unitários; convidado real em KVM e em TCG (modo do celular: boot, instalar APK, root no convidado, persistência); app no emulador Android (Iniciar → convidado pronto → Encerrar). Commit ${{ github.sha }}." \
+            2>&1 | tee release.log || { echo "::error title=release::$(tail -5 release.log | tr '\n' ' ')"; exit 1; }
