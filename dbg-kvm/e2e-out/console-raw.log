@@ -1,0 +1,146 @@
+console:/ # 
+console:/ # echo __AVS$((2+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc2+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((2+0))__
+__AVS2__
+__AVF2__
+console:/ # 
+console:/ # echo __AVS$((3+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3+03+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3+0                         <))__
+__AVS3__
+14.75
+__AVF3__
+console:/ # 
+etprop sys.console:/ # echo __AVS$((4+0))__; uptime; getprop init.svc.adbd; getprop init.4+0))__; uptime; getprop init.svc.adbd; getprop init.                         <svc.zygote; getprop sys.binit.svc.adbd; getprop init.svc.zygote; getprop sys.b                         <oot_completed; getprop peit.svc.zygote; getprop sys.boot_completed; getprop pe                         <rsist.adb.tcp.port; getprs.boot_completed; getprop persist.adb.tcp.port; getpr                         <op service.adb.tcp.port;  persist.adb.tcp.port; getprop service.adb.tcp.port;                          <netstat -ltn 2>/dev/null tprop service.adb.tcp.port; netstat -ltn 2>/dev/null                          <| grep 5555; top -b -n 1 t; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                          <| head -15; echo __AVF$((ll | grep 5555; top -b -n 1 | head -15; echo __AVF$((                         <4+0))__
+__AVS4__
+ 04:02:10 up 0 min,  0 users,  load average: 1.21, 0.26, 0.09
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 132 total,   3 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2010408k used,    29452k free,   386384k buffers
+Swap:        0k total,        0k used,        0k free,  1349668k cached
+400%cpu   0%user  32%nice 108%sys 148%idle 100%iow   0%irq   8%sirq   4%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1077 root          0 -20    0    0    0 S 76.0   0.0   0:05.27 [loop1]
+ 1195 root         -2  -8 170M  97M  55M S 68.0   4.8   0:04.74 surfaceflinger
+ 1333 system       18  -2 3.6G 141M 112M S 36.0   7.1   0:02.17 system_server
+ 1072 root          0 -20    0    0    0 S 24.0   0.0   0:02.38 [loop0]
+ 1064 root          0 -20    0    0    0 I  8.0   0.0   0:00.16 [kworker/3:1H-kblockd]
+ 1431 root         20   0 9.3M 3.4M 2.9M S  4.0   0.1   0:00.05 logcat -b all -v threadtime
+  702 root         20   0    0    0    0 S  4.0   0.0   0:00.08 [kswapd0]
+   43 root         20   0    0    0    0 I  4.0   0.0   0:00.49 [kworker/3:1-events_power_efficient]
+   24 root         20   0    0    0    0 I  4.0   0.0   0:00.22 [kworker/2:0-ata_sff]
+ 1455 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+__AVF4__
+console:/ # 
+console:/ # echo __AVS$((5+0))__; getprop sys.boot_completed; echo __AVF$((5+05+0))__; getprop sys.boot_completed; echo __AVF$((5+0                         <))__
+__AVS5__
+
+__AVF5__
+console:/ # 
+console:/ # echo __AVS$((6+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc6+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((6+0))__
+__AVS6__
+__AVF6__
+console:/ # 
+console:/ # echo __AVS$((7+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7+07+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7+0                         <))__
+__AVS7__
+27.80
+__AVF7__
+console:/ # 
+console:/ # echo __AVS$((8+0))__; getprop sys.boot_completed; echo __AVF$((8+08+0))__; getprop sys.boot_completed; echo __AVF$((8+0                         <))__
+__AVS8__
+1
+__AVF8__
+console:/ # 
+console:/ # echo __AVS$((9+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAPHP09+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAPHP0                         <PrvvkmhCnMPDcuXYJ0eOwXPGBisc/adb; grep -qF 'QAAAAPHP0PrvvkmhCnMPDcuXYJ0eOwXPGB                         <RoFChSFKpXGUJ6V/fpuBWjuVFHP0PrvvkmhCnMPDcuXYJ0eOwXPGBRoFChSFKpXGUJ6V/fpuBWjuVF                         <1jtn39luXbaZ/L8UA3JuYzURoPGBRoFChSFKpXGUJ6V/fpuBWjuVF1jtn39luXbaZ/L8UA3JuYzURo                         <O5VLl2rgh5Ovhd8ECIq1G98gNuVF1jtn39luXbaZ/L8UA3JuYzURoO5VLl2rgh5Ovhd8ECIq1G98gN                         <59Kvmg1YpS7BxwMgFybbD+RZbURoO5VLl2rgh5Ovhd8ECIq1G98gN59Kvmg1YpS7BxwMgFybbD+RZb                         <jbky9U8aY1DBNcRM2X6a9k7rf8gN59Kvmg1YpS7BxwMgFybbD+RZbjbky9U8aY1DBNcRM2X6a9k7rf                         <ETY0jBuKpVVdOd2MeedLMXxpKRZbjbky9U8aY1DBNcRM2X6a9k7rfETY0jBuKpVVdOd2MeedLMXxpK                         <Bcajepon0QWRnwZMaD6pXQLZW7rfETY0jBuKpVVdOd2MeedLMXxpKBcajepon0QWRnwZMaD6pXQLZW                         <NDuBbP65S+ASpPrb71QGwNBNHxpKBcajepon0QWRnwZMaD6pXQLZWNDuBbP65S+ASpPrb71QGwNBNH                         <ySHK/+G12LCVSZPxq4HIKkSE4LZWNDuBbP65S+ASpPrb71QGwNBNHySHK/+G12LCVSZPxq4HIKkSE4                         <mksja2etjCK6gjJlOG/A4kWJoBNHySHK/+G12LCVSZPxq4HIKkSE4mksja2etjCK6gjJlOG/A4kWJo                         <elvuxW6eoE0Z0Pv/PvvmEFoYYSE4mksja2etjCK6gjJlOG/A4kWJoelvuxW6eoE0Z0Pv/PvvmEFoYY                         <btz606P8BLWJHlf29Tt7nlC9tWJoelvuxW6eoE0Z0Pv/PvvmEFoYYbtz606P8BLWJHlf29Tt7nlC9t                         <Ktg9FdY+jT4DjRSqOWmdsLtFmoYYbtz606P8BLWJHlf29Tt7nlC9tKtg9FdY+jT4DjRSqOWmdsLtFm                         <Ahp97DXNAwUEuozkz5RqUfPhoC9tKtg9FdY+jT4DjRSqOWmdsLtFmAhp97DXNAwUEuozkz5RqUfPho                         <T0tEb6VDQ/2hDD7TLUMbiXfuetFmAhp97DXNAwUEuozkz5RqUfPhoT0tEb6VDQ/2hDD7TLUMbiXfue                         <evHz2FDAXMEpcWMstp19hYimTPhoT0tEb6VDQ/2hDD7TLUMbiXfueevHz2FDAXMEpcWMstp19hYimT                         <5k7k8hF01MoTMXXsqx/WNyGEIfueevHz2FDAXMEpcWMstp19hYimT5k7k8hF01MoTMXXsqx/WNyGEI                         <LZe+/6k6K+Yskk9RWMcY9T2pvimT5k7k8hF01MoTMXXsqx/WNyGEILZe+/6k6K+Yskk9RWMcY9T2pv                         <IK8r3LKcbobhCv9idrKy+8IKDGEILZe+/6k6K+Yskk9RWMcY9T2pvIK8r3LKcbobhCv9idrKy+8IKD                         <Ln3jLqbd2syiGTe3YwbZORPt/2pvIK8r3LKcbobhCv9idrKy+8IKDLn3jLqbd2syiGTe3YwbZORPt/                         <yiu5K4oZtU8bRZ+Nqu1QdpqbQIKDLn3jLqbd2syiGTe3YwbZORPt/yiu5K4oZtU8bRZ+Nqu1QdpqbQ                         <ODu5N/bAK5f+/X9ch5na7XVDzPt/yiu5K4oZtU8bRZ+Nqu1QdpqbQODu5N/bAK5f+/X9ch5na7XVDz                         <a2prddROM7dR2yvqz1ScaHSx7qbQODu5N/bAK5f+/X9ch5na7XVDza2prddROM7dR2yvqz1ScaHSx7                         <JznAs4C8DUP+uyrJFKubAW2irVDza2prddROM7dR2yvqz1ScaHSx7JznAs4C8DUP+uyrJFKubAW2ir                         <5jDk7JFn6vTZKFFF/plpFQJJWSx7JznAs4C8DUP+uyrJFKubAW2ir5jDk7JFn6vTZKFFF/plpFQJJW                         <WuhQOgmnsUbl1dgmjVqfWh5Nn2ir5jDk7JFn6vTZKFFF/plpFQJJWWuhQOgmnsUbl1dgmjVqfWh5Nn                         <5X+V1EdBfwEAAQA= unknown@JJWWuhQOgmnsUbl1dgmjVqfWh5Nn5X+V1EdBfwEAAQA= unknown@                         <unknown' /data/misc/adb/a5Nn5X+V1EdBfwEAAQA= unknown@unknown' /data/misc/adb/a                         <db_keys 2>/dev/null || ecwn@unknown' /data/misc/adb/adb_keys 2>/dev/null || ec                         <ho 'QAAAAPHP0PrvvkmhCnMPDb/adb_keys 2>/dev/null || echo 'QAAAAPHP0PrvvkmhCnMPD                         <cuXYJ0eOwXPGBRoFChSFKpXGU echo 'QAAAAPHP0PrvvkmhCnMPDcuXYJ0eOwXPGBRoFChSFKpXGU                         <J6V/fpuBWjuVF1jtn39luXbaZMPDcuXYJ0eOwXPGBRoFChSFKpXGUJ6V/fpuBWjuVF1jtn39luXbaZ                         </L8UA3JuYzURoO5VLl2rgh5OvXGUJ6V/fpuBWjuVF1jtn39luXbaZ/L8UA3JuYzURoO5VLl2rgh5Ov                         <hd8ECIq1G98gN59Kvmg1YpS7BbaZ/L8UA3JuYzURoO5VLl2rgh5Ovhd8ECIq1G98gN59Kvmg1YpS7B                         <xwMgFybbD+RZbjbky9U8aY1DB5Ovhd8ECIq1G98gN59Kvmg1YpS7BxwMgFybbD+RZbjbky9U8aY1DB                         <NcRM2X6a9k7rfETY0jBuKpVVdS7BxwMgFybbD+RZbjbky9U8aY1DBNcRM2X6a9k7rfETY0jBuKpVVd                         <Od2MeedLMXxpKBcajepon0QWR1DBNcRM2X6a9k7rfETY0jBuKpVVdOd2MeedLMXxpKBcajepon0QWR                         <nwZMaD6pXQLZWNDuBbP65S+ASVVdOd2MeedLMXxpKBcajepon0QWRnwZMaD6pXQLZWNDuBbP65S+AS                         <pPrb71QGwNBNHySHK/+G12LCVQWRnwZMaD6pXQLZWNDuBbP65S+ASpPrb71QGwNBNHySHK/+G12LCV                         <SZPxq4HIKkSE4mksja2etjCK6+ASpPrb71QGwNBNHySHK/+G12LCVSZPxq4HIKkSE4mksja2etjCK6                         <gjJlOG/A4kWJoelvuxW6eoE0ZLCVSZPxq4HIKkSE4mksja2etjCK6gjJlOG/A4kWJoelvuxW6eoE0Z                         <0Pv/PvvmEFoYYbtz606P8BLWJCK6gjJlOG/A4kWJoelvuxW6eoE0Z0Pv/PvvmEFoYYbtz606P8BLWJ                         <Hlf29Tt7nlC9tKtg9FdY+jT4DE0Z0Pv/PvvmEFoYYbtz606P8BLWJHlf29Tt7nlC9tKtg9FdY+jT4D                         <jRSqOWmdsLtFmAhp97DXNAwUELWJHlf29Tt7nlC9tKtg9FdY+jT4DjRSqOWmdsLtFmAhp97DXNAwUE                         <uozkz5RqUfPhoT0tEb6VDQ/2hT4DjRSqOWmdsLtFmAhp97DXNAwUEuozkz5RqUfPhoT0tEb6VDQ/2h                         <DD7TLUMbiXfueevHz2FDAXMEpwUEuozkz5RqUfPhoT0tEb6VDQ/2hDD7TLUMbiXfueevHz2FDAXMEp                         <cWMstp19hYimT5k7k8hF01MoT/2hDD7TLUMbiXfueevHz2FDAXMEpcWMstp19hYimT5k7k8hF01MoT                         <MXXsqx/WNyGEILZe+/6k6K+YsMEpcWMstp19hYimT5k7k8hF01MoTMXXsqx/WNyGEILZe+/6k6K+Ys                         <kk9RWMcY9T2pvIK8r3LKcbobhMoTMXXsqx/WNyGEILZe+/6k6K+Yskk9RWMcY9T2pvIK8r3LKcbobh                         <Cv9idrKy+8IKDLn3jLqbd2syi+Yskk9RWMcY9T2pvIK8r3LKcbobhCv9idrKy+8IKDLn3jLqbd2syi                         <GTe3YwbZORPt/yiu5K4oZtU8bobhCv9idrKy+8IKDLn3jLqbd2syiGTe3YwbZORPt/yiu5K4oZtU8b                         <RZ+Nqu1QdpqbQODu5N/bAK5f+syiGTe3YwbZORPt/yiu5K4oZtU8bRZ+Nqu1QdpqbQODu5N/bAK5f+                         </X9ch5na7XVDza2prddROM7dRU8bRZ+Nqu1QdpqbQODu5N/bAK5f+/X9ch5na7XVDza2prddROM7dR                         <2yvqz1ScaHSx7JznAs4C8DUP+5f+/X9ch5na7XVDza2prddROM7dR2yvqz1ScaHSx7JznAs4C8DUP+                         <uyrJFKubAW2ir5jDk7JFn6vTZ7dR2yvqz1ScaHSx7JznAs4C8DUP+uyrJFKubAW2ir5jDk7JFn6vTZ                         <KFFF/plpFQJJWWuhQOgmnsUblUP+uyrJFKubAW2ir5jDk7JFn6vTZKFFF/plpFQJJWWuhQOgmnsUbl                         <1dgmjVqfWh5Nn5X+V1EdBfwEAvTZKFFF/plpFQJJWWuhQOgmnsUbl1dgmjVqfWh5Nn5X+V1EdBfwEA                         <AQA= unknown@unknown' >> Ubl1dgmjVqfWh5Nn5X+V1EdBfwEAAQA= unknown@unknown' >>                          </data/misc/adb/adb_keys; wEAAQA= unknown@unknown' >> /data/misc/adb/adb_keys;                          <chown system:shell /data/>> /data/misc/adb/adb_keys; chown system:shell /data/                         <misc/adb/adb_keys; chmod s; chown system:shell /data/misc/adb/adb_keys; chmod                          <0640 /data/misc/adb/adb_kta/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_k                         <eys; echo __AVF$((9+0))__od 0640 /data/misc/adb/adb_keys; echo __AVF$((9+0))__                         <
+__AVS9__
+__AVF9__
+console:/ # 
+console:/ # echo __AVS$((10+0))__; setprop persist.adb.tcp.port 5555; setprop 10+0))__; setprop persist.adb.tcp.port 5555; setprop                          <service.adb.tcp.port 5555.adb.tcp.port 5555; setprop service.adb.tcp.port 5555                         <; stop adbd; start adbd; op service.adb.tcp.port 5555; stop adbd; start adbd;                          <sleep 2; netstat -ltn 2>/555; stop adbd; start adbd; sleep 2; netstat -ltn 2>/                         <dev/null | grep -q ':5555d; sleep 2; netstat -ltn 2>/dev/null | grep -q ':5555                         <' && echo ADB_TCP_OK || e2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || e                         <cho ADB_TCP_FAIL; echo __555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL; echo __                         <AVF$((10+0))__
+__AVS10__
+ADB_TCP_OK
+__AVF10__
+console:/ # 
+console:/ # echo __AVS$((11+0))__; settings put global device_provisioned 1; s11+0))__; settings put global device_provisioned 1; s                         <ettings put secure user_sobal device_provisioned 1; settings put secure user_s                         <etup_complete 1; pm disab; settings put secure user_setup_complete 1; pm disab                         <le-user --user 0 com.googr_setup_complete 1; pm disable-user --user 0 com.goog                         <le.android.setupwizard >/sable-user --user 0 com.google.android.setupwizard >/                         <dev/null 2>&1; settings poogle.android.setupwizard >/dev/null 2>&1; settings p                         <ut global window_animatio >/dev/null 2>&1; settings put global window_animatio                         <n_scale 0; settings put gs put global window_animation_scale 0; settings put g                         <lobal transition_animatiotion_scale 0; settings put global transition_animatio                         <n_scale 0; settings put gt global transition_animation_scale 0; settings put g                         <lobal animator_duration_stion_scale 0; settings put global animator_duration_s                         <cale 0; settings put systt global animator_duration_scale 0; settings put syst                         <em screen_off_timeout 214n_scale 0; settings put system screen_off_timeout 214                         <7483647; echo __AVF$((11+ystem screen_off_timeout 2147483647; echo __AVF$((11+                         <0))__
+__AVS11__
+__AVF11__
+console:/ # 
+console:/ # echo __AVS$((12+0))__; uptime; getprop init.svc.adbd; getprop init12+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop pnit.svc.zygote; getprop sys.boot_completed; getprop p                         <ersist.adb.tcp.port; getpys.boot_completed; getprop persist.adb.tcp.port; getp                         <rop service.adb.tcp.port;p persist.adb.tcp.port; getprop service.adb.tcp.port;                         < netstat -ltn 2>/dev/nulletprop service.adb.tcp.port; netstat -ltn 2>/dev/null                         < | grep 5555; top -b -n 1rt; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                         < | head -15; echo __AVF$(ull | grep 5555; top -b -n 1 | head -15; echo __AVF$(                         <(12+0))__
+__AVS12__
+ 04:03:50 up 1 min,  0 users,  load average: 1.12, 0.71, 0.27
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1899348k used,   140512k free,   200848k buffers
+Swap:        0k total,        0k used,        0k free,  1019212k cached
+400%cpu   0%user   0%nice   0%sys 400%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3610 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 3609 root         20   0  11M 4.0M 3.3M R  0.0   0.2   0:00.00 top -b -n 1
+ 3552 system       20   0 3.0G  78M  62M S  0.0   3.9   0:00.01 com.android.keychain
+ 3516 u0_a5        20   0 3.0G  75M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3476 u0_a4        20   0 3.0G  75M  59M S  0.0   3.7   0:00.00 com.google.android.ext.services
+ 3447 system       10 -10 3.0G 134M 115M S  0.0   6.7   0:00.08 system:ui
+ 3440 system       20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.zeroxlab.util.tscal
+ 3282 shell        20   0 9.3M 780K 696K S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 3205 u0_a8        20   0 3.1G 191M 126M S  0.0   9.5   0:00.76 com.google.android.gms.unstable
+ 3063 u0_a8        20   0 3.0G 127M 109M S  0.0   6.3   0:00.09 com.google.android.gms.ui
+__AVF12__
+console:/ # 
+console:/ # echo __AVS$((13+0))__; uptime; getprop init.svc.adbd; getprop init13+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop pnit.svc.zygote; getprop sys.boot_completed; getprop p                         <ersist.adb.tcp.port; getpys.boot_completed; getprop persist.adb.tcp.port; getp                         <rop service.adb.tcp.port;p persist.adb.tcp.port; getprop service.adb.tcp.port;                         < netstat -ltn 2>/dev/nulletprop service.adb.tcp.port; netstat -ltn 2>/dev/null                         < | grep 5555; top -b -n 1rt; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                         < | head -15; echo __AVF$(ull | grep 5555; top -b -n 1 | head -15; echo __AVF$(                         <(13+0))__
+__AVS13__
+ 04:05:15 up 3 min,  0 users,  load average: 0.27, 0.53, 0.25
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1893496k used,   146364k free,   201132k buffers
+Swap:        0k total,        0k used,        0k free,  1020396k cached
+400%cpu   0%user   0%nice   0%sys 400%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3624 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 3623 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 3552 system       20   0 3.0G  78M  62M S  0.0   3.9   0:00.01 com.android.keychain
+ 3516 u0_a5        20   0 3.0G  75M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3476 u0_a4        20   0 3.0G  75M  59M S  0.0   3.7   0:00.00 com.google.android.ext.services
+ 3447 system       10 -10 3.0G 134M 115M S  0.0   6.7   0:00.08 system:ui
+ 3440 system       20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.zeroxlab.util.tscal
+ 3282 shell        20   0 9.3M 780K 696K S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 3205 u0_a8        20   0 3.1G 191M 126M S  0.0   9.5   0:00.76 com.google.android.gms.unstable
+ 3063 u0_a8        20   0 3.0G 127M 109M S  0.0   6.3   0:00.09 com.google.android.gms.ui
+__AVF13__
+console:/ # 
+console:/ # echo __AVS$((14+0))__; uptime; getprop init.svc.adbd; getprop init14+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop pnit.svc.zygote; getprop sys.boot_completed; getprop p                         <ersist.adb.tcp.port; getpys.boot_completed; getprop persist.adb.tcp.port; getp                         <rop service.adb.tcp.port;p persist.adb.tcp.port; getprop service.adb.tcp.port;                         < netstat -ltn 2>/dev/nulletprop service.adb.tcp.port; netstat -ltn 2>/dev/null                         < | grep 5555; top -b -n 1rt; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                         < | head -15; echo __AVF$(ull | grep 5555; top -b -n 1 | head -15; echo __AVF$(                         <(14+0))__
+__AVS14__
+ 04:06:40 up 4 min,  0 users,  load average: 0.06, 0.40, 0.22
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1893712k used,   146148k free,   201200k buffers
+Swap:        0k total,        0k used,        0k free,  1020552k cached
+400%cpu   0%user   0%nice   4%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3634 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 3633 root         20   0  11M 4.0M 3.3M R  0.0   0.2   0:00.00 top -b -n 1
+ 3552 system       20   0 3.0G  78M  62M S  0.0   3.9   0:00.01 com.android.keychain
+ 3516 u0_a5        20   0 3.0G  75M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3476 u0_a4        20   0 3.0G  75M  59M S  0.0   3.7   0:00.00 com.google.android.ext.services
+ 3447 system       10 -10 3.0G 134M 115M S  0.0   6.7   0:00.08 system:ui
+ 3440 system       20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.zeroxlab.util.tscal
+ 3282 shell        20   0 9.3M 780K 696K S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 3205 u0_a8        20   0 3.1G 191M 126M S  0.0   9.5   0:00.76 com.google.android.gms.unstable
+ 3063 u0_a8        20   0 3.0G 127M 109M S  0.0   6.3   0:00.09 com.google.android.gms.ui
+__AVF14__
+console:/ # 

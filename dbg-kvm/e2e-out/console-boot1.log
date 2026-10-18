@@ -1,0 +1,92 @@
+==== 1792296130350
+04:02:10 up 0 min,  0 users,  load average: 1.21, 0.26, 0.09
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 132 total,   3 running,  80 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2010408k used,    29452k free,   386384k buffers
+Swap:        0k total,        0k used,        0k free,  1349668k cached
+400%cpu   0%user  32%nice 108%sys 148%idle 100%iow   0%irq   8%sirq   4%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1077 root          0 -20    0    0    0 S 76.0   0.0   0:05.27 [loop1]
+ 1195 root         -2  -8 170M  97M  55M S 68.0   4.8   0:04.74 surfaceflinger
+ 1333 system       18  -2 3.6G 141M 112M S 36.0   7.1   0:02.17 system_server
+ 1072 root          0 -20    0    0    0 S 24.0   0.0   0:02.38 [loop0]
+ 1064 root          0 -20    0    0    0 I  8.0   0.0   0:00.16 [kworker/3:1H-kblockd]
+ 1431 root         20   0 9.3M 3.4M 2.9M S  4.0   0.1   0:00.05 logcat -b all -v threadtime
+  702 root         20   0    0    0    0 S  4.0   0.0   0:00.08 [kswapd0]
+   43 root         20   0    0    0    0 I  4.0   0.0   0:00.49 [kworker/3:1-events_power_efficient]
+   24 root         20   0    0    0    0 I  4.0   0.0   0:00.22 [kworker/2:0-ata_sff]
+ 1455 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+==== 1792296231037
+04:03:50 up 1 min,  0 users,  load average: 1.12, 0.71, 0.27
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1899348k used,   140512k free,   200848k buffers
+Swap:        0k total,        0k used,        0k free,  1019212k cached
+400%cpu   0%user   0%nice   0%sys 400%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3610 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 3609 root         20   0  11M 4.0M 3.3M R  0.0   0.2   0:00.00 top -b -n 1
+ 3552 system       20   0 3.0G  78M  62M S  0.0   3.9   0:00.01 com.android.keychain
+ 3516 u0_a5        20   0 3.0G  75M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3476 u0_a4        20   0 3.0G  75M  59M S  0.0   3.7   0:00.00 com.google.android.ext.services
+ 3447 system       10 -10 3.0G 134M 115M S  0.0   6.7   0:00.08 system:ui
+ 3440 system       20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.zeroxlab.util.tscal
+ 3282 shell        20   0 9.3M 780K 696K S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 3205 u0_a8        20   0 3.1G 191M 126M S  0.0   9.5   0:00.76 com.google.android.gms.unstable
+ 3063 u0_a8        20   0 3.0G 127M 109M S  0.0   6.3   0:00.09 com.google.android.gms.ui
+==== 1792296315867
+04:05:15 up 3 min,  0 users,  load average: 0.27, 0.53, 0.25
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1893496k used,   146364k free,   201132k buffers
+Swap:        0k total,        0k used,        0k free,  1020396k cached
+400%cpu   0%user   0%nice   0%sys 400%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3624 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 3623 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 3552 system       20   0 3.0G  78M  62M S  0.0   3.9   0:00.01 com.android.keychain
+ 3516 u0_a5        20   0 3.0G  75M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3476 u0_a4        20   0 3.0G  75M  59M S  0.0   3.7   0:00.00 com.google.android.ext.services
+ 3447 system       10 -10 3.0G 134M 115M S  0.0   6.7   0:00.08 system:ui
+ 3440 system       20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.zeroxlab.util.tscal
+ 3282 shell        20   0 9.3M 780K 696K S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 3205 u0_a8        20   0 3.1G 191M 126M S  0.0   9.5   0:00.76 com.google.android.gms.unstable
+ 3063 u0_a8        20   0 3.0G 127M 109M S  0.0   6.3   0:00.09 com.google.android.gms.ui
+==== 1792296400702
+04:06:40 up 4 min,  0 users,  load average: 0.06, 0.40, 0.22
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1893712k used,   146148k free,   201200k buffers
+Swap:        0k total,        0k used,        0k free,  1020552k cached
+400%cpu   0%user   0%nice   4%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3634 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 3633 root         20   0  11M 4.0M 3.3M R  0.0   0.2   0:00.00 top -b -n 1
+ 3552 system       20   0 3.0G  78M  62M S  0.0   3.9   0:00.01 com.android.keychain
+ 3516 u0_a5        20   0 3.0G  75M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3476 u0_a4        20   0 3.0G  75M  59M S  0.0   3.7   0:00.00 com.google.android.ext.services
+ 3447 system       10 -10 3.0G 134M 115M S  0.0   6.7   0:00.08 system:ui
+ 3440 system       20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.zeroxlab.util.tscal
+ 3282 shell        20   0 9.3M 780K 696K S  0.0   0.0   0:00.00 adbd --root_seclabel=u:r:su:s0
+ 3205 u0_a8        20   0 3.1G 191M 126M S  0.0   9.5   0:00.76 com.google.android.gms.unstable
+ 3063 u0_a8        20   0 3.0G 127M 109M S  0.0   6.3   0:00.09 com.google.android.gms.ui
