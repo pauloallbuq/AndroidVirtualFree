@@ -1,0 +1,23 @@
+==== 1792304879489
+06:27:58 up 0 min,  0 users,  load average: 1.16, 0.25, 0.08
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 130 total,   4 running,  78 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2013492k used,    26368k free,   266148k buffers
+Swap:        0k total,        0k used,        0k free,  1479576k cached
+400%cpu   4%user  28%nice 108%sys 168%idle  72%iow   0%irq  12%sirq   8%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1089 root          0 -20    0    0    0 D 68.0   0.0   0:04.19 [loop1]
+ 1338 system       18  -2 3.6G 152M 125M R 52.0   7.6   0:01.68 system_server
+ 1084 root          0 -20    0    0    0 R 28.0   0.0   0:02.11 [loop0]
+ 1077 root         20   0    0    0    0 R  8.0   0.0   0:00.59 [kworker/3:2-ata_sff]
+ 1515 root         20   0 9.3M 3.3M 2.7M S  4.0   0.1   0:00.04 logcat -b all -v threadtime
+ 1478 root         20   0    0    0    0 I  4.0   0.0   0:00.00 [kworker/2:2-events]
+ 1076 root          0 -20    0    0    0 I  4.0   0.0   0:00.10 [kworker/3:1H-kblockd]
+  174 root         20   0    0    0    0 I  4.0   0.0   0:00.14 [kworker/1:1-ata_sff]
+   10 root         20   0    0    0    0 I  4.0   0.0   0:00.06 [rcu_preempt]
+ 1533 root         20   0  11M 3.2M 2.6M S  0.0   0.1   0:00.00 head -15
