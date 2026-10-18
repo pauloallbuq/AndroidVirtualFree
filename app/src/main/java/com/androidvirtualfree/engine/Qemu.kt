@@ -25,6 +25,7 @@ data class VmConfig(
     val accel: String = "tcg,thread=multi,tb-size=256",
     val serialSpec: String? = null,  // ex.: tcp:127.0.0.1:4555,server,nowait (console root do convidado, testes)
     val extraArgs: List<String> = emptyList(),
+    val cpuModel: String? = null,    // null = host (KVM) ou TCG_CPU
 ) {
     fun args(): List<String> {
         val a = ArrayList<String>()
@@ -32,7 +33,7 @@ data class VmConfig(
         firmwareDir?.let { a += listOf("-L", it.absolutePath) }
         a += listOf(
             "-M", "pc", "-accel", accel,
-            "-cpu", if (accel.startsWith("kvm")) "host" else "max",
+            "-cpu", cpuModel ?: if (accel.startsWith("kvm")) "host" else TCG_CPU,
             "-smp", cpus.toString(), "-m", memoryMb.toString(),
             "-kernel", kernel.absolutePath, "-initrd", initrd.absolutePath, "-append", cmdline,
             "-drive", "file=${dataDisk.absolutePath},if=ide,index=0,media=disk,format=qcow2,cache=writeback,discard=unmap",
@@ -51,7 +52,11 @@ data class VmConfig(
         return a
     }
 
-    companion object { const val NETDEV = "n0" }
+    companion object {
+        const val NETDEV = "n0"
+        /** CPU x86-64 para TCG: o mínimo que o Android-x86 9 exige (SSSE3/SSE4.x/POPCNT), sem extensões exóticas do "max". */
+        const val TCG_CPU = "qemu64,+ssse3,+sse4.1,+sse4.2,+popcnt,+cx16"
+    }
 }
 
 /** Processo do QEMU. O monitor HMP fica no stdin (privado ao app, sem porta aberta). */

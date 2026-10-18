@@ -65,7 +65,9 @@ class GuestE2ETest {
             serialSpec = "file:${File(out, "kernel-$tag.log").absolutePath}",
             extraArgs = listOf("-serial", "tcp:127.0.0.1:4555,server,nowait",
                 "-serial", "file:${File(out, "logcat-$tag.log").absolutePath}") +
-                (if (env["AVF_E2E_NOREBOOT"] == "1") listOf("-no-reboot") else emptyList()),
+                (if (env["AVF_E2E_NOREBOOT"] == "1") listOf("-no-reboot") else emptyList()) +
+                listOf("-d", "cpu_reset,guest_errors", "-D", File(out, "qemu-debug-$tag.log").absolutePath),
+            cpuModel = env["AVF_E2E_CPU"]?.takeIf { it.isNotBlank() },
         )
         log("qemu: ${cfg.args().joinToString(" ")}")
         val q = QemuProcess(cfg, emptyMap(), File(out, "qemu-$tag.log"))
