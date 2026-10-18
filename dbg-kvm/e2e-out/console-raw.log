@@ -1,0 +1,102 @@
+console:/ # 
+console:/ # echo __AVS$((2+0))__; echo 8 > /proc/sys/kernel/printk; cat /proc/2+0))__; echo 8 > /proc/sys/kernel/printk; cat /proc/                         <sys/kernel/printk /proc/sys/kernel/printk; cat /proc/sys/kernel/printk /proc/s                         <ys/kernel/panic /proc/sysoc/sys/kernel/printk /proc/sys/kernel/panic /proc/sys                         </kernel/softlockup_panic c/sys/kernel/panic /proc/sys/kernel/softlockup_panic                          </proc/sys/kernel/hung_tassys/kernel/softlockup_panic /proc/sys/kernel/hung_tas                         <k_panic /proc/sys/kernel/ic /proc/sys/kernel/hung_task_panic /proc/sys/kernel/                         <panic_on_oops 2>&1; zcat task_panic /proc/sys/kernel/panic_on_oops 2>&1; zcat                          </proc/config.gz 2>/dev/nuel/panic_on_oops 2>&1; zcat /proc/config.gz 2>/dev/nu                         <ll | grep -E 'PANIC|LOCKUat /proc/config.gz 2>/dev/null | grep -E 'PANIC|LOCKU                         <P|HUNG_TASK|WATCHDOG' | g/null | grep -E 'PANIC|LOCKUP|HUNG_TASK|WATCHDOG' | g                         <rep -v '^#'; echo __AVF$(CKUP|HUNG_TASK|WATCHDOG' | grep -v '^#'; echo __AVF$(                         <(2+0))__
+__AVS2__
+8	0	0	0
+0
+0
+cat: /proc/sys/kernel/hung_task_panic: No such file or directory
+1
+CONFIG_CLOCKSOURCE_WATCHDOG=y
+CONFIG_ACPI_WATCHDOG=y
+CONFIG_HAVE_HARDLOCKUP_DETECTOR_PERF=y
+CONFIG_WATCHDOG=y
+CONFIG_WATCHDOG_CORE=y
+CONFIG_WATCHDOG_HANDLE_BOOT_ENABLED=y
+CONFIG_SBC_FITPC2_WATCHDOG=m
+CONFIG_HP_WATCHDOG=m
+CONFIG_PCIPCWATCHDOG=m
+CONFIG_USBPCWATCHDOG=m
+CONFIG_PVPANIC=m
+CONFIG_LOCKUP_DETECTOR=y
+CONFIG_SOFTLOCKUP_DETECTOR=y
+CONFIG_BOOTPARAM_SOFTLOCKUP_PANIC_VALUE=0
+CONFIG_HARDLOCKUP_DETECTOR_PERF=y
+CONFIG_HARDLOCKUP_CHECK_TIMESTAMP=y
+CONFIG_HARDLOCKUP_DETECTOR=y
+CONFIG_BOOTPARAM_HARDLOCKUP_PANIC_VALUE=0
+CONFIG_PANIC_ON_OOPS_VALUE=0
+CONFIG_PANIC_TIMEOUT=5
+__AVF2__
+console:/ # 
+console:/ # echo __AVS$((3+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc3+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((3+0))__
+__AVS3__
+__AVF3__
+console:/ # 
+cho __console:/ # echo __AVS$((4+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4+04+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4+0                         <))__
+__AVS4__
+14.91
+__AVF4__
+console:/ # 
+console:/ # echo __AVS$((5+0))__; uptime; getprop init.svc.adbd; getprop init.5+0))__; uptime; getprop init.svc.adbd; getprop init.                         <svc.zygote; getprop sys.binit.svc.adbd; getprop init.svc.zygote; getprop sys.b                         <oot_completed; getprop peit.svc.zygote; getprop sys.boot_completed; getprop pe                         <rsist.adb.tcp.port; getprs.boot_completed; getprop persist.adb.tcp.port; getpr                         <op service.adb.tcp.port;  persist.adb.tcp.port; getprop service.adb.tcp.port;                          <netstat -ltn 2>/dev/null tprop service.adb.tcp.port; netstat -ltn 2>/dev/null                          <| grep 5555; top -b -n 1 t; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                          <| head -15; echo __AVF$((ll | grep 5555; top -b -n 1 | head -15; echo __AVF$((                         <5+0))__
+__AVS5__
+ 04:22:56 up 0 min,  0 users,  load average: 1.71, 0.38, 0.12
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 131 total,   6 running,  77 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2009240k used,    30620k free,   316892k buffers
+Swap:        0k total,        0k used,        0k free,  1421244k cached
+400%cpu  84%user  44%nice 100%sys 132%idle  16%iow   0%irq  12%sirq  12%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1199 root         -2  -8 176M 105M  59M R  108   5.2   0:05.12 surfaceflinger
+ 1445 u0_a40073    18  -2 1.2G  18M  17M R 88.0   0.8   0:00.07 dex2oat --zip-fd=16 --zip-location=Chrome.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@app@Chrome@Chrome.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/app/Chrome --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:29 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1336 system       18  -2 3.6G 151M 123M S 64.0   7.5   0:02.35 system_server
+ 1086 root          0 -20    0    0    0 R 60.0   0.0   0:04.87 [loop1]
+ 1081 root          0 -20    0    0    0 S 16.0   0.0   0:02.44 [loop0]
+ 1442 root         20   0 9.2M 3.4M 2.9M S  4.0   0.1   0:00.02 logcat -b all -v threadtime
+ 1073 root          0 -20    0    0    0 I  4.0   0.0   0:00.13 [kworker/3:1H-kblockd]
+  703 root         20   0    0    0    0 S  4.0   0.0   0:00.05 [kswapd0]
+   43 root         20   0    0    0    0 I  4.0   0.0   0:00.25 [kworker/1:1-ata_sff]
+   10 root         20   0    0    0    0 I  4.0   0.0   0:00.06 [rcu_preempt]
+__AVF5__
+console:/ # 
+console:/ # echo __AVS$((6+0))__; getprop sys.boot_completed; echo __AVF$((6+06+0))__; getprop sys.boot_completed; echo __AVF$((6+0                         <))__
+__AVS6__
+
+__AVF6__
+console:/ # 
+console:/ # echo __AVS$((7+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc7+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((7+0))__
+__AVS7__
+__AVF7__
+console:/ # 
+console:/ # echo __AVS$((8+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((8+08+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((8+0                         <))__
+__AVS8__
+25.67
+__AVF8__
+console:/ # 
+console:/ # echo __AVS$((9+0))__; getprop sys.boot_completed; echo __AVF$((9+09+0))__; getprop sys.boot_completed; echo __AVF$((9+0                         <))__
+__AVS9__
+1
+__AVF9__
+console:/ # 
+console:/ # echo __AVS$((10+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAMlU10+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAMlU                         <Fm+H+oUQflUUUUlb2XO0Wwdk2misc/adb; grep -qF 'QAAAAMlUFm+H+oUQflUUUUlb2XO0Wwdk2                         <CyduFdoStkz4JIf1iqG7Zpn+cMlUFm+H+oUQflUUUUlb2XO0Wwdk2CyduFdoStkz4JIf1iqG7Zpn+c                         <K1cSREuD9KwQz4JPdSdzOh8lZdk2CyduFdoStkz4JIf1iqG7Zpn+cK1cSREuD9KwQz4JPdSdzOh8lZ                         <yB13KHXzpaEyNRsOq8WdODT/Pn+cK1cSREuD9KwQz4JPdSdzOh8lZyB13KHXzpaEyNRsOq8WdODT/P                         <dTWRKugjWWOjnQarAntuLEhDl8lZyB13KHXzpaEyNRsOq8WdODT/PdTWRKugjWWOjnQarAntuLEhDl                         <P3+c9+MGbRwOOrv1FpTwqnf/GT/PdTWRKugjWWOjnQarAntuLEhDlP3+c9+MGbRwOOrv1FpTwqnf/G                         <2OVSn9uUDA3GaYiKFfk3BoPdahDlP3+c9+MGbRwOOrv1FpTwqnf/G2OVSn9uUDA3GaYiKFfk3BoPda                         <njDGlxtCGK3zeR6FBtFmpiXE9f/G2OVSn9uUDA3GaYiKFfk3BoPdanjDGlxtCGK3zeR6FBtFmpiXE9                         <38OqzBxbcOFAJEHgrjOQrmRE8PdanjDGlxtCGK3zeR6FBtFmpiXE938OqzBxbcOFAJEHgrjOQrmRE8                         </YyEhwNU34BPAlN2aIutk39hRXE938OqzBxbcOFAJEHgrjOQrmRE8/YyEhwNU34BPAlN2aIutk39hR                         <Vpt/HONWijkkf+s05VWh4Ioy6RE8/YyEhwNU34BPAlN2aIutk39hRVpt/HONWijkkf+s05VWh4Ioy6                         <9O+6qUh3PMY89NJC+Uf56d7sN9hRVpt/HONWijkkf+s05VWh4Ioy69O+6qUh3PMY89NJC+Uf56d7sN                         <sZe9c9xpsyi8eRb/WtSqag5KToy69O+6qUh3PMY89NJC+Uf56d7sNsZe9c9xpsyi8eRb/WtSqag5KT                         <sz4VYVI3reU/nPFYoLkajZXH37sNsZe9c9xpsyi8eRb/WtSqag5KTsz4VYVI3reU/nPFYoLkajZXH3                         <ZrSZXMrEZXOnfmE/gElbCjjKO5KTsz4VYVI3reU/nPFYoLkajZXH3ZrSZXMrEZXOnfmE/gElbCjjKO                         <cjOYXMikcpvELzhqyHBQmeJzjXH3ZrSZXMrEZXOnfmE/gElbCjjKOcjOYXMikcpvELzhqyHBQmeJzj                         <traNc6eD2NuARGL7m7I3m4HjdjKOcjOYXMikcpvELzhqyHBQmeJzjtraNc6eD2NuARGL7m7I3m4Hjd                         <tvZKsP6QPtKgEmq9BRYUNPlizJzjtraNc6eD2NuARGL7m7I3m4HjdtvZKsP6QPtKgEmq9BRYUNPliz                         <a4SKZ3/6hNZZc2JSBzpVWQk9sHjdtvZKsP6QPtKgEmq9BRYUNPliza4SKZ3/6hNZZc2JSBzpVWQk9s                         <FrQiG4mTF3NeDkqBS8jpFDPrPliza4SKZ3/6hNZZc2JSBzpVWQk9sFrQiG4mTF3NeDkqBS8jpFDPrP                         <zbK0FY4DE2Q7FgU0Xct0h0yMck9sFrQiG4mTF3NeDkqBS8jpFDPrPzbK0FY4DE2Q7FgU0Xct0h0yMc                         <xH/39fshutR/kuukVMeStyZPcPrPzbK0FY4DE2Q7FgU0Xct0h0yMcxH/39fshutR/kuukVMeStyZPc                         <jJ+DiyS4LGWaE66SF4iRzmnSgyMcxH/39fshutR/kuukVMeStyZPcjJ+DiyS4LGWaE66SF4iRzmnSg                         <V+zxzPNg8HOWORF6Lirv58LiVZPcjJ+DiyS4LGWaE66SF4iRzmnSgV+zxzPNg8HOWORF6Lirv58LiV                         <gwhTJVq5JomtUr7+o863GKWaknSgV+zxzPNg8HOWORF6Lirv58LiVgwhTJVq5JomtUr7+o863GKWak                         <SaNptvi3rFI1GEXiPhQAYjIwILiVgwhTJVq5JomtUr7+o863GKWakSaNptvi3rFI1GEXiPhQAYjIwI                         <eCD2GMPFMCfkOEG/mc+04YYAnWakSaNptvi3rFI1GEXiPhQAYjIwIeCD2GMPFMCfkOEG/mc+04YYAn                         <0ZOvQSrh9XgEAAQA= unknownIwIeCD2GMPFMCfkOEG/mc+04YYAn0ZOvQSrh9XgEAAQA= unknown                         <@unknown' /data/misc/adb/YAn0ZOvQSrh9XgEAAQA= unknown@unknown' /data/misc/adb/                         <adb_keys 2>/dev/null || eown@unknown' /data/misc/adb/adb_keys 2>/dev/null || e                         <cho 'QAAAAMlUFm+H+oUQflUUdb/adb_keys 2>/dev/null || echo 'QAAAAMlUFm+H+oUQflUU                         <UUlb2XO0Wwdk2CyduFdoStkz4| echo 'QAAAAMlUFm+H+oUQflUUUUlb2XO0Wwdk2CyduFdoStkz4                         <JIf1iqG7Zpn+cK1cSREuD9KwQlUUUUlb2XO0Wwdk2CyduFdoStkz4JIf1iqG7Zpn+cK1cSREuD9KwQ                         <z4JPdSdzOh8lZyB13KHXzpaEykz4JIf1iqG7Zpn+cK1cSREuD9KwQz4JPdSdzOh8lZyB13KHXzpaEy                         <NRsOq8WdODT/PdTWRKugjWWOjKwQz4JPdSdzOh8lZyB13KHXzpaEyNRsOq8WdODT/PdTWRKugjWWOj                         <nQarAntuLEhDlP3+c9+MGbRwOaEyNRsOq8WdODT/PdTWRKugjWWOjnQarAntuLEhDlP3+c9+MGbRwO                         <Orv1FpTwqnf/G2OVSn9uUDA3GWOjnQarAntuLEhDlP3+c9+MGbRwOOrv1FpTwqnf/G2OVSn9uUDA3G                         <aYiKFfk3BoPdanjDGlxtCGK3zRwOOrv1FpTwqnf/G2OVSn9uUDA3GaYiKFfk3BoPdanjDGlxtCGK3z                         <eR6FBtFmpiXE938OqzBxbcOFAA3GaYiKFfk3BoPdanjDGlxtCGK3zeR6FBtFmpiXE938OqzBxbcOFA                         <JEHgrjOQrmRE8/YyEhwNU34BPK3zeR6FBtFmpiXE938OqzBxbcOFAJEHgrjOQrmRE8/YyEhwNU34BP                         <AlN2aIutk39hRVpt/HONWijkkOFAJEHgrjOQrmRE8/YyEhwNU34BPAlN2aIutk39hRVpt/HONWijkk                         <f+s05VWh4Ioy69O+6qUh3PMY84BPAlN2aIutk39hRVpt/HONWijkkf+s05VWh4Ioy69O+6qUh3PMY8                         <9NJC+Uf56d7sNsZe9c9xpsyi8jkkf+s05VWh4Ioy69O+6qUh3PMY89NJC+Uf56d7sNsZe9c9xpsyi8                         <eRb/WtSqag5KTsz4VYVI3reU/MY89NJC+Uf56d7sNsZe9c9xpsyi8eRb/WtSqag5KTsz4VYVI3reU/                         <nPFYoLkajZXH3ZrSZXMrEZXOnyi8eRb/WtSqag5KTsz4VYVI3reU/nPFYoLkajZXH3ZrSZXMrEZXOn                         <fmE/gElbCjjKOcjOYXMikcpvEeU/nPFYoLkajZXH3ZrSZXMrEZXOnfmE/gElbCjjKOcjOYXMikcpvE                         <LzhqyHBQmeJzjtraNc6eD2NuAXOnfmE/gElbCjjKOcjOYXMikcpvELzhqyHBQmeJzjtraNc6eD2NuA                         <RGL7m7I3m4HjdtvZKsP6QPtKgpvELzhqyHBQmeJzjtraNc6eD2NuARGL7m7I3m4HjdtvZKsP6QPtKg                         <Emq9BRYUNPliza4SKZ3/6hNZZNuARGL7m7I3m4HjdtvZKsP6QPtKgEmq9BRYUNPliza4SKZ3/6hNZZ                         <c2JSBzpVWQk9sFrQiG4mTF3NetKgEmq9BRYUNPliza4SKZ3/6hNZZc2JSBzpVWQk9sFrQiG4mTF3Ne                         <DkqBS8jpFDPrPzbK0FY4DE2Q7NZZc2JSBzpVWQk9sFrQiG4mTF3NeDkqBS8jpFDPrPzbK0FY4DE2Q7                         <FgU0Xct0h0yMcxH/39fshutR/3NeDkqBS8jpFDPrPzbK0FY4DE2Q7FgU0Xct0h0yMcxH/39fshutR/                         <kuukVMeStyZPcjJ+DiyS4LGWa2Q7FgU0Xct0h0yMcxH/39fshutR/kuukVMeStyZPcjJ+DiyS4LGWa                         <E66SF4iRzmnSgV+zxzPNg8HOWtR/kuukVMeStyZPcjJ+DiyS4LGWaE66SF4iRzmnSgV+zxzPNg8HOW                         <ORF6Lirv58LiVgwhTJVq5JomtGWaE66SF4iRzmnSgV+zxzPNg8HOWORF6Lirv58LiVgwhTJVq5Jomt                         <Ur7+o863GKWakSaNptvi3rFI1HOWORF6Lirv58LiVgwhTJVq5JomtUr7+o863GKWakSaNptvi3rFI1                         <GEXiPhQAYjIwIeCD2GMPFMCfkomtUr7+o863GKWakSaNptvi3rFI1GEXiPhQAYjIwIeCD2GMPFMCfk                         <OEG/mc+04YYAn0ZOvQSrh9XgEFI1GEXiPhQAYjIwIeCD2GMPFMCfkOEG/mc+04YYAn0ZOvQSrh9XgE                         <AAQA= unknown@unknown' >>CfkOEG/mc+04YYAn0ZOvQSrh9XgEAAQA= unknown@unknown' >>                         < /data/misc/adb/adb_keys;XgEAAQA= unknown@unknown' >> /data/misc/adb/adb_keys;                         < chown system:shell /data >> /data/misc/adb/adb_keys; chown system:shell /data                         </misc/adb/adb_keys; chmodys; chown system:shell /data/misc/adb/adb_keys; chmod                         < 0640 /data/misc/adb/adb_ata/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_                         <keys; echo __AVF$((10+0))mod 0640 /data/misc/adb/adb_keys; echo __AVF$((10+0))                         <__
+__AVS10__
+__AVF10__
+console:/ # 
+console:/ # echo __AVS$((11+0))__; settings put global wifi_on 1; svc wifi ena11+0))__; settings put global wifi_on 1; svc wifi ena                         <ble; for i in $(seq 1 45)obal wifi_on 1; svc wifi enable; for i in $(seq 1 45)                         <; do ip -4 addr 2>/dev/nuenable; for i in $(seq 1 45); do ip -4 addr 2>/dev/nu                         <ll | grep -q 'inet 10\.0\45); do ip -4 addr 2>/dev/null | grep -q 'inet 10\.0\                         <.2\.' && break; sleep 2; /null | grep -q 'inet 10\.0\.2\.' && break; sleep 2;                          <done; ip -4 addr | grep '.0\.2\.' && break; sleep 2; done; ip -4 addr | grep '                         <inet 10\.0\.2\.' || echo 2; done; ip -4 addr | grep 'inet 10\.0\.2\.' || echo                          <NET_FAIL; echo __AVF$((11p 'inet 10\.0\.2\.' || echo NET_FAIL; echo __AVF$((11                         <+0))__
+__AVS11__
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global wlan0
+__AVF11__
+console:/ # 
+console:/ # echo __AVS$((12+0))__; setprop persist.adb.tcp.port 5555; setprop 12+0))__; setprop persist.adb.tcp.port 5555; setprop                          <service.adb.tcp.port 5555.adb.tcp.port 5555; setprop service.adb.tcp.port 5555                         <; stop adbd; start adbd; op service.adb.tcp.port 5555; stop adbd; start adbd;                          <sleep 2; netstat -ltn 2>/555; stop adbd; start adbd; sleep 2; netstat -ltn 2>/                         <dev/null | grep -q ':5555d; sleep 2; netstat -ltn 2>/dev/null | grep -q ':5555                         <' && echo ADB_TCP_OK || e2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || e                         <cho ADB_TCP_FAIL; echo __555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL; echo __                         <AVF$((12+0))__
+__AVS12__
+ADB_TCP_OK
+__AVF12__
+console:/ # 
+console:/ # echo __AVS$((13+0))__; settings put global device_provisioned 1; s13+0))__; settings put global device_provisioned 1; s                         <ettings put secure user_sobal device_provisioned 1; settings put secure user_s                         <etup_complete 1; pm disab; settings put secure user_setup_complete 1; pm disab                         <le-user --user 0 com.googr_setup_complete 1; pm disable-user --user 0 com.goog                         <le.android.setupwizard >/sable-user --user 0 com.google.android.setupwizard >/                         <dev/null 2>&1; settings poogle.android.setupwizard >/dev/null 2>&1; settings p                         <ut global window_animatio >/dev/null 2>&1; settings put global window_animatio                         <n_scale 0; settings put gs put global window_animation_scale 0; settings put g                         <lobal transition_animatiotion_scale 0; settings put global transition_animatio                         <n_scale 0; settings put gt global transition_animation_scale 0; settings put g                         <lobal animator_duration_stion_scale 0; settings put global animator_duration_s                         <cale 0; settings put systt global animator_duration_scale 0; settings put syst                         <em screen_off_timeout 214n_scale 0; settings put system screen_off_timeout 214                         <7483647; echo __AVF$((13+ystem screen_off_timeout 2147483647; echo __AVF$((13+                         <0))__
+__AVS13__
+__AVF13__
+consol
