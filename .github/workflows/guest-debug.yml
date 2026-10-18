@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        accel: [ kvm, tcg ]
+        accel: [ kvm, tcg, tcg-b ]
     name: Convidado (${{ matrix.accel }})
     runs-on: ubuntu-24.04
     timeout-minutes: 100

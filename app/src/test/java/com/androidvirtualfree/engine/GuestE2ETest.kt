@@ -119,7 +119,7 @@ class GuestE2ETest {
         fun kernelInfo() = runCatching {
             log("[$tag] kernel: " + con.run("echo 8 > /proc/sys/kernel/printk; cat /proc/sys/kernel/printk /proc/sys/kernel/panic " +
                 "/proc/sys/kernel/softlockup_panic /proc/sys/kernel/hung_task_panic /proc/sys/kernel/panic_on_oops 2>&1; " +
-                "zcat /proc/config.gz 2>/dev/null | grep -E 'PANIC|LOCKUP|HUNG_TASK|WATCHDOG' | grep -v '^#'", 60_000).replace('\n', ' '))
+                "grep -n -iE 'virt_?wifi|wifi_eth|ethernet' /system/etc/init.sh | head -20", 60_000).replace('\n', ' '))
         }
         var lastUp = 0.0; var reboots = 0
         while (!con.bootCompleted()) {
