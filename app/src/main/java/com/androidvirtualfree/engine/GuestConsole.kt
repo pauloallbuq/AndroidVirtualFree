@@ -85,13 +85,13 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
     fun prepareAfterBoot(adbPublicKey: String) {
         val key = adbPublicKey.trim().replace("'", "")
         run("mkdir -p /data/misc/adb; grep -qF '$key' /data/misc/adb/adb_keys 2>/dev/null || echo '$key' >> /data/misc/adb/adb_keys; " +
-            "chown system:shell /data/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_keys")
+            "chown system:shell /data/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_keys", 120_000)
         // rede do convidado (Wi-Fi virtual sobre a placa do QEMU): liga o Wi-Fi e espera o IP
         run("settings put global wifi_on 1; svc wifi enable; for i in $(seq 1 45); do " +
-            "ip -4 addr 2>/dev/null | grep -q 'inet 10\\.0\\.2\\.' && break; sleep 2; done; ip -4 addr | grep 'inet 10\\.0\\.2\\.' || echo NET_FAIL", 150_000)
+            "ip -4 addr 2>/dev/null | grep -q 'inet 10\\.0\\.2\\.' && break; sleep 2; done; ip -4 addr | grep 'inet 10\\.0\\.2\\.' || echo NET_FAIL", 240_000)
         // adbd do convidado escutando na rede interna do QEMU (porta 5555; só o app alcança via hostfwd)
         run("setprop persist.adb.tcp.port 5555; setprop service.adb.tcp.port 5555; stop adbd; start adbd; sleep 2; " +
-            "netstat -ltn 2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL", 60_000)
+            "netstat -ltn 2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL", 120_000)
         run("settings put global device_provisioned 1; settings put secure user_setup_complete 1; " +
             "pm disable-user --user 0 com.google.android.setupwizard >/dev/null 2>&1; " +
             "settings put global window_animation_scale 0; settings put global transition_animation_scale 0; " +
@@ -100,7 +100,7 @@ class GuestConsole(private val input: InputStream, private val output: OutputStr
             "settings put global hide_error_dialogs 1; settings put secure anr_show_background 0; " +
             // a configuração só é relida numa mudança de configuração: alterna o modo noturno e volta
             "cmd uimode night yes >/dev/null 2>&1; cmd uimode night no >/dev/null 2>&1; " +
-            "am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS >/dev/null 2>&1", 120_000)
+            "am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS >/dev/null 2>&1", 400_000)
     }
 
     fun powerOff() { runCatching { output.write("\nsync; reboot -p\n".toByteArray()); output.flush() } }
