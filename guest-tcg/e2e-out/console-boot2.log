@@ -1,0 +1,46 @@
+==== 1792313944683
+08:59:05 up 0 min,  0 users,  load average: 3.01, 0.63, 0.20
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 132 total,   8 running,  73 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   578532k used,  1461328k free,    65648k buffers
+Swap:        0k total,        0k used,        0k free,   401088k cached
+400%cpu 103%user   0%nice  68%sys 225%idle   3%iow   0%irq   1%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1078 root          0 -20    0    0    0 R 43.4   0.0   0:08.00 [loop1]
+ 1176 audioserver  20   0  38M  13M  12M R 42.0   0.6   0:01.15 audioserver
+ 1284 root          0 -20  14M 3.1M 2.7M R 36.2   0.1   0:00.22 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86 --instruction-set=x86 --verify
+ 1191 media        20   0  35M  13M  11M R 33.3   0.6   0:01.14 mediaserver
+ 1278 root         20   0  11M 3.1M 2.6M R 15.9   0.1   0:00.28 top -b -n 1
+ 1183 cameraserver 20   0  28M 8.2M 6.8M R 14.4   0.4   0:01.13 cameraserver
+ 1073 root          0 -20    0    0    0 S  8.6   0.0   0:01.65 [loop0]
+ 1178 root         12  -8  51M  15M  12M R  5.7   0.7   0:00.96 surfaceflinger
+ 1279 root          0 -20  28M 7.4M 6.6M D  4.3   0.3   0:00.45 patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/dalvik-cache/x86_64 --instruction-set=x86_64 --verify
+ 1195 mediacodec   20   0  28M  10M 8.6M D  4.3   0.5   0:00.97 media.codec hw/android.hardware.media.omx@1.0-service
+==== 1792314208675
+09:03:28 up 4 min,  0 users,  load average: 8.26, 6.00, 2.66
+running
+running
+1
+5555
+5555
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 157 total,   6 running, 103 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1738640k used,   301220k free,   274496k buffers
+Swap:        0k total,        0k used,        0k free,  1022472k cached
+400%cpu 298%user  48%nice  63%sys   8%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1178 root         -2  -8 180M  99M  53M S  245   4.9   8:02.88 surfaceflinger
+ 2781 u0_a17       20   0 3.0G 118M  99M S 65.0   5.9   0:01.62 com.android.systemui
+ 2197 u0_a40008    30  10 1.2G 103M  80M R 40.0   5.1   1:46.68 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+ 2829 root         20   0  11M 4.0M 3.3M R 32.5   0.2   0:00.27 top -b -n 1
+ 2830 root         20   0 2.4M 968K 796K R 25.0   0.0   0:00.04 head -15
+ 1195 mediacodec    4 -16  81M  25M  18M R 20.0   1.2   0:06.94 media.codec hw/android.hardware.media.omx@1.0-service
+ 1342 system       18  -2 3.8G 216M 180M S 12.5  10.8   1:04.31 system_server
+ 2050 system       10 -10 3.0G 139M 118M R  2.5   6.9   0:06.24 system:ui
+ 1191 media        20   0  62M  16M  14M S  2.5   0.8   0:02.41 mediaserver
+ 1189 mediaex      20   0 2.0G  24M  18M S  2.5   1.2   0:02.82 media.extractor aextractor
