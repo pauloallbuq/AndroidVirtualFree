@@ -1,0 +1,46 @@
+==== 1792312200252
+08:30:01 up 0 min,  0 users,  load average: 3.34, 0.70, 0.23
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 130 total,   5 running,  75 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   614684k used,  1425176k free,    71068k buffers
+Swap:        0k total,        0k used,        0k free,   430208k cached
+400%cpu  69%user   0%nice 123%sys  97%idle 111%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1174 audioserver  20   0  34M  10M 8.4M R 68.5   0.5   0:01.75 audioserver
+ 1075 root          0 -20    0    0    0 R 65.7   0.0   0:08.98 [loop1]
+ 1290 root         20   0  11M 3.0M 2.5M R 28.5   0.1   0:00.24 top -b -n 1
+ 1100 logd         30  10  19M 3.6M 2.7M S 25.7   0.1   0:02.06 logd
+ 1071 root          0 -20    0    0    0 S 17.1   0.0   0:01.98 [loop0]
+ 1102 system       20   0  16M 6.2M 5.1M S 11.4   0.3   0:00.91 hwservicemanager
+ 1176 root         12  -8  51M  18M  14M D  8.5   0.8   0:01.13 surfaceflinger
+    1 root         20   0  15M 3.3M 2.2M S  8.5   0.1   0:04.67 init
+ 1228 root         20   0 9.3M 3.2M 2.7M S  5.7   0.1   0:01.29 logcat -b all -v threadtime
+ 1189 media        20   0  32M  14M  12M D  5.7   0.6   0:01.39 mediaserver
+==== 1792312424618
+08:33:44 up 4 min,  0 users,  load average: 6.97, 5.03, 2.15
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 137 total,   2 running,  86 sleeping,   0 stopped,   1 zombie
+Mem:   2039860k total,  1920156k used,   119704k free,   250968k buffers
+Swap:        0k total,        0k used,        0k free,  1222884k cached
+400%cpu   8%user 308%nice  28%sys  56%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1984 u0_a40008    30  10 1.2G  96M  81M R  356   4.7   2:49.81 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+ 2111 root         20   0  11M 3.0M 2.5M R 35.8   0.1   0:00.26 top -b -n 1
+ 2112 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.11 head -15
+ 1928 u0_a16       20   0 3.3G 269M 153M S  0.0  13.5   0:37.85 com.android.systemui
+ 1813 root         20   0    0    0    0 I  0.0   0.0   0:00.12 [kworker/3:2-events]
+ 1766 system       10 -10 3.1G 164M 113M S  0.0   8.2   0:14.80 com.android.settings
+ 1749 radio        20   0 3.0G 106M  88M S  0.0   5.3   0:03.33 com.android.phone
+ 1656 webview_zygote 20 0 1.5G  60M  44M S  0.0   2.9   0:00.64 webview_zygote
+ 1563 u0_a70       20   0 3.0G  98M  80M S  0.0   4.9   0:01.49 com.android.inputmethod.latin
+ 1521 media_rw     20   0    0    0    0 Z  0.0   0.0   0:00.22 [sdcard]

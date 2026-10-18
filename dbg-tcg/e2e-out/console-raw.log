@@ -1,0 +1,353 @@
+o __AVS$((1+0))__; mpleted; echo __AVF$((1+0))__
+console:/ # mpleted; echo __AVF$((1+0))__
+/system/bin/sh: mpleted: not found
+__AVF1__
+console:/ # 
+console:/ # echo __AVS$((2+0))__; echo 0 > /proc/sys/kernel/panic_on_oops; cat2+0))__; echo 0 > /proc/sys/kernel/panic_on_oops; cat                         < /proc/sys/kernel/panic_oys/kernel/panic_on_oops; cat /proc/sys/kernel/panic_o                         <n_oops; echo __AVF$((2+0)cat /proc/sys/kernel/panic_on_oops; echo __AVF$((2+0)                         <)__
+__AVS2__
+0
+__AVF2__
+console:/ # 
+ /proc/sys/kernel/printk /proc/sys/kernel/panic /proc/sys/kernel/softlockup_panic /proc/sys/kernel/hung_task_panic /proc/sys/kernel/panic_on_oops 2>&1; grep -n -iE 'virt_?wifi|wifi_etconsole:/ # echo __AVS$((3+0))__; echo 8 > /proc/sys/kernel/printk; cat /proc/3+0))__; echo 8 > /proc/sys/kernel/printk; cat /proc/                         <sys/kernel/printk /proc/sys/kernel/printk; cat /proc/sys/kernel/printk /proc/s                         <ys/kernel/panic /proc/sysoc/sys/kernel/printk /proc/sys/kernel/panic /proc/sys                         </kernel/softlockup_panic c/sys/kernel/panic /proc/sys/kernel/softlockup_panic                          </proc/sys/kernel/hung_tassys/kernel/softlockup_panic /proc/sys/kernel/hung_tas                         <k_panic /proc/sys/kernel/ic /proc/sys/kernel/hung_task_panic /proc/sys/kernel/                         <panic_on_oops 2>&1; grep task_panic /proc/sys/kernel/panic_on_oops 2>&1; grep                          <-n -iE 'virt_?wifi|wifi_eel/panic_on_oops 2>&1; grep -n -iE 'virt_?wifi|wifi_e                         <th|ethernet' /system/etc/ep -n -iE 'virt_?wifi|wifi_eth|ethernet' /system/etc/                         <init.sh | head -20; echo i_eth|ethernet' /system/etc/init.sh | head -20; echo                          <__AVF$((3+0))__
+__AVS3__
+8	0	0	0
+0
+0
+cat: /proc/sys/kernel/hung_task_panic: No such file or directory
+0
+48:	# enable virt_wifi if needed
+49:	local eth=`getprop net.virt_wifi eth0`
+50:	if [ -d /sys/class/net/$eth -a "$VIRT_WIFI" != "0" ]; then
+51:		if [ -n "$wifi" -a "$VIRT_WIFI" = "1" ]; then
+56:			ip link set $eth name wifi_eth
+57:			ifconfig wifi_eth up
+58:			ip link add link wifi_eth name wlan0 type virt_wifi
+__AVF3__
+
+echo __AVS$((4+0)console:/ # 
+ 2>/dev/null | grep -qx "pconsole:/ # echo __AVS$((4+0))__; if service check package | grep -q ': found'4+0))__; if service check package | grep -q ': found'                         <; then for p in com.googl package | grep -q ': found'; then for p in com.googl                         <e.android.gms com.google.nd'; then for p in com.google.android.gms com.google.                         <android.gsf com.android.vogle.android.gms com.google.android.gsf com.android.v                         <ending com.android.chromele.android.gsf com.android.vending com.android.chrome                         < com.google.android.gm cod.vending com.android.chrome com.google.android.gm co                         <m.google.android.youtube ome com.google.android.gm com.google.android.youtube                          <com.google.android.apps.m com.google.android.youtube com.google.android.apps.m                         <aps com.google.android.mube com.google.android.apps.maps com.google.android.mu                         <sic com.google.android.aps.maps com.google.android.music com.google.android.ap                         <ps.photos com.google.andr.music com.google.android.apps.photos com.google.andr                         <oid.apps.docs com.google..apps.photos com.google.android.apps.docs com.google.                         <android.videos com.googlendroid.apps.docs com.google.android.videos com.google                         <.android.apps.restore comle.android.videos com.google.android.apps.restore com                         <.google.android.setupwizagle.android.apps.restore com.google.android.setupwiza                         <rd com.google.android.goocom.google.android.setupwizard com.google.android.goo                         <glequicksearchbox org.andizard com.google.android.googlequicksearchbox org.and                         <roid_x86.analytics; do pmgooglequicksearchbox org.android_x86.analytics; do pm                         < list packages -e $p 2>/dandroid_x86.analytics; do pm list packages -e $p 2>/d                         <ev/null | grep -qx "packa pm list packages -e $p 2>/dev/null | grep -qx "packa                         <ge:$p" && pm disable $p >>/dev/null | grep -qx "package:$p" && pm disable $p >                         </dev/null 2>&1; done; echckage:$p" && pm disable $p >/dev/null 2>&1; done; ech                         <o TRIM_DONE; else echo TRp >/dev/null 2>&1; done; echo TRIM_DONE; else echo TR                         <IM_WAIT; fi; echo __AVF$(echo TRIM_DONE; else echo TRIM_WAIT; fi; echo __AVF$(                         <(4+0))__
+__AVS4__
+TRIM_WAIT
+__AVF4__
+console:/ # 
+console:/ # echo __AVS$((5+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc5+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((5+0))__
+__AVS5__
+__AVF5__
+console:/ # 
+console:/ # echo __AVS$((6+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((6+06+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((6+0                         <))__
+__AVS6__
+18.27
+__AVF6__
+console:/ # 
+console:/ # echo __AVS$((7+0))__; uptime; getprop init.svc.adbd; getprop init.7+0))__; uptime; getprop init.svc.adbd; getprop init.                         <svc.zygote; getprop sys.binit.svc.adbd; getprop init.svc.zygote; getprop sys.b                         <oot_completed; getprop peit.svc.zygote; getprop sys.boot_completed; getprop pe                         <rsist.adb.tcp.port; getprs.boot_completed; getprop persist.adb.tcp.port; getpr                         <op service.adb.tcp.port;  persist.adb.tcp.port; getprop service.adb.tcp.port;                          <netstat -ltn 2>/dev/null tprop service.adb.tcp.port; netstat -ltn 2>/dev/null                          <| grep 5555; top -b -n 1 t; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                          <| head -15; echo __AVF$((ll | grep 5555; top -b -n 1 | head -15; echo __AVF$((                         <7+0))__
+__AVS7__
+ 08:30:01 up 0 min,  0 users,  load average: 3.34, 0.70, 0.23
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 130 total,   5 running,  75 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,   614684k used,  1425176k free,    71068k buffers
+Swap:        0k total,        0k used,        0k free,   430208k cached
+400%cpu  69%user   0%nice 123%sys  97%idle 111%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1174 audioserver  20   0  34M  10M 8.4M R 68.5   0.5   0:01.75 audioserver
+ 1075 root          0 -20    0    0    0 R 65.7   0.0   0:08.98 [loop1]
+ 1290 root         20   0  11M 3.0M 2.5M R 28.5   0.1   0:00.24 top -b -n 1
+ 1100 logd         30  10  19M 3.6M 2.7M S 25.7   0.1   0:02.06 logd
+ 1071 root          0 -20    0    0    0 S 17.1   0.0   0:01.98 [loop0]
+ 1102 system       20   0  16M 6.2M 5.1M S 11.4   0.3   0:00.91 hwservicemanager
+ 1176 root         12  -8  51M  18M  14M D  8.5   0.8   0:01.13 surfaceflinger
+    1 root         20   0  15M 3.3M 2.2M S  8.5   0.1   0:04.67 init
+ 1228 root         20   0 9.3M 3.2M 2.7M S  5.7   0.1   0:01.29 logcat -b all -v threadtime
+ 1189 media        20   0  32M  14M  12M D  5.7   0.6   0:01.39 mediaserver
+__AVF7__
+console:/ # 
+p sys.boot_completed; echo __AVF$((8+0))__
+console:/ # echo __AVS$((8+0))__; getprop sys.boot_completed; echo __AVF$((8+08+0))__; getprop sys.boot_completed; echo __AVF$((8+0                         <))__
+__AVS8__
+
+__AVF8__
+console:/ # 
+console:/ # echo __AVS$((9+0))__; if service check package | grep -q ': found'9+0))__; if service check package | grep -q ': found'                         <; then for p in com.googl package | grep -q ': found'; then for p in com.googl                         <e.android.gms com.google.nd'; then for p in com.google.android.gms com.google.                         <android.gsf com.android.vogle.android.gms com.google.android.gsf com.android.v                         <ending com.android.chromele.android.gsf com.android.vending com.android.chrome                         < com.google.android.gm cod.vending com.android.chrome com.google.android.gm co                         <m.google.android.youtube ome com.google.android.gm com.google.android.youtube                          <com.google.android.apps.m com.google.android.youtube com.google.android.apps.m                         <aps com.google.android.mube com.google.android.apps.maps com.google.android.mu                         <sic com.google.android.aps.maps com.google.android.music com.google.android.ap                         <ps.photos com.google.andr.music com.google.android.apps.photos com.google.andr                         <oid.apps.docs com.google..apps.photos com.google.android.apps.docs com.google.                         <android.videos com.googlendroid.apps.docs com.google.android.videos com.google                         <.android.apps.restore comle.android.videos com.google.android.apps.restore com                         <.google.android.setupwizagle.android.apps.restore com.google.android.setupwiza                         <rd com.google.android.goocom.google.android.setupwizard com.google.android.goo                         <glequicksearchbox org.andizard com.google.android.googlequicksearchbox org.and                         <roid_x86.analytics; do pmgooglequicksearchbox org.android_x86.analytics; do pm                         < list packages -e $p 2>/dandroid_x86.analytics; do pm list packages -e $p 2>/d                         <ev/null | grep -qx "packa pm list packages -e $p 2>/dev/null | grep -qx "packa                         <ge:$p" && pm disable $p >>/dev/null | grep -qx "package:$p" && pm disable $p >                         </dev/null 2>&1; done; echckage:$p" && pm disable $p >/dev/null 2>&1; done; ech                         <o TRIM_DONE; else echo TRp >/dev/null 2>&1; done; echo TRIM_DONE; else echo TR                         <IM_WAIT; fi; echo __AVF$(echo TRIM_DONE; else echo TRIM_WAIT; fi; echo __AVF$(                         <(9+0))__
+__AVS9__
+TRIM_WAIT
+__AVF9__
+console:/ # 
+console:/ # echo __AVS$((10+0))__; pgrep -f 'logcat -b all' >/dev/null || (log10+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((10+0))__
+__AVS10__
+__AVF10__
+console:/ # 
+console:/ # echo __AVS$((11+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1111+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((11                         <+0))__
+__AVS11__
+36.92
+__AVF11__
+console:/ # 
+console:/ # echo __AVS$((12+0))__; getprop sys.boot_completed; echo __AVF$((1212+0))__; getprop sys.boot_completed; echo __AVF$((12                         <+0))__
+__AVS12__
+
+__AVF12__
+console:/ # 
+AVS$((13+0))__; if service check pacconsole:/ # echo __AVS$((13+0))__; if service check package | grep -q ': found13+0))__; if service check package | grep -q ': found                         <'; then for p in com.googk package | grep -q ': found'; then for p in com.goog                         <le.android.gms com.googleund'; then for p in com.google.android.gms com.google                         <.android.gsf com.android.oogle.android.gms com.google.android.gsf com.android.                         <vending com.android.chromgle.android.gsf com.android.vending com.android.chrom                         <e com.google.android.gm cid.vending com.android.chrome com.google.android.gm c                         <om.google.android.youtuberome com.google.android.gm com.google.android.youtube                         < com.google.android.apps.m com.google.android.youtube com.google.android.apps.                         <maps com.google.android.mube com.google.android.apps.maps com.google.android.m                         <usic com.google.android.aps.maps com.google.android.music com.google.android.a                         <pps.photos com.google.andd.music com.google.android.apps.photos com.google.and                         <roid.apps.docs com.googled.apps.photos com.google.android.apps.docs com.google                         <.android.videos com.googlandroid.apps.docs com.google.android.videos com.googl                         <e.android.apps.restore cogle.android.videos com.google.android.apps.restore co                         <m.google.android.setupwizogle.android.apps.restore com.google.android.setupwiz                         <ard com.google.android.go com.google.android.setupwizard com.google.android.go                         <oglequicksearchbox org.anwizard com.google.android.googlequicksearchbox org.an                         <droid_x86.analytics; do p.googlequicksearchbox org.android_x86.analytics; do p                         <m list packages -e $p 2>/.android_x86.analytics; do pm list packages -e $p 2>/                         <dev/null | grep -qx "packo pm list packages -e $p 2>/dev/null | grep -qx "pack                         <age:$p" && pm disable $p 2>/dev/null | grep -qx "package:$p" && pm disable $p                          <>/dev/null 2>&1; done; ecackage:$p" && pm disable $p >/dev/null 2>&1; done; ec                         <ho TRIM_DONE; else echo T$p >/dev/null 2>&1; done; echo TRIM_DONE; else echo T                         <RIM_WAIT; fi; echo __AVF$ echo TRIM_DONE; else echo TRIM_WAIT; fi; echo __AVF$                         <((13+0))__
+__AVS13__
+TRIM_WAIT
+__AVF13__
+console:/ # 
+console:/ # echo __AVS$((14+0))__; pgrep -f 'logcat -b all' >/dev/null || (log14+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((14+0))__
+__AVS14__
+__AVF14__
+console:/ # 
+console:/ # echo __AVS$((15+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1515+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((15                         <+0))__
+__AVS15__
+48.33
+__AVF15__
+console:/ # 
+console:/ # echo __AVS$((16+0))__; getprop sys.boot_completed; echo __AVF$((1616+0))__; getprop sys.boot_completed; echo __AVF$((16                         <+0))__
+__AVS16__
+
+__AVF16__
+
+echo __AVS$((17+0))__; if service check packagconsole:/ # 
+console:/ # echo __AVS$((17+0))__; if service check package | grep -q ': found17+0))__; if service check package | grep -q ': found                         <'; then for p in com.googk package | grep -q ': found'; then for p in com.goog                         <le.android.gms com.googleund'; then for p in com.google.android.gms com.google                         <.android.gsf com.android.oogle.android.gms com.google.android.gsf com.android.                         <vending com.android.chromgle.android.gsf com.android.vending com.android.chrom                         <e com.google.android.gm cid.vending com.android.chrome com.google.android.gm c                         <om.google.android.youtuberome com.google.android.gm com.google.android.youtube                         < com.google.android.apps.m com.google.android.youtube com.google.android.apps.                         <maps com.google.android.mube com.google.android.apps.maps com.google.android.m                         <usic com.google.android.aps.maps com.google.android.music com.google.android.a                         <pps.photos com.google.andd.music com.google.android.apps.photos com.google.and                         <roid.apps.docs com.googled.apps.photos com.google.android.apps.docs com.google                         <.android.videos com.googlandroid.apps.docs com.google.android.videos com.googl                         <e.android.apps.restore cogle.android.videos com.google.android.apps.restore co                         <m.google.android.setupwizogle.android.apps.restore com.google.android.setupwiz                         <ard com.google.android.go com.google.android.setupwizard com.google.android.go                         <oglequicksearchbox org.anwizard com.google.android.googlequicksearchbox org.an                         <droid_x86.analytics; do p.googlequicksearchbox org.android_x86.analytics; do p                         <m list packages -e $p 2>/.android_x86.analytics; do pm list packages -e $p 2>/                         <dev/null | grep -qx "packo pm list packages -e $p 2>/dev/null | grep -qx "pack                         <age:$p" && pm disable $p 2>/dev/null | grep -qx "package:$p" && pm disable $p                          <>/dev/null 2>&1; done; ecackage:$p" && pm disable $p >/dev/null 2>&1; done; ec                         <ho TRIM_DONE; else echo T$p >/dev/null 2>&1; done; echo TRIM_DONE; else echo T                         <RIM_WAIT; fi; echo __AVF$ echo TRIM_DONE; else echo TRIM_WAIT; fi; echo __AVF$                         <((17+0))__
+__AVS17__
+TRIM_WAIT
+__AVF17__
+console:/ # 
+console:/ # echo __AVS$((18+0))__; pgrep -f 'logcat -b all' >/dev/null || (log18+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((18+0))__
+__AVS18__
+__AVF18__
+console:/ # 
+console:/ # echo __AVS$((19+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((1919+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((19                         <+0))__
+__AVS19__
+61.98
+__AVF19__
+console:/ # 
+console:/ # echo __AVS$((20+0))__; getprop sys.boot_completed; echo __AVF$((2020+0))__; getprop sys.boot_completed; echo __AVF$((20                         <+0))__
+__AVS20__
+
+__AVF20__
+console:/ # 
+console:/ # echo __AVS$((21+0))__; if service check package | grep -q ': found21+0))__; if service check package | grep -q ': found                         <'; then for p in com.googk package | grep -q ': found'; then for p in com.goog                         <le.android.gms com.googleund'; then for p in com.google.android.gms com.google                         <.android.gsf com.android.oogle.android.gms com.google.android.gsf com.android.                         <vending com.android.chromgle.android.gsf com.android.vending com.android.chrom                         <e com.google.android.gm cid.vending com.android.chrome com.google.android.gm c                         <om.google.android.youtuberome com.google.android.gm com.google.android.youtube                         < com.google.android.apps.m com.google.android.youtube com.google.android.apps.                         <maps com.google.android.mube com.google.android.apps.maps com.google.android.m                         <usic com.google.android.aps.maps com.google.android.music com.google.android.a                         <pps.photos com.google.andd.music com.google.android.apps.photos com.google.and                         <roid.apps.docs com.googled.apps.photos com.google.android.apps.docs com.google                         <.android.videos com.googlandroid.apps.docs com.google.android.videos com.googl                         <e.android.apps.restore cogle.android.videos com.google.android.apps.restore co                         <m.google.android.setupwizogle.android.apps.restore com.google.android.setupwiz                         <ard com.google.android.go com.google.android.setupwizard com.google.android.go                         <oglequicksearchbox org.anwizard com.google.android.googlequicksearchbox org.an                         <droid_x86.analytics; do p.googlequicksearchbox org.android_x86.analytics; do p                         <m list packages -e $p 2>/.android_x86.analytics; do pm list packages -e $p 2>/                         <dev/null | grep -qx "packo pm list packages -e $p 2>/dev/null | grep -qx "pack                         <age:$p" && pm disable $p 2>/dev/null | grep -qx "package:$p" && pm disable $p                          <>/dev/null 2>&1; done; ecackage:$p" && pm disable $p >/dev/null 2>&1; done; ec                         <ho TRIM_DONE; else echo T$p >/dev/null 2>&1; done; echo TRIM_DONE; else echo T                         <RIM_WAIT; fi; echo __AVF$ echo TRIM_DONE; else echo TRIM_WAIT; fi; echo __AVF$                         <((21+0))__
+__AVS21__
+TRIM_DONE
+__AVF21__
+console:/ # 
+console:/ # echo __AVS$((22+0))__; pgrep -f 'logcat -b all' >/dev/null || (log22+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((22+0))__
+__AVS22__
+__AVF22__
+console:/ # 
+console:/ # echo __AVS$((23+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((2323+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((23                         <+0))__
+__AVS23__
+107.55
+__AVF23__
+console:/ # 
+console:/ # echo __AVS$((24+0))__; getprop sys.boot_completed; echo __AVF$((2424+0))__; getprop sys.boot_completed; echo __AVF$((24                         <+0))__
+__AVS24__
+
+__AVF24__
+
+echo __AVS$((25+0))__; pgrep -f 'logcat -b all' >/dev/null || (logcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo __AVF$((25+0))__
+console:/ # 
+console:/ # echo __AVS$((25+0))__; pgrep -f 'logcat -b all' >/dev/null || (log25+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((25+0))__
+__AVS25__
+__AVF25__
+console:/ # 
+$((26+0)console:/ # echo __AVS$((26+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((2626+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((26                         <+0))__
+__AVS26__
+123.83
+__AVF26__
+console:/ # 
+console:/ # echo __AVS$((27+0))__; getprop sys.boot_completed; echo __AVF$((2727+0))__; getprop sys.boot_completed; echo __AVF$((27                         <+0))__
+__AVS27__
+
+__AVF27__
+console:/ # 
+console:/ # echo __AVS$((28+0))__; pgrep -f 'logcat -b all' >/dev/null || (log28+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((28+0))__
+__AVS28__
+__AVF28__
+
+echo __AVS$((29+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((29+0))__
+console:/ # 
+console:/ # echo __AVS$((29+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((2929+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((29                         <+0))__
+__AVS29__
+138.80
+__AVF29__
+console:/ # 
+; echo __AVF$((30+0))__
+console:/ # echo __AVS$((30+0))__; getprop sys.boot_completed; echo __AVF$((3030+0))__; getprop sys.boot_completed; echo __AVF$((30                         <+0))__
+__AVS30__
+
+__AVF30__
+console:/ # 
+console:/ # echo __AVS$((31+0))__; pgrep -f 'logcat -b all' >/dev/null || (log31+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((31+0))__
+__AVS31__
+__AVF31__
+console:/ # 
+-console:/ # echo __AVS$((32+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3232+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((32                         <+0))__
+__AVS32__
+152.19
+__AVF32__
+console:/ # 
+console:/ # echo __AVS$((33+0))__; getprop sys.boot_completed; echo __AVF$((3333+0))__; getprop sys.boot_completed; echo __AVF$((33                         <+0))__
+__AVS33__
+
+__AVF33__
+console:/ # 
+ -f 'logcaconsole:/ # echo __AVS$((34+0))__; pgrep -f 'logcat -b all' >/dev/null || (log34+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((34+0))__
+__AVS34__
+__AVF34__
+console:/ # 
+console:/ # echo __AVS$((35+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3535+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((35                         <+0))__
+__AVS35__
+165.94
+__AVF35__
+console:/ # 
+console:/ # echo __AVS$((36+0))__; getprop sys.boot_completed; echo __AVF$((3636+0))__; getprop sys.boot_completed; echo __AVF$((36                         <+0))__
+__AVS36__
+
+__AVF36__
+console:/ # 
+console:/ # echo __AVS$((37+0))__; pgrep -f 'logcat -b all' >/dev/null || (log37+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((37+0))__
+__AVS37__
+__AVF37__
+console:/ # 
+console:/ # echo __AVS$((38+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3838+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((38                         <+0))__
+__AVS38__
+178.27
+__AVF38__
+console:/ # 
+console:/ # echo __AVS$((39+0))__; getprop sys.boot_completed; echo __AVF$((3939+0))__; getprop sys.boot_completed; echo __AVF$((39                         <+0))__
+__AVS39__
+
+__AVF39__
+console:/ # 
+console:/ # echo __AVS$((40+0))__; pgrep -f 'logcat -b all' >/dev/null || (log40+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((40+0))__
+__AVS40__
+__AVF40__
+console:/ # 
+console:/ # echo __AVS$((41+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4141+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((41                         <+0))__
+__AVS41__
+189.16
+__AVF41__
+console:/ # 
+console:/ # echo __AVS$((42+0))__; getprop sys.boot_completed; echo __AVF$((4242+0))__; getprop sys.boot_completed; echo __AVF$((42                         <+0))__
+__AVS42__
+
+__AVF42__
+console:/ # 
+console:/ # echo __AVS$((43+0))__; pgrep -f 'logcat -b all' >/dev/null || (log43+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((43+0))__
+__AVS43__
+__AVF43__
+console:/ # 
+console:/ # echo __AVS$((44+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4444+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((44                         <+0))__
+__AVS44__
+199.93
+__AVF44__
+console:/ # 
+console:/ # echo __AVS$((45+0))__; getprop sys.boot_completed; echo __AVF$((4545+0))__; getprop sys.boot_completed; echo __AVF$((45                         <+0))__
+__AVS45__
+
+__AVF45__
+console:/ # 
+console:/ # echo __AVS$((46+0))__; pgrep -f 'logcat -b all' >/dev/null || (log46+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((46+0))__
+__AVS46__
+__AVF46__
+console:/ # 
+console:/ # echo __AVS$((47+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((4747+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((47                         <+0))__
+__AVS47__
+210.66
+__AVF47__
+console:/ # 
+console:/ # echo __AVS$((48+0))__; getprop sys.boot_completed; echo __AVF$((4848+0))__; getprop sys.boot_completed; echo __AVF$((48                         <+0))__
+__AVS48__
+
+__AVF48__
+console:/ # 
+console:/ # echo __AVS$((49+0))__; pgrep -f 'logcat -b all' >/dev/null || (log49+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((49+0))__
+__AVS49__
+__AVF49__
+console:/ # 
+console:/ # echo __AVS$((50+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5050+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((50                         <+0))__
+__AVS50__
+221.41
+__AVF50__
+console:/ # 
+rop sys.console:/ # echo __AVS$((51+0))__; getprop sys.boot_completed; echo __AVF$((5151+0))__; getprop sys.boot_completed; echo __AVF$((51                         <+0))__
+__AVS51__
+
+__AVF51__
+console:/ # 
+console:/ # echo __AVS$((52+0))__; pgrep -f 'logcat -b all' >/dev/null || (log52+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((52+0))__
+__AVS52__
+__AVF52__
+console:/ # 
+console:/ # echo __AVS$((53+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5353+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((53                         <+0))__
+__AVS53__
+232.11
+__AVF53__
+console:/ # 
+console:/ # echo __AVS$((54+0))__; getprop sys.boot_completed; echo __AVF$((5454+0))__; getprop sys.boot_completed; echo __AVF$((54                         <+0))__
+__AVS54__
+
+__AVF54__
+console:/ # 
+console:/ # echo __AVS$((55+0))__; pgrep -f 'logcat -b all' >/dev/null || (log55+0))__; pgrep -f 'logcat -b all' >/dev/null || (log                         <cat -b all -v threadtime t -b all' >/dev/null || (logcat -b all -v threadtime                          <> /dev/ttyS2 2>&1 &); echlogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); ech                         <o __AVF$((55+0))__
+__AVS55__
+__AVF55__
+console:/ # 
+console:/ # echo __AVS$((56+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((5656+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((56                         <+0))__
+__AVS56__
+242.60
+__AVF56__
+console:/ # 
+console:/ # echo __AVS$((57+0))__; uptime; getprop init.svc.adbd; getprop init57+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop pnit.svc.zygote; getprop sys.boot_completed; getprop p                         <ersist.adb.tcp.port; getpys.boot_completed; getprop persist.adb.tcp.port; getp                         <rop service.adb.tcp.port;p persist.adb.tcp.port; getprop service.adb.tcp.port;                         < netstat -ltn 2>/dev/nulletprop service.adb.tcp.port; netstat -ltn 2>/dev/null                         < | grep 5555; top -b -n 1rt; netstat -ltn 2>/dev/null | grep 5555; top -b -n 1                         < | head -15; echo __AVF$(ull | grep 5555; top -b -n 1 | head -15; echo __AVF$(                         <(57+0))__
+__AVS57__
+ 08:33:44 up 4 min,  0 users,  load average: 6.97, 5.03, 2.15
+running
+running
+
+5555
+
+tcp6       0      0 :::5555                 :::*                    LISTEN     
+Tasks: 137 total,   2 running,  86 sleeping,   0 stopped,   1 zombie
+Mem:   2039860k total,  1920156k used,   119704k free,   250968k buffers
+Swap:        0k total,        0k used,        0k free,  1222884k cached
+400%cpu   8%user 308%nice  28%sys  56%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1984 u0_a40008    30  10 1.2G  96M  81M R  356   4.7   2:49.81 dex2oat --zip-fd=16 --zip-location=GmsCore.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@priv-app@GmsCore@GmsCore.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=verify --swap-fd=19 --classpath-dir=/system/priv-app/GmsCore --class-loader-context=PCL[/system/framework/org.apache.http.legacy.boot.jar:/system/framework/com.android.media.remotedisplay.jar:/system/framework/com.android.location.provider.jar] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:28 --runtime-arg -Xhidden-api-checks --compilation-reason=boot
+ 2111 root         20   0  11M 3.0M 2.5M R 35.8   0.1   0:00.26 top -b -n 1
+ 2112 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.11 head -15
+ 1928 u0_a16       20   0 3.3G 269M 153M S  0.0  13.5   0:37.85 com.android.systemui
+ 1813 root         20   0    0    0    0 I  0.0   0.0   0:00.12 [kworker/3:2-events]
+ 1766 system       10 -10 3.1G 164M 113M S  0.0   8.2   0:14.80 com.android.settings
+ 1749 radio        20   0 3.0G 106M  88M S  0.0   5.3   0:03.33 com.android.phone
+ 1656 webview_zygote 20 0 1.5G  60M  44M S  0.0   2.9   0:00.64 webview_zygote
+ 1563 u0_a70       20   0 3.0G  98M  80M S  0.0   4.9   0:01.49 com.android.inputmethod.latin
+ 1521 media_rw     20   0    0    0    0 Z  0.0   0.0   0:00.22 [sdcard]
+__AVF57__
+console:/ # 
+console:/ # echo __AVS$((58+0))__; getprop sys.boot_completed; echo __AVF$((5858+0))__; getprop sys.boot_completed; echo __AVF$((58                         <+0))__
+__AVS58__
+1
+__AVF58__
+console:/ # 
+console:/ # echo __AVS$((59+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAN/E59+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAN/E                         <j4jhCCOP+SNusG2yPPRBs0JKGmisc/adb; grep -qF 'QAAAAN/Ej4jhCCOP+SNusG2yPPRBs0JKG                         <9/UcxTObTwPVCYgVyr34npFEpN/Ej4jhCCOP+SNusG2yPPRBs0JKG9/UcxTObTwPVCYgVyr34npFEp                         <xDS4ZA7DLqatEpruHIh35bzBPJKG9/UcxTObTwPVCYgVyr34npFEpxDS4ZA7DLqatEpruHIh35bzBP                         <DD4Wn61C6TDyas6JiPdeCa0kyFEpxDS4ZA7DLqatEpruHIh35bzBPDD4Wn61C6TDyas6JiPdeCa0ky                         <hqwpQIerlbV6oJgcHyCEOe2wxzBPDD4Wn61C6TDyas6JiPdeCa0kyhqwpQIerlbV6oJgcHyCEOe2wx                         <o8zSV5XDTBGSYZ6BZcLm7931A0kyhqwpQIerlbV6oJgcHyCEOe2wxo8zSV5XDTBGSYZ6BZcLm7931A                         <4G86mMD/8nxHxhmKmCi8WeGJn2wxo8zSV5XDTBGSYZ6BZcLm7931A4G86mMD/8nxHxhmKmCi8WeGJn                         <IN3Is9dNtxoiZS2Mb0fVAaXAi31A4G86mMD/8nxHxhmKmCi8WeGJnIN3Is9dNtxoiZS2Mb0fVAaXAi                         <1XRcNbZYImMLxJpIH7U4wmOd7GJnIN3Is9dNtxoiZS2Mb0fVAaXAi1XRcNbZYImMLxJpIH7U4wmOd7                         <8vrkfyf6SGiEybUzQIBkylK2DXAi1XRcNbZYImMLxJpIH7U4wmOd78vrkfyf6SGiEybUzQIBkylK2D                         <0yzd4e+tVUCjYm8TSg8Y4p6pBOd78vrkfyf6SGiEybUzQIBkylK2D0yzd4e+tVUCjYm8TSg8Y4p6pB                         <oVkm90SY7prre74Mo9lGGtGHKK2D0yzd4e+tVUCjYm8TSg8Y4p6pBoVkm90SY7prre74Mo9lGGtGHK                         <Ata4Hpzp3QDMXITBQZL1eZsLm6pBoVkm90SY7prre74Mo9lGGtGHKAta4Hpzp3QDMXITBQZL1eZsLm                         <kTyI55oAXH3NhJ2VAazAPyGTJGHKAta4Hpzp3QDMXITBQZL1eZsLmkTyI55oAXH3NhJ2VAazAPyGTJ                         <c2H7xA8iE+RCoMUyRcy7bUM8OsLmkTyI55oAXH3NhJ2VAazAPyGTJc2H7xA8iE+RCoMUyRcy7bUM8O                         <77KIuGcHB1P6O75Uw83X/OIBhGTJc2H7xA8iE+RCoMUyRcy7bUM8O77KIuGcHB1P6O75Uw83X/OIBh                         <bwWiuvtvSQkupPI/0FXYzxhY1M8O77KIuGcHB1P6O75Uw83X/OIBhbwWiuvtvSQkupPI/0FXYzxhY1                         <BJRWXInTOX+RRJvaFnpNYLO6PIBhbwWiuvtvSQkupPI/0FXYzxhY1BJRWXInTOX+RRJvaFnpNYLO6P                         <tTokL54frfZaLR+UsvTQdMc78hY1BJRWXInTOX+RRJvaFnpNYLO6PtTokL54frfZaLR+UsvTQdMc78                         <C9ZNctywx4MQn1DIopmPSszwnO6PtTokL54frfZaLR+UsvTQdMc78C9ZNctywx4MQn1DIopmPSszwn                         <ZfAXuGoBQ+ZvSt7csM4hSNfwdc78C9ZNctywx4MQn1DIopmPSszwnZfAXuGoBQ+ZvSt7csM4hSNfwd                         <23qBQ+vWWG8mzrjDKdGdXzuhBzwnZfAXuGoBQ+ZvSt7csM4hSNfwd23qBQ+vWWG8mzrjDKdGdXzuhB                         </3NGInaVsBjkIostnXyWDBHJKfwd23qBQ+vWWG8mzrjDKdGdXzuhB/3NGInaVsBjkIostnXyWDBHJK                         <bHPeZREXrL/s+VTnIFTpAGi0RuhB/3NGInaVsBjkIostnXyWDBHJKbHPeZREXrL/s+VTnIFTpAGi0R                         <MvS1Z/dx1iB4xhC9ByZl7a13nHJKbHPeZREXrL/s+VTnIFTpAGi0RMvS1Z/dx1iB4xhC9ByZl7a13n                         <hoR18qw8/RTULeQEKS1YbJ1Abi0RMvS1Z/dx1iB4xhC9ByZl7a13nhoR18qw8/RTULeQEKS1YbJ1Ab                         <9dNEXG6gjmGHrOVZ3Ja1tTTie13nhoR18qw8/RTULeQEKS1YbJ1Ab9dNEXG6gjmGHrOVZ3Ja1tTTie                         <W2ObH+wEpGgEAAQA= unknown1Ab9dNEXG6gjmGHrOVZ3Ja1tTTieW2ObH+wEpGgEAAQA= unknown                         <@unknown' /data/misc/adb/TieW2ObH+wEpGgEAAQA= unknown@unknown' /data/misc/adb/                         <adb_keys 2>/dev/null || eown@unknown' /data/misc/adb/adb_keys 2>/dev/null || e                         <cho 'QAAAAN/Ej4jhCCOP+SNudb/adb_keys 2>/dev/null || echo 'QAAAAN/Ej4jhCCOP+SNu                         <sG2yPPRBs0JKG9/UcxTObTwPV| echo 'QAAAAN/Ej4jhCCOP+SNusG2yPPRBs0JKG9/UcxTObTwPV                         <CYgVyr34npFEpxDS4ZA7DLqatSNusG2yPPRBs0JKG9/UcxTObTwPVCYgVyr34npFEpxDS4ZA7DLqat                         <EpruHIh35bzBPDD4Wn61C6TDywPVCYgVyr34npFEpxDS4ZA7DLqatEpruHIh35bzBPDD4Wn61C6TDy                         <as6JiPdeCa0kyhqwpQIerlbV6qatEpruHIh35bzBPDD4Wn61C6TDyas6JiPdeCa0kyhqwpQIerlbV6                         <oJgcHyCEOe2wxo8zSV5XDTBGSTDyas6JiPdeCa0kyhqwpQIerlbV6oJgcHyCEOe2wxo8zSV5XDTBGS                         <YZ6BZcLm7931A4G86mMD/8nxHbV6oJgcHyCEOe2wxo8zSV5XDTBGSYZ6BZcLm7931A4G86mMD/8nxH                         <xhmKmCi8WeGJnIN3Is9dNtxoiBGSYZ6BZcLm7931A4G86mMD/8nxHxhmKmCi8WeGJnIN3Is9dNtxoi                         <ZS2Mb0fVAaXAi1XRcNbZYImMLnxHxhmKmCi8WeGJnIN3Is9dNtxoiZS2Mb0fVAaXAi1XRcNbZYImML                         <xJpIH7U4wmOd78vrkfyf6SGiExoiZS2Mb0fVAaXAi1XRcNbZYImMLxJpIH7U4wmOd78vrkfyf6SGiE                         <ybUzQIBkylK2D0yzd4e+tVUCjmMLxJpIH7U4wmOd78vrkfyf6SGiEybUzQIBkylK2D0yzd4e+tVUCj                         <Ym8TSg8Y4p6pBoVkm90SY7prrGiEybUzQIBkylK2D0yzd4e+tVUCjYm8TSg8Y4p6pBoVkm90SY7prr                         <e74Mo9lGGtGHKAta4Hpzp3QDMUCjYm8TSg8Y4p6pBoVkm90SY7prre74Mo9lGGtGHKAta4Hpzp3QDM                         <XITBQZL1eZsLmkTyI55oAXH3Nprre74Mo9lGGtGHKAta4Hpzp3QDMXITBQZL1eZsLmkTyI55oAXH3N                         <hJ2VAazAPyGTJc2H7xA8iE+RCQDMXITBQZL1eZsLmkTyI55oAXH3NhJ2VAazAPyGTJc2H7xA8iE+RC                         <oMUyRcy7bUM8O77KIuGcHB1P6H3NhJ2VAazAPyGTJc2H7xA8iE+RCoMUyRcy7bUM8O77KIuGcHB1P6                         <O75Uw83X/OIBhbwWiuvtvSQku+RCoMUyRcy7bUM8O77KIuGcHB1P6O75Uw83X/OIBhbwWiuvtvSQku                         <pPI/0FXYzxhY1BJRWXInTOX+R1P6O75Uw83X/OIBhbwWiuvtvSQkupPI/0FXYzxhY1BJRWXInTOX+R                         <RJvaFnpNYLO6PtTokL54frfZaQkupPI/0FXYzxhY1BJRWXInTOX+RRJvaFnpNYLO6PtTokL54frfZa                         <LR+UsvTQdMc78C9ZNctywx4MQX+RRJvaFnpNYLO6PtTokL54frfZaLR+UsvTQdMc78C9ZNctywx4MQ                         <n1DIopmPSszwnZfAXuGoBQ+ZvfZaLR+UsvTQdMc78C9ZNctywx4MQn1DIopmPSszwnZfAXuGoBQ+Zv                         <St7csM4hSNfwd23qBQ+vWWG8m4MQn1DIopmPSszwnZfAXuGoBQ+ZvSt7csM4hSNfwd23qBQ+vWWG8m                         <zrjDKdGdXzuhB/3NGInaVsBjk+ZvSt7csM4hSNfwd23qBQ+vWWG8mzrjDKdGdXzuhB/3NGInaVsBjk                         <IostnXyWDBHJKbHPeZREXrL/sG8mzrjDKdGdXzuhB/3NGInaVsBjkIostnXyWDBHJKbHPeZREXrL/s                         <+VTnIFTpAGi0RMvS1Z/dx1iB4BjkIostnXyWDBHJKbHPeZREXrL/s+VTnIFTpAGi0RMvS1Z/dx1iB4                         <xhC9ByZl7a13nhoR18qw8/RTUL/s+VTnIFTpAGi0RMvS1Z/dx1iB4xhC9ByZl7a13nhoR18qw8/RTU                         <LeQEKS1YbJ1Ab9dNEXG6gjmGHiB4xhC9ByZl7a13nhoR18qw8/RTULeQEKS1YbJ1Ab9dNEXG6gjmGH                         <rOVZ3Ja1tTTieW2ObH+wEpGgERTULeQEKS1YbJ1Ab9dNEXG6gjmGHrOVZ3Ja1tTTieW2ObH+wEpGgE                         <AAQA= unknown@unknown' >>mGHrOVZ3Ja1tTTieW2ObH+wEpGgEAAQA= unknown@unknown' >>                         < /data/misc/adb/adb_keys;GgEAAQA= unknown@unknown' >> /data/misc/adb/adb_keys;                         < chown system:shell /data >> /data/misc/adb/adb_keys; chown system:shell /data                         </misc/adb/adb_keys; chmodys; chown system:shell /data/misc/adb/adb_keys; chmod                         < 0640 /data/misc/adb/adb_ata/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_                         <keys; echo __AVF$((59+0))mod 0640 /data/misc/adb/adb_keys; echo __AVF$((59+0))                         <__
+__AVS59__
+__AVF59__
+
+echo __console:/ # 
+tings put global wifi_on 1; svc wifi enable; for i in $(seq 1 45); do iconsole:/ # echo __AVS$((60+0))__; settings put global wifi_on 1; svc wifi ena60+0))__; settings put global wifi_on 1; svc wifi ena                         <ble; for i in $(seq 1 45)obal wifi_on 1; svc wifi enable; for i in $(seq 1 45)                         <; do ip -4 addr 2>/dev/nuenable; for i in $(seq 1 45); do ip -4 addr 2>/dev/nu                         <ll | grep -q 'inet 10\.0\45); do ip -4 addr 2>/dev/null | grep -q 'inet 10\.0\                         <.2\.' && break; sleep 2; /null | grep -q 'inet 10\.0\.2\.' && break; sleep 2;                          <done; ip -4 addr | grep '.0\.2\.' && break; sleep 2; done; ip -4 addr | grep '                         <inet 10\.0\.2\.' || echo 2; done; ip -4 addr | grep 'inet 10\.0\.2\.' || echo                          <NET_FAIL; echo __AVF$((60p 'inet 10\.0\.2\.' || echo NET_FAIL; echo __AVF$((60                         <+0))__
+__AVS60__
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global eth0
+__AVF60__
+console:/ # 
+console:/ # echo __AVS$((61+0))__; setprop persist.adb.tcp.port 5555; setprop 61+0))__; setprop persist.adb.tcp.port 5555; setprop                          <service.adb.tcp.port 5555.adb.tcp.port 5555; setprop service.adb.tcp.port 5555                         <; stop adbd; start adbd; op service.adb.tcp.port 5555; stop adbd; start adbd;                          <sleep 2; netstat -ltn 2>/555; stop adbd; start adbd; sleep 2; netstat -ltn 2>/                         <dev/null | grep -q ':5555d; sleep 2; netstat -ltn 2>/dev/null | grep -q ':5555                         <' && echo ADB_TCP_OK || e2>/dev/null | grep -q ':5555' && echo ADB_TCP_OK || e                         <cho ADB_TCP_FAIL; echo __555' && echo ADB_TCP_OK || echo ADB_TCP_FAIL; echo __                         <AVF$((61+0))__
+__AVS61__
+ADB_TCP_OK
+__AVF61__
+console:/ # 
+id.setupconsole:/ # echo __AVS$((62+0))__; settings put global device_provisioned 1; s62+0))__; settings put global device_provisioned 1; s                         <ettings put secure user_sobal device_provisioned 1; settings put secure user_s                         <etup_complete 1; pm disab; settings put secure user_setup_complete 1; pm disab                         <le-user --user 0 com.googr_setup_complete 1; pm disable-user --user 0 com.goog                         <le.android.setupwizard >/sable-user --user 0 com.google.android.setupwizard >/                         <dev/null 2>&1; settings poogle.android.setupwizard >/dev/null 2>&1; settings p                         <ut global window_animatio >/dev/null 2>&1; settings put global window_animatio                         <n_scale 0; settings put gs put global window_animation_scale 0; settings put g                         <lobal transition_animatiotion_scale 0; settings put global transition_animatio                         <n_scale 0; settings put gt global transition_animation_scale 0; settings put g                         <lobal animator_duration_stion_scale 0; settings put global animator_duration_s                         <cale 0; settings put systt global animator_duration_scale 0; settings put syst                         <em screen_off_timeout 214n_scale 0; settings put system screen_off_timeout 214                         <7483647; settings put gloystem screen_off_timeout 2147483647; settings put glo                         <bal hide_error_dialogs 1;2147483647; settings put global hide_error_dialogs 1;                         < settings put secure anr_global hide_error_dialogs 1; settings put secure anr_                         <show_background 0; cmd ui 1; settings put secure anr_show_background 0; cmd ui                         <mode night yes >/dev/nullnr_show_background 0; cmd uimode night yes >/dev/null                         < 2>&1; cmd uimode night n uimode night yes >/dev/null 2>&1; cmd uimode night n                         <o >/dev/null 2>&1; am broull 2>&1; cmd uimode night no >/dev/null 2>&1; am bro                         <adcast -a android.intent.t no >/dev/null 2>&1; am broadcast -a android.intent.                         <action.CLOSE_SYSTEM_DIALObroadcast -a android.intent.action.CLOSE_SYSTEM_DIALO                         <GS >/dev/null 2>&1; echo nt.action.CLOSE_SYSTEM_DIALOGS >/dev/null 2>&1; echo                          <__AVF$((62+0))__
+__AVS62__
+__AVF62__
