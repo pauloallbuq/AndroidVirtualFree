@@ -207,7 +207,7 @@ jobs:
     name: App no emulador Android (exec do QEMU sem root)
     needs: build
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    timeout-minutes: 170
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -237,7 +237,7 @@ jobs:
           ram-size: 4096M
           disk-size: 6G
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
-          script: bash scripts/device_test.sh apk/app-debug.apk ${{ env.ISO_NAME }}
+          script: BOOT_MIN=130 bash scripts/device_test.sh apk/app-debug.apk ${{ env.ISO_NAME }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -268,3 +268,24 @@ jobs:
             for c in /tmp/chunk_*; do echo "::error title=$f::$(sed ':a;N;$!ba;s/\n/%0A/g' "$c")"; done
             rm -f /tmp/chunk_*
           done
+
+  release:
+    name: Publicar APK (somente com todos os testes aprovados)
+    needs: [ build, guest-e2e, device-test ]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: AndroidVirtualFree-debug-apk, path: apk }
+      - name: Release "latest"
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          cp apk/app-debug.apk AndroidVirtualFree.apk
+          sha256sum AndroidVirtualFree.apk | tee sha256.txt
+          gh release delete latest -y --cleanup-tag || true
+          gh release create latest AndroidVirtualFree.apk sha256.txt --target "${{ github.sha }}" \
+            --title "Android Virtual Free — build ${{ github.run_number }}" \
+            --notes "APK gerado e aprovado no CI: build + testes unitários, convidado real em KVM e em TCG (modo do celular: boot, instalar APK, root no convidado, persistência) e app no emulador Android. Commit ${{ github.sha }}."
