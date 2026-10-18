@@ -1,0 +1,133 @@
+console:/ # 
+console:/ # echo __AVS$((2+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc2+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((2+0))__
+__AVS2__
+__AVF2__
+console:/ # 
+console:/ # echo __AVS$((3+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3+03+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((3+0                         <))__
+__AVS3__
+14.91
+__AVF3__
+console:/ # 
+op init.svc.adbd; getprop inconsole:/ # echo __AVS$((4+0))__; uptime; getprop init.svc.adbd; getprop init.4+0))__; uptime; getprop init.svc.adbd; getprop init.                         <svc.zygote; getprop sys.binit.svc.adbd; getprop init.svc.zygote; getprop sys.b                         <oot_completed; getprop deit.svc.zygote; getprop sys.boot_completed; getprop de                         <v.bootcomplete; top -b -ns.boot_completed; getprop dev.bootcomplete; top -b -n                         < 1 | head -15; echo __AVF dev.bootcomplete; top -b -n 1 | head -15; echo __AVF                         <$((4+0))__
+__AVS4__
+ 03:53:32 up 0 min,  0 users,  load average: 1.33, 0.29, 0.10
+running
+running
+
+
+Tasks: 132 total,   2 running,  81 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  2012516k used,    27344k free,   316728k buffers
+Swap:        0k total,        0k used,        0k free,  1404804k cached
+400%cpu 252%user   0%nice  32%sys 108%idle   0%iow   0%irq   0%sirq   8%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 1442 u0_a40073    18  -2 1.2G  60M  42M R  280   3.0   0:01.57 dex2oat --zip-fd=16 --zip-location=Chrome.apk --input-vdex-fd=-1 --output-vdex-fd=18 --oat-fd=17 --oat-location=/data/dalvik-cache/x86/system@app@Chrome@Chrome.apk@classes.dex --instruction-set=x86 --instruction-set-variant=x86_64 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=19 --classpath-dir=/system/app/Chrome --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --runtime-arg -Xtarget-sdk-version:29 --runtime-arg -Xhidden-api-checks --compilation-reason=first-boot
+ 1339 system       18  -2 3.6G 154M 123M S  156   7.7   0:02.46 system_server
+ 1449 root         20   0 9.3M 3.3M 2.8M S  8.0   0.1   0:00.01 logcat -b all -v threadtime
+ 1316 graphics     16  -4 2.1G  94M  54M S  4.0   4.7   0:01.01 bootanimation
+ 1200 root         -2  -8 177M 107M  61M S  4.0   5.3   0:05.11 surfaceflinger
+ 1458 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 1457 root         20   0  11M 3.0M 2.5M R  0.0   0.1   0:00.00 top -b -n 1
+ 1245 root         20   0 9.3M 3.1M 2.5M S  0.0   0.1   0:00.00 ip6tables-restore --noflush -w -v
+ 1244 root         20   0 9.2M 3.2M 2.6M S  0.0   0.1   0:00.00 iptables-restore --noflush -w -v
+ 1237 mdnsr        20   0 5.5M 1.0M 860K S  0.0   0.0   0:00.00 mdnsd
+__AVF4__
+console:/ # 
+console:/ # echo __AVS$((5+0))__; getprop sys.boot_completed; echo __AVF$((5+05+0))__; getprop sys.boot_completed; echo __AVF$((5+0                         <))__
+__AVS5__
+
+__AVF5__
+console:/ # 
+console:/ # echo __AVS$((6+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc6+0))__; pgrep -f 'logcat -b all' >/dev/null || (logc                         <at -b all -v threadtime > -b all' >/dev/null || (logcat -b all -v threadtime >                         < /dev/ttyS2 2>&1 &); echoogcat -b all -v threadtime > /dev/ttyS2 2>&1 &); echo                         < __AVF$((6+0))__
+__AVS6__
+__AVF6__
+console:/ # 
+console:/ # echo __AVS$((7+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7+07+0))__; cut -d' ' -f1 /proc/uptime; echo __AVF$((7+0                         <))__
+__AVS7__
+25.68
+__AVF7__
+console:/ # 
+console:/ # echo __AVS$((8+0))__; getprop sys.boot_completed; echo __AVF$((8+08+0))__; getprop sys.boot_completed; echo __AVF$((8+0                         <))__
+__AVS8__
+1
+__AVF8__
+console:/ # 
+console:/ # echo __AVS$((9+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAPFeu9+0))__; mkdir -p /data/misc/adb; grep -qF 'QAAAAPFeu                         <ofvLWFdRnxNflvluXwgom+N8lisc/adb; grep -qF 'QAAAAPFeuofvLWFdRnxNflvluXwgom+N8l                         <MWfGs9pQ/JRRriwCEK4oBPqxxFeuofvLWFdRnxNflvluXwgom+N8lMWfGs9pQ/JRRriwCEK4oBPqxx                         <7v0XZqHG1wU4cceGZsNPgEMXpN8lMWfGs9pQ/JRRriwCEK4oBPqxx7v0XZqHG1wU4cceGZsNPgEMXp                         <810DoEURCdkOFMbMbgz2Uhyzbqxx7v0XZqHG1wU4cceGZsNPgEMXp810DoEURCdkOFMbMbgz2Uhyzb                         <hvaCrb80x2ov/yOB3SVPktvHVMXp810DoEURCdkOFMbMbgz2UhyzbhvaCrb80x2ov/yOB3SVPktvHV                         <7az5ZL5IM1Pa4pORgd8pMo7ibyzbhvaCrb80x2ov/yOB3SVPktvHV7az5ZL5IM1Pa4pORgd8pMo7ib                         <qyhtNPIYlyCFUiyqvWE+mI2FAvHV7az5ZL5IM1Pa4pORgd8pMo7ibqyhtNPIYlyCFUiyqvWE+mI2FA                         <bcHvwiBKemYihKFZ6ByKJKnRS7ibqyhtNPIYlyCFUiyqvWE+mI2FAbcHvwiBKemYihKFZ6ByKJKnRS                         <Elp+PDtu+wtWoqtJDcZUgqAB22FAbcHvwiBKemYihKFZ6ByKJKnRSElp+PDtu+wtWoqtJDcZUgqAB2                         <bIz4Ve6lQxuNybCFSOklB0U7snRSElp+PDtu+wtWoqtJDcZUgqAB2bIz4Ve6lQxuNybCFSOklB0U7s                         <JzmEJlZMizMztsdGMpFMCdcdRAB2bIz4Ve6lQxuNybCFSOklB0U7sJzmEJlZMizMztsdGMpFMCdcdR                         <iT/zPMHQmPD3h5gM8CKfdnsBSU7sJzmEJlZMizMztsdGMpFMCdcdRiT/zPMHQmPD3h5gM8CKfdnsBS                         <K7Egw0caVzJq6yQ0VrQUG5ndIcdRiT/zPMHQmPD3h5gM8CKfdnsBSK7Egw0caVzJq6yQ0VrQUG5ndI                         <Bka5XFjMjUSgaeM2i7PTAmd7osBSK7Egw0caVzJq6yQ0VrQUG5ndIBka5XFjMjUSgaeM2i7PTAmd7o                         <QLSLV47J8lau1gFdwQyKcfxEtndIBka5XFjMjUSgaeM2i7PTAmd7oQLSLV47J8lau1gFdwQyKcfxEt                         <3NQUWfD3NOV1uIQKiDPAz/ymjd7oQLSLV47J8lau1gFdwQyKcfxEt3NQUWfD3NOV1uIQKiDPAz/ymj                         <9TNDNvLfaDD7h67Uj/jhQltPcxEt3NQUWfD3NOV1uIQKiDPAz/ymj9TNDNvLfaDD7h67Uj/jhQltPc                         <0nBF9A/n0dHPmehE2VINQt+htymj9TNDNvLfaDD7h67Uj/jhQltPc0nBF9A/n0dHPmehE2VINQt+ht                         <kMABabm2oOrmQYIoO/eis86sQtPc0nBF9A/n0dHPmehE2VINQt+htkMABabm2oOrmQYIoO/eis86sQ                         <ydzJgpW+0sDpq5mHq3OyHCgjd+htkMABabm2oOrmQYIoO/eis86sQydzJgpW+0sDpq5mHq3OyHCgjd                         <We3pLcEAqOEZQNqIyxcrOXlvz6sQydzJgpW+0sDpq5mHq3OyHCgjdWe3pLcEAqOEZQNqIyxcrOXlvz                         <d6MypXx4CM69SYsQmiH6Y913ogjdWe3pLcEAqOEZQNqIyxcrOXlvzd6MypXx4CM69SYsQmiH6Y913o                         <mCsSwZX5RcMcf5P/RqniPezmYlvzd6MypXx4CM69SYsQmiH6Y913omCsSwZX5RcMcf5P/RqniPezmY                         <6US1mOHIVrhnyHOTedPaMX69f13omCsSwZX5RcMcf5P/RqniPezmY6US1mOHIVrhnyHOTedPaMX69f                         <LwUYvsQ0pdNqAJjF7H2Ua4MbbzmY6US1mOHIVrhnyHOTedPaMX69fLwUYvsQ0pdNqAJjF7H2Ua4Mbb                         <2jNtCF5z7LfR5L0j53OFz7GRF69fLwUYvsQ0pdNqAJjF7H2Ua4Mbb2jNtCF5z7LfR5L0j53OFz7GRF                         <bGD1nd5PxXvtZ0iAtff74KPR3Mbb2jNtCF5z7LfR5L0j53OFz7GRFbGD1nd5PxXvtZ0iAtff74KPR3                         <2i62YDa9swEAAQA= unknown@GRFbGD1nd5PxXvtZ0iAtff74KPR32i62YDa9swEAAQA= unknown@                         <unknown' /data/misc/adb/aPR32i62YDa9swEAAQA= unknown@unknown' /data/misc/adb/a                         <db_keys 2>/dev/null || ecwn@unknown' /data/misc/adb/adb_keys 2>/dev/null || ec                         <ho 'QAAAAPFeuofvLWFdRnxNfb/adb_keys 2>/dev/null || echo 'QAAAAPFeuofvLWFdRnxNf                         <lvluXwgom+N8lMWfGs9pQ/JRR echo 'QAAAAPFeuofvLWFdRnxNflvluXwgom+N8lMWfGs9pQ/JRR                         <riwCEK4oBPqxx7v0XZqHG1wU4xNflvluXwgom+N8lMWfGs9pQ/JRRriwCEK4oBPqxx7v0XZqHG1wU4                         <cceGZsNPgEMXp810DoEURCdkOJRRriwCEK4oBPqxx7v0XZqHG1wU4cceGZsNPgEMXp810DoEURCdkO                         <FMbMbgz2UhyzbhvaCrb80x2ovwU4cceGZsNPgEMXp810DoEURCdkOFMbMbgz2UhyzbhvaCrb80x2ov                         </yOB3SVPktvHV7az5ZL5IM1PadkOFMbMbgz2UhyzbhvaCrb80x2ov/yOB3SVPktvHV7az5ZL5IM1Pa                         <4pORgd8pMo7ibqyhtNPIYlyCF2ov/yOB3SVPktvHV7az5ZL5IM1Pa4pORgd8pMo7ibqyhtNPIYlyCF                         <UiyqvWE+mI2FAbcHvwiBKemYi1Pa4pORgd8pMo7ibqyhtNPIYlyCFUiyqvWE+mI2FAbcHvwiBKemYi                         <hKFZ6ByKJKnRSElp+PDtu+wtWyCFUiyqvWE+mI2FAbcHvwiBKemYihKFZ6ByKJKnRSElp+PDtu+wtW                         <oqtJDcZUgqAB2bIz4Ve6lQxuNmYihKFZ6ByKJKnRSElp+PDtu+wtWoqtJDcZUgqAB2bIz4Ve6lQxuN                         <ybCFSOklB0U7sJzmEJlZMizMzwtWoqtJDcZUgqAB2bIz4Ve6lQxuNybCFSOklB0U7sJzmEJlZMizMz                         <tsdGMpFMCdcdRiT/zPMHQmPD3xuNybCFSOklB0U7sJzmEJlZMizMztsdGMpFMCdcdRiT/zPMHQmPD3                         <h5gM8CKfdnsBSK7Egw0caVzJqzMztsdGMpFMCdcdRiT/zPMHQmPD3h5gM8CKfdnsBSK7Egw0caVzJq                         <6yQ0VrQUG5ndIBka5XFjMjUSgPD3h5gM8CKfdnsBSK7Egw0caVzJq6yQ0VrQUG5ndIBka5XFjMjUSg                         <aeM2i7PTAmd7oQLSLV47J8lauzJq6yQ0VrQUG5ndIBka5XFjMjUSgaeM2i7PTAmd7oQLSLV47J8lau                         <1gFdwQyKcfxEt3NQUWfD3NOV1USgaeM2i7PTAmd7oQLSLV47J8lau1gFdwQyKcfxEt3NQUWfD3NOV1                         <uIQKiDPAz/ymj9TNDNvLfaDD7lau1gFdwQyKcfxEt3NQUWfD3NOV1uIQKiDPAz/ymj9TNDNvLfaDD7                         <h67Uj/jhQltPc0nBF9A/n0dHPOV1uIQKiDPAz/ymj9TNDNvLfaDD7h67Uj/jhQltPc0nBF9A/n0dHP                         <mehE2VINQt+htkMABabm2oOrmDD7h67Uj/jhQltPc0nBF9A/n0dHPmehE2VINQt+htkMABabm2oOrm                         <QYIoO/eis86sQydzJgpW+0sDpdHPmehE2VINQt+htkMABabm2oOrmQYIoO/eis86sQydzJgpW+0sDp                         <q5mHq3OyHCgjdWe3pLcEAqOEZOrmQYIoO/eis86sQydzJgpW+0sDpq5mHq3OyHCgjdWe3pLcEAqOEZ                         <QNqIyxcrOXlvzd6MypXx4CM69sDpq5mHq3OyHCgjdWe3pLcEAqOEZQNqIyxcrOXlvzd6MypXx4CM69                         <SYsQmiH6Y913omCsSwZX5RcMcOEZQNqIyxcrOXlvzd6MypXx4CM69SYsQmiH6Y913omCsSwZX5RcMc                         <f5P/RqniPezmY6US1mOHIVrhnM69SYsQmiH6Y913omCsSwZX5RcMcf5P/RqniPezmY6US1mOHIVrhn                         <yHOTedPaMX69fLwUYvsQ0pdNqcMcf5P/RqniPezmY6US1mOHIVrhnyHOTedPaMX69fLwUYvsQ0pdNq                         <AJjF7H2Ua4Mbb2jNtCF5z7LfRrhnyHOTedPaMX69fLwUYvsQ0pdNqAJjF7H2Ua4Mbb2jNtCF5z7LfR                         <5L0j53OFz7GRFbGD1nd5PxXvtdNqAJjF7H2Ua4Mbb2jNtCF5z7LfR5L0j53OFz7GRFbGD1nd5PxXvt                         <Z0iAtff74KPR32i62YDa9swEALfR5L0j53OFz7GRFbGD1nd5PxXvtZ0iAtff74KPR32i62YDa9swEA                         <AQA= unknown@unknown' >> XvtZ0iAtff74KPR32i62YDa9swEAAQA= unknown@unknown' >>                          </data/misc/adb/adb_keys; wEAAQA= unknown@unknown' >> /data/misc/adb/adb_keys;                          <chown system:shell /data/>> /data/misc/adb/adb_keys; chown system:shell /data/                         <misc/adb/adb_keys; chmod s; chown system:shell /data/misc/adb/adb_keys; chmod                          <0640 /data/misc/adb/adb_kta/misc/adb/adb_keys; chmod 0640 /data/misc/adb/adb_k                         <eys; echo __AVF$((9+0))__od 0640 /data/misc/adb/adb_keys; echo __AVF$((9+0))__                         <
+__AVS9__
+__AVF9__
+console:/ # 
+console:/ # echo __AVS$((10+0))__; settings put global device_provisioned 1; s10+0))__; settings put global device_provisioned 1; s                         <ettings put secure user_sobal device_provisioned 1; settings put secure user_s                         <etup_complete 1; pm disab; settings put secure user_setup_complete 1; pm disab                         <le-user --user 0 com.googr_setup_complete 1; pm disable-user --user 0 com.goog                         <le.android.setupwizard >/sable-user --user 0 com.google.android.setupwizard >/                         <dev/null 2>&1; settings poogle.android.setupwizard >/dev/null 2>&1; settings p                         <ut global window_animatio >/dev/null 2>&1; settings put global window_animatio                         <n_scale 0; settings put gs put global window_animation_scale 0; settings put g                         <lobal transition_animatiotion_scale 0; settings put global transition_animatio                         <n_scale 0; settings put gt global transition_animation_scale 0; settings put g                         <lobal animator_duration_stion_scale 0; settings put global animator_duration_s                         <cale 0; settings put systt global animator_duration_scale 0; settings put syst                         <em screen_off_timeout 214n_scale 0; settings put system screen_off_timeout 214                         <7483647; echo __AVF$((10+ystem screen_off_timeout 2147483647; echo __AVF$((10+                         <0))__
+__AVS10__
+__AVF10__
+console:/ # 
+console:/ # echo __AVS$((11+0))__; uptime; getprop init.svc.adbd; getprop init11+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop dnit.svc.zygote; getprop sys.boot_completed; getprop d                         <ev.bootcomplete; top -b -ys.boot_completed; getprop dev.bootcomplete; top -b -                         <n 1 | head -15; echo __AVp dev.bootcomplete; top -b -n 1 | head -15; echo __AV                         <F$((11+0))__
+__AVS11__
+ 03:55:10 up 1 min,  0 users,  load average: 1.33, 0.82, 0.32
+running
+running
+1
+1
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1871268k used,   168592k free,   210744k buffers
+Swap:        0k total,        0k used,        0k free,  1030588k cached
+400%cpu   0%user   0%nice   0%sys 400%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3561 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 3560 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 3491 system       20   0 3.0G  77M  60M S  0.0   3.8   0:00.00 com.android.keychain
+ 3469 u0_a5        20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3332 u0_a8        20   0 3.1G 175M 126M S  0.0   8.7   0:00.58 com.google.android.gms.unstable
+ 3208 u0_a8        20   0 3.0G 126M 108M S  0.0   6.3   0:00.12 com.google.android.gms.ui
+ 3146 u0_a23       20   0 3.0G  79M  63M S  0.0   3.9   0:00.01 com.google.android.packageinstaller
+ 3117 u0_a15       20   0 3.0G  76M  60M S  0.0   3.8   0:00.01 com.google.android.onetimeinitializer
+ 3109 u0_a73       20   0 1.0G  90M  75M S  0.0   4.5   0:00.32 com.android.chrome
+ 3064 u0_a75       20   0 3.0G 104M  85M S  0.0   5.1   0:00.14 com.google.android.gm
+__AVF11__
+console:/ # 
+console:/ # echo __AVS$((12+0))__; uptime; getprop init.svc.adbd; getprop init12+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop dnit.svc.zygote; getprop sys.boot_completed; getprop d                         <ev.bootcomplete; top -b -ys.boot_completed; getprop dev.bootcomplete; top -b -                         <n 1 | head -15; echo __AVp dev.bootcomplete; top -b -n 1 | head -15; echo __AV                         <F$((12+0))__
+__AVS12__
+ 03:56:35 up 3 min,  0 users,  load average: 0.35, 0.62, 0.29
+running
+running
+1
+1
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1872528k used,   167332k free,   211044k buffers
+Swap:        0k total,        0k used,        0k free,  1032056k cached
+400%cpu   4%user   0%nice   0%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3573 root         20   0  11M 3.0M 2.5M S  0.0   0.1   0:00.00 head -15
+ 3572 root         20   0  11M 4.0M 3.3M R  0.0   0.2   0:00.00 top -b -n 1
+ 3491 system       20   0 3.0G  77M  60M S  0.0   3.8   0:00.00 com.android.keychain
+ 3469 u0_a5        20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3332 u0_a8        20   0 3.1G 175M 126M S  0.0   8.7   0:00.58 com.google.android.gms.unstable
+ 3208 u0_a8        20   0 3.0G 126M 108M S  0.0   6.3   0:00.12 com.google.android.gms.ui
+ 3146 u0_a23       20   0 3.0G  79M  63M S  0.0   3.9   0:00.01 com.google.android.packageinstaller
+ 3117 u0_a15       20   0 3.0G  76M  60M S  0.0   3.8   0:00.01 com.google.android.onetimeinitializer
+ 3109 u0_a73       20   0 1.0G  90M  75M S  0.0   4.5   0:00.32 com.android.chrome
+ 3064 u0_a75       20   0 3.0G 104M  85M S  0.0   5.1   0:00.14 com.google.android.gm
+__AVF12__
+console:/ # 
+console:/ # echo __AVS$((13+0))__; uptime; getprop init.svc.adbd; getprop init13+0))__; uptime; getprop init.svc.adbd; getprop init                         <.svc.zygote; getprop sys. init.svc.adbd; getprop init.svc.zygote; getprop sys.                         <boot_completed; getprop dnit.svc.zygote; getprop sys.boot_completed; getprop d                         <ev.bootcomplete; top -b -ys.boot_completed; getprop dev.bootcomplete; top -b -                         <n 1 | head -15; echo __AVp dev.bootcomplete; top -b -n 1 | head -15; echo __AV                         <F$((13+0))__
+__AVS13__
+ 03:58:00 up 4 min,  0 users,  load average: 0.08, 0.47, 0.26
+running
+running
+1
+1
+Tasks: 157 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+Mem:   2039860k total,  1873252k used,   166608k free,   211060k buffers
+Swap:        0k total,        0k used,        0k free,  1031948k cached
+400%cpu   0%user   0%nice   4%sys 396%idle   0%iow   0%irq   0%sirq   0%host
+  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS                       
+ 3582 root         20   0  11M 3.1M 2.6M S  0.0   0.1   0:00.00 head -15
+ 3581 root         20   0  11M 3.9M 3.2M R  0.0   0.1   0:00.00 top -b -n 1
+ 3491 system       20   0 3.0G  77M  60M S  0.0   3.8   0:00.00 com.android.keychain
+ 3469 u0_a5        20   0 3.0G  74M  58M S  0.0   3.7   0:00.00 org.android_x86.analytics
+ 3332 u0_a8        20   0 3.1G 175M 126M S  0.0   8.7   0:00.58 com.google.android.gms.unstable
+ 3208 u0_a8        20   0 3.0G 126M 108M S  0.0   6.3   0:00.12 com.google.android.gms.ui
+ 3146 u0_a23       20   0 3.0G  79M  63M S  0.0   3.9   0:00.01 com.google.android.packageinstaller
+ 3117 u0_a15       20   0 3.0G  76M  60M S  0.0   3.8   0:00.01 com.google.android.onetimeinitializer
+ 3109 u0_a73       20   0 1.0G  90M  75M S  0.0   4.5   0:00.32 com.android.chrome
+ 3064 u0_a75       20   0 3.0G 104M  85M S  0.0   5.1   0:00.14 com.google.android.gm
+__AVF13__
+console:/ # 
